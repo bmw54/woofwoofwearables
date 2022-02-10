@@ -1,6 +1,6 @@
 import socket
 
-HOST = '172.28.42.55' # Wireless IP Address of PI
+HOST = '172.28.143.162' # Wireless IP Address of PI
 PORT = 12345 # Pick an open Port (1000+ recommended), must match the server port
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST,PORT))
