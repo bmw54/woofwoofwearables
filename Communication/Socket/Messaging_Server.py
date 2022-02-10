@@ -1,6 +1,6 @@
 import socket
 
-HOST = '172.28.42.55' # Wireless IP Address of PI
+HOST = '172.28.143.162' # Wireless IP Address of PI
 PORT = 12345 # Pick an open Port (1000+ recommended), must match the client sport
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print('Socket created')
@@ -18,23 +18,23 @@ print('Connected')
 
 # awaiting for message
 while True:
-	data = conn.recv(1024).decode()
-	print('I sent a message back in response to: ' + data)
-	reply = ''
+    data = conn.recv(1024).decode()
+    print('I sent a message back in response to: ' + data)
+    reply = ''
 
-	# process your message
-	if data == 'Hello':
-		reply = 'Hi, back!'
-		elif data == 'This is important':
-		reply = 'OK, I have done the important thing you have asked me!'
+    # process your message
+    if data == 'Hello':
+        reply = 'Hi, back!'
+    elif data == 'This is important':
+        reply = 'OK, I have done the important thing you have asked me!'
 
-	#and so on and on until...
-	elif data == 'quit':
-		conn.send('Terminating')
-		break
-	else:
-		reply = 'Unknown command'
+    #and so on and on until...
+    elif data == 'quit':
+        conn.send('Terminating')
+        break
+    else:
+        reply = 'Unknown command'
 
-	# Sending reply
-	conn.send(reply.encode())
+    # Sending reply
+    conn.send(reply.encode())
 conn.close() # Close connections
