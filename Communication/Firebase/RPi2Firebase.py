@@ -12,14 +12,22 @@ class RPi2Firebase:
     }
     firebase = pyrebase.initialize_app(config)
     self.db = firebase.database()
+    self.storage = firebase.storage()
 
 
   def send_data_to_firebase(self, data, data_name):
-    print("Send Data to Firebase Using Raspberry Pi")
+    print("Sending Data to Firebase Using Raspberry Pi")
     print("—————————————-")
     print()
     self.db.child(data_name).child("1-set").set(data)
-    self.db.child(data_name).child("2-push").push(data)
+  
+  def send_image_to_firebase(self, path, image_name):
+    print("Sending Image to Firebase Using Raspberry Pi")
+    print("—————————————-")
+    print()
+    self.storage.child(path).put(image_name)
+
+    
 
 
 
