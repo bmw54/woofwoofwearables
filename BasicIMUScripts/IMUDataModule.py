@@ -45,11 +45,9 @@ class IMUDataModule:
         
 
     def get_imu_data(self):
-        self.poll_imu_data()
         return [self.acceleration, self.gyro, self.magnetic, self.angle]
     
     def get_average_imu_data(self):
-        self.poll_imu_data()
         return [self.average_acceleration, self.average_gyro, self.average_magnetic, self.average_magnetic, self.length]
      
 

@@ -14,12 +14,12 @@ class RPI2Firebase:
     self.db = firebase.database()
 
 
-  def send_data_to_firebase(self, data):
+  def send_data_to_firebase(self, data, data_name):
     print("Send Data to Firebase Using Raspberry Pi")
     print("—————————————-")
     print()
-    self.db.child("icm20x").child("1-set").set(data)
-    self.db.child("icm20x").child("2-push").push(data)
+    self.db.child(data_name).child("1-set").set(data)
+    self.db.child(data_name).child("2-push").push(data)
 
 
 
