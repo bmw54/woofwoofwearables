@@ -1,5 +1,5 @@
-from Communication.Firebase import RPi2Firebase
-from BasicIMUScripts import IMUDataModule
+from Communication.Firebase.RPi2Firebase import RPi2Firebase
+from BasicIMUScripts.IMUDataModule import IMUDataModule
 import time
 
 data_module = IMUDataModule()
