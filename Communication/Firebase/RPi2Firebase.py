@@ -1,6 +1,6 @@
 import pyrebase
 
-class RPI2Firebase:
+class RPi2Firebase:
 
   def __init__(self):
 
