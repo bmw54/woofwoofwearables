@@ -1,4 +1,5 @@
 import pyrebase
+import time
 
 class RPi2Firebase:
 
@@ -25,8 +26,11 @@ class RPi2Firebase:
     print("Sending Image to Firebase Using Raspberry Pi")
     print("—————————————-")
     print()
-    self.storage.child(path).put(image_name)
-
+    self.storage.child(image_name).put(path)
+    storage_url = self.storage.child(image_name).get_url(None)
+    self.db.child("images").child("1-set").set(storage_url)
+    self.db.child("images").child("2-push").push(storage_url)
+    
     
 
 
