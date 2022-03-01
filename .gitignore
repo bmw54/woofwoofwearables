@@ -1,2 +1,3 @@
 # .gitignore 
 Communication/Firebase/config.py 
+woof-webapp/src/firebase.js
