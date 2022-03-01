@@ -1,12 +1,15 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Home from './Home';
+import Chart from './chart';
 import 'bootstrap/dist/css/bootstrap.css';
 import firebaseConfig from './firebase';
 import {ref, onValue } from "firebase/database";
 import { initializeApp } from 'firebase/app';
 import { getDatabase} from "firebase/database";
 import Image from 'react-bootstrap/Image'
+
+
 
 
 function App() {
@@ -64,6 +67,7 @@ function App() {
     <div className="App">
       <Home accel={accelData} gyro={gyroData} mag={magData} angle={angleData}/>
       <Image fluid src={imageURL} />
+      <Chart/>
     </div>
   );
 }
