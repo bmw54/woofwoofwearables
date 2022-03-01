@@ -15,31 +15,31 @@ function Chart({}){
 const data = [
   {
     name: "11:00",
-    Acceleration: 4000
+    Acceleration: 3.21
   },
   {
     name: "11:30",
-    Acceleration: 3000
+    Acceleration: 3.45
   },
   {
     name: "12:00",
-    Acceleration: 2000
+    Acceleration: 9.55
   },
   {
     name: "12:30",
-    Acceleration: 2780
+    Acceleration: 1.12
   },
   {
     name: "13:00",
-    Acceleration: 1890
+    Acceleration: 0.20
   },
   {
     name: "13:30",
-    Acceleration: 2390
+    Acceleration: 2.23
   },
   {
     name: "14:00",
-    Acceleration: 3490
+    Acceleration: 3.34
   }
 ];
 return (
