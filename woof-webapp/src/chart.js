@@ -1,13 +1,13 @@
 // import "./styles.css";
 import React from "react";
 import {
-  LineChart,
-  Line,
+  BarChart,
+  Bar,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend
+  ResponsiveContainer
 } from "recharts";
 
 function Chart({}){
@@ -15,72 +15,41 @@ function Chart({}){
 const data = [
   {
     name: "11:00",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400
+    Acceleration: 4000
   },
   {
     name: "11:30",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210
+    Acceleration: 3000
   },
   {
     name: "12:00",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290
+    Acceleration: 2000
   },
   {
     name: "12:30",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000
+    Acceleration: 2780
   },
   {
     name: "13:00",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181
+    Acceleration: 1890
   },
   {
     name: "13:30",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500
+    Acceleration: 2390
   },
   {
     name: "14:00",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100
+    Acceleration: 3490
   }
 ];
 return (
-<LineChart
-    width={500}
-    height={300}
-    data={data}
-    margin={{
-    top: 5,
-    right: 30,
-    left: 20,
-    bottom: 5
-    }}
->
-    <CartesianGrid strokeDasharray="3 3" />
-    <XAxis dataKey="name" />
-    <YAxis />
-    <Tooltip />
-    <Legend />
-    <Line
-    type="monotone"
-    dataKey="pv"
-    stroke="#8884d8"
-    activeDot={{ r: 8 }}
-    />
-    <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-</LineChart>
+<BarChart width={730} height={500} data={data}>
+  <CartesianGrid strokeDasharray="3 3" />
+  <XAxis dataKey="name" label={{ value: 'Time', offset: "-5", position: 'insideBottom' }}/>
+  <YAxis label={{ value: 'Average Acceleration', angle: -90, position: 'insideLeft' }}/>
+  <Tooltip />
+  <Bar dataKey="Acceleration" fill="#8884d8" />
+</BarChart>
 );
 }
 export default Chart;
