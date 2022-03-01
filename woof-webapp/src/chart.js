@@ -1,13 +1,12 @@
 // import "./styles.css";
 import React from "react";
 import {
-  BarChart,
-  Bar,
+  LineChart,
+  Line,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  ResponsiveContainer
 } from "recharts";
 
 function Chart({}){
@@ -43,13 +42,15 @@ const data = [
   }
 ];
 return (
-<BarChart width={730} height={500} data={data}>
+<LineChart width={730} height={500} data={data}
+  margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
   <CartesianGrid strokeDasharray="3 3" />
-  <XAxis dataKey="name" label={{ value: 'Time', offset: "-5", position: 'insideBottom' }}/>
+  <XAxis dataKey="name" />
   <YAxis label={{ value: 'Average Acceleration', angle: -90, position: 'insideLeft' }}/>
-  <Tooltip />
-  <Bar dataKey="Acceleration" fill="#8884d8" />
-</BarChart>
+  <XAxis label={{ value: 'Time', offset: -5, position: 'insideBottom' }}/>
+  <Tooltip/>
+  <Line type="monotone" dataKey="Acceleration" stroke="#8884d8" />
+</LineChart>
 );
 }
 export default Chart;
