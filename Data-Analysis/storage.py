@@ -9,11 +9,10 @@ icm = adafruit_icm20x.ICM20948(i2c)
 
 df = pd.DataFrame(columns = ['X_Acceleration','Y_Acceleration', 'Z_Acceleration', 'X_Gyro', 'Y_Gyro','Z_Gyro','X_Magnetometer', 'Y_Magnetometer', 'Z_Magnetometer'])
 
-df = df.append({'Name' : 'Ankit', 'Articles' : 97, 'Improved' : 2200}, 
-                ignore_index = True)
+
 
 cycles = 1800
-for i in range(0, cycles):
+for i in range(1, cycles):
     acceleration = icm.acceleration
     gyro = icm.gyro
     magnetic = icm.magnetic
