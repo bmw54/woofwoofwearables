@@ -1,7 +1,7 @@
 import board
 import adafruit_icm20x
 import numpy as np
-import datetime
+import time
 
 class IMUDataModule:
     def __init__(self):
@@ -44,7 +44,7 @@ class IMUDataModule:
         self.gyro = gyro
         self.magnetic = magnetic
         self.angle = angle
-        self.time = datetime.datetime.now()
+        self.time = time.time()
         
 
     def get_imu_data(self):

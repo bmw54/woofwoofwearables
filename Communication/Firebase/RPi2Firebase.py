@@ -1,10 +1,19 @@
 import pyrebase
-import config
-
+#import config
 class RPi2Firebase:
 
   def __init__(self):
+    config = {
 
+    "apiKey": "M3daySH0pEM5DcBgLbw8LVYJakBh2M8anFkDXq0I",
+
+    "authDomain": "woof-woof-wearables.firebaseapp.com",
+
+    "databaseURL": "https://woof-woof-wearables-default-rtdb.firebaseio.com",
+
+    "storageBucket": "woof-woof-wearables.appspot.com"
+
+    }
     firebase = pyrebase.initialize_app(config)
     self.db = firebase.database()
     self.storage = firebase.storage()
