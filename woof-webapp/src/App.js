@@ -154,9 +154,9 @@ function App() {
     <div className="App">
       <Home accel={accelData} gyro={gyroData} mag={magData} angle={angleData}/>
       <Image fluid src={imageURL} />
-      <Chart timeSeries = {accelerationXTimeSeries}/>
-      <Chart timeSeries = {accelerationYTimeSeries}/>
-      <Chart timeSeries = {accelerationZTimeSeries}/>
+      <Chart timeSeries = {accelerationXTimeSeries} direction = "X"/>
+      <Chart timeSeries = {accelerationYTimeSeries}direction = "Y" />
+      <Chart timeSeries = {accelerationZTimeSeries} direction = "Z"/>
     </div>
   );
 }
