@@ -18,6 +18,7 @@ while True:
     xangle += tailIcm.gyro[0]*(t-tlast)*180/np.pi
     yangle += tailIcm.gyro[1]*(t-tlast)*180/np.pi
     zangle += tailIcm.gyro[2]*(t-tlast)*180/np.pi
+    print(t-tlast)
     tlast = t
     print("Angle X:%.2f, Y: %.2f, Z: %.2f degrees" % (xangle,yangle,zangle))
     time.sleep(0.1)
