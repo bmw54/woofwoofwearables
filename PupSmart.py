@@ -14,12 +14,37 @@ while True:
     y_acceleration = data_module.get_Y_acceleration()
     z_acceleration = data_module.get_Z_acceleration()
 
+    x_gyro = data_module.get_X_gyro()
+    y_gyro = data_module.get_Y_gyro()
+    z_gyro = data_module.get_Z_gyro()
+
+    x_magnetic = data_module.get_X_magnetic()
+    y_magnetic = data_module.get_Y_magnetic()
+    z_magnetic = data_module.get_Z_magnetic()
+
     x_accel_data = {"Time" : timestamp, "Value": x_acceleration}
     y_accel_data = {"Time" : timestamp, "Value": y_acceleration}
     z_accel_data = {"Time" : timestamp, "Value": z_acceleration}
-    rpi_2_firebase.send_timeseries_to_firebase(x_accel_data, "CurrentIMUData", "X", "accel")
-    rpi_2_firebase.send_timeseries_to_firebase(y_accel_data, "CurrentIMUData", "Y", "accel")
-    rpi_2_firebase.send_timeseries_to_firebase(z_accel_data, "CurrentIMUData", "Z", "accel")
+
+    x_gyro_data = {"Time" : timestamp, "Value": x_gyro}
+    y_gyro_data = {"Time" : timestamp, "Value": y_gyro}
+    z_gyro_data = {"Time" : timestamp, "Value": z_gyro}
+
+    x_mag_data = {"Time" : timestamp, "Value": x_mag}
+    y_mag_data = {"Time" : timestamp, "Value": y_mag}
+    z_mag_data = {"Time" : timestamp, "Value": z_mag}
+
+    rpi_2_firebase.send_timeseries_to_firebase(x_accel_data, "FridayPuppyRun", "X", "accel")
+    rpi_2_firebase.send_timeseries_to_firebase(y_accel_data, "FridayPuppyRun", "Y", "accel")
+    rpi_2_firebase.send_timeseries_to_firebase(z_accel_data, "FridayPuppyRun", "Z", "accel")
+
+    rpi_2_firebase.send_timeseries_to_firebase(x_gyro_data, "FridayPuppyRun", "X", "gyro")
+    rpi_2_firebase.send_timeseries_to_firebase(y_gyro_data, "FridayPuppyRun", "Y", "gyro")
+    rpi_2_firebase.send_timeseries_to_firebase(z_gyro_data, "FridayPuppyRun", "Z", "gyro")
+
+    rpi_2_firebase.send_timeseries_to_firebase(x_mag_data, "FridayPuppyRun", "X", "mag")
+    rpi_2_firebase.send_timeseries_to_firebase(y_mag_data, "FridayPuppyRun", "Y", "mag")
+    rpi_2_firebase.send_timeseries_to_firebase(z_mag_data, "FridayPuppyRun", "Z", "mag")
 
 
     current_data = data_module.get_imu_data()
@@ -28,4 +53,4 @@ while True:
 #     rpi_2_firebase.send_image_to_firebase(path, "testimg.jpg")
     # average_data = data_module.get_average_imu_data()
     # rpi_2_firebase.send_data_to_firebase(average_data, "AverageIMUData")
-    time.sleep(2)
+    time.sleep(.1)

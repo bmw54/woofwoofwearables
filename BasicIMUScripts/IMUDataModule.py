@@ -59,9 +59,27 @@ class IMUDataModule:
     def get_Z_acceleration(self):
         return self.acceleration[2]
 
+    def get_X_gyro(self):
+        return self.gyro[0]
+
+    def get_Y_gyro(self):
+        return self.gyro[1]
+    
+    def get_Z_gyro(self):
+        return self.gyro[2]
+    
+    def get_X_magnetic(self):
+        return self.magnetic[0]
+
+    def get_Y_magnetic(self):
+        return self.magnetic[1]
+    
+    def get_Z_magnetic(self):
+        return self.magnetic[2]
+
     def get_timestamp(self):
         return self.time
-        
+
     def get_average_imu_data(self):
         print(self.average_acceleration)
         return [self.average_acceleration, self.average_gyro, self.average_magnetic, self.average_magnetic, self.length]
