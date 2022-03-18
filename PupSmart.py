@@ -18,9 +18,9 @@ while True:
     y_gyro = data_module.get_Y_gyro()
     z_gyro = data_module.get_Z_gyro()
 
-    x_magnetic = data_module.get_X_magnetic()
-    y_magnetic = data_module.get_Y_magnetic()
-    z_magnetic = data_module.get_Z_magnetic()
+    x_mag = data_module.get_X_magnetic()
+    y_mag = data_module.get_Y_magnetic()
+    z_mag = data_module.get_Z_magnetic()
 
     x_accel_data = {"Time" : timestamp, "Value": x_acceleration}
     y_accel_data = {"Time" : timestamp, "Value": y_acceleration}
