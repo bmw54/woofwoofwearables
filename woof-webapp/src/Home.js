@@ -2,10 +2,6 @@ import { Row, Container, Col } from 'react-bootstrap';
 
 //all 4 params are arrays accel, gyro, magnetic, angle
 function Home({accel, gyro, mag, angle}){
-  console.log(accel);
-  console.log(gyro);
-  console.log(mag);
-  console.log(angle);
   
   return (
     <Container>
