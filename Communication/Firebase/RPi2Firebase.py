@@ -1,10 +1,19 @@
 import pyrebase
-import config
-
+#import config
 class RPi2Firebase:
 
   def __init__(self):
+    config = {
 
+    "apiKey": "M3daySH0pEM5DcBgLbw8LVYJakBh2M8anFkDXq0I",
+
+    "authDomain": "woof-woof-wearables.firebaseapp.com",
+
+    "databaseURL": "https://woof-woof-wearables-default-rtdb.firebaseio.com",
+
+    "storageBucket": "woof-woof-wearables.appspot.com"
+
+    }
     firebase = pyrebase.initialize_app(config)
     self.db = firebase.database()
     self.storage = firebase.storage()
@@ -15,6 +24,12 @@ class RPi2Firebase:
     print("—————————————-")
     print()
     self.db.child(data_name).child("1-set").set(data)
+
+  def send_timeseries_to_firebase(self, data, folder_name, direction, data_name):
+    print("Sending TimeSeries to Firebase Using Raspberry Pi")
+    print("—————————————-")
+    print()
+    self.db.child(folder_name).child("2-push").child(data_name).child(direction).push(data)
   
   def send_image_to_firebase(self, path, image_name):
     print("Sending Image to Firebase Using Raspberry Pi")

@@ -1,6 +1,7 @@
 import board
 import adafruit_icm20x
 import numpy as np
+import time
 
 class IMUDataModule:
     def __init__(self):
@@ -15,6 +16,7 @@ class IMUDataModule:
         self.average_magnetic = (0.0, 0.0,0.0)
         self.average_angle = (0.0, 0.0,0.0)
         self.length = 0
+        self.timestamp = 0.0;
 
     def poll_imu_data(self):
         (x,y,z) = self.icm.magnetic
@@ -42,11 +44,42 @@ class IMUDataModule:
         self.gyro = gyro
         self.magnetic = magnetic
         self.angle = angle
+        self.time = time.time()
         
 
     def get_imu_data(self):
         return [self.acceleration, self.gyro, self.magnetic, self.angle]
+
+    def get_X_acceleration(self):
+        return self.acceleration[0]
+
+    def get_Y_acceleration(self):
+        return self.acceleration[1]
     
+    def get_Z_acceleration(self):
+        return self.acceleration[2]
+
+    def get_X_gyro(self):
+        return self.gyro[0]
+
+    def get_Y_gyro(self):
+        return self.gyro[1]
+    
+    def get_Z_gyro(self):
+        return self.gyro[2]
+    
+    def get_X_magnetic(self):
+        return self.magnetic[0]
+
+    def get_Y_magnetic(self):
+        return self.magnetic[1]
+    
+    def get_Z_magnetic(self):
+        return self.magnetic[2]
+
+    def get_timestamp(self):
+        return self.time
+
     def get_average_imu_data(self):
         print(self.average_acceleration)
         return [self.average_acceleration, self.average_gyro, self.average_magnetic, self.average_magnetic, self.length]
