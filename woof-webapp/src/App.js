@@ -3,29 +3,10 @@ import React, { useState, useEffect } from 'react';
 import Home from './Home';
 import Chart from './chart';
 import 'bootstrap/dist/css/bootstrap.css';
-import firebaseConfig from './firebase';
-import {ref, onValue, child} from "firebase/database";
-import { initializeApp } from 'firebase/app';
-import { getDatabase} from "firebase/database";
 import Image from 'react-bootstrap/Image'
-
-
-
+import axios from 'axios'
 
 function App() {
-  const imuDBPath = "CurrentIMUData/1-set/";
-  const accelPath = imuDBPath + "/0";
-  const gyroPath = imuDBPath + "/1";
-  const magPath = imuDBPath + "/2";
-  const anglePath = imuDBPath + "/3";
-  const imagesPath = "images/1-set";
-
-
-  const seriesPath = "CurrentIMUData/2-push"
-  const accelSeriesPath = seriesPath + "/accel";
-  // const gyroSeriesPath = seriesPath + "/gyro";
-  // const magSeriesPath = seriesPath + "/mag";
-  // const angleSeriesPath = seriesPath + "/angle";
 
   const [accelData, setAccelData] = useState([]);
   const [gyroData, setGyroData] = useState([]);
@@ -37,117 +18,119 @@ function App() {
   const [accelerationYTimeSeries, setAccelerationYTimeSeries] = useState([]);
   const [accelerationZTimeSeries, setAccelerationZTimeSeries] = useState([]);
 
-  // const [gyroXTimeSeries, setGyroXTimeSeries] = useState([]);
-  // const [gyroYTimeSeries, setGyroYTimeSeries] = useState([]);
-  // const [gyroZTimeSeries, setGyroZTimeSeries] = useState([]);
+  const [gyroXTimeSeries, setGyroXTimeSeries] = useState([]);
+  const [gyroYTimeSeries, setGyroYTimeSeries] = useState([]);
+  const [gyroZTimeSeries, setGyroZTimeSeries] = useState([]);
 
-  // const [magXTimeSeries, setMagXTimeSeries] = useState([]);
-  // const [magYTimeSeries, setMagYTimeSeries] = useState([]);
-  // const [magZTimeSeries, setMagZTimeSeries] = useState([]);
+  const [magXTimeSeries, setMagXTimeSeries] = useState([]);
+  const [magYTimeSeries, setMagYTimeSeries] = useState([]);
+  const [magZTimeSeries, setMagZTimeSeries] = useState([]);
 
-  // const [angleXTimeSeries, setAngleXTimeSeries] = useState([]);
-  // const [angleYTimeSeries, setAngleYTimeSeries] = useState([]);
-  // const [angleZTimeSeries, setAngleZTimeSeries] = useState([]);
+  const [angleXTimeSeries, setAngleXTimeSeries] = useState([]);
+  const [angleYTimeSeries, setAngleYTimeSeries] = useState([]);
+  const [angleZTimeSeries, setAngleZTimeSeries] = useState([]);
 
-  // const db = getDatabase();
-  useEffect(() => {
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
+  useEffect(()=>{
+    
+    axios.get('http://localhost:5000/firebase/FridayPuppyRun/accel/X').then(response => {
+      console.log("SUCCESS", response.data)
+      setAccelerationXTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
 
-    const accelRef = ref(db, accelPath);
-    onValue(accelRef, (snapshot) => {
-      const data = snapshot.val();
-      setAccelData(data);
-    });
+    axios.get('http://localhost:5000/firebase/FridayPuppyRun/accel/Y').then(response => {
+      console.log("SUCCESS", response.data)
+      setAccelerationYTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
 
-    const gyroRef = ref(db, gyroPath);
-    onValue(gyroRef, (snapshot) => {
-      const data = snapshot.val();
-      setGyroData(data);
-    });
+    axios.get('http://localhost:5000/firebase/FridayPuppyRun/accel/Z').then(response => {
+      console.log("SUCCESS", response.data)
+      setAccelerationZTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
 
-    const magRef = ref(db, magPath);
-    onValue(magRef, (snapshot) => {
-      const data = snapshot.val();
-      setMagData(data);
-    });
+    axios.get('http://localhost:5000/firebase/FridayPuppyRun/gyro/X').then(response => {
+      console.log("SUCCESS", response.data)
+      setGyroXTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
 
-    const angleRef = ref(db, anglePath);
-    onValue(angleRef, (snapshot) => {
-      const data = snapshot.val();
-      setAngleData(data);
-    });
+    axios.get('http://localhost:5000/firebase/FridayPuppyRun/gyro/Y').then(response => {
+      console.log("SUCCESS", response.data)
+      setGyroYTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
 
-    const imageRef = ref(db, imagesPath);
-    onValue(imageRef, (snapshot) => {
-      const data = snapshot.val();
-      setImageURL(data);
-    });
+    axios.get('http://localhost:5000/firebase/FridayPuppyRun/gyro/Z').then(response => {
+      console.log("SUCCESS", response.data)
+      setGyroZTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
 
-    const accelerationXSeriesRef = ref(db, accelSeriesPath + "/X");
-    const accelerationYSeriesRef = ref(db, accelSeriesPath + "/Y");
-    const accelerationZSeriesRef = ref(db, accelSeriesPath + "/Z");
-    onValue(accelerationXSeriesRef, (snapshot) => {
-      const data = snapshot.val();
-      console.log(data);
-      var values = Object.keys(data).map(function(key){
-        return data[key];
-      });
-      setAccelerationXTimeSeries(values);
-      console.log(values);
-    });
-    onValue(accelerationYSeriesRef, (snapshot) => {
-      const data = snapshot.val();
-      console.log(data);
-      var values = Object.keys(data).map(function(key){
-        return data[key];
-      });
-      setAccelerationYTimeSeries(values);
-      console.log(values);
-    });
-    onValue(accelerationZSeriesRef, (snapshot) => {
-      const data = snapshot.val();
-      console.log(data);
-      var values = Object.keys(data).map(function(key){
-        return data[key];
-      });
-      setAccelerationZTimeSeries(values);
-      console.log(values);
-    });
+    axios.get('http://localhost:5000/firebase/FridayPuppyRun/mag/X').then(response => {
+      console.log("SUCCESS", response.data)
+      setMagXTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
 
-  //   const gyroSeriesRef = ref(db, gyroSeriesPath);
-  //   onValue(gyroSeriesRef, (snapshot) => {
-  //     const data = snapshot.val();
-  //     console.log(data);
-  //     var values = Object.keys(data).map(function(key){
-  //       return data[key];
-  //     });
-  //     setGyroTimeSeries(values);
-  //     console.log(values);
-  //   });
+    axios.get('http://localhost:5000/firebase/FridayPuppyRun/mag/Y').then(response => {
+      console.log("SUCCESS", response.data)
+      setMagYTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
 
-  //   const magSeriesRef = ref(db, magSeriesPath);
-  //   onValue(magSeriesRef, (snapshot) => {
-  //     const data = snapshot.val();
-  //     console.log(data);
-  //     var values = Object.keys(data).map(function(key){
-  //       return data[key];
-  //     });
-  //     setMagTimeSeries(values);
-  //     console.log(values);
-  //   });
+    axios.get('http://localhost:5000/firebase/FridayPuppyRun/mag/Z').then(response => {
+      console.log("SUCCESS", response.data)
+      setMagZTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
 
-  //   const angleSeriesRef = ref(db, angleSeriesPath);
-  //   onValue(angleSeriesRef, (snapshot) => {
-  //     const data = snapshot.val();
-  //     console.log(data);
-  //     var values = Object.keys(data).map(function(key){
-  //       return data[key];
-  //     });
-  //     setAngleTimeSeries(values);
-  //     console.log(values);
-  //   });
-  }, []);
+    axios.get('http://localhost:5000/firebase/images').then(response => {
+      console.log("SUCCESS", response.data)
+      setImageURL(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+
+    axios.get('http://localhost:5000/firebase/CurrentIMUData/0').then(response => {
+      console.log("SUCCESS", response.data)
+      setAccelData(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+
+    axios.get('http://localhost:5000/firebase/CurrentIMUData/1').then(response => {
+      console.log("SUCCESS", response.data)
+      setGyroData(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+
+    axios.get('http://localhost:5000/firebase/CurrentIMUData/2').then(response => {
+      console.log("SUCCESS", response.data)
+      setMagData(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+
+    axios.get('http://localhost:5000/firebase/CurrentIMUData/3').then(response => {
+      console.log("SUCCESS", response.data)
+      setAngleData(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+
+  }, [])
   
   
   return (
@@ -157,7 +140,7 @@ function App() {
       <Chart timeSeries = {accelerationXTimeSeries} direction = "X"/>
       <Chart timeSeries = {accelerationYTimeSeries}direction = "Y" />
       <Chart timeSeries = {accelerationZTimeSeries} direction = "Z"/>
-    </div>
+</div>
   );
 }
 
