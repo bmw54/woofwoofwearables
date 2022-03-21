@@ -18,6 +18,10 @@ function App() {
   const [accelerationYTimeSeries, setAccelerationYTimeSeries] = useState([]);
   const [accelerationZTimeSeries, setAccelerationZTimeSeries] = useState([]);
 
+  const [velocityXTimeSeries, setVelocityXTimeSeries] = useState([]);
+  const [velocityYTimeSeries, setVelocityYTimeSeries] = useState([]);
+  const [velocityZTimeSeries, setVelocityZTimeSeries] = useState([]);
+
   const [gyroXTimeSeries, setGyroXTimeSeries] = useState([]);
   const [gyroYTimeSeries, setGyroYTimeSeries] = useState([]);
   const [gyroZTimeSeries, setGyroZTimeSeries] = useState([]);
@@ -31,27 +35,69 @@ function App() {
   const [angleZTimeSeries, setAngleZTimeSeries] = useState([]);
 
   useEffect(()=>{
-    
-    axios.get('http://localhost:5000/firebase/FridayPuppyRun/accel/X').then(response => {
+
+    axios.get('http://localhost:5000/firebase/averages/FridayPuppyRun/accel/X').then(response => {
       console.log("SUCCESS", response.data)
       setAccelerationXTimeSeries(response.data)
     }).catch(error => {
       console.log(error)
     })
 
-    axios.get('http://localhost:5000/firebase/FridayPuppyRun/accel/Y').then(response => {
+    axios.get('http://localhost:5000/firebase/averages/FridayPuppyRun/accel/Y').then(response => {
       console.log("SUCCESS", response.data)
       setAccelerationYTimeSeries(response.data)
     }).catch(error => {
       console.log(error)
     })
 
-    axios.get('http://localhost:5000/firebase/FridayPuppyRun/accel/Z').then(response => {
+    axios.get('http://localhost:5000/firebase/averages/FridayPuppyRun/accel/Z').then(response => {
       console.log("SUCCESS", response.data)
       setAccelerationZTimeSeries(response.data)
     }).catch(error => {
       console.log(error)
     })
+
+    axios.get('http://localhost:5000/firebase/velocity/FridayPuppyRun/accel/X').then(response => {
+      console.log("SUCCESS", response.data)
+      setVelocityXTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+
+    axios.get('http://localhost:5000/firebase/velocity/FridayPuppyRun/accel/Y').then(response => {
+      console.log("SUCCESS", response.data)
+      setVelocityYTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+
+    axios.get('http://localhost:5000/firebase/velocity/FridayPuppyRun/accel/Z').then(response => {
+      console.log("SUCCESS", response.data)
+      setVelocityZTimeSeries(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+    
+    // axios.get('http://localhost:5000/firebase/FridayPuppyRun/accel/X').then(response => {
+    //   console.log("SUCCESS", response.data)
+    //   setAccelerationXTimeSeries(response.data)
+    // }).catch(error => {
+    //   console.log(error)
+    // })
+
+    // axios.get('http://localhost:5000/firebase/FridayPuppyRun/accel/Y').then(response => {
+    //   console.log("SUCCESS", response.data)
+    //   setAccelerationYTimeSeries(response.data)
+    // }).catch(error => {
+    //   console.log(error)
+    // })
+
+    // axios.get('http://localhost:5000/firebase/FridayPuppyRun/accel/Z').then(response => {
+    //   console.log("SUCCESS", response.data)
+    //   setAccelerationZTimeSeries(response.data)
+    // }).catch(error => {
+    //   console.log(error)
+    // })
 
     axios.get('http://localhost:5000/firebase/FridayPuppyRun/gyro/X').then(response => {
       console.log("SUCCESS", response.data)
@@ -137,9 +183,13 @@ function App() {
     <div className="App">
       <Home accel={accelData} gyro={gyroData} mag={magData} angle={angleData}/>
       <Image fluid src={imageURL} />
-      <Chart timeSeries = {accelerationXTimeSeries} direction = "X"/>
-      <Chart timeSeries = {accelerationYTimeSeries}direction = "Y" />
-      <Chart timeSeries = {accelerationZTimeSeries} direction = "Z"/>
+      <Chart timeSeries = {accelerationXTimeSeries} data_name = "Average Acceleration X"/>
+      <Chart timeSeries = {accelerationYTimeSeries} data_name = "Average Acceleration Y" />
+      <Chart timeSeries = {accelerationZTimeSeries} data_name = "Average Acceleration Z"/>
+
+      <Chart timeSeries = {velocityXTimeSeries} data_name = "Average Velocity X"/>
+      <Chart timeSeries = {velocityYTimeSeries} data_name = "Average Velocity Y" />
+      <Chart timeSeries = {velocityZTimeSeries} data_name = "Average Velocity Z"/>
 </div>
   );
 }
