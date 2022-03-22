@@ -1,0 +1,5956 @@
+{
+  "2-push" : {
+    "accel" : {
+      "X" : {
+        "-MySd5sw-mCDM67tHvih" : {
+          "Time" : 1.6476172731112773E9,
+          "Value" : 3.2632968627929686
+        },
+        "-MySd61vf7lT4keG0aBk" : {
+          "Time" : 1.6476172740171509E9,
+          "Value" : 3.6152445068359373
+        },
+        "-MySd6CU8IfFgZx7slT-" : {
+          "Time" : 1.6476172746954236E9,
+          "Value" : 3.603273498535156
+        },
+        "-MySd6NHFSZWX-CZhid_" : {
+          "Time" : 1.6476172753847697E9,
+          "Value" : 3.5434184570312497
+        },
+        "-MySd6XfZJMTL3Nkpjsm" : {
+          "Time" : 1.6476172760543356E9,
+          "Value" : 3.6104561035156246
+        },
+        "-MySd6ghQn4s6xAjEQ_d" : {
+          "Time" : 1.6476172766915483E9,
+          "Value" : 3.6367923217773437
+        },
+        "-MySd6r4Owt2c5xcGHH5" : {
+          "Time" : 1.6476172773565059E9,
+          "Value" : 3.641580725097656
+        },
+        "-MySe71cXX0x_qBl57E5" : {
+          "Time" : 1.6476175400228093E9,
+          "Value" : -0.13168109130859373
+        },
+        "-MySe7CVpk_YaVwQ99JO" : {
+          "Time" : 1.6476175409357376E9,
+          "Value" : -0.1292868896484375
+        },
+        "-MySe7NNcTEhRToBojcu" : {
+          "Time" : 1.647617541628289E9,
+          "Value" : -0.16280571289062498
+        },
+        "-MySe7Y-anqbDeJ6vycI" : {
+          "Time" : 1.647617542308556E9,
+          "Value" : -0.16519991455078123
+        },
+        "-MySjw15DYD8egT-4ECg" : {
+          "Time" : 1.6476190636569395E9,
+          "Value" : -0.7876923461914062
+        },
+        "-MySjwB5a8RVU_8LC5VR" : {
+          "Time" : 1.6476190645489793E9,
+          "Value" : -0.7206546997070312
+        },
+        "-MySjwLeY6YzeYaOoYfm" : {
+          "Time" : 1.6476190652253487E9,
+          "Value" : -0.7733271362304687
+        },
+        "-MySjwWEexYzztQ6hV3d" : {
+          "Time" : 1.647619065902243E9,
+          "Value" : -0.7637503295898437
+        },
+        "-MySjwfq1XYiIyfofr5b" : {
+          "Time" : 1.6476190665837002E9,
+          "Value" : -0.7948749511718749
+        },
+        "-MySjwqkNdc36PoatzeZ" : {
+          "Time" : 1.6476190672793689E9,
+          "Value" : -0.718260498046875
+        },
+        "-MySlyIdWPD9220HABN7" : {
+          "Time" : 1.6476195972858584E9,
+          "Value" : -1.6831237670898436
+        },
+        "-MySlyUFyQTylRYUHUJu" : {
+          "Time" : 1.6476195982631109E9,
+          "Value" : -3.7924154296875
+        },
+        "-MySlydmxXDt3s04yAON" : {
+          "Time" : 1.6476195989365728E9,
+          "Value" : -9.739612353515625
+        },
+        "-MySlyoTD7PtldBLy8sO" : {
+          "Time" : 1.6476195996180785E9,
+          "Value" : -11.575965026855467
+        },
+        "-MySlyzJtkA2Jfjf5pFo" : {
+          "Time" : 1.647619600313867E9,
+          "Value" : -4.778826513671874
+        },
+        "-MySlz9TxeZm3P7qrUaI" : {
+          "Time" : 1.6476196010287821E9,
+          "Value" : -0.2753331909179687
+        },
+        "-MySlzLFs2tMQIENVbjy" : {
+          "Time" : 1.647619601770276E9,
+          "Value" : -2.8131869506835936
+        },
+        "-MySlzWlvY6Z_QSDmzjr" : {
+          "Time" : 1.6476196025206554E9,
+          "Value" : -3.3590649291992185
+        },
+        "-MySlzhN5VMc3LBkH9AV" : {
+          "Time" : 1.647619603258593E9,
+          "Value" : -3.785232824707031
+        },
+        "-MySlzsGz7JGbvrGnTXY" : {
+          "Time" : 1.6476196039609213E9,
+          "Value" : -4.129997863769531
+        },
+        "-MySm-6KQ9wzIjzD_R03" : {
+          "Time" : 1.6476196046494877E9,
+          "Value" : -4.043806604003906
+        },
+        "-MySm-HVKGjvY9n9Mz1U" : {
+          "Time" : 1.6476196056358848E9,
+          "Value" : -4.264073156738281
+        },
+        "-MySm-SFbxwGqsbp1nrA" : {
+          "Time" : 1.6476196063220701E9,
+          "Value" : -4.055777612304687
+        },
+        "-MySm-c0qVS5CQGiwnsS" : {
+          "Time" : 1.6476196070176144E9,
+          "Value" : -4.311957189941406
+        },
+        "-MySm-o2_6je8MCtJh6b" : {
+          "Time" : 1.6476196077832727E9,
+          "Value" : -2.360682836914062
+        },
+        "-MySm-zFU6h8GdfhKzDh" : {
+          "Time" : 1.6476196085039704E9,
+          "Value" : -3.5410242553710933
+        },
+        "-MySm08uI2z8GB9zpX0X" : {
+          "Time" : 1.6476196091834586E9,
+          "Value" : -11.123460913085937
+        },
+        "-MySm0JObcCzeOsO5PnU" : {
+          "Time" : 1.6476196098589857E9,
+          "Value" : -0.8643067993164062
+        },
+        "-MySmJq3wNvkeEaQCHg9" : {
+          "Time" : 1.647619689617486E9,
+          "Value" : -9.320627062988281
+        },
+        "-MySmKAD3Ps3tYq_wjIB" : {
+          "Time" : 1.647619690587606E9,
+          "Value" : -9.208099584960937
+        },
+        "-MySmKLWKPZAcDMrSG_s" : {
+          "Time" : 1.6476196919262536E9,
+          "Value" : -9.332598071289063
+        },
+        "-MySmKXLiBpA3BV8mP5l" : {
+          "Time" : 1.6476196926843522E9,
+          "Value" : -8.12113203125
+        },
+        "-MySmKguGACTrtyakR5Z" : {
+          "Time" : 1.6476196933581283E9,
+          "Value" : -9.457096557617186
+        },
+        "-MySmKrPOGkNVUDEHR9M" : {
+          "Time" : 1.6476196940313306E9,
+          "Value" : -9.0788126953125
+        },
+        "-MySmL3xqeBhMIeWIOwp" : {
+          "Time" : 1.647619694900582E9,
+          "Value" : -8.877699755859375
+        },
+        "-MySmLEVx57xKHaRgMle" : {
+          "Time" : 1.6476196955721447E9,
+          "Value" : -9.165003955078124
+        },
+        "-MySmLPjzFIbzQ0Mbu-o" : {
+          "Time" : 1.647619696250517E9,
+          "Value" : -9.289502441406249
+        },
+        "-MySmL_dcgyF7Flm0iDH" : {
+          "Time" : 1.6476196969895473E9,
+          "Value" : -9.239224206542968
+        },
+        "-MySmLnh1Fccty-Q11_b" : {
+          "Time" : 1.6476196976912465E9,
+          "Value" : -9.33978067626953
+        },
+        "-MySmLxQljxmad0b6PDK" : {
+          "Time" : 1.647619698514233E9,
+          "Value" : -9.777919580078125
+        },
+        "-MySmM6pXgpVKkvqbt7O" : {
+          "Time" : 1.647619699180484E9,
+          "Value" : -8.954314208984375
+        },
+        "-MySmMHPAY8eNwHKpd-7" : {
+          "Time" : 1.6476196998566868E9,
+          "Value" : -9.411606726074218
+        },
+        "-MySmMS6_9rlwgdV0Me3" : {
+          "Time" : 1.647619700541602E9,
+          "Value" : -8.884882360839843
+        },
+        "-MySmMbSI8U0e6N-nA1A" : {
+          "Time" : 1.6476197012041883E9,
+          "Value" : -9.0788126953125
+        },
+        "-MySmMlr6h2rl6s2aBE7" : {
+          "Time" : 1.6476197018697615E9,
+          "Value" : -9.10993731689453
+        },
+        "-MySmMwJiy8wYRdeyZW3" : {
+          "Time" : 1.6476197025396914E9,
+          "Value" : -9.035717065429687
+        },
+        "-MySmN5m6xEzmdPvyjUY" : {
+          "Time" : 1.647619703207513E9,
+          "Value" : -9.239224206542968
+        },
+        "-MySmNHm_6nAFyllfN8V" : {
+          "Time" : 1.6476197039754703E9,
+          "Value" : -9.402029919433593
+        },
+        "-MySmNVvjZ3l6oKVR-U2" : {
+          "Time" : 1.647619704658138E9,
+          "Value" : -8.815450512695312
+        },
+        "-MySmNeyKkxhSrzIve3t" : {
+          "Time" : 1.6476197055252125E9,
+          "Value" : -8.916006982421875
+        },
+        "-MySmNxDiW9hGHJ-jGFK" : {
+          "Time" : 1.6476197061900003E9,
+          "Value" : -9.526528405761718
+        },
+        "-MySmO75DEFnM51euOR6" : {
+          "Time" : 1.64761970739046E9,
+          "Value" : -9.181763366699219
+        },
+        "-MySmOICiHqEOyG7JDFi" : {
+          "Time" : 1.6476197081008332E9,
+          "Value" : -9.124302526855468
+        },
+        "-MySmOSyEJtOWKThXXXE" : {
+          "Time" : 1.6476197087901092E9,
+          "Value" : -9.129090930175781
+        },
+        "-MySmOce2UalvMEedAoa" : {
+          "Time" : 1.6476197094725022E9,
+          "Value" : -9.184157568359375
+        },
+        "-MySmOn1RBVN4m0amRBc" : {
+          "Time" : 1.6476197101410172E9,
+          "Value" : -9.188945971679686
+        },
+        "-MySmPAai3FB5wTgQtsY" : {
+          "Time" : 1.6476197108301954E9,
+          "Value" : -9.210493786621093
+        },
+        "-MySmPLVgQMjIKH7zm8L" : {
+          "Time" : 1.6476197124091043E9,
+          "Value" : -8.951920007324219
+        },
+        "-MySmPZZSubCFyGGUYbi" : {
+          "Time" : 1.6476197131016293E9,
+          "Value" : -9.124302526855468
+        },
+        "-MySmPibj7h-uI-keryu" : {
+          "Time" : 1.647619713953224E9,
+          "Value" : -9.112331518554686
+        },
+        "-MySmPtw7TeWPLwe7ryw" : {
+          "Time" : 1.6476197146782055E9,
+          "Value" : -9.107543115234375
+        },
+        "-MySmQ8BGrHYTfPAs8af" : {
+          "Time" : 1.6476197153627388E9,
+          "Value" : -9.265560424804686
+        },
+        "-MySmQZZzOMt5GcMJtoC" : {
+          "Time" : 1.6476197174101744E9,
+          "Value" : -3.1364041748046874
+        },
+        "-MySmQjVbMjLYmUg5lcg" : {
+          "Time" : 1.6476197181040542E9,
+          "Value" : -5.449202978515625
+        },
+        "-MySmQuvIfU1COhMa6Po" : {
+          "Time" : 1.6476197188338392E9,
+          "Value" : -3.864241479492187
+        },
+        "-MySmR6_hDNFSKcZhr9X" : {
+          "Time" : 1.6476197196293712E9,
+          "Value" : -0.32561142578124996
+        },
+        "-MySmRH6Pd3aU2g8apIZ" : {
+          "Time" : 1.6476197203228803E9,
+          "Value" : -2.2553379638671873
+        },
+        "-MySmRRSvh3dvXm0ZGyf" : {
+          "Time" : 1.6476197209829924E9,
+          "Value" : -3.3973721557617185
+        },
+        "-MySmRfKWt48lq5BVH7X" : {
+          "Time" : 1.647619721693708E9,
+          "Value" : -5.45877978515625
+        },
+        "-MySmSADvfMzKErrv1ed" : {
+          "Time" : 1.6476197239690335E9,
+          "Value" : -6.785167504882812
+        },
+        "-MySmSKh6mtiAaLiRd2y" : {
+          "Time" : 1.6476197246424835E9,
+          "Value" : 0.7924807495117187
+        },
+        "-MySmSVHlBGmWZ39iDFy" : {
+          "Time" : 1.6476197253168578E9,
+          "Value" : -3.5506010620117183
+        },
+        "-MySmSf8i-PneAcTCWbf" : {
+          "Time" : 1.6476197260107777E9,
+          "Value" : -4.151545678710937
+        },
+        "-MySmSqVjeeikRhG00tE" : {
+          "Time" : 1.647619726736941E9,
+          "Value" : -3.3399113159179685
+        },
+        "-MySmT0-45jnjMeFjODo" : {
+          "Time" : 1.6476197274111173E9,
+          "Value" : -9.0788126953125
+        },
+        "-MySmTAmLUi7Svh4H6BL" : {
+          "Time" : 1.6476197280993867E9,
+          "Value" : -8.080430603027343
+        },
+        "-MySmTZJaH-mFfG8UA1k" : {
+          "Time" : 1.64761972877911E9,
+          "Value" : -6.124367846679687
+        },
+        "-MySmTipY7P3_Kkyqyv-" : {
+          "Time" : 1.647619730341118E9,
+          "Value" : -11.489773767089844
+        },
+        "-MySmTxDNGufiHmXEVE8" : {
+          "Time" : 1.647619731056797E9,
+          "Value" : -5.798756420898437
+        },
+        "-MySmU60iao91BJCz4lC" : {
+          "Time" : 1.647619731892536E9,
+          "Value" : -4.00310517578125
+        },
+        "-MySmUGsZOIVpNOmPUnG" : {
+          "Time" : 1.6476197325836792E9,
+          "Value" : -3.4907460205078125
+        },
+        "-MySmURKigjHa-UWBNKB" : {
+          "Time" : 1.6476197332473388E9,
+          "Value" : -4.393360046386719
+        },
+        "-MySmUb4PJeHI-Ocnx3A" : {
+          "Time" : 1.6476197339317832E9,
+          "Value" : -1.5610194824218748
+        },
+        "-MySmUlQvNNJQ31VwS4m" : {
+          "Time" : 1.6476197346014516E9,
+          "Value" : -7.41244833984375
+        },
+        "-MySmUw-aXXU7qJX9Zlr" : {
+          "Time" : 1.6476197352715502E9,
+          "Value" : -4.050989208984375
+        },
+        "-MySmV5gC6uxNdyC_EEa" : {
+          "Time" : 1.6476197359604993E9,
+          "Value" : -4.996698864746094
+        },
+        "-MySmVHN70Ecqe6H3Mub" : {
+          "Time" : 1.6476197367065039E9,
+          "Value" : -1.5275006591796874
+        },
+        "-MySmVSKZGmYuSPnBccR" : {
+          "Time" : 1.6476197374096816E9,
+          "Value" : -2.1619640991210938
+        },
+        "-MySmVf7AFmThRxkOpex" : {
+          "Time" : 1.6476197380876148E9,
+          "Value" : -2.3774422485351563
+        },
+        "-MySmVoxWDg6_MYQtVsP" : {
+          "Time" : 1.6476197389224482E9,
+          "Value" : -2.8036101440429686
+        },
+        "-MySmVzkLRxQSKJLASwX" : {
+          "Time" : 1.6476197396115427E9,
+          "Value" : -2.6815058593749996
+        },
+        "-MySmW9QAecHVMSShl0a" : {
+          "Time" : 1.6476197402789333E9,
+          "Value" : -2.7461493041992187
+        },
+        "-MySmWO43U_EdDaFbwb2" : {
+          "Time" : 1.6476197411616843E9,
+          "Value" : -3.5721488769531247
+        },
+        "-MySmWZpNbXakxdDbT1n" : {
+          "Time" : 1.647619741983272E9,
+          "Value" : -3.9887399658203124
+        },
+        "-MySmWjJJ8xgJwcZXkxA" : {
+          "Time" : 1.6476197426532445E9,
+          "Value" : -4.551377355957031
+        },
+        "-MySmWtvcYNFglM0Gtdb" : {
+          "Time" : 1.6476197433345723E9,
+          "Value" : -4.6447512207031245
+        },
+        "-MySmX3rZ_lddgpxqqdp" : {
+          "Time" : 1.6476197440331895E9,
+          "Value" : -4.627991809082031
+        },
+        "-MySmXEL5Rx-VzxKXEs6" : {
+          "Time" : 1.6476197447046967E9,
+          "Value" : -4.671087438964843
+        },
+        "-MySmXS58Dbkqtpdesv_" : {
+          "Time" : 1.6476197453862875E9,
+          "Value" : -4.398148449707031
+        },
+        "-MySmXawOBpwZWIshk6k" : {
+          "Time" : 1.6476197462138283E9,
+          "Value" : -4.498704919433593
+        },
+        "-MySmXmFfv_OnX3Y3BAs" : {
+          "Time" : 1.6476197469384701E9,
+          "Value" : -4.934449621582031
+        },
+        "-MySmXwrQWkW0EX8RxyB" : {
+          "Time" : 1.6476197476163085E9,
+          "Value" : -4.651933825683593
+        },
+        "-MySmY6Sk1r5FWNTZgeU" : {
+          "Time" : 1.6476197482933865E9,
+          "Value" : -4.544194750976562
+        },
+        "-MySmYHEw3FQYA8yrLqQ" : {
+          "Time" : 1.6476197489842541E9,
+          "Value" : -4.565742565917969
+        },
+        "-MySmYRqEchaXENd9DvR" : {
+          "Time" : 1.6476197496600728E9,
+          "Value" : -4.560954162597656
+        },
+        "-MySmYbJErb3pRTI8Ib6" : {
+          "Time" : 1.647619750333019E9,
+          "Value" : -4.477157104492187
+        },
+        "-MySmYmXnBPsv7kkLIMJ" : {
+          "Time" : 1.6476197510120318E9,
+          "Value" : -4.563348364257812
+        },
+        "-MySmYxPsusRrHw8Tb9M" : {
+          "Time" : 1.6476197517463577E9,
+          "Value" : -2.6527754394531247
+        },
+        "-MySmZAIY_Tq-LjjiA_A" : {
+          "Time" : 1.6476197524310403E9,
+          "Value" : -6.019022973632812
+        },
+        "-MySmZKDwyqCwXplWUqS" : {
+          "Time" : 1.6476197532708619E9,
+          "Value" : -3.23696064453125
+        },
+        "-MySmZbp9KsjPIe7h2Gb" : {
+          "Time" : 1.6476197544617252E9,
+          "Value" : -1.7310078002929687
+        },
+        "-MySmZmE0_ar8v5kBKcw" : {
+          "Time" : 1.6476197551271925E9,
+          "Value" : -4.161122485351562
+        },
+        "-MySmZwnSr-KN0W6k5JI" : {
+          "Time" : 1.6476197558013775E9,
+          "Value" : -4.340687609863281
+        },
+        "-MySm_6S9OsL-vDcvVjr" : {
+          "Time" : 1.6476197564887953E9,
+          "Value" : -0.36631285400390623
+        },
+        "-MySm_Gq3rdYhIa7BMul" : {
+          "Time" : 1.6476197571480105E9,
+          "Value" : 0.0383072265625
+        },
+        "-MySm_RXI9lEknzyVFs6" : {
+          "Time" : 1.647619757832099E9,
+          "Value" : -1.484405029296875
+        },
+        "-MySm_bGKHYy0axFwpXd" : {
+          "Time" : 1.6476197585175254E9,
+          "Value" : -1.3862427612304686
+        },
+        "-MySm_lvRhbYNC-1gyMS" : {
+          "Time" : 1.6476197592005699E9,
+          "Value" : -1.8555062866210936
+        },
+        "-MySm_zvHYF-pqZ_0E8J" : {
+          "Time" : 1.6476197598985221E9,
+          "Value" : 1.4341267944335936
+        },
+        "-MySma8qwC3EM42uGoma" : {
+          "Time" : 1.6476197607266662E9,
+          "Value" : -7.651868505859374
+        },
+        "-MySmaJRB4OvhpCTDS6a" : {
+          "Time" : 1.647619761409565E9,
+          "Value" : -8.13310303955078
+        },
+        "-MySmaTsYz7EmoC1HwrZ" : {
+          "Time" : 1.6476197620809858E9,
+          "Value" : -6.248866333007812
+        },
+        "-MySmadCf3_0WHghvT6z" : {
+          "Time" : 1.6476197627394838E9,
+          "Value" : -4.240131140136718
+        },
+        "-MySmaoNkBq219HtfLOo" : {
+          "Time" : 1.6476197634532788E9,
+          "Value" : -4.271255761718749
+        },
+        "-MySmaz-FV8thQCYOnVS" : {
+          "Time" : 1.6476197641349137E9,
+          "Value" : -2.961627453613281
+        },
+        "-MySmb8gOiyqYGA_qaGk" : {
+          "Time" : 1.6476197648178263E9,
+          "Value" : -4.187458703613281
+        },
+        "-MySmbJCeVjgmlYHB07r" : {
+          "Time" : 1.647619765490326E9,
+          "Value" : -5.209782812499999
+        },
+        "-MySmbU8iuomk1HahXZa" : {
+          "Time" : 1.6476197661885593E9,
+          "Value" : -1.6304513305664061
+        },
+        "-MySmbhEcoDnqrqi4wOq" : {
+          "Time" : 1.647619766892465E9,
+          "Value" : -2.750937707519531
+        },
+        "-MySmbrd25FqNdyefxIh" : {
+          "Time" : 1.6476197677573915E9,
+          "Value" : -6.643909606933593
+        },
+        "-MySmc18RwK3ZIB_0C9T" : {
+          "Time" : 1.6476197684302762E9,
+          "Value" : -9.198522778320312
+        },
+        "-MySmcBWNs9CsLXuXBUp" : {
+          "Time" : 1.6476197690893006E9,
+          "Value" : -6.6702458251953125
+        },
+        "-MySmcLsoY4IlA9Fte_i" : {
+          "Time" : 1.6476197697567694E9,
+          "Value" : -7.017405065917968
+        },
+        "-MySmcWLjBAj1dqrqve7" : {
+          "Time" : 1.647619770426971E9,
+          "Value" : -6.49307490234375
+        },
+        "-MySmcg12fwClTrXKDEw" : {
+          "Time" : 1.6476197711118574E9,
+          "Value" : -7.625532287597656
+        },
+        "-MySmcqY7VgzhtG_zlh7" : {
+          "Time" : 1.6476197717842963E9,
+          "Value" : -5.080495922851562
+        },
+        "-MySmd0BVbX-vANVx1xa" : {
+          "Time" : 1.6476197724669983E9,
+          "Value" : 0.040701428222656245
+        },
+        "-MySmdBSvgr8_dZQxdub" : {
+          "Time" : 1.6476197731862879E9,
+          "Value" : -1.3215993164062498
+        },
+        "-MySmdOuyJb5PLePdNPt" : {
+          "Time" : 1.6476197738636131E9,
+          "Value" : -1.4796166259765624
+        },
+        "-MySmdZE9SZHyybkrHDh" : {
+          "Time" : 1.647619774693274E9,
+          "Value" : -1.0941501586914062
+        },
+        "-MySmdiamuVnBMcVzfdH" : {
+          "Time" : 1.6476197753729246E9,
+          "Value" : -1.199495031738281
+        },
+        "-MySmdsmbOzaddZ4EIOx" : {
+          "Time" : 1.6476197760199223E9,
+          "Value" : -1.3910311645507811
+        },
+        "-MySme29z7TU-8OlCh0C" : {
+          "Time" : 1.6476197766845973E9,
+          "Value" : -1.7980454467773437
+        },
+        "-MySmeCkRSYTUpIuvuqx" : {
+          "Time" : 1.6476197773644009E9,
+          "Value" : -2.281674182128906
+        },
+        "-MySmeNL7izWYzkx80-C" : {
+          "Time" : 1.647619778044512E9,
+          "Value" : -9.931148486328125
+        },
+        "-MySmeehTEgJbNwF4E20" : {
+          "Time" : 1.647619779218171E9,
+          "Value" : -7.805097412109374
+        },
+        "-MySmeq1IlrJwES7cC6C" : {
+          "Time" : 1.6476197799429197E9,
+          "Value" : -5.585672473144531
+        },
+        "-MySmf-jQLvNtdjdV0GE" : {
+          "Time" : 1.6476197806187546E9,
+          "Value" : -2.214636535644531
+        },
+        "-MySmfDVfaen-gHw0lEc" : {
+          "Time" : 1.647619781308111E9,
+          "Value" : -3.2154128295898436
+        },
+        "-MySmfNIW4A5vPkqnIwt" : {
+          "Time" : 1.6476197821371238E9,
+          "Value" : -4.527435339355469
+        },
+        "-MySmfXgiFC1BzB_Nvf9" : {
+          "Time" : 1.6476197828003287E9,
+          "Value" : -3.7134067749023436
+        },
+        "-MySmfhNI-ggkT9sSo4H" : {
+          "Time" : 1.6476197834836464E9,
+          "Value" : -4.608838195800781
+        },
+        "-MySmfrzXhD4pQH98mYd" : {
+          "Time" : 1.647619784162109E9,
+          "Value" : -3.6750995483398436
+        },
+        "-MySmg1VhsJ1PaL9_I_n" : {
+          "Time" : 1.6476197848337917E9,
+          "Value" : -3.859453076171875
+        },
+        "-MySmgBv7kx7qHhb-FHJ" : {
+          "Time" : 1.6476197855012398E9,
+          "Value" : -5.887341882324218
+        },
+        "-MySmgMugALAtO2qmHmm" : {
+          "Time" : 1.6476197862052703E9,
+          "Value" : -1.89620771484375
+        },
+        "-MySmgXJ87SLTafBda8p" : {
+          "Time" : 1.6476197868716972E9,
+          "Value" : -3.708618371582031
+        },
+        "-MySmggkPuBnGLfgn7To" : {
+          "Time" : 1.647619787539824E9,
+          "Value" : -2.530671154785156
+        }
+      },
+      "Y" : {
+        "-MySd5tgwFMJ2anCO6iK" : {
+          "Time" : 1.6476172731112773E9,
+          "Value" : -0.076614453125
+        },
+        "-MySd62qVDemoNwm-hak" : {
+          "Time" : 1.6476172740171509E9,
+          "Value" : -0.0383072265625
+        },
+        "-MySd6DPnK072bItadXp" : {
+          "Time" : 1.6476172746954236E9,
+          "Value" : -0.0430956298828125
+        },
+        "-MySd6O4RAnK6Aonm-H1" : {
+          "Time" : 1.6476172753847697E9,
+          "Value" : 0.00239420166015625
+        },
+        "-MySd6YQrwRf0_9uWxZB" : {
+          "Time" : 1.6476172760543356E9,
+          "Value" : -0.062249243164062495
+        },
+        "-MySd6hXZAS7_DWkCdRf" : {
+          "Time" : 1.6476172766915483E9,
+          "Value" : 0.00239420166015625
+        },
+        "-MySd6rw1GIVuHgUsQ8_" : {
+          "Time" : 1.6476172773565059E9,
+          "Value" : 0.011971008300781249
+        },
+        "-MySe72Y3VvG6uyFkB6B" : {
+          "Time" : 1.6476175400228093E9,
+          "Value" : 5.72693037109375
+        },
+        "-MySe7DUDVB6z6uIdqgE" : {
+          "Time" : 1.6476175409357376E9,
+          "Value" : 5.734112976074218
+        },
+        "-MySe7ODSj73n3fVv6aI" : {
+          "Time" : 1.647617541628289E9,
+          "Value" : 5.7317187744140625
+        },
+        "-MySe7Yu6xOViNrg5-5A" : {
+          "Time" : 1.647617542308556E9,
+          "Value" : 5.664681127929687
+        },
+        "-MySjw1sg2yH9EIQD-kT" : {
+          "Time" : 1.6476190636569395E9,
+          "Value" : 3.047818713378906
+        },
+        "-MySjwBuEYKhLuL2lNve" : {
+          "Time" : 1.6476190645489793E9,
+          "Value" : 3.0430303100585934
+        },
+        "-MySjwMYTwi2_ClYIJru" : {
+          "Time" : 1.6476190652253487E9,
+          "Value" : 3.0645781249999997
+        },
+        "-MySjwXAyBewBT3dja0Q" : {
+          "Time" : 1.647619065902243E9,
+          "Value" : 3.0502129150390624
+        },
+        "-MySjwgjPPaIhQ2x0G4V" : {
+          "Time" : 1.6476190665837002E9,
+          "Value" : 3.0334535034179684
+        },
+        "-MySjwrcrGEwI5McaVJ7" : {
+          "Time" : 1.6476190672793689E9,
+          "Value" : 3.0430303100585934
+        },
+        "-MySlyJONN426Og1MR-R" : {
+          "Time" : 1.6476195972858584E9,
+          "Value" : 6.636727001953124
+        },
+        "-MySlyV6q-P7bPYUd7Cf" : {
+          "Time" : 1.6476195982631109E9,
+          "Value" : 5.475539196777343
+        },
+        "-MySlyebciGJX1zaVsLD" : {
+          "Time" : 1.6476195989365728E9,
+          "Value" : 1.467645617675781
+        },
+        "-MySlypYxpK2-3_5LC_T" : {
+          "Time" : 1.6476195996180785E9,
+          "Value" : 13.046004846191405
+        },
+        "-MySlz-BZDe36XyIpl_U" : {
+          "Time" : 1.647619600313867E9,
+          "Value" : 4.553771557617187
+        },
+        "-MySlzAMJR3NRIj9jJAC" : {
+          "Time" : 1.6476196010287821E9,
+          "Value" : -0.7781155395507812
+        },
+        "-MySlzMDIwt_fpvtHmFP" : {
+          "Time" : 1.647619601770276E9,
+          "Value" : 4.709394665527343
+        },
+        "-MySlzXl1ymsTiGa1_XI" : {
+          "Time" : 1.6476196025206554E9,
+          "Value" : 4.797980126953124
+        },
+        "-MySlziGlrB7gFA7rthB" : {
+          "Time" : 1.647619603258593E9,
+          "Value" : 4.740519287109374
+        },
+        "-MySlzt73-2f0SiCeErL" : {
+          "Time" : 1.6476196039609213E9,
+          "Value" : 4.529829541015625
+        },
+        "-MySm-7ARikaMIe4SyuK" : {
+          "Time" : 1.6476196046494877E9,
+          "Value" : 4.661510632324219
+        },
+        "-MySm-IMv2SFgly9tzNY" : {
+          "Time" : 1.6476196056358848E9,
+          "Value" : 4.292803576660156
+        },
+        "-MySm-T9XBQzTLqlF3vB" : {
+          "Time" : 1.6476196063220701E9,
+          "Value" : 4.122815258789062
+        },
+        "-MySm-diX-T3D_tGW9D4" : {
+          "Time" : 1.6476196070176144E9,
+          "Value" : 3.4644098022460934
+        },
+        "-MySm-otZGZNyXMsjveS" : {
+          "Time" : 1.6476196077832727E9,
+          "Value" : 2.262520568847656
+        },
+        "-MySm0-5IzzOPIyT3qa6" : {
+          "Time" : 1.6476196085039704E9,
+          "Value" : -1.879448303222656
+        },
+        "-MySm09riC775fYeFqE3" : {
+          "Time" : 1.6476196091834586E9,
+          "Value" : -1.0199299072265624
+        },
+        "-MySm0KIelBLwXDJOCIr" : {
+          "Time" : 1.6476196098589857E9,
+          "Value" : 7.278373046874999
+        },
+        "-MySmJqzDovHfE5nyosa" : {
+          "Time" : 1.647619689617486E9,
+          "Value" : 0.4429273071289062
+        },
+        "-MySmKB7Z2kj52jjRjP0" : {
+          "Time" : 1.647619690587606E9,
+          "Value" : 0.5434837768554687
+        },
+        "-MySmKMOZm86cF6Fm5dm" : {
+          "Time" : 1.6476196919262536E9,
+          "Value" : 0.39983167724609375
+        },
+        "-MySmKYCVFqTyBFsGEA6" : {
+          "Time" : 1.6476196926843522E9,
+          "Value" : 0.8571241943359375
+        },
+        "-MySmKhpK1uvYDR1XWmo" : {
+          "Time" : 1.6476196933581283E9,
+          "Value" : 2.5139117431640625
+        },
+        "-MySmKsJ1Ix9KT3LnciT" : {
+          "Time" : 1.6476196940313306E9,
+          "Value" : 0.22266075439453123
+        },
+        "-MySmL4pCEOJ5eeWejF4" : {
+          "Time" : 1.647619694900582E9,
+          "Value" : 0.28730419921875
+        },
+        "-MySmLFPRqd0Hb98ztQS" : {
+          "Time" : 1.6476196955721447E9,
+          "Value" : 0.354341845703125
+        },
+        "-MySmLQYRf_Ix1peZAm6" : {
+          "Time" : 1.647619696250517E9,
+          "Value" : 0.45010991210937495
+        },
+        "-MySmLaXBESP-5ZyQZbs" : {
+          "Time" : 1.6476196969895473E9,
+          "Value" : 0.45489831542968745
+        },
+        "-MySmLoPNDACJUpy0IhH" : {
+          "Time" : 1.6476196976912465E9,
+          "Value" : 0.8762778076171874
+        },
+        "-MySmLyH5rdiWmMxw7CC" : {
+          "Time" : 1.647619698514233E9,
+          "Value" : 1.7741034301757812
+        },
+        "-MySmM7fNyfX8MXbdUvX" : {
+          "Time" : 1.647619699180484E9,
+          "Value" : 0.8690952026367187
+        },
+        "-MySmMIHaWRM1T6JMdZ6" : {
+          "Time" : 1.6476196998566868E9,
+          "Value" : 0.12689268798828124
+        },
+        "-MySmMSzt_1FD-fldxrt" : {
+          "Time" : 1.647619700541602E9,
+          "Value" : -0.1005564697265625
+        },
+        "-MySmMcM0HJr4GHkf_Mz" : {
+          "Time" : 1.6476197012041883E9,
+          "Value" : 0.20350714111328125
+        },
+        "-MySmMmksXOiFN0JAgJG" : {
+          "Time" : 1.6476197018697615E9,
+          "Value" : 0.1388636962890625
+        },
+        "-MySmMxAKqmTnle_cA4k" : {
+          "Time" : 1.6476197025396914E9,
+          "Value" : 0.13168109130859373
+        },
+        "-MySmN6fG6Cq328r4Sd_" : {
+          "Time" : 1.647619703207513E9,
+          "Value" : -0.05027823486328125
+        },
+        "-MySmNIa5nzuOJ2QVEjO" : {
+          "Time" : 1.6476197039754703E9,
+          "Value" : 0.09816226806640624
+        },
+        "-MySmNWdYM_GtejTZyIA" : {
+          "Time" : 1.647619704658138E9,
+          "Value" : -0.12689268798828124
+        },
+        "-MySmNfpuniUCUxiwmhw" : {
+          "Time" : 1.6476197055252125E9,
+          "Value" : 0.009576806640625
+        },
+        "-MySmNy6XIyiGmxXmPlw" : {
+          "Time" : 1.6476197061900003E9,
+          "Value" : 0.16280571289062498
+        },
+        "-MySmO7zZB_Cay_oAQIq" : {
+          "Time" : 1.64761970739046E9,
+          "Value" : 0.3591302490234375
+        },
+        "-MySmOJ5NInenqAWvxix" : {
+          "Time" : 1.6476197081008332E9,
+          "Value" : 0.20350714111328125
+        },
+        "-MySmOTpGZsPWD_X5pXs" : {
+          "Time" : 1.6476197087901092E9,
+          "Value" : 0.13407529296874998
+        },
+        "-MySmOdWyg5K-wEDS4Ry" : {
+          "Time" : 1.6476197094725022E9,
+          "Value" : 0.16041151123046873
+        },
+        "-MySmOnr36tT5o68szQg" : {
+          "Time" : 1.6476197101410172E9,
+          "Value" : 0.10295067138671875
+        },
+        "-MySmPBkt1tRHasusb_1" : {
+          "Time" : 1.6476197108301954E9,
+          "Value" : 0.076614453125
+        },
+        "-MySmPMPFBoKp9BHZe0v" : {
+          "Time" : 1.6476197124091043E9,
+          "Value" : -0.03591302490234375
+        },
+        "-MySmP_In2RqWp9QUaC0" : {
+          "Time" : 1.6476197131016293E9,
+          "Value" : -0.20350714111328125
+        },
+        "-MySmPjS1BfqDRpsaANV" : {
+          "Time" : 1.647619713953224E9,
+          "Value" : -0.033518823242187495
+        },
+        "-MySmPum4W_CjPc3WPSP" : {
+          "Time" : 1.6476197146782055E9,
+          "Value" : -0.06464344482421874
+        },
+        "-MySmQ98pLmovpEIY56N" : {
+          "Time" : 1.6476197153627388E9,
+          "Value" : -0.8810662109374999
+        },
+        "-MySmQ_L2GR7mwrcCVUH" : {
+          "Time" : 1.6476197174101744E9,
+          "Value" : 0.047884033203124995
+        },
+        "-MySmQkWtrZwc9jzYx64" : {
+          "Time" : 1.6476197181040542E9,
+          "Value" : -3.88818349609375
+        },
+        "-MySmQvrxAWjGp3HrIzC" : {
+          "Time" : 1.6476197188338392E9,
+          "Value" : 1.1276689819335937
+        },
+        "-MySmR7R6DTYhV29nJkC" : {
+          "Time" : 1.6476197196293712E9,
+          "Value" : 7.194575988769531
+        },
+        "-MySmRI3TKAXJ8XAcsd3" : {
+          "Time" : 1.6476197203228803E9,
+          "Value" : 2.4947581298828125
+        },
+        "-MySmRSJnuJI3jDn5PyK" : {
+          "Time" : 1.6476197209829924E9,
+          "Value" : 8.037334973144532
+        },
+        "-MySmRgALJT2HtiNIMJh" : {
+          "Time" : 1.647619721693708E9,
+          "Value" : -18.011579089355468
+        },
+        "-MySmSB5FjJHi-KTujgq" : {
+          "Time" : 1.6476197239690335E9,
+          "Value" : 7.671022119140624
+        },
+        "-MySmSLcte_Yc5HNiXsM" : {
+          "Time" : 1.6476197246424835E9,
+          "Value" : 5.57370146484375
+        },
+        "-MySmSWA5tvXWAlXC3t8" : {
+          "Time" : 1.6476197253168578E9,
+          "Value" : 7.563283044433593
+        },
+        "-MySmSg1ZMzg3-bVBSFU" : {
+          "Time" : 1.6476197260107777E9,
+          "Value" : 11.767501159667969
+        },
+        "-MySmSrMp1TtYMnXErWz" : {
+          "Time" : 1.647619726736941E9,
+          "Value" : 10.395623608398436
+        },
+        "-MySmT0r4v7aeYLP-cpd" : {
+          "Time" : 1.6476197274111173E9,
+          "Value" : 2.272097375488281
+        },
+        "-MySmTBciykNvCLpvX-K" : {
+          "Time" : 1.6476197280993867E9,
+          "Value" : 0.7805097412109374
+        },
+        "-MySmT_C9OdpBYCqUYo9" : {
+          "Time" : 1.64761972877911E9,
+          "Value" : 4.637568615722656
+        },
+        "-MySmTkIzXhMmqCGPSDu" : {
+          "Time" : 1.647619730341118E9,
+          "Value" : 2.1260510742187497
+        },
+        "-MySmTxyaXCVuAuIoXZk" : {
+          "Time" : 1.647619731056797E9,
+          "Value" : 4.302380383300781
+        },
+        "-MySmU6zfABX5usJN5F-" : {
+          "Time" : 1.647619731892536E9,
+          "Value" : 3.356670727539062
+        },
+        "-MySmUHjJCnIP3N535bb" : {
+          "Time" : 1.6476197325836792E9,
+          "Value" : 3.995922570800781
+        },
+        "-MySmUSEDHLSh2eN_hWe" : {
+          "Time" : 1.6476197332473388E9,
+          "Value" : 3.0741549316406247
+        },
+        "-MySmUbtrizbNFKDAzY6" : {
+          "Time" : 1.6476197339317832E9,
+          "Value" : -0.7685387329101562
+        },
+        "-MySmUmGogLK7zQhXoCh" : {
+          "Time" : 1.6476197346014516E9,
+          "Value" : 3.3351229125976563
+        },
+        "-MySmUwvmB-OQlHsTAP4" : {
+          "Time" : 1.6476197352715502E9,
+          "Value" : 3.366247534179687
+        },
+        "-MySmV6_UMtViZ-H4CN4" : {
+          "Time" : 1.6476197359604993E9,
+          "Value" : 2.042254016113281
+        },
+        "-MySmVIFldgObGWulhkG" : {
+          "Time" : 1.6476197367065039E9,
+          "Value" : -0.7876923461914062
+        },
+        "-MySmVTAMpwxe8Ea-9Dg" : {
+          "Time" : 1.6476197374096816E9,
+          "Value" : -5.109226342773437
+        },
+        "-MySmVftQWb3ow9fYjV3" : {
+          "Time" : 1.6476197380876148E9,
+          "Value" : -3.6367923217773437
+        },
+        "-MySmVpnTjaVfq4G-ig7" : {
+          "Time" : 1.6476197389224482E9,
+          "Value" : -3.0262708984374997
+        },
+        "-MySmW-a9-YnXZhW7IJM" : {
+          "Time" : 1.6476197396115427E9,
+          "Value" : -3.878606689453125
+        },
+        "-MySmWAFgyMa8Nt2_6ea" : {
+          "Time" : 1.6476197402789333E9,
+          "Value" : -4.261678955078125
+        },
+        "-MySmWQF8w2eN158cmbc" : {
+          "Time" : 1.6476197411616843E9,
+          "Value" : -2.442085693359375
+        },
+        "-MySmW_gkjWUzJBZy11S" : {
+          "Time" : 1.647619741983272E9,
+          "Value" : -1.9728221679687499
+        },
+        "-MySmWkDQ6QJmoPWUXJO" : {
+          "Time" : 1.6476197426532445E9,
+          "Value" : -0.9002198242187499
+        },
+        "-MySmWunF5S7Q1a5rl5g" : {
+          "Time" : 1.6476197433345723E9,
+          "Value" : -1.1635820068359375
+        },
+        "-MySmX4jgcSfAenSa0IP" : {
+          "Time" : 1.6476197440331895E9,
+          "Value" : -1.0414777221679687
+        },
+        "-MySmXFEyHyWRKU377nn" : {
+          "Time" : 1.6476197447046967E9,
+          "Value" : -1.209071838378906
+        },
+        "-MySmXSqabgXvzkzo9X_" : {
+          "Time" : 1.6476197453862875E9,
+          "Value" : -1.4987702392578124
+        },
+        "-MySmXboehs4qVEA0Uov" : {
+          "Time" : 1.6476197462138283E9,
+          "Value" : -1.1468225952148436
+        },
+        "-MySmXn9RxsZZAZLO9pO" : {
+          "Time" : 1.6476197469384701E9,
+          "Value" : -1.7836802368164062
+        },
+        "-MySmXxjlBmetock3OD_" : {
+          "Time" : 1.6476197476163085E9,
+          "Value" : -1.7405846069335937
+        },
+        "-MySmY7JDMYxMgSTPPh1" : {
+          "Time" : 1.6476197482933865E9,
+          "Value" : -1.5442600708007812
+        },
+        "-MySmYI6u0rRrbNfbNri" : {
+          "Time" : 1.6476197489842541E9,
+          "Value" : -1.6232687255859375
+        },
+        "-MySmYSgz4PjhZEwmH5I" : {
+          "Time" : 1.6476197496600728E9,
+          "Value" : -1.458068811035156
+        },
+        "-MySmYcAV7kO8VEfKN-t" : {
+          "Time" : 1.647619750333019E9,
+          "Value" : -1.2904746948242187
+        },
+        "-MySmYnKm_F2x91eZeWD" : {
+          "Time" : 1.6476197510120318E9,
+          "Value" : -1.4053963745117186
+        },
+        "-MySmYyGIS90croXXp8B" : {
+          "Time" : 1.6476197517463577E9,
+          "Value" : -2.817975354003906
+        },
+        "-MySmZB27a9UePXQG656" : {
+          "Time" : 1.6476197524310403E9,
+          "Value" : 4.639962817382812
+        },
+        "-MySmZL6nM39Fn6Q3Kfy" : {
+          "Time" : 1.6476197532708619E9,
+          "Value" : -1.5825672973632812
+        },
+        "-MySmZcniN7D_PA58B0I" : {
+          "Time" : 1.6476197544617252E9,
+          "Value" : 4.077325427246094
+        },
+        "-MySmZn4ApbiRz4sI1lo" : {
+          "Time" : 1.6476197551271925E9,
+          "Value" : 2.147598889160156
+        },
+        "-MySmZxessxeYIBUatiD" : {
+          "Time" : 1.6476197558013775E9,
+          "Value" : 13.053187451171874
+        },
+        "-MySm_7CmLv3S9RjcW5Q" : {
+          "Time" : 1.6476197564887953E9,
+          "Value" : 5.923254907226562
+        },
+        "-MySm_HfCcVgID1HPjhX" : {
+          "Time" : 1.6476197571480105E9,
+          "Value" : 6.514622717285156
+        },
+        "-MySm_SPYIJEE9Xmkkix" : {
+          "Time" : 1.647619757832099E9,
+          "Value" : 7.819462622070312
+        },
+        "-MySm_c8rzy5L19QzyGc" : {
+          "Time" : 1.6476197585175254E9,
+          "Value" : 10.254365710449218
+        },
+        "-MySm_mmuWSyllPYfXTf" : {
+          "Time" : 1.6476197592005699E9,
+          "Value" : 10.826579907226561
+        },
+        "-MySma-gkSjVP28ZgbD4" : {
+          "Time" : 1.6476197598985221E9,
+          "Value" : 12.296619726562499
+        },
+        "-MySma9gWG-ezHigQ_aY" : {
+          "Time" : 1.6476197607266662E9,
+          "Value" : 8.508992700195313
+        },
+        "-MySmaKJr2XfRlJmHKpZ" : {
+          "Time" : 1.647619761409565E9,
+          "Value" : 2.779668127441406
+        },
+        "-MySmaUeEG4APVWPEfyN" : {
+          "Time" : 1.6476197620809858E9,
+          "Value" : 5.394136340332031
+        },
+        "-MySmae5sUvjaHGPcb1I" : {
+          "Time" : 1.6476197627394838E9,
+          "Value" : 6.763619689941406
+        },
+        "-MySmapEY2O4WSWAIHzm" : {
+          "Time" : 1.6476197634532788E9,
+          "Value" : 9.248801013183593
+        },
+        "-MySmazrYTKlJ0GofrZQ" : {
+          "Time" : 1.6476197641349137E9,
+          "Value" : 6.593631372070312
+        },
+        "-MySmb9cbkVFQvDXh8Do" : {
+          "Time" : 1.6476197648178263E9,
+          "Value" : 2.6958710693359373
+        },
+        "-MySmbK6ruYTZWLUipT5" : {
+          "Time" : 1.647619765490326E9,
+          "Value" : 3.2513258544921873
+        },
+        "-MySmbV1AUczcwP7tTH7" : {
+          "Time" : 1.6476197661885593E9,
+          "Value" : -0.97683427734375
+        },
+        "-MySmbi-80pStGFc1Uib" : {
+          "Time" : 1.647619766892465E9,
+          "Value" : -3.478775012207031
+        },
+        "-MySmbsTRrVjvL7urBIv" : {
+          "Time" : 1.6476197677573915E9,
+          "Value" : 1.3718775512695311
+        },
+        "-MySmc2-63EtSCbjOGg1" : {
+          "Time" : 1.6476197684302762E9,
+          "Value" : 2.1835119140624997
+        },
+        "-MySmcCNUFo-4u0jv_-3" : {
+          "Time" : 1.6476197690893006E9,
+          "Value" : 0.3232172241210937
+        },
+        "-MySmcMk2fJxswQ5Tpmh" : {
+          "Time" : 1.6476197697567694E9,
+          "Value" : -0.047884033203124995
+        },
+        "-MySmcXFG8Y-2cKtyVEt" : {
+          "Time" : 1.647619770426971E9,
+          "Value" : -1.3072341064453123
+        },
+        "-MySmcgtQ5x5PFsFa8dE" : {
+          "Time" : 1.6476197711118574E9,
+          "Value" : 0.3854664672851562
+        },
+        "-MySmcrRJHTCUrisTJ5G" : {
+          "Time" : 1.6476197717842963E9,
+          "Value" : -1.4125789794921875
+        },
+        "-MySmd16GrV_COh2ekcY" : {
+          "Time" : 1.6476197724669983E9,
+          "Value" : -2.085349645996094
+        },
+        "-MySmdCJiKP1nFZw_a5J" : {
+          "Time" : 1.6476197731862879E9,
+          "Value" : -8.429984045410155
+        },
+        "-MySmdPg45JRnQGQ34nx" : {
+          "Time" : 1.6476197738636131E9,
+          "Value" : -8.719682446289061
+        },
+        "-MySmd_5nInvoKMALTuk" : {
+          "Time" : 1.647619774693274E9,
+          "Value" : -9.026140258789061
+        },
+        "-MySmdjNrrj1o4qN07F7" : {
+          "Time" : 1.6476197753729246E9,
+          "Value" : -8.980650427246093
+        },
+        "-MySmdtc6zDgw8pJpw0f" : {
+          "Time" : 1.6476197760199223E9,
+          "Value" : -7.52737001953125
+        },
+        "-MySme36BNw67CpUiOMa" : {
+          "Time" : 1.6476197766845973E9,
+          "Value" : -8.530540515136718
+        },
+        "-MySmeDeCnu72tO1R0bI" : {
+          "Time" : 1.6476197773644009E9,
+          "Value" : -8.939948999023438
+        },
+        "-MySmeOCZAsat8e-ytS7" : {
+          "Time" : 1.647619778044512E9,
+          "Value" : -1.0941501586914062
+        },
+        "-MySmefa0uvlg-NMdczO" : {
+          "Time" : 1.647619779218171E9,
+          "Value" : 0.8259995727539062
+        },
+        "-MySmeqvo6uvv5B050c-" : {
+          "Time" : 1.6476197799429197E9,
+          "Value" : 3.0047230834960934
+        },
+        "-MySmf0bnIi8a-THQh6X" : {
+          "Time" : 1.6476197806187546E9,
+          "Value" : 2.099714855957031
+        },
+        "-MySmfEFg1cKJ3sXS7mT" : {
+          "Time" : 1.647619781308111E9,
+          "Value" : -0.2609679809570312
+        },
+        "-MySmfO931Ro7FxYPb4H" : {
+          "Time" : 1.6476197821371238E9,
+          "Value" : 0.21787235107421873
+        },
+        "-MySmfYfHI6gzcqj_XYi" : {
+          "Time" : 1.6476197828003287E9,
+          "Value" : 2.224213342285156
+        },
+        "-MySmfiCuZAmu1hb-NzA" : {
+          "Time" : 1.6476197834836464E9,
+          "Value" : 6.124367846679687
+        },
+        "-MySmfstZjzd-afNjfYg" : {
+          "Time" : 1.647619784162109E9,
+          "Value" : 2.932897033691406
+        },
+        "-MySmg2LxypqS1KIIUsj" : {
+          "Time" : 1.6476197848337917E9,
+          "Value" : 2.0757728393554684
+        },
+        "-MySmgCmmg1S8XlhYATk" : {
+          "Time" : 1.6476197855012398E9,
+          "Value" : 4.103661645507812
+        },
+        "-MySmgNjtxEkBvX7CMcs" : {
+          "Time" : 1.6476197862052703E9,
+          "Value" : 3.754108203125
+        },
+        "-MySmgYBtGg2j0Ov8gTM" : {
+          "Time" : 1.6476197868716972E9,
+          "Value" : 5.786785412597656
+        },
+        "-MySmghagLgVj-3RTGDa" : {
+          "Time" : 1.647619787539824E9,
+          "Value" : 4.546588952636719
+        }
+      },
+      "Z" : {
+        "-MySd5uPcTUV9YxV6oNM" : {
+          "Time" : 1.6476172731112773E9,
+          "Value" : 9.287108239746093
+        },
+        "-MySd63eX3HjwzBRThMC" : {
+          "Time" : 1.6476172740171509E9,
+          "Value" : 9.296685046386719
+        },
+        "-MySd6EGmEU6FCz6ThhJ" : {
+          "Time" : 1.6476172746954236E9,
+          "Value" : 9.387664709472656
+        },
+        "-MySd6P-Au24AM1HINaB" : {
+          "Time" : 1.6476172753847697E9,
+          "Value" : 9.41639512939453
+        },
+        "-MySd6Z8oxo-jrBL_U1x" : {
+          "Time" : 1.6476172760543356E9,
+          "Value" : 9.397241516113281
+        },
+        "-MySd6iKzW4bf4R7XTX1" : {
+          "Time" : 1.6476172766915483E9,
+          "Value" : 9.380482104492186
+        },
+        "-MySd6sis_0wa-_wnznG" : {
+          "Time" : 1.6476172773565059E9,
+          "Value" : 9.375693701171874
+        },
+        "-MySe73PiRx0C9pCXAUp" : {
+          "Time" : 1.6476175400228093E9,
+          "Value" : -7.963114721679687
+        },
+        "-MySe7EJcnrBDfKdj5Wk" : {
+          "Time" : 1.6476175409357376E9,
+          "Value" : -7.948749511718749
+        },
+        "-MySe7P5GXHQ9vhd1p4L" : {
+          "Time" : 1.647617541628289E9,
+          "Value" : -7.908048083496094
+        },
+        "-MySe7ZnSuJmfz3NwG4B" : {
+          "Time" : 1.647617542308556E9,
+          "Value" : -7.908048083496094
+        },
+        "-MySjw2esrou1UVbxwaa" : {
+          "Time" : 1.6476190636569395E9,
+          "Value" : -9.368511096191405
+        },
+        "-MySjwCo0GXxgcMtKeYH" : {
+          "Time" : 1.6476190645489793E9,
+          "Value" : -9.270348828125
+        },
+        "-MySjwNN8MyYGPKbh_qt" : {
+          "Time" : 1.6476190652253487E9,
+          "Value" : -9.275137231445312
+        },
+        "-MySjwY37UHENqBNDFa8" : {
+          "Time" : 1.647619065902243E9,
+          "Value" : -9.265560424804686
+        },
+        "-MySjwh_Rl3wIj3gR2hz" : {
+          "Time" : 1.6476190665837002E9,
+          "Value" : -9.287108239746093
+        },
+        "-MySjwsQT949PR6qUWIZ" : {
+          "Time" : 1.6476190672793689E9,
+          "Value" : -9.203311181640624
+        },
+        "-MySlyL8cKGZEG_yrnsn" : {
+          "Time" : 1.6476195972858584E9,
+          "Value" : -9.121908325195312
+        },
+        "-MySlyVtcMxAhjZlNli0" : {
+          "Time" : 1.6476195982631109E9,
+          "Value" : -5.236119030761718
+        },
+        "-MySlyfQzK8ir48MbhHT" : {
+          "Time" : 1.6476195989365728E9,
+          "Value" : -10.929530578613281
+        },
+        "-MySlyqSLIQPv-jIiV78" : {
+          "Time" : 1.6476195996180785E9,
+          "Value" : -15.483302136230467
+        },
+        "-MySlz03bmB1zNpKTKQN" : {
+          "Time" : 1.647619600313867E9,
+          "Value" : -7.584830859375
+        },
+        "-MySlzBHZTyYbQk_zxi5" : {
+          "Time" : 1.6476196010287821E9,
+          "Value" : -1.5610194824218748
+        },
+        "-MySlzNG_6IRwLEbwICd" : {
+          "Time" : 1.647619601770276E9,
+          "Value" : -9.229647399902344
+        },
+        "-MySlzYgqrVnummY4WFN" : {
+          "Time" : 1.6476196025206554E9,
+          "Value" : -7.876923461914062
+        },
+        "-MySlzj90j6yf7TuBSet" : {
+          "Time" : 1.647619603258593E9,
+          "Value" : -7.539341027832031
+        },
+        "-MySlztvq3dKqk2e02pd" : {
+          "Time" : 1.6476196039609213E9,
+          "Value" : -7.539341027832031
+        },
+        "-MySm-8DF-UhKEwxPmIW" : {
+          "Time" : 1.6476196046494877E9,
+          "Value" : -7.560888842773437
+        },
+        "-MySm-JFrQUbyuVBzySi" : {
+          "Time" : 1.6476196056358848E9,
+          "Value" : -7.560888842773437
+        },
+        "-MySm-U6kA740eOX6ZZn" : {
+          "Time" : 1.6476196063220701E9,
+          "Value" : -8.212111694335936
+        },
+        "-MySm-ezP7rD_CDY3R2B" : {
+          "Time" : 1.6476196070176144E9,
+          "Value" : -8.547299926757812
+        },
+        "-MySm-pksqTUsRl0hyQi" : {
+          "Time" : 1.6476196077832727E9,
+          "Value" : -4.905719201660156
+        },
+        "-MySm0-x9G8W-OmmU2qu" : {
+          "Time" : 1.6476196085039704E9,
+          "Value" : -5.966350537109375
+        },
+        "-MySm0AglnWs3eQrO75e" : {
+          "Time" : 1.6476196091834586E9,
+          "Value" : -7.156268762207031
+        },
+        "-MySm0L8NBlqx-grVfYP" : {
+          "Time" : 1.6476196098589857E9,
+          "Value" : -6.904877587890625
+        },
+        "-MySmJrpEUcNIkh1MkIH" : {
+          "Time" : 1.647619689617486E9,
+          "Value" : -3.1938650146484373
+        },
+        "-MySmKC16zt67wWl5wZJ" : {
+          "Time" : 1.647619690587606E9,
+          "Value" : -3.342305517578125
+        },
+        "-MySmKOXlG85cmW3OpWZ" : {
+          "Time" : 1.6476196919262536E9,
+          "Value" : -3.967192150878906
+        },
+        "-MySmKZ0VHLvVr2scsmb" : {
+          "Time" : 1.6476196926843522E9,
+          "Value" : -4.015076184082031
+        },
+        "-MySmKifFc37ZYddlHj_" : {
+          "Time" : 1.6476196933581283E9,
+          "Value" : -4.685452648925781
+        },
+        "-MySmKt6CS6T7mo2p3Tl" : {
+          "Time" : 1.6476196940313306E9,
+          "Value" : -3.8762124877929685
+        },
+        "-MySmL5h_s_rspXbZko4" : {
+          "Time" : 1.647619694900582E9,
+          "Value" : -3.718195178222656
+        },
+        "-MySmLGGl5pV5w47Pj2E" : {
+          "Time" : 1.6476196955721447E9,
+          "Value" : -3.028665100097656
+        },
+        "-MySmLRQuQ64rd-Y4Igv" : {
+          "Time" : 1.647619696250517E9,
+          "Value" : -3.0502129150390624
+        },
+        "-MySmLbNiG6i7ydjUdqg" : {
+          "Time" : 1.6476196969895473E9,
+          "Value" : -3.2441432495117186
+        },
+        "-MySmLpC6z-iPqcYJb9Q" : {
+          "Time" : 1.6476196976912465E9,
+          "Value" : -4.048595007324218
+        },
+        "-MySmLz3sfhSpvRSyzd3" : {
+          "Time" : 1.647619698514233E9,
+          "Value" : -4.283226770019531
+        },
+        "-MySmM8W9p2uczjqK4PM" : {
+          "Time" : 1.647619699180484E9,
+          "Value" : -2.9185318237304685
+        },
+        "-MySmMJ7fYAe_yWtx8QM" : {
+          "Time" : 1.6476196998566868E9,
+          "Value" : -3.7158009765625
+        },
+        "-MySmMTmP-0jHOKCbj_G" : {
+          "Time" : 1.647619700541602E9,
+          "Value" : -3.6655227416992187
+        },
+        "-MySmMdAU5rUneyGiU9Z" : {
+          "Time" : 1.6476197012041883E9,
+          "Value" : -3.4620156005859375
+        },
+        "-MySmMn_1lk9UoAKfiC1" : {
+          "Time" : 1.6476197018697615E9,
+          "Value" : -3.421314172363281
+        },
+        "-MySmMxyqNZWYSaH_e0b" : {
+          "Time" : 1.6476197025396914E9,
+          "Value" : -3.134009973144531
+        },
+        "-MySmN7XeMUdJVE18HIC" : {
+          "Time" : 1.647619703207513E9,
+          "Value" : -3.4715924072265625
+        },
+        "-MySmNJX_N-xNurNT1Qz" : {
+          "Time" : 1.6476197039754703E9,
+          "Value" : -3.622427111816406
+        },
+        "-MySmNXQ-8Ca2aSQpmg3" : {
+          "Time" : 1.647619704658138E9,
+          "Value" : -3.208230224609375
+        },
+        "-MySmNgi4NJw6XMTVO7a" : {
+          "Time" : 1.6476197055252125E9,
+          "Value" : -3.239354846191406
+        },
+        "-MySmNyxyZ17x9wkHvHd" : {
+          "Time" : 1.6476197061900003E9,
+          "Value" : -3.6679169433593746
+        },
+        "-MySmO8m3wPqHP-aTK_V" : {
+          "Time" : 1.64761970739046E9,
+          "Value" : -3.392583752441406
+        },
+        "-MySmOJxpEeikn-zGYS8" : {
+          "Time" : 1.6476197081008332E9,
+          "Value" : -3.246537451171875
+        },
+        "-MySmOUu8SA5A3mFHVKC" : {
+          "Time" : 1.6476197087901092E9,
+          "Value" : -3.0813375366210938
+        },
+        "-MySmOeI_JdkB1M_e_di" : {
+          "Time" : 1.6476197094725022E9,
+          "Value" : -3.2824504760742186
+        },
+        "-MySmOoi2IV56NtQXtWv" : {
+          "Time" : 1.6476197101410172E9,
+          "Value" : -3.347093920898437
+        },
+        "-MySmPCYgTfHSkpInV0l" : {
+          "Time" : 1.6476197108301954E9,
+          "Value" : -3.4428619873046875
+        },
+        "-MySmPNCOsaCiCK3cwBL" : {
+          "Time" : 1.6476197124091043E9,
+          "Value" : -3.6008792968749996
+        },
+        "-MySmPa4dmWUWzo3z7mr" : {
+          "Time" : 1.6476197131016293E9,
+          "Value" : -3.6272155151367187
+        },
+        "-MySmPlB4dnj0Cc8QAhx" : {
+          "Time" : 1.647619713953224E9,
+          "Value" : -3.5529952636718747
+        },
+        "-MySmPv_j4f_dQGumRC4" : {
+          "Time" : 1.6476197146782055E9,
+          "Value" : -3.268085266113281
+        },
+        "-MySmQA0dJmVhTfAYzF9" : {
+          "Time" : 1.6476197153627388E9,
+          "Value" : -2.6575638427734374
+        },
+        "-MySmQaDcykQKZq_nz2r" : {
+          "Time" : 1.6476197174101744E9,
+          "Value" : -8.8489693359375
+        },
+        "-MySmQlNMDG60ZE3dsRU" : {
+          "Time" : 1.6476197181040542E9,
+          "Value" : -15.066711047363281
+        },
+        "-MySmQwn6HepbUExzYhv" : {
+          "Time" : 1.6476197188338392E9,
+          "Value" : -8.693346228027343
+        },
+        "-MySmR8J6DfG3Wk6k5Sc" : {
+          "Time" : 1.6476197196293712E9,
+          "Value" : -5.061342309570312
+        },
+        "-MySmRIp8Y6nl9i00IzB" : {
+          "Time" : 1.6476197203228803E9,
+          "Value" : -9.878476049804688
+        },
+        "-MySmRT6a_0G2VUI0dem" : {
+          "Time" : 1.6476197209829924E9,
+          "Value" : -8.044517578125
+        },
+        "-MySmRh3f98Qi4cdsIwU" : {
+          "Time" : 1.647619721693708E9,
+          "Value" : -21.650765612792966
+        },
+        "-MySmSBveS-7L7VlHsk_" : {
+          "Time" : 1.6476197239690335E9,
+          "Value" : -7.436390356445312
+        },
+        "-MySmSMRWt6AJ72d6x9C" : {
+          "Time" : 1.6476197246424835E9,
+          "Value" : -3.5889082885742187
+        },
+        "-MySmSX0eNG2dpBJt_xm" : {
+          "Time" : 1.6476197253168578E9,
+          "Value" : -4.522646936035156
+        },
+        "-MySmSgt1pUOBY1P7yfW" : {
+          "Time" : 1.6476197260107777E9,
+          "Value" : -7.8362220336914055
+        },
+        "-MySmSsB8fMk-594roVA" : {
+          "Time" : 1.647619726736941E9,
+          "Value" : -6.629544396972656
+        },
+        "-MySmT1dJ0jFHDHu2H12" : {
+          "Time" : 1.6476197274111173E9,
+          "Value" : -10.307038146972655
+        },
+        "-MySmTCSn5pPwb32H-XE" : {
+          "Time" : 1.6476197280993867E9,
+          "Value" : -5.295974072265625
+        },
+        "-MySmTa5QOtyS6fmoGQ4" : {
+          "Time" : 1.64761972877911E9,
+          "Value" : -5.700594152832031
+        },
+        "-MySmTl77-Ipze0x7LBl" : {
+          "Time" : 1.647619730341118E9,
+          "Value" : -11.204863769531249
+        },
+        "-MySmTymaZjbiz_9l38H" : {
+          "Time" : 1.647619731056797E9,
+          "Value" : -3.23696064453125
+        },
+        "-MySmU7nRxzSFOxD1uhl" : {
+          "Time" : 1.647619731892536E9,
+          "Value" : -8.29351455078125
+        },
+        "-MySmUIWqHzitcXh1BfD" : {
+          "Time" : 1.6476197325836792E9,
+          "Value" : -8.403647827148436
+        },
+        "-MySmUT4wS8bxLh4WlSw" : {
+          "Time" : 1.6476197332473388E9,
+          "Value" : -7.012616662597656
+        },
+        "-MySmUcg5UTQcItWogVo" : {
+          "Time" : 1.6476197339317832E9,
+          "Value" : -8.710105639648438
+        },
+        "-MySmUn73C3MRbCyAONO" : {
+          "Time" : 1.6476197346014516E9,
+          "Value" : -6.172251879882812
+        },
+        "-MySmUxiIk3hNgXNv_qN" : {
+          "Time" : 1.6476197352715502E9,
+          "Value" : -6.177040283203125
+        },
+        "-MySmV7RSqIQLwZYk-_f" : {
+          "Time" : 1.6476197359604993E9,
+          "Value" : -6.272808349609375
+        },
+        "-MySmVJ2opLiSxWLdRDX" : {
+          "Time" : 1.6476197367065039E9,
+          "Value" : -9.236830004882812
+        },
+        "-MySmVU-uqYGWNe21aT8" : {
+          "Time" : 1.6476197374096816E9,
+          "Value" : -8.109161022949218
+        },
+        "-MySmVgg96YDgA8aTRS7" : {
+          "Time" : 1.6476197380876148E9,
+          "Value" : -8.777143286132812
+        },
+        "-MySmVqgDPpFa9Y_zAww" : {
+          "Time" : 1.6476197389224482E9,
+          "Value" : -8.913612780761719
+        },
+        "-MySmW0R9Tn0SGvImw_l" : {
+          "Time" : 1.6476197396115427E9,
+          "Value" : -8.525752111816406
+        },
+        "-MySmWBBAMPBf47u7ecz" : {
+          "Time" : 1.6476197402789333E9,
+          "Value" : -8.851363537597656
+        },
+        "-MySmWR1UszXRI1QdsA3" : {
+          "Time" : 1.6476197411616843E9,
+          "Value" : -11.784260571289062
+        },
+        "-MySmWaWf-dHiNmA93uQ" : {
+          "Time" : 1.647619741983272E9,
+          "Value" : -9.145850341796875
+        },
+        "-MySmWl4oIjx5aOL45hk" : {
+          "Time" : 1.6476197426532445E9,
+          "Value" : -8.686163623046875
+        },
+        "-MySmWvcT2YA1F6LANAE" : {
+          "Time" : 1.6476197433345723E9,
+          "Value" : -8.410830432128906
+        },
+        "-MySmX5Y3IRt5n8FGHFH" : {
+          "Time" : 1.6476197440331895E9,
+          "Value" : -8.47786807861328
+        },
+        "-MySmXG5_DaUAcoZ3HRu" : {
+          "Time" : 1.6476197447046967E9,
+          "Value" : -8.755595471191405
+        },
+        "-MySmXTcOXY6XwJFhKDE" : {
+          "Time" : 1.6476197453862875E9,
+          "Value" : -8.386888415527343
+        },
+        "-MySmXc_W6cuZCw-_DZH" : {
+          "Time" : 1.6476197462138283E9,
+          "Value" : -8.197746484375
+        },
+        "-MySmXo3hzgC3DJBQYlY" : {
+          "Time" : 1.6476197469384701E9,
+          "Value" : -8.942343200683593
+        },
+        "-MySmXyYlWudRQVjFzN2" : {
+          "Time" : 1.6476197476163085E9,
+          "Value" : -8.24802471923828
+        },
+        "-MySmY8AkqBK8senyPv6" : {
+          "Time" : 1.6476197482933865E9,
+          "Value" : -8.441955053710936
+        },
+        "-MySmYIxgOJFvB6_y1O_" : {
+          "Time" : 1.6476197489842541E9,
+          "Value" : -8.475473876953124
+        },
+        "-MySmYTZMXFS0VEoeijy" : {
+          "Time" : 1.6476197496600728E9,
+          "Value" : -8.621520178222656
+        },
+        "-MySmYd66y6xEENaVQw6" : {
+          "Time" : 1.647619750333019E9,
+          "Value" : -8.461108666992187
+        },
+        "-MySmYoAPSL4yvtCkqmf" : {
+          "Time" : 1.6476197510120318E9,
+          "Value" : -8.453926062011718
+        },
+        "-MySmYz8Pax8XpVbxnzW" : {
+          "Time" : 1.6476197517463577E9,
+          "Value" : -9.686939916992188
+        },
+        "-MySmZBp4YVWR4NSto73" : {
+          "Time" : 1.6476197524310403E9,
+          "Value" : -10.690110412597656
+        },
+        "-MySmZM-gjh0uPUGgo8T" : {
+          "Time" : 1.6476197532708619E9,
+          "Value" : -9.145850341796875
+        },
+        "-MySmZdb9Dqjfy5-djVr" : {
+          "Time" : 1.6476197544617252E9,
+          "Value" : -6.804321118164062
+        },
+        "-MySmZnwkH8T9HlLfLiD" : {
+          "Time" : 1.6476197551271925E9,
+          "Value" : -11.769895361328125
+        },
+        "-MySmZyXjlAtuuZrhiQM" : {
+          "Time" : 1.6476197558013775E9,
+          "Value" : -6.725312463378906
+        },
+        "-MySm_7uiZAQDtYKMQ_V" : {
+          "Time" : 1.6476197564887953E9,
+          "Value" : -2.8036101440429686
+        },
+        "-MySm_IWUvwsDCI79vxd" : {
+          "Time" : 1.6476197571480105E9,
+          "Value" : -3.1603461914062496
+        },
+        "-MySm_TFMSN0RHUVDXck" : {
+          "Time" : 1.647619757832099E9,
+          "Value" : -3.9600095458984375
+        },
+        "-MySm_d-utjBCoTZStLe" : {
+          "Time" : 1.6476197585175254E9,
+          "Value" : 0.08379705810546874
+        },
+        "-MySm_naBqUi4qWHb47i" : {
+          "Time" : 1.6476197592005699E9,
+          "Value" : -3.385401147460937
+        },
+        "-MySma0QUq7D2gtun-Vq" : {
+          "Time" : 1.6476197598985221E9,
+          "Value" : -0.63206923828125
+        },
+        "-MySmaAX2AQfLdiTdOgO" : {
+          "Time" : 1.6476197607266662E9,
+          "Value" : -9.220070593261719
+        },
+        "-MySmaLBamvX25CUvcJD" : {
+          "Time" : 1.647619761409565E9,
+          "Value" : -8.441955053710936
+        },
+        "-MySmaVQIS06B7AE4nB7" : {
+          "Time" : 1.6476197620809858E9,
+          "Value" : -8.80347950439453
+        },
+        "-MySmaezpob6G6X_YSjW" : {
+          "Time" : 1.6476197627394838E9,
+          "Value" : -6.919242797851562
+        },
+        "-MySmaq1vWXnNUVy74G8" : {
+          "Time" : 1.6476197634532788E9,
+          "Value" : -3.7229835815429686
+        },
+        "-MySmb-i715OgtpvzeeS" : {
+          "Time" : 1.6476197641349137E9,
+          "Value" : -5.796362219238281
+        },
+        "-MySmbATPr6DkXXdOjUB" : {
+          "Time" : 1.6476197648178263E9,
+          "Value" : -7.223306408691406
+        },
+        "-MySmbL-a4ENzCBRS48G" : {
+          "Time" : 1.647619765490326E9,
+          "Value" : -8.243236315917969
+        },
+        "-MySmbVzD6SCla2X9o9J" : {
+          "Time" : 1.6476197661885593E9,
+          "Value" : -9.74200655517578
+        },
+        "-MySmbijgid6djY7uTTJ" : {
+          "Time" : 1.647619766892465E9,
+          "Value" : -6.074089611816406
+        },
+        "-MySmbtK2pUTe191g6RS" : {
+          "Time" : 1.6476197677573915E9,
+          "Value" : -7.117961535644531
+        },
+        "-MySmc2o3g5yeeIidXRB" : {
+          "Time" : 1.6476197684302762E9,
+          "Value" : -6.938396411132812
+        },
+        "-MySmcDCqG_b8ez8bLcW" : {
+          "Time" : 1.6476197690893006E9,
+          "Value" : -7.762001782226562
+        },
+        "-MySmcNZDtNmRJxjhs6r" : {
+          "Time" : 1.6476197697567694E9,
+          "Value" : -6.133944653320312
+        },
+        "-MySmcY5iZOg4hx876MV" : {
+          "Time" : 1.647619770426971E9,
+          "Value" : -7.862558251953125
+        },
+        "-MySmchkXWES-maqpFXG" : {
+          "Time" : 1.6476197711118574E9,
+          "Value" : -9.028534460449219
+        },
+        "-MySmcsGVCQDo3V9T6Op" : {
+          "Time" : 1.6476197717842963E9,
+          "Value" : -9.162609753417968
+        },
+        "-MySmd1zWVCfI8RQTRPR" : {
+          "Time" : 1.6476197724669983E9,
+          "Value" : -8.999804040527343
+        },
+        "-MySmdD9Y0Pq9Dm1Z1tF" : {
+          "Time" : 1.6476197731862879E9,
+          "Value" : -4.6255976074218745
+        },
+        "-MySmdQURHVcG5QPbZl8" : {
+          "Time" : 1.6476197738636131E9,
+          "Value" : -4.544194750976562
+        },
+        "-MySmda2AJ6z521mPnEa" : {
+          "Time" : 1.647619774693274E9,
+          "Value" : -3.746925598144531
+        },
+        "-MySmdk78vvSUn_VV1lQ" : {
+          "Time" : 1.6476197753729246E9,
+          "Value" : -3.785232824707031
+        },
+        "-MySmduUv469FXFP1Ulv" : {
+          "Time" : 1.6476197760199223E9,
+          "Value" : -5.468356591796875
+        },
+        "-MySme4-TiBsYlq-Zj8M" : {
+          "Time" : 1.6476197766845973E9,
+          "Value" : -4.563348364257812
+        },
+        "-MySmeEVpMo2Hg2gsm91" : {
+          "Time" : 1.6476197773644009E9,
+          "Value" : -4.350264416503906
+        },
+        "-MySmeP0uIvVnHTSUlvM" : {
+          "Time" : 1.647619778044512E9,
+          "Value" : -1.5035586425781249
+        },
+        "-MySmegxsxDY9CZ5U4br" : {
+          "Time" : 1.647619779218171E9,
+          "Value" : -12.624625354003905
+        },
+        "-MySmerjHZ0jO7w3rPs0" : {
+          "Time" : 1.6476197799429197E9,
+          "Value" : -8.032546569824218
+        },
+        "-MySmf1SO5__ta3GX-ap" : {
+          "Time" : 1.6476197806187546E9,
+          "Value" : -7.953537915039062
+        },
+        "-MySmfEzTygTTTcBuKxh" : {
+          "Time" : 1.647619781308111E9,
+          "Value" : -10.184933862304687
+        },
+        "-MySmfOxs_XYdrzfm_k0" : {
+          "Time" : 1.6476197821371238E9,
+          "Value" : -5.796362219238281
+        },
+        "-MySmfZXVm_ELj5brmVS" : {
+          "Time" : 1.6476197828003287E9,
+          "Value" : -9.641450085449218
+        },
+        "-MySmfj-6igNOaOjLUIT" : {
+          "Time" : 1.6476197834836464E9,
+          "Value" : -6.303932971191406
+        },
+        "-MySmftiBaW0dvi3AdZE" : {
+          "Time" : 1.647619784162109E9,
+          "Value" : -6.430825659179687
+        },
+        "-MySmg39ZMBiXuozOi0K" : {
+          "Time" : 1.6476197848337917E9,
+          "Value" : -9.220070593261719
+        },
+        "-MySmgDcBxXnQR8BbRjv" : {
+          "Time" : 1.6476197855012398E9,
+          "Value" : -8.949525805664061
+        },
+        "-MySmgOYBPS4h03Mh68u" : {
+          "Time" : 1.6476197862052703E9,
+          "Value" : -9.878476049804688
+        },
+        "-MySmgYyAyrhFnGgieas" : {
+          "Time" : 1.6476197868716972E9,
+          "Value" : -9.337386474609374
+        },
+        "-MySmgiPUtPhGVAcYEIL" : {
+          "Time" : 1.647619787539824E9,
+          "Value" : -10.117896215820313
+        }
+      }
+    },
+    "gyro" : {
+      "X" : {
+        "-MySd5v7AX5_gEKLJEdk" : {
+          "Time" : 1.6476172731112773E9,
+          "Value" : 0.006661562213740459
+        },
+        "-MySd64UXesLCN8CdwxU" : {
+          "Time" : 1.6476172740171509E9,
+          "Value" : 0.007194487190839696
+        },
+        "-MySd6F7oFhEGTkMgEEY" : {
+          "Time" : 1.6476172746954236E9,
+          "Value" : 0.009059724610687023
+        },
+        "-MySd6PlUtjpT5JpNF43" : {
+          "Time" : 1.6476172753847697E9,
+          "Value" : 0.006928024702290077
+        },
+        "-MySd6ZtNBCb3H9GmHw4" : {
+          "Time" : 1.6476172760543356E9,
+          "Value" : 0.003996937328244275
+        },
+        "-MySd6j890pwR4ahsXrL" : {
+          "Time" : 1.6476172766915483E9,
+          "Value" : 0.0034640123511450386
+        },
+        "-MySd6tWO4pVsnR8hsmH" : {
+          "Time" : 1.6476172773565059E9,
+          "Value" : 0.004263399816793893
+        },
+        "-MySe74J_f2onJQ5etcQ" : {
+          "Time" : 1.6476175400228093E9,
+          "Value" : -0.014388974381679392
+        },
+        "-MySe7F9vPCkUFFmCMRz" : {
+          "Time" : 1.6476175409357376E9,
+          "Value" : -0.018119449221374047
+        },
+        "-MySe7PstMI62E-O5-OZ" : {
+          "Time" : 1.647617541628289E9,
+          "Value" : -0.016787136778625956
+        },
+        "-MySe7_djQFlVjlZViT-" : {
+          "Time" : 1.647617542308556E9,
+          "Value" : -0.020251149129770992
+        },
+        "-MySjw3OUlAKhY4bsvLa" : {
+          "Time" : 1.6476190636569395E9,
+          "Value" : -0.015454824335877864
+        },
+        "-MySjwDdAvRcgs37j_lj" : {
+          "Time" : 1.6476190645489793E9,
+          "Value" : -0.014388974381679392
+        },
+        "-MySjwO90mcKyTF0-aiE" : {
+          "Time" : 1.6476190652253487E9,
+          "Value" : -0.00959264958778626
+        },
+        "-MySjwYt5y6GisBYfuvV" : {
+          "Time" : 1.647619065902243E9,
+          "Value" : -0.006661562213740459
+        },
+        "-MySjwiNjE52iUM9b853" : {
+          "Time" : 1.6476190665837002E9,
+          "Value" : -0.010658499541984735
+        },
+        "-MySjwtC2poxM-tKmi47" : {
+          "Time" : 1.6476190672793689E9,
+          "Value" : -0.005862174748091604
+        },
+        "-MySlyM1Ee2fXFIj4M6G" : {
+          "Time" : 1.6476195972858584E9,
+          "Value" : -0.034906586
+        },
+        "-MySlyWk8Hd-vL0wGDhX" : {
+          "Time" : 1.6476195982631109E9,
+          "Value" : 0.6101990987786261
+        },
+        "-MySlygLR3nfJNwjvBhH" : {
+          "Time" : 1.6476195989365728E9,
+          "Value" : 0.1337641692519084
+        },
+        "-MySlyrG9nuK28-mtmiZ" : {
+          "Time" : 1.6476195996180785E9,
+          "Value" : -1.2235957474198476
+        },
+        "-MySlz0ufMRPh3g4QBvJ" : {
+          "Time" : 1.647619600313867E9,
+          "Value" : -0.8425543887938932
+        },
+        "-MySlzC9LIvaCoE6-FrL" : {
+          "Time" : 1.6476196010287821E9,
+          "Value" : -0.5475804139694657
+        },
+        "-MySlzODnulmBZN0HHCy" : {
+          "Time" : 1.647619601770276E9,
+          "Value" : -1.6126309807022903
+        },
+        "-MySlzZgK3jXbJbudiGI" : {
+          "Time" : 1.6476196025206554E9,
+          "Value" : -0.09832465827480917
+        },
+        "-MySlzjzZT_wp1phJr97" : {
+          "Time" : 1.647619603258593E9,
+          "Value" : 0.033041348580152674
+        },
+        "-MySlzumBIXqYEIF2A3V" : {
+          "Time" : 1.6476196039609213E9,
+          "Value" : -0.007727412167938932
+        },
+        "-MySm-96aShHCKJ-Rd_E" : {
+          "Time" : 1.6476196046494877E9,
+          "Value" : 0.0013323124427480919
+        },
+        "-MySm-K1oi650WrWspYo" : {
+          "Time" : 1.6476196056358848E9,
+          "Value" : 0.01945176166412214
+        },
+        "-MySm-UwtMFKHF9AcPQz" : {
+          "Time" : 1.6476196063220701E9,
+          "Value" : -0.3562603471908397
+        },
+        "-MySm-fxsct73pZaMeAX" : {
+          "Time" : 1.6476196070176144E9,
+          "Value" : 0.7098560694961833
+        },
+        "-MySm-qZr0b70zsvUotW" : {
+          "Time" : 1.6476196077832727E9,
+          "Value" : -2.1178438589923667
+        },
+        "-MySm00rd8UA58pVqbps" : {
+          "Time" : 1.6476196085039704E9,
+          "Value" : -0.9563338714045803
+        },
+        "-MySm0BVvIko-wwgwTSf" : {
+          "Time" : 1.6476196091834586E9,
+          "Value" : 0.6600275841374046
+        },
+        "-MySm0LyU0BnFNB-DL4K" : {
+          "Time" : 1.6476196098589857E9,
+          "Value" : 2.757087369022901
+        },
+        "-MySmJsivljaLWImt6Dp" : {
+          "Time" : 1.647619689617486E9,
+          "Value" : -0.2920428874503817
+        },
+        "-MySmKCvRqpYrm8hpGuj" : {
+          "Time" : 1.647619690587606E9,
+          "Value" : 0.00959264958778626
+        },
+        "-MySmKPPPLTCYZR7QMqG" : {
+          "Time" : 1.6476196919262536E9,
+          "Value" : -0.13269831929770992
+        },
+        "-MySmKZop9Cx7q40OdgW" : {
+          "Time" : 1.6476196926843522E9,
+          "Value" : -0.6890719953893131
+        },
+        "-MySmKjSTyTaSUC0dTqe" : {
+          "Time" : 1.6476196933581283E9,
+          "Value" : 0.7937917533893131
+        },
+        "-MySmKtwSTPLoCAWZa6O" : {
+          "Time" : 1.6476196940313306E9,
+          "Value" : 0.5617029258625955
+        },
+        "-MySmL6WTcrlmKfI-ZLt" : {
+          "Time" : 1.647619694900582E9,
+          "Value" : 0.5923461120458016
+        },
+        "-MySmLH35wIEOZjhvNwX" : {
+          "Time" : 1.6476196955721447E9,
+          "Value" : -0.15747933073282444
+        },
+        "-MySmLSENcV8AYu-KjMr" : {
+          "Time" : 1.647619696250517E9,
+          "Value" : -0.04423277309923664
+        },
+        "-MySmLcBO7kDLwoitzbK" : {
+          "Time" : 1.6476196969895473E9,
+          "Value" : -0.04156814821374046
+        },
+        "-MySmLpwEMynDPLITg3y" : {
+          "Time" : 1.6476196976912465E9,
+          "Value" : -0.9829801202595421
+        },
+        "-MySmLztiKqyiO5oqibs" : {
+          "Time" : 1.647619698514233E9,
+          "Value" : -0.8905176367328245
+        },
+        "-MySmM9KGDtp9FE3bSgz" : {
+          "Time" : 1.647619699180484E9,
+          "Value" : -0.5132067529465649
+        },
+        "-MySmMJxgExczB1VgDkq" : {
+          "Time" : 1.6476196998566868E9,
+          "Value" : 0.1716018426259542
+        },
+        "-MySmMU_RngyJWeQlikt" : {
+          "Time" : 1.647619700541602E9,
+          "Value" : 0.06341807227480917
+        },
+        "-MySmMdyL3Cf3Sl-CVOw" : {
+          "Time" : 1.6476197012041883E9,
+          "Value" : 0.02771209880916031
+        },
+        "-MySmMoN2l_9B-xUM-7t" : {
+          "Time" : 1.6476197018697615E9,
+          "Value" : -0.012523736961832063
+        },
+        "-MySmMynrjop03M_LRp9" : {
+          "Time" : 1.6476197025396914E9,
+          "Value" : -0.06421745974045802
+        },
+        "-MySmN8MNeX-3UyxgOc_" : {
+          "Time" : 1.647619703207513E9,
+          "Value" : 0.026646248854961835
+        },
+        "-MySmNKLmbgCx7f5DL16" : {
+          "Time" : 1.6476197039754703E9,
+          "Value" : 0.04556508554198474
+        },
+        "-MySmNYDwJ3kP3cbUTIN" : {
+          "Time" : 1.647619704658138E9,
+          "Value" : -0.002931087374045802
+        },
+        "-MySmNhYfOxSNatJ7-XA" : {
+          "Time" : 1.6476197055252125E9,
+          "Value" : -0.08393568389312979
+        },
+        "-MySmNzq5J0al2VRRExi" : {
+          "Time" : 1.6476197061900003E9,
+          "Value" : -0.02637978636641222
+        },
+        "-MySmO9ZtlpQNUuYB-k0" : {
+          "Time" : 1.64761970739046E9,
+          "Value" : -0.007460949679389314
+        },
+        "-MySmOKs_cuxAc4aQ0ig" : {
+          "Time" : 1.6476197081008332E9,
+          "Value" : -0.029044411251908403
+        },
+        "-MySmOVimUaS09dZyxb6" : {
+          "Time" : 1.6476197087901092E9,
+          "Value" : -0.046630935496183204
+        },
+        "-MySmOf8dpOBNRvcip5i" : {
+          "Time" : 1.6476197094725022E9,
+          "Value" : 0.04290046065648855
+        },
+        "-MySmOpXOg7s_GFPh6TZ" : {
+          "Time" : 1.6476197101410172E9,
+          "Value" : -0.03597243595419848
+        },
+        "-MySmPDLhe9DEkw2JH8M" : {
+          "Time" : 1.6476197108301954E9,
+          "Value" : -0.01279019945038168
+        },
+        "-MySmPO1fhs5NHY-yXBS" : {
+          "Time" : 1.6476197124091043E9,
+          "Value" : 0.017320061755725192
+        },
+        "-MySmPapWY4mVsaC3yr5" : {
+          "Time" : 1.6476197131016293E9,
+          "Value" : -0.035705973465648855
+        },
+        "-MySmPm-KCs5lJv46oG2" : {
+          "Time" : 1.647619713953224E9,
+          "Value" : -0.034373661022900764
+        },
+        "-MySmPwhf_JmbX-IIubP" : {
+          "Time" : 1.6476197146782055E9,
+          "Value" : -0.09725880832061069
+        },
+        "-MySmQArEKyGfYnlRDmN" : {
+          "Time" : 1.6476197153627388E9,
+          "Value" : 0.08686677126717558
+        },
+        "-MySmQb7DM1_bT4nAz5g" : {
+          "Time" : 1.6476197174101744E9,
+          "Value" : 0.05702297254961833
+        },
+        "-MySmQmHOdsyDVm5KCgl" : {
+          "Time" : 1.6476197181040542E9,
+          "Value" : 1.2920766069770993
+        },
+        "-MySmQxeja1KXbZO-Y_y" : {
+          "Time" : 1.6476197188338392E9,
+          "Value" : -1.588382894244275
+        },
+        "-MySmR9AM9Pr5A9hwS58" : {
+          "Time" : 1.6476197196293712E9,
+          "Value" : -0.9152986481679389
+        },
+        "-MySmRJaaTq-q8BhwMmc" : {
+          "Time" : 1.6476197203228803E9,
+          "Value" : 0.5238652524885496
+        },
+        "-MySmRTzqe6bS7z1WNBn" : {
+          "Time" : 1.6476197209829924E9,
+          "Value" : -0.3093629492061069
+        },
+        "-MySmRhvp57wxqks8kGr" : {
+          "Time" : 1.647619721693708E9,
+          "Value" : 1.1745666495267175
+        },
+        "-MySmSCjs-KNv11edTno" : {
+          "Time" : 1.6476197239690335E9,
+          "Value" : 1.818073559374046
+        },
+        "-MySmSNM5XC5tTm2_cZj" : {
+          "Time" : 1.6476197246424835E9,
+          "Value" : 1.1119479647175574
+        },
+        "-MySmSXpdTRGcA6yQHTA" : {
+          "Time" : 1.6476197253168578E9,
+          "Value" : -0.839889763908397
+        },
+        "-MySmShfq9DPBYmmrzk7" : {
+          "Time" : 1.6476197260107777E9,
+          "Value" : -1.285947969740458
+        },
+        "-MySmSsx7TCsaY7IN38L" : {
+          "Time" : 1.647619726736941E9,
+          "Value" : -0.9957703197099238
+        },
+        "-MySmT2S2wEVnzd-g9yy" : {
+          "Time" : 1.6476197274111173E9,
+          "Value" : -1.6731179656030535
+        },
+        "-MySmTDInNQ5uicBASfu" : {
+          "Time" : 1.6476197280993867E9,
+          "Value" : 1.0253476559389314
+        },
+        "-MySmTav75FgHxjNRsXJ" : {
+          "Time" : 1.64761972877911E9,
+          "Value" : -1.0935620530076338
+        },
+        "-MySmTlw6tDdHypBZfzz" : {
+          "Time" : 1.647619730341118E9,
+          "Value" : 3.1439909023969466
+        },
+        "-MySmTzVwHvu3HvaNngR" : {
+          "Time" : 1.647619731056797E9,
+          "Value" : 0.8401562263969466
+        },
+        "-MySmU8dxnDYdv08Bs3R" : {
+          "Time" : 1.647619731892536E9,
+          "Value" : -0.9856447451450383
+        },
+        "-MySmUJKRxJ1GdmuBaek" : {
+          "Time" : 1.6476197325836792E9,
+          "Value" : 0.004263399816793893
+        },
+        "-MySmUU1wLe2-yBA_Rgq" : {
+          "Time" : 1.6476197332473388E9,
+          "Value" : 0.034107198534351145
+        },
+        "-MySmUdVdc1wW8z5SB5B" : {
+          "Time" : 1.6476197339317832E9,
+          "Value" : -0.7130536193587788
+        },
+        "-MySmUnwWTTwP6smkUx0" : {
+          "Time" : 1.6476197346014516E9,
+          "Value" : 1.9563675909312979
+        },
+        "-MySmUyd9ghUwYy6wfOo" : {
+          "Time" : 1.6476197352715502E9,
+          "Value" : 0.6512343220152672
+        },
+        "-MySmV8GlyS4rSO-HrTP" : {
+          "Time" : 1.6476197359604993E9,
+          "Value" : 0.3727810214809161
+        },
+        "-MySmVJqZHh5YwRG4NnJ" : {
+          "Time" : 1.6476197367065039E9,
+          "Value" : 0.41408270720610696
+        },
+        "-MySmVUm_A8XY3RfJUN-" : {
+          "Time" : 1.6476197374096816E9,
+          "Value" : -0.18305972963358783
+        },
+        "-MySmVhRXpwalhec8zSR" : {
+          "Time" : 1.6476197380876148E9,
+          "Value" : 0.010924962030534353
+        },
+        "-MySmVrWicbLIsLz_Lwe" : {
+          "Time" : 1.6476197389224482E9,
+          "Value" : -0.4551179304427482
+        },
+        "-MySmW1DIO68mYY6tu9q" : {
+          "Time" : 1.6476197396115427E9,
+          "Value" : 0.40528944508396947
+        },
+        "-MySmWBzkZtIZC7b_DwR" : {
+          "Time" : 1.6476197402789333E9,
+          "Value" : 0.18545789203053437
+        },
+        "-MySmWRq2RCTnYidOffB" : {
+          "Time" : 1.6476197411616843E9,
+          "Value" : -0.2675283385038168
+        },
+        "-MySmWbGJF8xXvwyW2F4" : {
+          "Time" : 1.647619741983272E9,
+          "Value" : -0.1390934190229008
+        },
+        "-MySmWlrdRKZA3hCVXaC" : {
+          "Time" : 1.6476197426532445E9,
+          "Value" : -0.03703828590839695
+        },
+        "-MySmWwTSVdgYGW7io2L" : {
+          "Time" : 1.6476197433345723E9,
+          "Value" : 0.010392037053435116
+        },
+        "-MySmX6NOhQfyPcXrk5t" : {
+          "Time" : 1.6476197440331895E9,
+          "Value" : -0.029577336229007635
+        },
+        "-MySmXGv6XC9sAW8Db4k" : {
+          "Time" : 1.6476197447046967E9,
+          "Value" : -0.008793262122137404
+        },
+        "-MySmXUKRTu7u9I9MyRT" : {
+          "Time" : 1.6476197453862875E9,
+          "Value" : -0.024781011435114506
+        },
+        "-MySmXdQRfgUAqmRPxwj" : {
+          "Time" : 1.6476197462138283E9,
+          "Value" : -0.09406125845801527
+        },
+        "-MySmXotNQCtp_pDDvvo" : {
+          "Time" : 1.6476197469384701E9,
+          "Value" : -0.011990811984732825
+        },
+        "-MySmXzLSEoPHzwYBfxg" : {
+          "Time" : 1.6476197476163085E9,
+          "Value" : 0.03543951097709924
+        },
+        "-MySmY8wnOOgQeDQyps3" : {
+          "Time" : 1.6476197482933865E9,
+          "Value" : -0.025047473923664125
+        },
+        "-MySmYJl8luqp4KUabrh" : {
+          "Time" : 1.6476197489842541E9,
+          "Value" : -0.04902909789312977
+        },
+        "-MySmYUKRsYfE_H9Ji69" : {
+          "Time" : 1.6476197496600728E9,
+          "Value" : -0.014122511893129772
+        },
+        "-MySmYe-h9VnImRhN8Fl" : {
+          "Time" : 1.647619750333019E9,
+          "Value" : 0.017852986732824427
+        },
+        "-MySmYpEH92LS8mDWIBw" : {
+          "Time" : 1.6476197510120318E9,
+          "Value" : -0.011457887007633588
+        },
+        "-MySmYzx4Jlz2g39aksr" : {
+          "Time" : 1.6476197517463577E9,
+          "Value" : -0.09059724610687023
+        },
+        "-MySmZC__WBE-WobQuCK" : {
+          "Time" : 1.6476197524310403E9,
+          "Value" : -0.8654701628091604
+        },
+        "-MySmZMqgvbtHT7Jn125" : {
+          "Time" : 1.6476197532708619E9,
+          "Value" : 0.5158713778320612
+        },
+        "-MySmZeR4CkalGuWTCeG" : {
+          "Time" : 1.6476197544617252E9,
+          "Value" : -3.1506524646106873
+        },
+        "-MySmZokPiRhE_UeQFCM" : {
+          "Time" : 1.6476197551271925E9,
+          "Value" : 0.04156814821374046
+        },
+        "-MySmZzHAIw82-xIKJzd" : {
+          "Time" : 1.6476197558013775E9,
+          "Value" : -0.41408270720610696
+        },
+        "-MySm_8epavD3qenZxx6" : {
+          "Time" : 1.6476197564887953E9,
+          "Value" : -0.4948208412366413
+        },
+        "-MySm_JMyZ_CzklvboJt" : {
+          "Time" : 1.6476197571480105E9,
+          "Value" : 0.06821439706870229
+        },
+        "-MySm_U6Ld7dKfeAl-Ql" : {
+          "Time" : 1.647619757832099E9,
+          "Value" : 0.21716692816793895
+        },
+        "-MySm_dm29Y1KWl2QEnF" : {
+          "Time" : 1.6476197585175254E9,
+          "Value" : -0.5883491747175573
+        },
+        "-MySm_oNrPIzu5FGlC0v" : {
+          "Time" : 1.6476197592005699E9,
+          "Value" : 0.10711792039694658
+        },
+        "-MySma19S4YwWSIKz1mx" : {
+          "Time" : 1.6476197598985221E9,
+          "Value" : 3.057390593618321
+        },
+        "-MySmaBNaLHXEts_EcuT" : {
+          "Time" : 1.6476197607266662E9,
+          "Value" : 1.8388576334809164
+        },
+        "-MySmaM2FL6fpnEpdbX3" : {
+          "Time" : 1.647619761409565E9,
+          "Value" : 2.579356889160305
+        },
+        "-MySmaWCVMYlncNgzRcP" : {
+          "Time" : 1.6476197620809858E9,
+          "Value" : 1.8084809097862597
+        },
+        "-MySmafnDoSrbMwiEkuV" : {
+          "Time" : 1.6476197627394838E9,
+          "Value" : 0.6994640324427482
+        },
+        "-MySmaqoP7R6hhS0Ma8f" : {
+          "Time" : 1.6476197634532788E9,
+          "Value" : 1.1993476609618323
+        },
+        "-MySmb0YCu0WoENzDD8M" : {
+          "Time" : 1.6476197641349137E9,
+          "Value" : 0.5180030777404581
+        },
+        "-MySmbBEsVaU7jdnZJXT" : {
+          "Time" : 1.6476197648178263E9,
+          "Value" : 0.10791730786259543
+        },
+        "-MySmbLneyaL_0b0GTLA" : {
+          "Time" : 1.647619765490326E9,
+          "Value" : -0.6509678595267177
+        },
+        "-MySmbWmFGgP7-meVESE" : {
+          "Time" : 1.6476197661885593E9,
+          "Value" : -0.36398775935877864
+        },
+        "-MySmbjWVCxV4KhKTl-g" : {
+          "Time" : 1.647619766892465E9,
+          "Value" : -0.55157735129771
+        },
+        "-MySmbu5ZODhhUkVAQgN" : {
+          "Time" : 1.6476197677573915E9,
+          "Value" : -0.7039938947480916
+        },
+        "-MySmc3aLYl15ruUoH1k" : {
+          "Time" : 1.6476197684302762E9,
+          "Value" : 1.1364625136641224
+        },
+        "-MySmcE-tWz2MUNAaoTn" : {
+          "Time" : 1.6476197690893006E9,
+          "Value" : -0.09619295836641223
+        },
+        "-MySmcOLtadBskl9Sn73" : {
+          "Time" : 1.6476197697567694E9,
+          "Value" : -0.42580705670229013
+        },
+        "-MySmcYt73oVx4ibqIoO" : {
+          "Time" : 1.647619770426971E9,
+          "Value" : -0.22889127766412218
+        },
+        "-MySmcic3CnW_zH8GXMD" : {
+          "Time" : 1.6476197711118574E9,
+          "Value" : 0.4012925077557252
+        },
+        "-MySmct6qnoVN8Ddd26r" : {
+          "Time" : 1.6476197717842963E9,
+          "Value" : 0.5148055278778626
+        },
+        "-MySmd2pLHY28CPVh2kE" : {
+          "Time" : 1.6476197724669983E9,
+          "Value" : 1.0077611316946566
+        },
+        "-MySmdDwZ5PfGTdoUu0E" : {
+          "Time" : 1.6476197731862879E9,
+          "Value" : 0.2675283385038168
+        },
+        "-MySmdRE9k7XdGAbCDyC" : {
+          "Time" : 1.6476197738636131E9,
+          "Value" : 0.13136600685496183
+        },
+        "-MySmdanPVuYjRbA37Nr" : {
+          "Time" : 1.647619774693274E9,
+          "Value" : 0.028777948763358784
+        },
+        "-MySmdkzGc1RNwGHcdDI" : {
+          "Time" : 1.6476197753729246E9,
+          "Value" : -0.09566003338931298
+        },
+        "-MySmdvHoEY0w8YcOYl5" : {
+          "Time" : 1.6476197760199223E9,
+          "Value" : -0.2920428874503817
+        },
+        "-MySme4oex0fbBEViTLf" : {
+          "Time" : 1.6476197766845973E9,
+          "Value" : 0.2744563632061069
+        },
+        "-MySmeFMQgDHXRkkN1s4" : {
+          "Time" : 1.6476197773644009E9,
+          "Value" : -0.4476569807633588
+        },
+        "-MySmeXfedpq8_98mj3n" : {
+          "Time" : 1.647619778044512E9,
+          "Value" : -1.7077580891145039
+        },
+        "-MySmei2zacORQoZgMHF" : {
+          "Time" : 1.647619779218171E9,
+          "Value" : 0.9232925228244275
+        },
+        "-MySmes_1nOLBVzoVTJ2" : {
+          "Time" : 1.6476197799429197E9,
+          "Value" : -0.576624825221374
+        },
+        "-MySmf2ERvhJJMroiiri" : {
+          "Time" : 1.6476197806187546E9,
+          "Value" : -0.2075742785801527
+        },
+        "-MySmfFkkcuauT0VhTUD" : {
+          "Time" : 1.647619781308111E9,
+          "Value" : -0.9925727698473283
+        },
+        "-MySmfPm9aqgbY-Ps2Jh" : {
+          "Time" : 1.6476197821371238E9,
+          "Value" : -1.987010777114504
+        },
+        "-MySmf_MLloa90hT70A9" : {
+          "Time" : 1.6476197828003287E9,
+          "Value" : -0.13696171911450383
+        },
+        "-MySmfjnI7I-CLMXiAqz" : {
+          "Time" : 1.6476197834836464E9,
+          "Value" : -0.2891118000763359
+        },
+        "-MySmfuaCnOGvKNeiR_u" : {
+          "Time" : 1.647619784162109E9,
+          "Value" : -0.7876631161526718
+        },
+        "-MySmg4-vDZCSMYAqcMF" : {
+          "Time" : 1.6476197848337917E9,
+          "Value" : 0.3775773462748092
+        },
+        "-MySmgERG4lHO2uG-6G1" : {
+          "Time" : 1.6476197855012398E9,
+          "Value" : 1.8777611568091606
+        },
+        "-MySmgPMbnmjQ7VIYfJD" : {
+          "Time" : 1.6476197862052703E9,
+          "Value" : 0.8894517867786261
+        },
+        "-MySmgZl2i141GCYz1gZ" : {
+          "Time" : 1.6476197868716972E9,
+          "Value" : 1.9798162899236642
+        },
+        "-MySmgjDGNULxPeLY2_2" : {
+          "Time" : 1.647619787539824E9,
+          "Value" : -0.05036141033587787
+        }
+      },
+      "Y" : {
+        "-MySd5vsayt_Pyq8Z9PS" : {
+          "Time" : 1.6476172731112773E9,
+          "Value" : -0.014655436870229008
+        },
+        "-MySd65IeCgHu8fYjvmW" : {
+          "Time" : 1.6476172740171509E9,
+          "Value" : -0.00479632479389313
+        },
+        "-MySd6FvAId8wBWT0_4T" : {
+          "Time" : 1.6476172746954236E9,
+          "Value" : -0.011990811984732825
+        },
+        "-MySd6QZbkr1yg0i9juD" : {
+          "Time" : 1.6476172753847697E9,
+          "Value" : -0.007727412167938932
+        },
+        "-MySd6_efPgtTVZQpqXy" : {
+          "Time" : 1.6476172760543356E9,
+          "Value" : -0.003730474839694657
+        },
+        "-MySd6jxGUy9KrnOdFfU" : {
+          "Time" : 1.6476172766915483E9,
+          "Value" : -0.00799387465648855
+        },
+        "-MySd6uIu11_LjAU0gfp" : {
+          "Time" : 1.6476172773565059E9,
+          "Value" : -0.010658499541984735
+        },
+        "-MySe75AX7rmoEAqlApp" : {
+          "Time" : 1.6476175400228093E9,
+          "Value" : 0.012257274473282443
+        },
+        "-MySe7G-aKFB9cAK39y0" : {
+          "Time" : 1.6476175409357376E9,
+          "Value" : 0.016520674290076337
+        },
+        "-MySe7QfdgJ5Jj4NE9EU" : {
+          "Time" : 1.647617541628289E9,
+          "Value" : 0.014388974381679392
+        },
+        "-MySe7aTrNiwAc4ZQeVO" : {
+          "Time" : 1.647617542308556E9,
+          "Value" : 0.010392037053435116
+        },
+        "-MySjw482SuXOV1U6_Is" : {
+          "Time" : 1.6476190636569395E9,
+          "Value" : 0.00639509972519084
+        },
+        "-MySjwEUTQVAB_Ibf0tm" : {
+          "Time" : 1.6476190645489793E9,
+          "Value" : 0.018119449221374047
+        },
+        "-MySjwP5KRYH5IJ8peuQ" : {
+          "Time" : 1.6476190652253487E9,
+          "Value" : 0.010924962030534353
+        },
+        "-MySjwZj-yhfVumBrJvR" : {
+          "Time" : 1.647619065902243E9,
+          "Value" : 0.005595712259541985
+        },
+        "-MySjwjCdgC3x52V-m_5" : {
+          "Time" : 1.6476190665837002E9,
+          "Value" : 0.009059724610687023
+        },
+        "-MySjwu0OozBKc8roV3u" : {
+          "Time" : 1.6476190672793689E9,
+          "Value" : 0.011990811984732825
+        },
+        "-MySlyMvzMrfAsAx_OYw" : {
+          "Time" : 1.6476195972858584E9,
+          "Value" : 0.9283553101068703
+        },
+        "-MySlyXXTZTOONLJoya_" : {
+          "Time" : 1.6476195982631109E9,
+          "Value" : -2.819439591343512
+        },
+        "-MySlyh8TyqWl-l21hT9" : {
+          "Time" : 1.6476195989365728E9,
+          "Value" : -3.5130414490381683
+        },
+        "-MySlys8-qJE4JtdTtRk" : {
+          "Time" : 1.6476195996180785E9,
+          "Value" : 0.34879939751145045
+        },
+        "-MySlz1g2yk6nYG5EtiL" : {
+          "Time" : 1.647619600313867E9,
+          "Value" : 1.0282787433129772
+        },
+        "-MySlzD28HHx4qm4TiyC" : {
+          "Time" : 1.6476196010287821E9,
+          "Value" : -0.6952006326259542
+        },
+        "-MySlzP4_y5MWHwmskba" : {
+          "Time" : 1.647619601770276E9,
+          "Value" : 1.659528378687023
+        },
+        "-MySlz_eFu6ar0i98Oc9" : {
+          "Time" : 1.6476196025206554E9,
+          "Value" : -0.02558039890076336
+        },
+        "-MySlzknEYihrtaP5Oqg" : {
+          "Time" : 1.647619603258593E9,
+          "Value" : -0.04822971042748092
+        },
+        "-MySlzvaW92mBuRx1VjN" : {
+          "Time" : 1.6476196039609213E9,
+          "Value" : 0.023448698992366415
+        },
+        "-MySm-9wlAu1ucVauhKA" : {
+          "Time" : 1.6476196046494877E9,
+          "Value" : -5.329249770992366E-4
+        },
+        "-MySm-Kp_NfYJBrkW028" : {
+          "Time" : 1.6476196056358848E9,
+          "Value" : 0.02078407410687023
+        },
+        "-MySm-VlQf0HNUBQHrcR" : {
+          "Time" : 1.6476196063220701E9,
+          "Value" : 0.333078110687023
+        },
+        "-MySm-glanm4cFjLU0JW" : {
+          "Time" : 1.6476196070176144E9,
+          "Value" : -0.1148453325648855
+        },
+        "-MySm-rlHKWUtPwjV673" : {
+          "Time" : 1.6476196077832727E9,
+          "Value" : -2.7541562816488554
+        },
+        "-MySm01hk1wXJc5Ay89S" : {
+          "Time" : 1.6476196085039704E9,
+          "Value" : -0.034906586
+        },
+        "-MySm0CJCb9Vks8Khuac" : {
+          "Time" : 1.6476196091834586E9,
+          "Value" : -2.673418147618321
+        },
+        "-MySm0d-4pyZ0tTYRcqu" : {
+          "Time" : 1.6476196098589857E9,
+          "Value" : -1.5230995845496185
+        },
+        "-MySmJtexiQ2AyK1NSF_" : {
+          "Time" : 1.647619689617486E9,
+          "Value" : 0.013589586916030535
+        },
+        "-MySmKDo7Pmv54Nk4prS" : {
+          "Time" : 1.647619690587606E9,
+          "Value" : -0.02558039890076336
+        },
+        "-MySmKQF1-OfDyCKk9_d" : {
+          "Time" : 1.6476196919262536E9,
+          "Value" : 0.10392037053435114
+        },
+        "-MySmK_bxE2OIMBiIvt8" : {
+          "Time" : 1.6476196926843522E9,
+          "Value" : 0.4860275791145039
+        },
+        "-MySmKkGa3i5z-p7jjPx" : {
+          "Time" : 1.6476196933581283E9,
+          "Value" : -0.3554609597251909
+        },
+        "-MySmKukA5EQtBK0VMDo" : {
+          "Time" : 1.6476196940313306E9,
+          "Value" : -0.6672220713282443
+        },
+        "-MySmL7HjtefdPMzWxos" : {
+          "Time" : 1.647619694900582E9,
+          "Value" : -0.9358162597862596
+        },
+        "-MySmLHucNHOZUmf-6MJ" : {
+          "Time" : 1.6476196955721447E9,
+          "Value" : -0.09459418343511453
+        },
+        "-MySmLT4kfnHrz3DPyFf" : {
+          "Time" : 1.647619696250517E9,
+          "Value" : 0.07674119670229008
+        },
+        "-MySmLd3WIpHgZ5f-lLK" : {
+          "Time" : 1.6476196969895473E9,
+          "Value" : 0.08100459651908397
+        },
+        "-MySmLqgJ6Ig66GR6XYB" : {
+          "Time" : 1.6476196976912465E9,
+          "Value" : 2.089065910229008
+        },
+        "-MySmM-gsLR-mfaHABo2" : {
+          "Time" : 1.647619698514233E9,
+          "Value" : 1.5915804441068704
+        },
+        "-MySmMAAHzybKun2A6rm" : {
+          "Time" : 1.647619699180484E9,
+          "Value" : 0.36079020949618323
+        },
+        "-MySmMKoqISLp4GrnLvm" : {
+          "Time" : 1.6476196998566868E9,
+          "Value" : -0.2019785663206107
+        },
+        "-MySmMVPtFBWdoF8-WYV" : {
+          "Time" : 1.647619700541602E9,
+          "Value" : -0.15135069349618321
+        },
+        "-MySmMeksE2l-C4azxqp" : {
+          "Time" : 1.6476197012041883E9,
+          "Value" : -0.04396631061068702
+        },
+        "-MySmMpAvB6taJOO_PrD" : {
+          "Time" : 1.6476197018697615E9,
+          "Value" : 0.010924962030534353
+        },
+        "-MySmMzaK3rBPajhOwV8" : {
+          "Time" : 1.6476197025396914E9,
+          "Value" : 0.034906586
+        },
+        "-MySmN9CnjR2x3do7-4c" : {
+          "Time" : 1.647619703207513E9,
+          "Value" : -0.033840736045801526
+        },
+        "-MySmNL8BoOZNhVHirZL" : {
+          "Time" : 1.6476197039754703E9,
+          "Value" : -0.012523736961832063
+        },
+        "-MySmNZ1q6euhf54G4ks" : {
+          "Time" : 1.647619704658138E9,
+          "Value" : -0.036238898442748094
+        },
+        "-MySmNiNmUd7xxUxnFjj" : {
+          "Time" : 1.6476197055252125E9,
+          "Value" : 0.0522266477557252
+        },
+        "-MySmO-f5Bc9BTl5AbOf" : {
+          "Time" : 1.6476197061900003E9,
+          "Value" : 0.08313629642748092
+        },
+        "-MySmOALOyQK0TR4yf8T" : {
+          "Time" : 1.64761970739046E9,
+          "Value" : 0.013323124427480917
+        },
+        "-MySmOLg6ZRKu0_AgkuC" : {
+          "Time" : 1.6476197081008332E9,
+          "Value" : 0.03224196111450382
+        },
+        "-MySmOWXq4a2hiLAUx2i" : {
+          "Time" : 1.6476197087901092E9,
+          "Value" : 0.033840736045801526
+        },
+        "-MySmOfxBUN8vBux_tdk" : {
+          "Time" : 1.6476197094725022E9,
+          "Value" : -7.99387465648855E-4
+        },
+        "-MySmOqI2dpYB4INW7BQ" : {
+          "Time" : 1.6476197101410172E9,
+          "Value" : 0.03810413586259542
+        },
+        "-MySmPECZ6lg6FJzBFkW" : {
+          "Time" : 1.6476197108301954E9,
+          "Value" : 0.015721286824427482
+        },
+        "-MySmPOw4AI_07cremku" : {
+          "Time" : 1.6476197124091043E9,
+          "Value" : -0.04876263540458016
+        },
+        "-MySmPbiPQuLRdO9wepE" : {
+          "Time" : 1.6476197131016293E9,
+          "Value" : 0.015721286824427482
+        },
+        "-MySmPmqbUtdxjF2lXbQ" : {
+          "Time" : 1.647619713953224E9,
+          "Value" : 0.0159877493129771
+        },
+        "-MySmPxUXIUNDYd0CwOa" : {
+          "Time" : 1.6476197146782055E9,
+          "Value" : 0.030376723694656493
+        },
+        "-MySmQBvAhkMiTNFNg98" : {
+          "Time" : 1.6476197153627388E9,
+          "Value" : -0.13456355671755726
+        },
+        "-MySmQbzp5oZYXCYJHM7" : {
+          "Time" : 1.6476197174101744E9,
+          "Value" : 1.7479939248854963
+        },
+        "-MySmQn75JCxfRsZKJoP" : {
+          "Time" : 1.6476197181040542E9,
+          "Value" : 4.692670885847329
+        },
+        "-MySmQyZJFelNiYGvnHL" : {
+          "Time" : 1.6476197188338392E9,
+          "Value" : 4.793393706519085
+        },
+        "-MySmRA2cmpymRSqx5Jz" : {
+          "Time" : 1.6476197196293712E9,
+          "Value" : 1.2438468965496183
+        },
+        "-MySmRKPrqGgHLJKgImN" : {
+          "Time" : 1.6476197203228803E9,
+          "Value" : -2.669687672778626
+        },
+        "-MySmRUu7xmVqX1MZ50w" : {
+          "Time" : 1.6476197209829924E9,
+          "Value" : -0.5006830159847329
+        },
+        "-MySmRipGvVEc41hpPwC" : {
+          "Time" : 1.647619721693708E9,
+          "Value" : -4.562903653923665
+        },
+        "-MySmSDXJ-9cWaXQ8frV" : {
+          "Time" : 1.6476197239690335E9,
+          "Value" : -3.6358806562595425
+        },
+        "-MySmSO9cZVDqclRe1Li" : {
+          "Time" : 1.6476197246424835E9,
+          "Value" : -3.2519082102595425
+        },
+        "-MySmSYcgJYlGGPEiMeW" : {
+          "Time" : 1.6476197253168578E9,
+          "Value" : 2.547647853022901
+        },
+        "-MySmSiTe0BPaF5RNce1" : {
+          "Time" : 1.6476197260107777E9,
+          "Value" : 3.1922206128244275
+        },
+        "-MySmStsrrxslje_jVyx" : {
+          "Time" : 1.647619726736941E9,
+          "Value" : 2.385105735007634
+        },
+        "-MySmT3F6zsuyNEWUAYc" : {
+          "Time" : 1.6476197274111173E9,
+          "Value" : 3.5069128118015267
+        },
+        "-MySmTE34uG3WT6-u7zy" : {
+          "Time" : 1.6476197280993867E9,
+          "Value" : -1.0871669532824428
+        },
+        "-MySmTbl-c0N9_N1ukPD" : {
+          "Time" : 1.64761972877911E9,
+          "Value" : 2.2396172162595422
+        },
+        "-MySmTmjzdo1kQsdfOVl" : {
+          "Time" : 1.647619730341118E9,
+          "Value" : -0.5358560644732825
+        },
+        "-MySmU-GabWgMuHWwwUv" : {
+          "Time" : 1.647619731056797E9,
+          "Value" : -1.2124043229007635
+        },
+        "-MySmU9SMvbt4DqtSen9" : {
+          "Time" : 1.647619731892536E9,
+          "Value" : 2.7450965570381682
+        },
+        "-MySmUK7Zw8AX8cb-74F" : {
+          "Time" : 1.6476197325836792E9,
+          "Value" : 2.2396172162595422
+        },
+        "-MySmUUp6r8QdmYGwogg" : {
+          "Time" : 1.6476197332473388E9,
+          "Value" : 1.8910842812366415
+        },
+        "-MySmUeIX_L4Y_jNmvGK" : {
+          "Time" : 1.6476197339317832E9,
+          "Value" : 1.1961501110992367
+        },
+        "-MySmUojNaCXMQ5AtS0p" : {
+          "Time" : 1.6476197346014516E9,
+          "Value" : -0.532658514610687
+        },
+        "-MySmUzRFVqlxw3iO5Zw" : {
+          "Time" : 1.6476197352715502E9,
+          "Value" : -0.47590200454961834
+        },
+        "-MySmV95pFTtnRzTNzVc" : {
+          "Time" : 1.6476197359604993E9,
+          "Value" : 0.8766615873282443
+        },
+        "-MySmVKdRfPb4hI9-Wyl" : {
+          "Time" : 1.6476197367065039E9,
+          "Value" : 0.21503522825954202
+        },
+        "-MySmVVeXLU8IqR7FNIf" : {
+          "Time" : 1.6476197374096816E9,
+          "Value" : 0.0319754986259542
+        },
+        "-MySmViBNE86DN-TmtZs" : {
+          "Time" : 1.6476197380876148E9,
+          "Value" : 0.014655436870229008
+        },
+        "-MySmVsOw4Gye4Ub7sj6" : {
+          "Time" : 1.6476197389224482E9,
+          "Value" : 0.12656968206106872
+        },
+        "-MySmW20PN73hqIVhc5b" : {
+          "Time" : 1.6476197396115427E9,
+          "Value" : 0.03357427355725191
+        },
+        "-MySmWCweU7fSqk3iekG" : {
+          "Time" : 1.6476197402789333E9,
+          "Value" : -0.5987412117709924
+        },
+        "-MySmWSf5R5XP__4zPFR" : {
+          "Time" : 1.6476197411616843E9,
+          "Value" : -0.19238591673282446
+        },
+        "-MySmWc42YfprPyMYWLb" : {
+          "Time" : 1.647619741983272E9,
+          "Value" : -0.20464319120610688
+        },
+        "-MySmWminqCoE3Ox-SqR" : {
+          "Time" : 1.6476197426532445E9,
+          "Value" : 0.02105053659541985
+        },
+        "-MySmWxGCrUxvPHcjD1k" : {
+          "Time" : 1.6476197433345723E9,
+          "Value" : -0.0061286372366412215
+        },
+        "-MySmX7AoF6llR2-WWRE" : {
+          "Time" : 1.6476197440331895E9,
+          "Value" : 0.02424808645801527
+        },
+        "-MySmXHj2Fi6ssTv-hap" : {
+          "Time" : 1.6476197447046967E9,
+          "Value" : -0.030376723694656493
+        },
+        "-MySmXV6sorvOOEiJQSz" : {
+          "Time" : 1.6476197453862875E9,
+          "Value" : -0.04076876074809161
+        },
+        "-MySmXeIBHPXc7ltVcr2" : {
+          "Time" : 1.6476197462138283E9,
+          "Value" : 0.011724349496183208
+        },
+        "-MySmXpjF1B4ylOPOJJt" : {
+          "Time" : 1.6476197469384701E9,
+          "Value" : -0.0959264958778626
+        },
+        "-MySmY-8EOhJYG01Fcst" : {
+          "Time" : 1.6476197476163085E9,
+          "Value" : 0.01279019945038168
+        },
+        "-MySmY9vwNcoemGwDRFp" : {
+          "Time" : 1.6476197482933865E9,
+          "Value" : 0.008260337145038169
+        },
+        "-MySmYK_ex3mfIFxeEHk" : {
+          "Time" : 1.6476197489842541E9,
+          "Value" : 0.016254211801526718
+        },
+        "-MySmYV7R4S_kYR14Fhu" : {
+          "Time" : 1.6476197496600728E9,
+          "Value" : -0.013323124427480917
+        },
+        "-MySmYenwm3D-5-BZqy7" : {
+          "Time" : 1.647619750333019E9,
+          "Value" : 0.019984686641221373
+        },
+        "-MySmYq04UqWK6eBU6lP" : {
+          "Time" : 1.6476197510120318E9,
+          "Value" : 0.008793262122137404
+        },
+        "-MySmZ-l__yjBos00_-I" : {
+          "Time" : 1.6476197517463577E9,
+          "Value" : 0.21130475341984734
+        },
+        "-MySmZDMZ-Jip2aBhmNj" : {
+          "Time" : 1.6476197524310403E9,
+          "Value" : -1.52896175929771
+        },
+        "-MySmZVMLH3Rzd9p1T0Q" : {
+          "Time" : 1.6476197532708619E9,
+          "Value" : 0.9715222332519086
+        },
+        "-MySmZfDoW4-xIffFz15" : {
+          "Time" : 1.6476197544617252E9,
+          "Value" : 1.0972925278473284
+        },
+        "-MySmZpWZj6M53mqXNfq" : {
+          "Time" : 1.6476197551271925E9,
+          "Value" : 2.0195192007175575
+        },
+        "-MySm_-3LjLB4BtFSbOX" : {
+          "Time" : 1.6476197558013775E9,
+          "Value" : -1.0805053910687024
+        },
+        "-MySm_9alBCFHHRaY8b6" : {
+          "Time" : 1.6476197564887953E9,
+          "Value" : -2.912967924824428
+        },
+        "-MySm_K9U6KVrr4CjcVT" : {
+          "Time" : 1.6476197571480105E9,
+          "Value" : 2.0925299225801526
+        },
+        "-MySm_Uxw2E1Bar79SVT" : {
+          "Time" : 1.647619757832099E9,
+          "Value" : -0.1665390553435115
+        },
+        "-MySm_ecE6ljfsdJXS9a" : {
+          "Time" : 1.6476197585175254E9,
+          "Value" : -0.33574273557251916
+        },
+        "-MySm_pOd-GS8k_sfzF-" : {
+          "Time" : 1.6476197592005699E9,
+          "Value" : -1.1340643512671758
+        },
+        "-MySma1vcgWHh8rwR0QG" : {
+          "Time" : 1.6476197598985221E9,
+          "Value" : -6.686609687664123
+        },
+        "-MySmaCE_HNWLzjOYSYo" : {
+          "Time" : 1.6476197607266662E9,
+          "Value" : -5.327917458549619
+        },
+        "-MySmaMrq2vVDDjsE85o" : {
+          "Time" : 1.647619761409565E9,
+          "Value" : -3.067782630671756
+        },
+        "-MySmaWxni8EMVkFd6dd" : {
+          "Time" : 1.6476197620809858E9,
+          "Value" : -3.4245759028396954
+        },
+        "-MySmagnW79osCuhQj53" : {
+          "Time" : 1.6476197627394838E9,
+          "Value" : -3.2817520089770995
+        },
+        "-MySmart5ISmTOgl3qSf" : {
+          "Time" : 1.6476197634532788E9,
+          "Value" : -2.121307871343512
+        },
+        "-MySmb1M6VWiA0oYAKQ3" : {
+          "Time" : 1.6476197641349137E9,
+          "Value" : -0.9792496454198474
+        },
+        "-MySmbC34byEj34-DfFj" : {
+          "Time" : 1.6476197648178263E9,
+          "Value" : -0.1289678444580153
+        },
+        "-MySmbMq5CALbTuMRwy6" : {
+          "Time" : 1.647619765490326E9,
+          "Value" : 1.637145529648855
+        },
+        "-MySmbXk3NFpRoOIN5PI" : {
+          "Time" : 1.6476197661885593E9,
+          "Value" : 0.2440796395114504
+        },
+        "-MySmbkI8n3SBlc23kpk" : {
+          "Time" : 1.647619766892465E9,
+          "Value" : -1.0983583778015267
+        },
+        "-MySmbuwDfr-eTD8gzXU" : {
+          "Time" : 1.6476197677573915E9,
+          "Value" : -0.26779480099236647
+        },
+        "-MySmc4OxY2YJiNRbw6h" : {
+          "Time" : 1.6476197684302762E9,
+          "Value" : -0.3453353851603054
+        },
+        "-MySmcEnOwsKo2MUf6gp" : {
+          "Time" : 1.6476197690893006E9,
+          "Value" : 0.261133238778626
+        },
+        "-MySmcP9LEx8uLVJgGl2" : {
+          "Time" : 1.6476197697567694E9,
+          "Value" : 1.1399265260152673
+        },
+        "-MySmcZh3FJVeMqp8hKM" : {
+          "Time" : 1.647619770426971E9,
+          "Value" : 0.10924962030534352
+        },
+        "-MySmcjRBbZtaFHXmjyE" : {
+          "Time" : 1.6476197711118574E9,
+          "Value" : -0.5108085905496184
+        },
+        "-MySmctvwria16pda8me" : {
+          "Time" : 1.6476197717842963E9,
+          "Value" : 0.12070750731297711
+        },
+        "-MySmd3d5PMPBzWm-40C" : {
+          "Time" : 1.6476197724669983E9,
+          "Value" : -1.2603675708396949
+        },
+        "-MySmdEm8N49wBY83VHw" : {
+          "Time" : 1.6476197731862879E9,
+          "Value" : 0.02717917383206107
+        },
+        "-MySmdRzE6h9hfKiy4Pj" : {
+          "Time" : 1.6476197738636131E9,
+          "Value" : -0.03597243595419848
+        },
+        "-MySmdbaRXn2k6IbBVdc" : {
+          "Time" : 1.647619774693274E9,
+          "Value" : 0.02078407410687023
+        },
+        "-MySmdlkgle9VwrwjMpI" : {
+          "Time" : 1.6476197753729246E9,
+          "Value" : 0.0668820846259542
+        },
+        "-MySmdw2C39w9HMWfJ0e" : {
+          "Time" : 1.6476197760199223E9,
+          "Value" : 0.16573966787786262
+        },
+        "-MySme5_6471o7-AauTp" : {
+          "Time" : 1.6476197766845973E9,
+          "Value" : -0.02771209880916031
+        },
+        "-MySmeG9iVv_jw8Uw5Kz" : {
+          "Time" : 1.6476197773644009E9,
+          "Value" : 0.10205513311450383
+        },
+        "-MySmeYYkHmbFZ06kcZq" : {
+          "Time" : 1.647619778044512E9,
+          "Value" : 3.20447788729771
+        },
+        "-MySmeisSOjtKwqze_IC" : {
+          "Time" : 1.647619779218171E9,
+          "Value" : -2.4541195195419854
+        },
+        "-MySmetMPkGsCn-kEv7C" : {
+          "Time" : 1.6476197799429197E9,
+          "Value" : 1.2593017208854964
+        },
+        "-MySmf36SmrgO-EkaasZ" : {
+          "Time" : 1.6476197806187546E9,
+          "Value" : 1.861240482519084
+        },
+        "-MySmfGXT0er-RuOAEUB" : {
+          "Time" : 1.647619781308111E9,
+          "Value" : 1.013090381465649
+        },
+        "-MySmfQZ9i4XYX20AB6_" : {
+          "Time" : 1.6476197821371238E9,
+          "Value" : 1.3171240809007634
+        },
+        "-MySmfaF0LdFrb5efOuD" : {
+          "Time" : 1.6476197828003287E9,
+          "Value" : 3.0222175451297715
+        },
+        "-MySmfkhQkrV65iZ7NeR" : {
+          "Time" : 1.6476197834836464E9,
+          "Value" : 1.8239357341221376
+        },
+        "-MySmfvNjYD1h8JVFDSO" : {
+          "Time" : 1.647619784162109E9,
+          "Value" : 1.304333881450382
+        },
+        "-MySmg4p86JZbijp9k-M" : {
+          "Time" : 1.6476197848337917E9,
+          "Value" : 1.7858315982595423
+        },
+        "-MySmgFEZ-owgkN5BJhW" : {
+          "Time" : 1.6476197855012398E9,
+          "Value" : -2.007261926244275
+        },
+        "-MySmgQ9MgddUSPr2Qls" : {
+          "Time" : 1.6476197862052703E9,
+          "Value" : -3.219399786656489
+        },
+        "-MySmg__IH-O7JL9M6-p" : {
+          "Time" : 1.6476197868716972E9,
+          "Value" : -1.789562073099237
+        },
+        "-MySmgk0dwT-EEBYHTXf" : {
+          "Time" : 1.647619787539824E9,
+          "Value" : 2.1234395712519087
+        }
+      },
+      "Z" : {
+        "-MySd5wg5hUrzg8YcWAY" : {
+          "Time" : 1.6476172731112773E9,
+          "Value" : -0.009326187099236643
+        },
+        "-MySd667CGjEsUt2mTIK" : {
+          "Time" : 1.6476172740171509E9,
+          "Value" : -0.015454824335877864
+        },
+        "-MySd6Gj6jeXL7F5VwT1" : {
+          "Time" : 1.6476172746954236E9,
+          "Value" : -0.0130566619389313
+        },
+        "-MySd6RQt6_eZtIwUO3J" : {
+          "Time" : 1.6476172753847697E9,
+          "Value" : -0.010924962030534353
+        },
+        "-MySd6aQAtuzrwciAg7P" : {
+          "Time" : 1.6476172760543356E9,
+          "Value" : -0.013323124427480917
+        },
+        "-MySd6kk8IqbIXjzD-eq" : {
+          "Time" : 1.6476172766915483E9,
+          "Value" : -0.012523736961832063
+        },
+        "-MySd6v6ENoYmYdUCNUz" : {
+          "Time" : 1.6476172773565059E9,
+          "Value" : -0.013589586916030535
+        },
+        "-MySe76-FKskHPRjEkte" : {
+          "Time" : 1.6476175400228093E9,
+          "Value" : 0.0021316999083969466
+        },
+        "-MySe7Gxx1Aq4ra3wWKz" : {
+          "Time" : 1.6476175409357376E9,
+          "Value" : 0.0018652374198473284
+        },
+        "-MySe7RV4cLNwCtWiJuV" : {
+          "Time" : 1.647617541628289E9,
+          "Value" : 0.003730474839694657
+        },
+        "-MySe7bGHd8_Exg_nXmf" : {
+          "Time" : 1.647617542308556E9,
+          "Value" : -0.0010658499541984733
+        },
+        "-MySjw4uL3jAWG_bWor4" : {
+          "Time" : 1.6476190636569395E9,
+          "Value" : 0.002398162396946565
+        },
+        "-MySjwFGzlMOWWfuCkGN" : {
+          "Time" : 1.6476190645489793E9,
+          "Value" : 0.002398162396946565
+        },
+        "-MySjwPv_lKKssddg-hN" : {
+          "Time" : 1.6476190652253487E9,
+          "Value" : 0.003730474839694657
+        },
+        "-MySjw_ZnDwggeYxWPni" : {
+          "Time" : 1.647619065902243E9,
+          "Value" : -5.329249770992366E-4
+        },
+        "-MySjwk1TxLHMk2U2JfE" : {
+          "Time" : 1.6476190665837002E9,
+          "Value" : 0.003730474839694657
+        },
+        "-MySjwuqLzKOWyTgbI3a" : {
+          "Time" : 1.6476190672793689E9,
+          "Value" : 0.004529862305343512
+        },
+        "-MySlyNnGDQg6ZN8jfu4" : {
+          "Time" : 1.6476195972858584E9,
+          "Value" : -2.359258873618321
+        },
+        "-MySlyYK_2ykSNj7PmnJ" : {
+          "Time" : 1.6476195982631109E9,
+          "Value" : 2.7821348429465655
+        },
+        "-MySlyhydwSGNJbVE-Db" : {
+          "Time" : 1.6476195989365728E9,
+          "Value" : 4.158680058793894
+        },
+        "-MySlysuGGeiNViAV9dM" : {
+          "Time" : 1.6476195996180785E9,
+          "Value" : 2.556174652656489
+        },
+        "-MySlz2ZnJId8Yml9tVo" : {
+          "Time" : 1.647619600313867E9,
+          "Value" : -0.7426309555877862
+        },
+        "-MySlzDwKmbjTnrRvMB6" : {
+          "Time" : 1.6476196010287821E9,
+          "Value" : -5.838992511587787
+        },
+        "-MySlzPz9JjZdEph8juh" : {
+          "Time" : 1.647619601770276E9,
+          "Value" : -0.7271761312519085
+        },
+        "-MySlzaYqcJeA7K7gBoD" : {
+          "Time" : 1.6476196025206554E9,
+          "Value" : 0.004529862305343512
+        },
+        "-MySlzlbTSItJfGRRSkt" : {
+          "Time" : 1.647619603258593E9,
+          "Value" : -0.05036141033587787
+        },
+        "-MySlzwSEInGfX01AQ3B" : {
+          "Time" : 1.6476196039609213E9,
+          "Value" : -0.005595712259541985
+        },
+        "-MySm-AlYA4gx8uFfDvs" : {
+          "Time" : 1.6476196046494877E9,
+          "Value" : -0.0021316999083969466
+        },
+        "-MySm-LenalZAcwkRiLb" : {
+          "Time" : 1.6476196056358848E9,
+          "Value" : -0.020251149129770992
+        },
+        "-MySm-WZY9RD5Yl6ctki" : {
+          "Time" : 1.6476196063220701E9,
+          "Value" : -0.06368453476335878
+        },
+        "-MySm-haZEYpwSGEWS_i" : {
+          "Time" : 1.6476196070176144E9,
+          "Value" : -0.6440398348244275
+        },
+        "-MySm-sqQDQpmHAisqLG" : {
+          "Time" : 1.6476196077832727E9,
+          "Value" : 3.638278818656489
+        },
+        "-MySm02W1sLbY2nGG8FZ" : {
+          "Time" : 1.6476196085039704E9,
+          "Value" : 0.034906586
+        },
+        "-MySm0D6z8LEQJ4s7sXN" : {
+          "Time" : 1.6476196091834586E9,
+          "Value" : -0.5928790370229009
+        },
+        "-MySm0duNlOxGTI6dkUq" : {
+          "Time" : 1.6476196098589857E9,
+          "Value" : 4.570098141114505
+        },
+        "-MySmJuafxT7ThiJWQq7" : {
+          "Time" : 1.647619689617486E9,
+          "Value" : -0.2480765768396947
+        },
+        "-MySmKEgpS83qbsb1F-X" : {
+          "Time" : 1.647619690587606E9,
+          "Value" : -0.005595712259541985
+        },
+        "-MySmKR2UFLIA8Hrwq1v" : {
+          "Time" : 1.6476196919262536E9,
+          "Value" : -0.07674119670229008
+        },
+        "-MySmKaRhjTZoltTdl1d" : {
+          "Time" : 1.6476196926843522E9,
+          "Value" : -0.8580092131297711
+        },
+        "-MySmKl38mD6gPqCPtLY" : {
+          "Time" : 1.6476196933581283E9,
+          "Value" : 2.4882267180763358
+        },
+        "-MySmKv_o9nEI1vJ-KgI" : {
+          "Time" : 1.6476196940313306E9,
+          "Value" : 0.49348852879389316
+        },
+        "-MySmL8A47SDwbukDIV6" : {
+          "Time" : 1.647619694900582E9,
+          "Value" : 0.3565268096793894
+        },
+        "-MySmLIhzm_I6TAoqIhG" : {
+          "Time" : 1.6476196955721447E9,
+          "Value" : -0.1700030676946565
+        },
+        "-MySmLU4y81guZb-1g8a" : {
+          "Time" : 1.647619696250517E9,
+          "Value" : -0.1478866811450382
+        },
+        "-MySmLe1luc5uN9aglpJ" : {
+          "Time" : 1.6476196969895473E9,
+          "Value" : 0.04103522323664122
+        },
+        "-MySmLrRT9cGitnHBIM9" : {
+          "Time" : 1.6476196976912465E9,
+          "Value" : -1.124738164167939
+        },
+        "-MySmM0T9jWaihACG_NU" : {
+          "Time" : 1.647619698514233E9,
+          "Value" : -0.9129004857709925
+        },
+        "-MySmMB4aWhe_IAy4MrK" : {
+          "Time" : 1.647619699180484E9,
+          "Value" : -0.5571730635572519
+        },
+        "-MySmMLaheOLk0EsR1Tf" : {
+          "Time" : 1.6476196998566868E9,
+          "Value" : 0.15561409331297713
+        },
+        "-MySmMWCIfsknAxUuGkk" : {
+          "Time" : 1.647619700541602E9,
+          "Value" : 0.04902909789312977
+        },
+        "-MySmMfYnM5OQn5nlosQ" : {
+          "Time" : 1.6476197012041883E9,
+          "Value" : 0.07647473421374047
+        },
+        "-MySmMpxsLSSaAHkb_NA" : {
+          "Time" : 1.6476197018697615E9,
+          "Value" : 0.0053292497709923675
+        },
+        "-MySmN-Qp9YDCKUwCn_g" : {
+          "Time" : 1.6476197025396914E9,
+          "Value" : -0.040502298259541984
+        },
+        "-MySmNA-jtkUub8YrD-M" : {
+          "Time" : 1.647619703207513E9,
+          "Value" : 0.04689739798473283
+        },
+        "-MySmNLwtnjgP0dj5DNV" : {
+          "Time" : 1.6476197039754703E9,
+          "Value" : 0.08660030877862597
+        },
+        "-MySmNZqqMTnhxnldaNE" : {
+          "Time" : 1.647619704658138E9,
+          "Value" : 0.06581623467175574
+        },
+        "-MySmNj6F66_SjuCunHD" : {
+          "Time" : 1.6476197055252125E9,
+          "Value" : 0.00959264958778626
+        },
+        "-MySmO0Vm2rFJ0SFZipV" : {
+          "Time" : 1.6476197061900003E9,
+          "Value" : 0.03970291079389313
+        },
+        "-MySmOBpDfqSw6fswN8i" : {
+          "Time" : 1.64761970739046E9,
+          "Value" : -0.02717917383206107
+        },
+        "-MySmOMW_7XyV7OtkOHg" : {
+          "Time" : 1.6476197081008332E9,
+          "Value" : -0.07487595928244276
+        },
+        "-MySmOXLhti3wUwAAD2f" : {
+          "Time" : 1.6476197087901092E9,
+          "Value" : 0.002398162396946565
+        },
+        "-MySmOglenaot2BoUitA" : {
+          "Time" : 1.6476197094725022E9,
+          "Value" : 0.12310566970992368
+        },
+        "-MySmOr5-a3bYjP3fEHM" : {
+          "Time" : 1.6476197101410172E9,
+          "Value" : -0.0261133238778626
+        },
+        "-MySmPF2UEkyiQyT4rnZ" : {
+          "Time" : 1.6476197108301954E9,
+          "Value" : -0.005595712259541985
+        },
+        "-MySmPPj0AUg4X_tQD8M" : {
+          "Time" : 1.6476197124091043E9,
+          "Value" : -0.005062787282442748
+        },
+        "-MySmPcVea2O9EYY07FV" : {
+          "Time" : 1.6476197131016293E9,
+          "Value" : -0.040502298259541984
+        },
+        "-MySmPndsCcfufw9VqQp" : {
+          "Time" : 1.647619713953224E9,
+          "Value" : -0.06554977218320611
+        },
+        "-MySmPyJksEGCMR9ITrA" : {
+          "Time" : 1.6476197146782055E9,
+          "Value" : -0.07087902195419848
+        },
+        "-MySmQChXvVnBvBhf1qG" : {
+          "Time" : 1.6476197153627388E9,
+          "Value" : 0.21050536595419847
+        },
+        "-MySmQcq9DCYkncgYEU_" : {
+          "Time" : 1.6476197174101744E9,
+          "Value" : -1.1524502629770994
+        },
+        "-MySmQo5L_b-EiLoOnvC" : {
+          "Time" : 1.6476197181040542E9,
+          "Value" : -6.248811818977099
+        },
+        "-MySmQzO1BPoJxvwvspJ" : {
+          "Time" : 1.6476197188338392E9,
+          "Value" : -5.410787292488551
+        },
+        "-MySmRAvbArYiIfEyRZZ" : {
+          "Time" : 1.6476197196293712E9,
+          "Value" : 1.1010230026870231
+        },
+        "-MySmRLFtlkatUJpePoG" : {
+          "Time" : 1.6476197203228803E9,
+          "Value" : 2.724845407908397
+        },
+        "-MySmRVkdCeJzRaiOK9Z" : {
+          "Time" : 1.6476197209829924E9,
+          "Value" : 2.2212313045496184
+        },
+        "-MySmRjlMzzN8mKUzb2j" : {
+          "Time" : 1.647619721693708E9,
+          "Value" : 1.0594548544732825
+        },
+        "-MySmSELCn5d-EGj6ee6" : {
+          "Time" : 1.6476197239690335E9,
+          "Value" : 4.812579005694657
+        },
+        "-MySmSOyDbT0GazlUWVj" : {
+          "Time" : 1.6476197246424835E9,
+          "Value" : 0.7167840941984734
+        },
+        "-MySmSZ_dnSEXZdBEqxi" : {
+          "Time" : 1.6476197253168578E9,
+          "Value" : -2.222297154503817
+        },
+        "-MySmSjFMk_B16beXFgQ" : {
+          "Time" : 1.6476197260107777E9,
+          "Value" : -0.20437672871755727
+        },
+        "-MySmSulMCuOIGBGFKnj" : {
+          "Time" : 1.647619726736941E9,
+          "Value" : -1.7805023484885498
+        },
+        "-MySmT441FODIyncCwpp" : {
+          "Time" : 1.6476197274111173E9,
+          "Value" : -5.555742886259543
+        },
+        "-MySmTEygDvjPqsL7z5f" : {
+          "Time" : 1.6476197280993867E9,
+          "Value" : 1.1766983494351146
+        },
+        "-MySmTc_in-M_2cEroVU" : {
+          "Time" : 1.64761972877911E9,
+          "Value" : 0.20943951600000002
+        },
+        "-MySmTnWuLS4bTfrDkhI" : {
+          "Time" : 1.647619730341118E9,
+          "Value" : 8.703197801007635
+        },
+        "-MySmU00m-e41MuJyoPn" : {
+          "Time" : 1.647619731056797E9,
+          "Value" : -0.2558039890076336
+        },
+        "-MySmUAI8y6QyvlMJlwB" : {
+          "Time" : 1.647619731892536E9,
+          "Value" : -4.158680058793894
+        },
+        "-MySmUKvBPRs1CV7VICn" : {
+          "Time" : 1.6476197325836792E9,
+          "Value" : -5.587984847374047
+        },
+        "-MySmUVf2lCJz6Cy_Nan" : {
+          "Time" : 1.6476197332473388E9,
+          "Value" : -6.892318728824429
+        },
+        "-MySmUf7mm5Kz4zlySO5" : {
+          "Time" : 1.6476197339317832E9,
+          "Value" : -2.0866677478320614
+        },
+        "-MySmUpZESwtOOmew-S0" : {
+          "Time" : 1.6476197346014516E9,
+          "Value" : 3.4733385382442754
+        },
+        "-MySmV-FA6JFy4jhPGoC" : {
+          "Time" : 1.6476197352715502E9,
+          "Value" : -0.06821439706870229
+        },
+        "-MySmV9tknWNqfim2OvU" : {
+          "Time" : 1.6476197359604993E9,
+          "Value" : 0.05675651006106871
+        },
+        "-MySmVLRrHQlZrTke5Vw" : {
+          "Time" : 1.6476197367065039E9,
+          "Value" : -0.4543185429770993
+        },
+        "-MySmVWRkoj0D66OSt-L" : {
+          "Time" : 1.6476197374096816E9,
+          "Value" : 0.12870138196946565
+        },
+        "-MySmViw3ZqoY8pJ8yRY" : {
+          "Time" : 1.6476197380876148E9,
+          "Value" : -0.00799387465648855
+        },
+        "-MySmVtHB0t7AqXMFETC" : {
+          "Time" : 1.6476197389224482E9,
+          "Value" : 0.10845023283969467
+        },
+        "-MySmW2mVwsLWKRWD11d" : {
+          "Time" : 1.6476197396115427E9,
+          "Value" : -0.07381010932824428
+        },
+        "-MySmWDmKQ_kWjGQ0ACp" : {
+          "Time" : 1.6476197402789333E9,
+          "Value" : 0.5688974130534352
+        },
+        "-MySmWTS9tZ_OmgPWOQJ" : {
+          "Time" : 1.6476197411616843E9,
+          "Value" : -0.4172802570687023
+        },
+        "-MySmWctTpy0Axr00axS" : {
+          "Time" : 1.647619741983272E9,
+          "Value" : 0.04583154803053435
+        },
+        "-MySmWnTGgFOa-lVJW_P" : {
+          "Time" : 1.6476197426532445E9,
+          "Value" : 0.10525268297709924
+        },
+        "-MySmWyKW7dugHUVmVRZ" : {
+          "Time" : 1.6476197433345723E9,
+          "Value" : -0.005862174748091604
+        },
+        "-MySmX7zv6sYdg-rKtD1" : {
+          "Time" : 1.6476197440331895E9,
+          "Value" : 0.08366922140458016
+        },
+        "-MySmXIW9JUKh0wWXQDt" : {
+          "Time" : 1.6476197447046967E9,
+          "Value" : 0.03090964867175573
+        },
+        "-MySmXVs3ps7vs-SJnfk" : {
+          "Time" : 1.6476197453862875E9,
+          "Value" : -0.00799387465648855
+        },
+        "-MySmXf8lC-PhDjglgvG" : {
+          "Time" : 1.6476197462138283E9,
+          "Value" : 0.033840736045801526
+        },
+        "-MySmXqWbY9MBVyTxAQz" : {
+          "Time" : 1.6476197469384701E9,
+          "Value" : 0.033041348580152674
+        },
+        "-MySmY-y_X0jX3pivf2C" : {
+          "Time" : 1.6476197476163085E9,
+          "Value" : -0.05036141033587787
+        },
+        "-MySmYAjz5hD4Z5-ZPHw" : {
+          "Time" : 1.6476197482933865E9,
+          "Value" : 0.02398162396946565
+        },
+        "-MySmYLP9b-2HUnQEn8T" : {
+          "Time" : 1.6476197489842541E9,
+          "Value" : 0.04556508554198474
+        },
+        "-MySmYVwWEqxKXFf5kM7" : {
+          "Time" : 1.6476197496600728E9,
+          "Value" : -0.018652374198473286
+        },
+        "-MySmYfZoQNQ8P1yCY2w" : {
+          "Time" : 1.647619750333019E9,
+          "Value" : -0.05622358508396947
+        },
+        "-MySmYqpA3k2o2LnZII7" : {
+          "Time" : 1.6476197510120318E9,
+          "Value" : -0.0021316999083969466
+        },
+        "-MySmZ0YJXmQxmVRR95K" : {
+          "Time" : 1.6476197517463577E9,
+          "Value" : 1.7376018878320614
+        },
+        "-MySmZE7BeIoCnNWIaeH" : {
+          "Time" : 1.6476197524310403E9,
+          "Value" : 4.994039960396948
+        },
+        "-MySmZWQOCqCsQxvvL7r" : {
+          "Time" : 1.6476197532708619E9,
+          "Value" : -2.5151394294198473
+        },
+        "-MySmZfz6vvQytMJ-n08" : {
+          "Time" : 1.6476197544617252E9,
+          "Value" : -3.13493117778626
+        },
+        "-MySmZqK2BZ8P-rPZUbp" : {
+          "Time" : 1.6476197551271925E9,
+          "Value" : -8.731442824793893
+        },
+        "-MySm_-oXJkywGH3u06m" : {
+          "Time" : 1.6476197558013775E9,
+          "Value" : 3.439231339709924
+        },
+        "-MySm_AWIOLpxR6tCtDI" : {
+          "Time" : 1.6476197564887953E9,
+          "Value" : 2.2747902647480918
+        },
+        "-MySm_LBoqTjxIdVVmWD" : {
+          "Time" : 1.6476197571480105E9,
+          "Value" : -1.484196061221374
+        },
+        "-MySm_Vvvoyvec1dqVN1" : {
+          "Time" : 1.647619757832099E9,
+          "Value" : -1.8671026572671758
+        },
+        "-MySm_fSHTFxbXHkUKcP" : {
+          "Time" : 1.6476197585175254E9,
+          "Value" : -2.529528403801527
+        },
+        "-MySm_qMxU7ESWVdNQij" : {
+          "Time" : 1.6476197592005699E9,
+          "Value" : 1.2371853343358779
+        },
+        "-MySma2fzJeLVFVWkpFP" : {
+          "Time" : 1.6476197598985221E9,
+          "Value" : 3.4208454280000002
+        },
+        "-MySmaD1CszcbUhfm8rT" : {
+          "Time" : 1.6476197607266662E9,
+          "Value" : 8.731176362305344
+        },
+        "-MySmaNhLWiJBvkfiGcp" : {
+          "Time" : 1.647619761409565E9,
+          "Value" : 6.948009388931299
+        },
+        "-MySmaXk0mUbIKK4nAJT" : {
+          "Time" : 1.6476197620809858E9,
+          "Value" : 5.102490193236642
+        },
+        "-MySmai0wwouvz40TbGN" : {
+          "Time" : 1.6476197627394838E9,
+          "Value" : 3.0565912061526723
+        },
+        "-MySmasgPPCPuuAcUZoG" : {
+          "Time" : 1.6476197634532788E9,
+          "Value" : 1.0274793558473283
+        },
+        "-MySmb2CTGtKVbJJm4Dn" : {
+          "Time" : 1.6476197641349137E9,
+          "Value" : -1.3938652776030536
+        },
+        "-MySmbCqjG5x0MLIC3E1" : {
+          "Time" : 1.6476197648178263E9,
+          "Value" : -0.22302910291603056
+        },
+        "-MySmbNm1wvdP7kgF9Q9" : {
+          "Time" : 1.647619765490326E9,
+          "Value" : -3.747261976473283
+        },
+        "-MySmbYYduhOLqt4Pa4T" : {
+          "Time" : 1.6476197661885593E9,
+          "Value" : -1.9387810666870229
+        },
+        "-MySmbl2eH0jf4_E9zZY" : {
+          "Time" : 1.647619766892465E9,
+          "Value" : 0.11617764500763361
+        },
+        "-MySmbvjg3YjZEMl5t1m" : {
+          "Time" : 1.6476197677573915E9,
+          "Value" : -1.6166279180305345
+        },
+        "-MySmc59FbeBDuON8qzV" : {
+          "Time" : 1.6476197684302762E9,
+          "Value" : 3.647871468244275
+        },
+        "-MySmcFZRKgdDQLrnnig" : {
+          "Time" : 1.6476197690893006E9,
+          "Value" : -0.3117611116030535
+        },
+        "-MySmcPxK5CVVjLCpw8M" : {
+          "Time" : 1.6476197697567694E9,
+          "Value" : -0.7953905283206107
+        },
+        "-MySmc_Uyzm16arw6rse" : {
+          "Time" : 1.647619770426971E9,
+          "Value" : -0.15215008096183208
+        },
+        "-MySmckDGUGbVuao058v" : {
+          "Time" : 1.6476197711118574E9,
+          "Value" : 3.675050642076336
+        },
+        "-MySmcug9RvDKoiOr_tg" : {
+          "Time" : 1.6476197717842963E9,
+          "Value" : 0.6200582108549618
+        },
+        "-MySmd4RpfJJxNIGMuvp" : {
+          "Time" : 1.6476197724669983E9,
+          "Value" : -1.5097764601221377
+        },
+        "-MySmdF_wXKKTZ_QUrJE" : {
+          "Time" : 1.6476197731862879E9,
+          "Value" : -0.28644717519083973
+        },
+        "-MySmdSutoCiE5ceLBQL" : {
+          "Time" : 1.6476197738636131E9,
+          "Value" : -0.037837673374045803
+        },
+        "-MySmdcO4pm14vj1h3sX" : {
+          "Time" : 1.647619774693274E9,
+          "Value" : -0.016787136778625956
+        },
+        "-MySmdmYkVJoi0ja7fLr" : {
+          "Time" : 1.6476197753729246E9,
+          "Value" : 0.08606738380152673
+        },
+        "-MySmdwpNuGXM0iRyrX_" : {
+          "Time" : 1.6476197760199223E9,
+          "Value" : 0.08633384629007634
+        },
+        "-MySme6N8SOvg1WSw29p" : {
+          "Time" : 1.6476197766845973E9,
+          "Value" : -0.19584992908396948
+        },
+        "-MySmeGx_HT0gNb2cDun" : {
+          "Time" : 1.6476197773644009E9,
+          "Value" : 0.7530229926412214
+        },
+        "-MySmeZMHWo2mxnfhnit" : {
+          "Time" : 1.647619778044512E9,
+          "Value" : -3.551678509877863
+        },
+        "-MySmejeOaVmdqKbCSOe" : {
+          "Time" : 1.647619779218171E9,
+          "Value" : 3.8439878598167945
+        },
+        "-MySmeuGlA1EWLtwx3x3" : {
+          "Time" : 1.6476197799429197E9,
+          "Value" : -1.0871669532824428
+        },
+        "-MySmf3rZi_C2TqEmroa" : {
+          "Time" : 1.6476197806187546E9,
+          "Value" : -2.5670996146870233
+        },
+        "-MySmfHHWaL_p8_KN1L_" : {
+          "Time" : 1.647619781308111E9,
+          "Value" : -2.4567841444274814
+        },
+        "-MySmfRPWVNVKBkpPahX" : {
+          "Time" : 1.6476197821371238E9,
+          "Value" : -0.8135099775419848
+        },
+        "-MySmfb708CBDicavOnQ" : {
+          "Time" : 1.6476197828003287E9,
+          "Value" : -5.5711977105954205
+        },
+        "-MySmflVqlFj8MqPL8gn" : {
+          "Time" : 1.6476197834836464E9,
+          "Value" : -5.081972581618321
+        },
+        "-MySmfwBpTsPv6M4lg7X" : {
+          "Time" : 1.647619784162109E9,
+          "Value" : -4.7363707339694665
+        },
+        "-MySmg5eW_LJ7Oo_Uhig" : {
+          "Time" : 1.6476197848337917E9,
+          "Value" : -4.425675472320611
+        },
+        "-MySmgG04ZrBGYheIrOF" : {
+          "Time" : 1.6476197855012398E9,
+          "Value" : 4.963929699190841
+        },
+        "-MySmgR-7JvbLmr3SDWv" : {
+          "Time" : 1.6476197862052703E9,
+          "Value" : 3.6454733058473283
+        },
+        "-MySmgaOBEfd5HJU-AWg" : {
+          "Time" : 1.6476197868716972E9,
+          "Value" : 0.9835130452366414
+        },
+        "-MySmgkvxgBqDYeoga7E" : {
+          "Time" : 1.647619787539824E9,
+          "Value" : -4.004131815435115
+        }
+      }
+    },
+    "mag" : {
+      "X" : {
+        "-MySd5xTKToTXFbQtbl5" : {
+          "Time" : 1.6476172731112773E9,
+          "Value" : -35.85
+        },
+        "-MySd66uruRD3XLKQsgY" : {
+          "Time" : 1.6476172740171509E9,
+          "Value" : -36.0
+        },
+        "-MySd6HZD0GQecfvamsz" : {
+          "Time" : 1.6476172746954236E9,
+          "Value" : -37.8
+        },
+        "-MySd6SJ9QWpQMd5JeWQ" : {
+          "Time" : 1.6476172753847697E9,
+          "Value" : -34.949999999999996
+        },
+        "-MySd6b8csA2pC2Qx_py" : {
+          "Time" : 1.6476172760543356E9,
+          "Value" : -35.55
+        },
+        "-MySd6lYEXKHRm91xnHR" : {
+          "Time" : 1.6476172766915483E9,
+          "Value" : -35.4
+        },
+        "-MySd6vzXTZ2w_EhcPn8" : {
+          "Time" : 1.6476172773565059E9,
+          "Value" : -36.0
+        },
+        "-MySe76pR0TkoYvtY4SI" : {
+          "Time" : 1.6476175400228093E9,
+          "Value" : -21.9
+        },
+        "-MySe7HjLk0G-5wY2giU" : {
+          "Time" : 1.6476175409357376E9,
+          "Value" : -22.349999999999998
+        },
+        "-MySe7SKXc6c00bSN5Wx" : {
+          "Time" : 1.647617541628289E9,
+          "Value" : -22.349999999999998
+        },
+        "-MySe7cBeLXz_bTMBM6j" : {
+          "Time" : 1.647617542308556E9,
+          "Value" : -21.599999999999998
+        },
+        "-MySjw5eVD-SLDM2WWp8" : {
+          "Time" : 1.6476190636569395E9,
+          "Value" : -83.39999999999999
+        },
+        "-MySjwG5JNEUKphn1CHm" : {
+          "Time" : 1.6476190645489793E9,
+          "Value" : -83.25
+        },
+        "-MySjwQj-sgWMw73uhaz" : {
+          "Time" : 1.6476190652253487E9,
+          "Value" : -83.25
+        },
+        "-MySjwaNq7nf4-Cgx8O5" : {
+          "Time" : 1.647619065902243E9,
+          "Value" : -83.1
+        },
+        "-MySjwkpEOEGzHUa6jbz" : {
+          "Time" : 1.6476190665837002E9,
+          "Value" : -83.1
+        },
+        "-MySjwvgWvih269f8TLA" : {
+          "Time" : 1.6476190672793689E9,
+          "Value" : -83.7
+        },
+        "-MySlyOY14kuuDmS3tdm" : {
+          "Time" : 1.6476195972858584E9,
+          "Value" : -17.099999999999998
+        },
+        "-MySlyZANT2cp5KTj1wa" : {
+          "Time" : 1.6476195982631109E9,
+          "Value" : -10.35
+        },
+        "-MySlyioESEkDkM3nOrp" : {
+          "Time" : 1.6476195989365728E9,
+          "Value" : 1.3499999999999999
+        },
+        "-MySlytlrNFnCwtDdqim" : {
+          "Time" : 1.6476195996180785E9,
+          "Value" : 2.1
+        },
+        "-MySlz3bGB2zeB1cbA0g" : {
+          "Time" : 1.647619600313867E9,
+          "Value" : -1.7999999999999998
+        },
+        "-MySlzEqRuAIYdIwqdrD" : {
+          "Time" : 1.6476196010287821E9,
+          "Value" : -9.45
+        },
+        "-MySlzQsOX4eq9nbQ2fh" : {
+          "Time" : 1.647619601770276E9,
+          "Value" : -3.5999999999999996
+        },
+        "-MySlzbR72_vhrACxl-q" : {
+          "Time" : 1.6476196025206554E9,
+          "Value" : -3.15
+        },
+        "-MySlzmTir_etadeAFvU" : {
+          "Time" : 1.647619603258593E9,
+          "Value" : -2.6999999999999997
+        },
+        "-MySlzxI6yc6rqtqI6Dk" : {
+          "Time" : 1.6476196039609213E9,
+          "Value" : -1.7999999999999998
+        },
+        "-MySm-BbyZ2UJaFgqv1E" : {
+          "Time" : 1.6476196046494877E9,
+          "Value" : -1.05
+        },
+        "-MySm-MXRr8P3QTD9iw7" : {
+          "Time" : 1.6476196056358848E9,
+          "Value" : -0.6
+        },
+        "-MySm-XQtOg6Q1YuKRch" : {
+          "Time" : 1.6476196063220701E9,
+          "Value" : 0.15
+        },
+        "-MySm-iP82x7hDuRxXep" : {
+          "Time" : 1.6476196070176144E9,
+          "Value" : 1.05
+        },
+        "-MySm-te1--xCvQZvCBl" : {
+          "Time" : 1.6476196077832727E9,
+          "Value" : -11.1
+        },
+        "-MySm03LOAmszj6a3woh" : {
+          "Time" : 1.6476196085039704E9,
+          "Value" : -1.3499999999999999
+        },
+        "-MySm0DwgGmS2EN51XuN" : {
+          "Time" : 1.6476196091834586E9,
+          "Value" : 10.95
+        },
+        "-MySm0enAGtdhYDO8dtc" : {
+          "Time" : 1.6476196098589857E9,
+          "Value" : -6.3
+        },
+        "-MySmJvXxox46Lch6jcM" : {
+          "Time" : 1.647619689617486E9,
+          "Value" : 17.7
+        },
+        "-MySmKFlFElNQGaqViV-" : {
+          "Time" : 1.647619690587606E9,
+          "Value" : 17.7
+        },
+        "-MySmKRsJT6KnxCHSkje" : {
+          "Time" : 1.6476196919262536E9,
+          "Value" : 18.0
+        },
+        "-MySmKbHa0jydIHwBga9" : {
+          "Time" : 1.6476196926843522E9,
+          "Value" : 15.6
+        },
+        "-MySmKlwplWU1BIhblXi" : {
+          "Time" : 1.6476196933581283E9,
+          "Value" : 16.2
+        },
+        "-MySmKwNZSm9EhOe-2Y4" : {
+          "Time" : 1.6476196940313306E9,
+          "Value" : 16.65
+        },
+        "-MySmL8wpFNJz7Blai9h" : {
+          "Time" : 1.647619694900582E9,
+          "Value" : 14.85
+        },
+        "-MySmLJXWUJfP9-Z_TSd" : {
+          "Time" : 1.6476196955721447E9,
+          "Value" : 18.3
+        },
+        "-MySmLV0gXmccdXfNc1_" : {
+          "Time" : 1.647619696250517E9,
+          "Value" : 19.05
+        },
+        "-MySmLethLf8hwW72PLW" : {
+          "Time" : 1.6476196969895473E9,
+          "Value" : 19.349999999999998
+        },
+        "-MySmLsDb9GYXJwYl6eL" : {
+          "Time" : 1.6476196976912465E9,
+          "Value" : 15.149999999999999
+        },
+        "-MySmM1Nrwj8VnY1ITyM" : {
+          "Time" : 1.647619698514233E9,
+          "Value" : 16.95
+        },
+        "-MySmMBvfQkekPoEl1Su" : {
+          "Time" : 1.647619699180484E9,
+          "Value" : 19.65
+        },
+        "-MySmMMTbq2uNRTpyNUU" : {
+          "Time" : 1.6476196998566868E9,
+          "Value" : 17.7
+        },
+        "-MySmMX0hMtcEOgNY8up" : {
+          "Time" : 1.647619700541602E9,
+          "Value" : 17.7
+        },
+        "-MySmMgMuWfxKlasGAuX" : {
+          "Time" : 1.6476197012041883E9,
+          "Value" : 17.25
+        },
+        "-MySmMqnwagFdMy7kq-x" : {
+          "Time" : 1.6476197018697615E9,
+          "Value" : 18.75
+        },
+        "-MySmN0B-H4_ec_m-UL9" : {
+          "Time" : 1.6476197025396914E9,
+          "Value" : 18.15
+        },
+        "-MySmNAomWIArz86gTiR" : {
+          "Time" : 1.647619703207513E9,
+          "Value" : 17.849999999999998
+        },
+        "-MySmNMlG3KOue8z585X" : {
+          "Time" : 1.6476197039754703E9,
+          "Value" : 17.25
+        },
+        "-MySmN_dWS6pGm2uUf18" : {
+          "Time" : 1.647619704658138E9,
+          "Value" : 18.599999999999998
+        },
+        "-MySmNjt6QrsH3otQuBa" : {
+          "Time" : 1.6476197055252125E9,
+          "Value" : 18.3
+        },
+        "-MySmO1ZGID3HGlkX7oq" : {
+          "Time" : 1.6476197061900003E9,
+          "Value" : 19.05
+        },
+        "-MySmOCg2e7fpFGckiNU" : {
+          "Time" : 1.64761970739046E9,
+          "Value" : 17.25
+        },
+        "-MySmONQPram_DYR4Dsf" : {
+          "Time" : 1.6476197081008332E9,
+          "Value" : 18.3
+        },
+        "-MySmOYAxkdXNG6D47DI" : {
+          "Time" : 1.6476197087901092E9,
+          "Value" : 17.849999999999998
+        },
+        "-MySmOhXH6H9ZRDQ16qp" : {
+          "Time" : 1.6476197094725022E9,
+          "Value" : 17.4
+        },
+        "-MySmOrwk0lDf1nbr4HX" : {
+          "Time" : 1.6476197101410172E9,
+          "Value" : 15.899999999999999
+        },
+        "-MySmPFtLmNu0s0g9n_B" : {
+          "Time" : 1.6476197108301954E9,
+          "Value" : 17.849999999999998
+        },
+        "-MySmPQXC53Rm9uckA-8" : {
+          "Time" : 1.6476197124091043E9,
+          "Value" : 17.099999999999998
+        },
+        "-MySmPdEQqdEM06tGnyO" : {
+          "Time" : 1.6476197131016293E9,
+          "Value" : 18.9
+        },
+        "-MySmPoS5uv8GEVmeXUG" : {
+          "Time" : 1.647619713953224E9,
+          "Value" : 17.7
+        },
+        "-MySmPz7gj3Uc1HDJ5yg" : {
+          "Time" : 1.6476197146782055E9,
+          "Value" : 18.0
+        },
+        "-MySmQQYCoRYnwKohj4y" : {
+          "Time" : 1.6476197153627388E9,
+          "Value" : 18.3
+        },
+        "-MySmQdfTzY6NTBodVOB" : {
+          "Time" : 1.6476197174101744E9,
+          "Value" : 8.1
+        },
+        "-MySmQoz95RmU7ZiRiqu" : {
+          "Time" : 1.6476197181040542E9,
+          "Value" : -0.44999999999999996
+        },
+        "-MySmR-vFJhCyf-XZ0UH" : {
+          "Time" : 1.6476197188338392E9,
+          "Value" : -8.1
+        },
+        "-MySmRBrOQAYxOIvB7kB" : {
+          "Time" : 1.6476197196293712E9,
+          "Value" : -16.95
+        },
+        "-MySmRM2hcwE0b50vWAl" : {
+          "Time" : 1.6476197203228803E9,
+          "Value" : -2.55
+        },
+        "-MySmRWd7THyw7Z8pRh5" : {
+          "Time" : 1.6476197209829924E9,
+          "Value" : -10.5
+        },
+        "-MySmRkizkmiJCOJDB8l" : {
+          "Time" : 1.647619721693708E9,
+          "Value" : 2.85
+        },
+        "-MySmSF98fd0sM3ElTVW" : {
+          "Time" : 1.6476197239690335E9,
+          "Value" : 11.549999999999999
+        },
+        "-MySmSPkapbTxLgLcorD" : {
+          "Time" : 1.6476197246424835E9,
+          "Value" : -1.05
+        },
+        "-MySmS_PdkoMJI7IPe6g" : {
+          "Time" : 1.6476197253168578E9,
+          "Value" : 1.7999999999999998
+        },
+        "-MySmSkwccEmqcRfboMZ" : {
+          "Time" : 1.6476197260107777E9,
+          "Value" : -1.65
+        },
+        "-MySmSv_p_Hr_xVd3AHt" : {
+          "Time" : 1.647619726736941E9,
+          "Value" : 1.05
+        },
+        "-MySmT4qkF1fhlH3oXb0" : {
+          "Time" : 1.6476197274111173E9,
+          "Value" : 12.45
+        },
+        "-MySmTFl6vaYuZfNawfW" : {
+          "Time" : 1.6476197280993867E9,
+          "Value" : 17.25
+        },
+        "-MySmTdNzmt5bQGlNYn6" : {
+          "Time" : 1.64761972877911E9,
+          "Value" : 12.75
+        },
+        "-MySmToKG_00VunxEDrF" : {
+          "Time" : 1.647619730341118E9,
+          "Value" : -14.399999999999999
+        },
+        "-MySmU0mikn2VLI71E4P" : {
+          "Time" : 1.647619731056797E9,
+          "Value" : 12.75
+        },
+        "-MySmUB6hWlVGY9LvnqU" : {
+          "Time" : 1.647619731892536E9,
+          "Value" : -9.75
+        },
+        "-MySmULh0vwJ2eMiySO2" : {
+          "Time" : 1.6476197325836792E9,
+          "Value" : -15.6
+        },
+        "-MySmUWVcxLGukW0pqkR" : {
+          "Time" : 1.6476197332473388E9,
+          "Value" : -11.1
+        },
+        "-MySmUfxE05BBYWDOKiv" : {
+          "Time" : 1.6476197339317832E9,
+          "Value" : -18.9
+        },
+        "-MySmUqNgRBIiJzr79g-" : {
+          "Time" : 1.6476197346014516E9,
+          "Value" : 2.1
+        },
+        "-MySmV04df4rimcWn4BJ" : {
+          "Time" : 1.6476197352715502E9,
+          "Value" : 7.8
+        },
+        "-MySmVBpHx3fmf8LkGEk" : {
+          "Time" : 1.6476197359604993E9,
+          "Value" : 9.0
+        },
+        "-MySmVMk_OG9h_6mVDXT" : {
+          "Time" : 1.6476197367065039E9,
+          "Value" : -5.3999999999999995
+        },
+        "-MySmVXEB-4UFJLWFF39" : {
+          "Time" : 1.6476197374096816E9,
+          "Value" : -7.949999999999999
+        },
+        "-MySmVjgqjqbx1KICDW_" : {
+          "Time" : 1.6476197380876148E9,
+          "Value" : -7.5
+        },
+        "-MySmVu7EHIqPA33L1_T" : {
+          "Time" : 1.6476197389224482E9,
+          "Value" : -7.8
+        },
+        "-MySmW3a-gWwQocprdHH" : {
+          "Time" : 1.6476197396115427E9,
+          "Value" : -5.55
+        },
+        "-MySmWEb6ACXR6dBPPVk" : {
+          "Time" : 1.6476197402789333E9,
+          "Value" : -5.3999999999999995
+        },
+        "-MySmWUGwQvAg7WWAWpN" : {
+          "Time" : 1.6476197411616843E9,
+          "Value" : 1.05
+        },
+        "-MySmWdiqMX9WOvzb25y" : {
+          "Time" : 1.647619741983272E9,
+          "Value" : 3.3
+        },
+        "-MySmWoGrACzGBDox89k" : {
+          "Time" : 1.6476197426532445E9,
+          "Value" : 4.8
+        },
+        "-MySmWz8CrgJ1Dd1PT8L" : {
+          "Time" : 1.6476197433345723E9,
+          "Value" : 5.1
+        },
+        "-MySmX8mU64wnkOZQDU8" : {
+          "Time" : 1.6476197440331895E9,
+          "Value" : 4.35
+        },
+        "-MySmXJJnYKNxL8woCjb" : {
+          "Time" : 1.6476197447046967E9,
+          "Value" : 3.9
+        },
+        "-MySmXWbV9sa_nkn2VRf" : {
+          "Time" : 1.6476197453862875E9,
+          "Value" : 2.55
+        },
+        "-MySmXfwGm7L7BZ_j8S3" : {
+          "Time" : 1.6476197462138283E9,
+          "Value" : 3.9
+        },
+        "-MySmXrLcEgu1CFtlEdm" : {
+          "Time" : 1.6476197469384701E9,
+          "Value" : 4.6499999999999995
+        },
+        "-MySmY0qqUztFG8vGn8K" : {
+          "Time" : 1.6476197476163085E9,
+          "Value" : 3.9
+        },
+        "-MySmYBXF5mDdqZc0Vm7" : {
+          "Time" : 1.6476197482933865E9,
+          "Value" : 4.2
+        },
+        "-MySmYMCsiF8VW0HJgOn" : {
+          "Time" : 1.6476197489842541E9,
+          "Value" : 4.35
+        },
+        "-MySmYWkLewNCMUYDmRO" : {
+          "Time" : 1.6476197496600728E9,
+          "Value" : 4.95
+        },
+        "-MySmYgPnU8RbqfROz3q" : {
+          "Time" : 1.647619750333019E9,
+          "Value" : 4.05
+        },
+        "-MySmYrbxULO8XYBM5wn" : {
+          "Time" : 1.6476197510120318E9,
+          "Value" : 4.95
+        },
+        "-MySmZ1N-kYzn99V19Si" : {
+          "Time" : 1.6476197517463577E9,
+          "Value" : -4.6499999999999995
+        },
+        "-MySmZEuys2Iad9F58xg" : {
+          "Time" : 1.6476197524310403E9,
+          "Value" : -5.55
+        },
+        "-MySmZXMIPCRIU3uGVx-" : {
+          "Time" : 1.6476197532708619E9,
+          "Value" : -12.75
+        },
+        "-MySmZgktii3FN_CdKfK" : {
+          "Time" : 1.6476197544617252E9,
+          "Value" : -21.599999999999998
+        },
+        "-MySmZrArGr5p9uyOiM-" : {
+          "Time" : 1.6476197551271925E9,
+          "Value" : -13.2
+        },
+        "-MySm_0Z336pHFEaAQIe" : {
+          "Time" : 1.6476197558013775E9,
+          "Value" : -16.2
+        },
+        "-MySm_BI5N6xxLShXhLo" : {
+          "Time" : 1.6476197564887953E9,
+          "Value" : -18.15
+        },
+        "-MySm_M-lv17Kpu4JJje" : {
+          "Time" : 1.6476197571480105E9,
+          "Value" : -21.15
+        },
+        "-MySm_WjloVBk3lM3R2v" : {
+          "Time" : 1.647619757832099E9,
+          "Value" : -13.2
+        },
+        "-MySm_gHVG7Rqx4qxqHe" : {
+          "Time" : 1.6476197585175254E9,
+          "Value" : -28.5
+        },
+        "-MySm_r9ZQM1yP66ve8b" : {
+          "Time" : 1.6476197592005699E9,
+          "Value" : -24.0
+        },
+        "-MySma3Qbv-bICklTn1O" : {
+          "Time" : 1.6476197598985221E9,
+          "Value" : -25.5
+        },
+        "-MySmaDqf3Twp5BxSCyP" : {
+          "Time" : 1.6476197607266662E9,
+          "Value" : -4.2
+        },
+        "-MySmaOTJ-tFjI9FFFiz" : {
+          "Time" : 1.647619761409565E9,
+          "Value" : 0.8999999999999999
+        },
+        "-MySmaYXUZk2t-KimcYQ" : {
+          "Time" : 1.6476197620809858E9,
+          "Value" : -3.5999999999999996
+        },
+        "-MySmaio0ckbnZoVSrm6" : {
+          "Time" : 1.6476197627394838E9,
+          "Value" : -12.0
+        },
+        "-MySmatXKbewjyzrRQfU" : {
+          "Time" : 1.6476197634532788E9,
+          "Value" : -18.15
+        },
+        "-MySmb30Vqo_fnht-xHU" : {
+          "Time" : 1.6476197641349137E9,
+          "Value" : -15.0
+        },
+        "-MySmbDea1PlwIWTQ5k-" : {
+          "Time" : 1.6476197648178263E9,
+          "Value" : -6.0
+        },
+        "-MySmbOaNWFP_tZEjEQN" : {
+          "Time" : 1.647619765490326E9,
+          "Value" : -2.55
+        },
+        "-MySmbZO8l3xaHKdYrUH" : {
+          "Time" : 1.6476197661885593E9,
+          "Value" : -4.35
+        },
+        "-MySmbloOTOuD11132dr" : {
+          "Time" : 1.647619766892465E9,
+          "Value" : 0.8999999999999999
+        },
+        "-MySmbwYyi4J2jfi_mSE" : {
+          "Time" : 1.6476197677573915E9,
+          "Value" : 10.95
+        },
+        "-MySmc5y_DUwgeIah3eP" : {
+          "Time" : 1.6476197684302762E9,
+          "Value" : 10.95
+        },
+        "-MySmcGMp-46ha1W1U-0" : {
+          "Time" : 1.6476197690893006E9,
+          "Value" : 1.65
+        },
+        "-MySmcQmlNYm7xhiXX1G" : {
+          "Time" : 1.6476197697567694E9,
+          "Value" : 3.5999999999999996
+        },
+        "-MySmcaV4mMKjJrcnw9s" : {
+          "Time" : 1.647619770426971E9,
+          "Value" : 4.05
+        },
+        "-MySmcl-8FfJ28YGlSpx" : {
+          "Time" : 1.6476197711118574E9,
+          "Value" : 8.25
+        },
+        "-MySmcvYcX4NyWS_jtu-" : {
+          "Time" : 1.6476197717842963E9,
+          "Value" : -3.5999999999999996
+        },
+        "-MySmd5IgdD35okoTeSw" : {
+          "Time" : 1.6476197724669983E9,
+          "Value" : -15.0
+        },
+        "-MySmdGPbeMXv1Aw9d-Y" : {
+          "Time" : 1.6476197731862879E9,
+          "Value" : -12.0
+        },
+        "-MySmdTd6b__rjvCHSyj" : {
+          "Time" : 1.6476197738636131E9,
+          "Value" : -10.95
+        },
+        "-MySmddIijiCvHdMkuid" : {
+          "Time" : 1.647619774693274E9,
+          "Value" : -13.65
+        },
+        "-MySmdnFzvnP59OK-DXg" : {
+          "Time" : 1.6476197753729246E9,
+          "Value" : -13.5
+        },
+        "-MySmdxeEw6t8b3a9-0y" : {
+          "Time" : 1.6476197760199223E9,
+          "Value" : -11.25
+        },
+        "-MySme7CXdG3FxxM8Nzg" : {
+          "Time" : 1.6476197766845973E9,
+          "Value" : -11.85
+        },
+        "-MySmeHtTNPS-jMYC-fH" : {
+          "Time" : 1.6476197773644009E9,
+          "Value" : -10.95
+        },
+        "-MySme_AxokeozoAfDFL" : {
+          "Time" : 1.647619778044512E9,
+          "Value" : 13.2
+        },
+        "-MySmekRup2-5zFTKSzX" : {
+          "Time" : 1.647619779218171E9,
+          "Value" : 15.45
+        },
+        "-MySmev2nqJk2wLOYZ-2" : {
+          "Time" : 1.6476197799429197E9,
+          "Value" : 12.75
+        },
+        "-MySmf4h_BN01MhzPUuL" : {
+          "Time" : 1.6476197806187546E9,
+          "Value" : 7.8
+        },
+        "-MySmfI2GU9iIjf-7iOA" : {
+          "Time" : 1.647619781308111E9,
+          "Value" : 8.25
+        },
+        "-MySmfSDDFu4jnsan7kE" : {
+          "Time" : 1.6476197821371238E9,
+          "Value" : 8.1
+        },
+        "-MySmfburgto5LsOJKe-" : {
+          "Time" : 1.6476197828003287E9,
+          "Value" : 6.6
+        },
+        "-MySmfmIAwF8_t_oRfRd" : {
+          "Time" : 1.6476197834836464E9,
+          "Value" : 10.799999999999999
+        },
+        "-MySmfwzongS8PZEf-Ap" : {
+          "Time" : 1.647619784162109E9,
+          "Value" : 8.85
+        },
+        "-MySmg6TFrLazyVFJa7T" : {
+          "Time" : 1.6476197848337917E9,
+          "Value" : 10.35
+        },
+        "-MySmgGnElLcHXazNsTy" : {
+          "Time" : 1.6476197855012398E9,
+          "Value" : 15.149999999999999
+        },
+        "-MySmgRmK3YPrrus8iuA" : {
+          "Time" : 1.6476197862052703E9,
+          "Value" : 6.45
+        },
+        "-MySmgbF5m9BQ0Nm8dIf" : {
+          "Time" : 1.6476197868716972E9,
+          "Value" : 12.0
+        },
+        "-MySmglm_Gy6_6p9JvY6" : {
+          "Time" : 1.647619787539824E9,
+          "Value" : 9.0
+        }
+      },
+      "Y" : {
+        "-MySd5yCtTe6o7enCQjY" : {
+          "Time" : 1.6476172731112773E9,
+          "Value" : 4.05
+        },
+        "-MySd67kGQjcQUHKb7wB" : {
+          "Time" : 1.6476172740171509E9,
+          "Value" : 4.2
+        },
+        "-MySd6ISKBrAH9q2YayS" : {
+          "Time" : 1.6476172746954236E9,
+          "Value" : 3.15
+        },
+        "-MySd6T90AdfU_DSPuHm" : {
+          "Time" : 1.6476172753847697E9,
+          "Value" : 3.4499999999999997
+        },
+        "-MySd6bv4MXdNgJUWTI7" : {
+          "Time" : 1.6476172760543356E9,
+          "Value" : 3.4499999999999997
+        },
+        "-MySd6mOGWwpgpLS8AY1" : {
+          "Time" : 1.6476172766915483E9,
+          "Value" : 4.35
+        },
+        "-MySd6wnk6UzVRUCjJxs" : {
+          "Time" : 1.6476172773565059E9,
+          "Value" : 5.3999999999999995
+        },
+        "-MySe77fhQZSeoRkDOn6" : {
+          "Time" : 1.6476175400228093E9,
+          "Value" : 66.89999999999999
+        },
+        "-MySe7IVesVBIN04NkG6" : {
+          "Time" : 1.6476175409357376E9,
+          "Value" : 67.95
+        },
+        "-MySe7T64We5gjKOuX2Q" : {
+          "Time" : 1.647617541628289E9,
+          "Value" : 68.39999999999999
+        },
+        "-MySe7d0Z6rFFsLi_ERY" : {
+          "Time" : 1.647617542308556E9,
+          "Value" : 67.2
+        },
+        "-MySjw6Q2tHcPPjuWnTP" : {
+          "Time" : 1.6476190636569395E9,
+          "Value" : 58.349999999999994
+        },
+        "-MySjwGtv_yRqXffZpXu" : {
+          "Time" : 1.6476190645489793E9,
+          "Value" : 57.0
+        },
+        "-MySjwRYxK-ImmdY-e2s" : {
+          "Time" : 1.6476190652253487E9,
+          "Value" : 58.5
+        },
+        "-MySjwbAxmXxhAdhB3H2" : {
+          "Time" : 1.647619065902243E9,
+          "Value" : 58.349999999999994
+        },
+        "-MySjwlojlnH_dpKv2Jl" : {
+          "Time" : 1.6476190665837002E9,
+          "Value" : 58.65
+        },
+        "-MySlyPLPbgWjeqGy5wk" : {
+          "Time" : 1.6476195972858584E9,
+          "Value" : 41.699999999999996
+        },
+        "-MySly_2ujafuyl1cVfe" : {
+          "Time" : 1.6476195982631109E9,
+          "Value" : 40.199999999999996
+        },
+        "-MySlyjfNCbbI6brAlhD" : {
+          "Time" : 1.6476195989365728E9,
+          "Value" : 41.699999999999996
+        },
+        "-MySlyuZ2DCjXbkxmEkK" : {
+          "Time" : 1.6476195996180785E9,
+          "Value" : 37.05
+        },
+        "-MySlz4U6ZOHQXBhxS-T" : {
+          "Time" : 1.647619600313867E9,
+          "Value" : 44.4
+        },
+        "-MySlzG5CoGvFMxdg7zs" : {
+          "Time" : 1.6476196010287821E9,
+          "Value" : 45.75
+        },
+        "-MySlzRmoJHgeoRB_-t7" : {
+          "Time" : 1.647619601770276E9,
+          "Value" : 43.949999999999996
+        },
+        "-MySlzcPArGuuhugAikk" : {
+          "Time" : 1.6476196025206554E9,
+          "Value" : 41.85
+        },
+        "-MySlznW8o0SA_v3pyyF" : {
+          "Time" : 1.647619603258593E9,
+          "Value" : 43.5
+        },
+        "-MySlzy9ZAKGusB9r0ue" : {
+          "Time" : 1.6476196039609213E9,
+          "Value" : 41.25
+        },
+        "-MySm-CV6fHuQgfSRPiI" : {
+          "Time" : 1.6476196046494877E9,
+          "Value" : 42.449999999999996
+        },
+        "-MySm-NMusxh4rrfyYS5" : {
+          "Time" : 1.6476196056358848E9,
+          "Value" : 42.449999999999996
+        },
+        "-MySm-YGsqA8Kbqgl3yG" : {
+          "Time" : 1.6476196063220701E9,
+          "Value" : 39.9
+        },
+        "-MySm-jGmx9i2qc9qUBW" : {
+          "Time" : 1.6476196070176144E9,
+          "Value" : 35.85
+        },
+        "-MySm-uToT0Xs-uNliv8" : {
+          "Time" : 1.6476196077832727E9,
+          "Value" : 40.199999999999996
+        },
+        "-MySm0476bp6q36FK2YH" : {
+          "Time" : 1.6476196085039704E9,
+          "Value" : 29.25
+        },
+        "-MySm0ElqifHwBpzy7hq" : {
+          "Time" : 1.6476196091834586E9,
+          "Value" : 21.0
+        },
+        "-MySm0fe_up81lSFmMhs" : {
+          "Time" : 1.6476196098589857E9,
+          "Value" : 51.75
+        },
+        "-MySmJwVMhqJ6SY5XHlA" : {
+          "Time" : 1.647619689617486E9,
+          "Value" : 29.099999999999998
+        },
+        "-MySmKGakpMSxHoxpt98" : {
+          "Time" : 1.647619690587606E9,
+          "Value" : 31.5
+        },
+        "-MySmKSeL3rcEZvZdIwQ" : {
+          "Time" : 1.6476196919262536E9,
+          "Value" : 30.299999999999997
+        },
+        "-MySmKc6cPCWfOjT53kf" : {
+          "Time" : 1.6476196926843522E9,
+          "Value" : 36.6
+        },
+        "-MySmKmjXRsvmt6k0_aM" : {
+          "Time" : 1.6476196933581283E9,
+          "Value" : 39.9
+        },
+        "-MySmKxC2IvwwOPxUx5s" : {
+          "Time" : 1.6476196940313306E9,
+          "Value" : 27.45
+        },
+        "-MySmL9kdhkJr-c1RE67" : {
+          "Time" : 1.647619694900582E9,
+          "Value" : 28.5
+        },
+        "-MySmLKKlrp4XejpTMvT" : {
+          "Time" : 1.6476196955721447E9,
+          "Value" : 29.849999999999998
+        },
+        "-MySmLVrlKjxlNKNGAcz" : {
+          "Time" : 1.647619696250517E9,
+          "Value" : 29.849999999999998
+        },
+        "-MySmLfhWG9p-AhJThit" : {
+          "Time" : 1.6476196969895473E9,
+          "Value" : 29.7
+        },
+        "-MySmLsx55JceJv7tw7b" : {
+          "Time" : 1.6476196976912465E9,
+          "Value" : 31.049999999999997
+        },
+        "-MySmM2CFZBG-MTmnuYC" : {
+          "Time" : 1.647619698514233E9,
+          "Value" : 31.049999999999997
+        },
+        "-MySmMCixt8W7woPWM55" : {
+          "Time" : 1.647619699180484E9,
+          "Value" : 32.85
+        },
+        "-MySmMNGW3kc33uvsmTZ" : {
+          "Time" : 1.6476196998566868E9,
+          "Value" : 29.099999999999998
+        },
+        "-MySmMXmcyWUx7zF8tpP" : {
+          "Time" : 1.647619700541602E9,
+          "Value" : 27.15
+        },
+        "-MySmMhADGihgveh3Va0" : {
+          "Time" : 1.6476197012041883E9,
+          "Value" : 29.099999999999998
+        },
+        "-MySmMra5H1sYqObUZpZ" : {
+          "Time" : 1.6476197018697615E9,
+          "Value" : 29.849999999999998
+        },
+        "-MySmN11i2RpeKxxlm_W" : {
+          "Time" : 1.6476197025396914E9,
+          "Value" : 29.25
+        },
+        "-MySmNBdmIBqhROPRBX-" : {
+          "Time" : 1.647619703207513E9,
+          "Value" : 28.5
+        },
+        "-MySmNNYY6MKvRhnSq7S" : {
+          "Time" : 1.6476197039754703E9,
+          "Value" : 27.9
+        },
+        "-MySmNaMXcMKoEVlLpEP" : {
+          "Time" : 1.647619704658138E9,
+          "Value" : 28.95
+        },
+        "-MySmNkfwc0_4l3a2l6k" : {
+          "Time" : 1.6476197055252125E9,
+          "Value" : 29.549999999999997
+        },
+        "-MySmO2PqUgv7Y7Dxi0d" : {
+          "Time" : 1.6476197061900003E9,
+          "Value" : 28.349999999999998
+        },
+        "-MySmODXnVtbePQ9CANN" : {
+          "Time" : 1.64761970739046E9,
+          "Value" : 29.849999999999998
+        },
+        "-MySmOOGeXmgbu5dlJmw" : {
+          "Time" : 1.6476197081008332E9,
+          "Value" : 28.799999999999997
+        },
+        "-MySmOYzTyNs0v0Qgy4I" : {
+          "Time" : 1.6476197087901092E9,
+          "Value" : 28.95
+        },
+        "-MySmOiLpK_ouG8yktNF" : {
+          "Time" : 1.6476197094725022E9,
+          "Value" : 28.5
+        },
+        "-MySmOsucTP4uCis3jTC" : {
+          "Time" : 1.6476197101410172E9,
+          "Value" : 29.7
+        },
+        "-MySmPGpGJ-uz6aa8NVg" : {
+          "Time" : 1.6476197108301954E9,
+          "Value" : 29.25
+        },
+        "-MySmPRPU5ZpWG489Rd0" : {
+          "Time" : 1.6476197124091043E9,
+          "Value" : 28.5
+        },
+        "-MySmPdz3_LDgWsJ-Up1" : {
+          "Time" : 1.6476197131016293E9,
+          "Value" : 28.2
+        },
+        "-MySmPpFfT0CYytqqscm" : {
+          "Time" : 1.647619713953224E9,
+          "Value" : 27.599999999999998
+        },
+        "-MySmPzwUgtChO2W7l4f" : {
+          "Time" : 1.6476197146782055E9,
+          "Value" : 28.799999999999997
+        },
+        "-MySmQUrQM-tBRYXMoIO" : {
+          "Time" : 1.6476197153627388E9,
+          "Value" : 27.599999999999998
+        },
+        "-MySmQeYi9YDyg0_zevx" : {
+          "Time" : 1.6476197174101744E9,
+          "Value" : 39.75
+        },
+        "-MySmQpuF5aBgoJ-u-B2" : {
+          "Time" : 1.6476197181040542E9,
+          "Value" : 34.5
+        },
+        "-MySmR0nNpD0cDO3DNON" : {
+          "Time" : 1.6476197188338392E9,
+          "Value" : 30.15
+        },
+        "-MySmRCbvpEr26S0Flrl" : {
+          "Time" : 1.6476197196293712E9,
+          "Value" : 29.549999999999997
+        },
+        "-MySmRMrL0708sYzJNEm" : {
+          "Time" : 1.6476197203228803E9,
+          "Value" : 25.5
+        },
+        "-MySmRXV8zUlpyppIaIi" : {
+          "Time" : 1.6476197209829924E9,
+          "Value" : 32.25
+        },
+        "-MySmS5FBx7GdF0BBJp9" : {
+          "Time" : 1.647619721693708E9,
+          "Value" : 48.3
+        },
+        "-MySmSFyjmghcBntpT5f" : {
+          "Time" : 1.6476197239690335E9,
+          "Value" : 42.9
+        },
+        "-MySmSQZHUSoxVZNPCzT" : {
+          "Time" : 1.6476197246424835E9,
+          "Value" : 52.199999999999996
+        },
+        "-MySmSaKu074rqQAcOOt" : {
+          "Time" : 1.6476197253168578E9,
+          "Value" : 52.199999999999996
+        },
+        "-MySmSlkfHThRwdkGfVR" : {
+          "Time" : 1.6476197260107777E9,
+          "Value" : 53.55
+        },
+        "-MySmSwMhUOPfJieniej" : {
+          "Time" : 1.647619726736941E9,
+          "Value" : 52.5
+        },
+        "-MySmT5eM674_nxIPjEc" : {
+          "Time" : 1.6476197274111173E9,
+          "Value" : 48.449999999999996
+        },
+        "-MySmTGZMk-tpQkE-u7b" : {
+          "Time" : 1.6476197280993867E9,
+          "Value" : 45.75
+        },
+        "-MySmTe8oXPJhfJbL78v" : {
+          "Time" : 1.64761972877911E9,
+          "Value" : 43.5
+        },
+        "-MySmTp7b5bXJ6DGDWgY" : {
+          "Time" : 1.647619730341118E9,
+          "Value" : 49.5
+        },
+        "-MySmU1WqsbUrPQSzUVt" : {
+          "Time" : 1.647619731056797E9,
+          "Value" : 48.9
+        },
+        "-MySmUCA03GIhYwDI7I-" : {
+          "Time" : 1.647619731892536E9,
+          "Value" : 56.55
+        },
+        "-MySmUMXhF4BsWkHnIK9" : {
+          "Time" : 1.6476197325836792E9,
+          "Value" : 54.449999999999996
+        },
+        "-MySmUXKX4DIPPstgu4u" : {
+          "Time" : 1.6476197332473388E9,
+          "Value" : 55.199999999999996
+        },
+        "-MySmUgiYEkfwcjRqOxJ" : {
+          "Time" : 1.6476197339317832E9,
+          "Value" : 51.0
+        },
+        "-MySmUrDG98j7wQHNZpO" : {
+          "Time" : 1.6476197346014516E9,
+          "Value" : 53.25
+        },
+        "-MySmV0uo3J3R2r0g6y3" : {
+          "Time" : 1.6476197352715502E9,
+          "Value" : 45.15
+        },
+        "-MySmVCaoqUzaolXI6lq" : {
+          "Time" : 1.6476197359604993E9,
+          "Value" : 41.85
+        },
+        "-MySmVNemCgi0w8Ko6Ee" : {
+          "Time" : 1.6476197367065039E9,
+          "Value" : 36.449999999999996
+        },
+        "-MySmVY1MNgCOupIIRVa" : {
+          "Time" : 1.6476197374096816E9,
+          "Value" : 14.1
+        },
+        "-MySmVkTLErwi-fdxgaz" : {
+          "Time" : 1.6476197380876148E9,
+          "Value" : 21.45
+        },
+        "-MySmVv4tirwkeLVhEiE" : {
+          "Time" : 1.6476197389224482E9,
+          "Value" : 25.8
+        },
+        "-MySmW4V3M2OFW6cuunH" : {
+          "Time" : 1.6476197396115427E9,
+          "Value" : 18.15
+        },
+        "-MySmWFTKBd74WBwjh_y" : {
+          "Time" : 1.6476197402789333E9,
+          "Value" : 17.099999999999998
+        },
+        "-MySmWV7lxn-MrhgjRX4" : {
+          "Time" : 1.6476197411616843E9,
+          "Value" : 27.75
+        },
+        "-MySmWeVn9iV6lvy7dEW" : {
+          "Time" : 1.647619741983272E9,
+          "Value" : 29.25
+        },
+        "-MySmWp5UNMc9BDm5iB2" : {
+          "Time" : 1.6476197426532445E9,
+          "Value" : 35.85
+        },
+        "-MySmX-0FkDhAtBMb1JE" : {
+          "Time" : 1.6476197433345723E9,
+          "Value" : 37.05
+        },
+        "-MySmX9b_PsG69SptiAH" : {
+          "Time" : 1.6476197440331895E9,
+          "Value" : 35.55
+        },
+        "-MySmXK6LDe9ya9vHmli" : {
+          "Time" : 1.6476197447046967E9,
+          "Value" : 36.449999999999996
+        },
+        "-MySmXXQqwARIKVPZRKj" : {
+          "Time" : 1.6476197453862875E9,
+          "Value" : 35.85
+        },
+        "-MySmXgjHIkNbGpsegj3" : {
+          "Time" : 1.6476197462138283E9,
+          "Value" : 35.699999999999996
+        },
+        "-MySmXs9_vIBe2EKD7uc" : {
+          "Time" : 1.6476197469384701E9,
+          "Value" : 35.699999999999996
+        },
+        "-MySmY1dFl0JBTNYkb9q" : {
+          "Time" : 1.6476197476163085E9,
+          "Value" : 34.199999999999996
+        },
+        "-MySmYCKKXwhz-P6uAM7" : {
+          "Time" : 1.6476197482933865E9,
+          "Value" : 34.5
+        },
+        "-MySmYN3gVhxw4ieO74Z" : {
+          "Time" : 1.6476197489842541E9,
+          "Value" : 33.6
+        },
+        "-MySmYXaH4LgH1o_8AAs" : {
+          "Time" : 1.6476197496600728E9,
+          "Value" : 33.75
+        },
+        "-MySmYhDLeZd6lwOpHa4" : {
+          "Time" : 1.647619750333019E9,
+          "Value" : 36.3
+        },
+        "-MySmYseKiEaq1YQ5Ae-" : {
+          "Time" : 1.6476197510120318E9,
+          "Value" : 34.949999999999996
+        },
+        "-MySmZ2ABrKkOGJzBVyG" : {
+          "Time" : 1.6476197517463577E9,
+          "Value" : 26.099999999999998
+        },
+        "-MySmZFfJTzRjUyugp8k" : {
+          "Time" : 1.6476197524310403E9,
+          "Value" : 47.85
+        },
+        "-MySmZY95BNovlJUT8uP" : {
+          "Time" : 1.6476197532708619E9,
+          "Value" : 45.0
+        },
+        "-MySmZh_MXcDIDtXcsdJ" : {
+          "Time" : 1.6476197544617252E9,
+          "Value" : 44.4
+        },
+        "-MySmZrzGfOeSc6KTAQX" : {
+          "Time" : 1.6476197551271925E9,
+          "Value" : 53.1
+        },
+        "-MySm_1IwXmykrBICkNO" : {
+          "Time" : 1.6476197558013775E9,
+          "Value" : 58.5
+        },
+        "-MySm_C8p5bTpifyLC5W" : {
+          "Time" : 1.6476197564887953E9,
+          "Value" : 59.55
+        },
+        "-MySm_Mo3U3OiknMYZT6" : {
+          "Time" : 1.6476197571480105E9,
+          "Value" : 57.9
+        },
+        "-MySm_XZ4wnUQI9imV-x" : {
+          "Time" : 1.647619757832099E9,
+          "Value" : 57.3
+        },
+        "-MySm_hAgzonE09ZNdrd" : {
+          "Time" : 1.6476197585175254E9,
+          "Value" : 51.15
+        },
+        "-MySm_rz7LtUFDcWfrnY" : {
+          "Time" : 1.6476197592005699E9,
+          "Value" : 52.65
+        },
+        "-MySma4A0bdqyd42mS9d" : {
+          "Time" : 1.6476197598985221E9,
+          "Value" : 48.449999999999996
+        },
+        "-MySmaEdNsXjIz9uHGnc" : {
+          "Time" : 1.6476197607266662E9,
+          "Value" : 36.15
+        },
+        "-MySmaPNM1Wx2otnRmEm" : {
+          "Time" : 1.647619761409565E9,
+          "Value" : 32.55
+        },
+        "-MySmaZOqIIrizhrk0uT" : {
+          "Time" : 1.6476197620809858E9,
+          "Value" : 32.85
+        },
+        "-MySmajcJtgtcYpE9Zr0" : {
+          "Time" : 1.6476197627394838E9,
+          "Value" : 37.199999999999996
+        },
+        "-MySmauJ-nIzsgtNEaKy" : {
+          "Time" : 1.6476197634532788E9,
+          "Value" : 40.199999999999996
+        },
+        "-MySmb3skB77nG_xRSJ7" : {
+          "Time" : 1.6476197641349137E9,
+          "Value" : 39.6
+        },
+        "-MySmbES7Nr7M2QRlPcb" : {
+          "Time" : 1.6476197648178263E9,
+          "Value" : 33.0
+        },
+        "-MySmbPOdurGgvG6wQzv" : {
+          "Time" : 1.647619765490326E9,
+          "Value" : 30.9
+        },
+        "-MySmb_DEh5TQeRxiQ8q" : {
+          "Time" : 1.6476197661885593E9,
+          "Value" : 32.85
+        },
+        "-MySmbm_NY0dORzjK511" : {
+          "Time" : 1.647619766892465E9,
+          "Value" : 31.799999999999997
+        },
+        "-MySmbxMBlfb4kMDr68d" : {
+          "Time" : 1.6476197677573915E9,
+          "Value" : 29.849999999999998
+        },
+        "-MySmc6llvFFPIJrygiq" : {
+          "Time" : 1.6476197684302762E9,
+          "Value" : 25.2
+        },
+        "-MySmcHBa70PTrj76qRm" : {
+          "Time" : 1.6476197690893006E9,
+          "Value" : 22.5
+        },
+        "-MySmcRY3Me9sO5-9qMy" : {
+          "Time" : 1.6476197697567694E9,
+          "Value" : 21.15
+        },
+        "-MySmcbHo1PD7vlnbld0" : {
+          "Time" : 1.647619770426971E9,
+          "Value" : 19.2
+        },
+        "-MySmclm4rjzkc2OB6Cf" : {
+          "Time" : 1.6476197711118574E9,
+          "Value" : 24.15
+        },
+        "-MySmcwKgoMXH5HYaVAu" : {
+          "Time" : 1.6476197717842963E9,
+          "Value" : 21.15
+        },
+        "-MySmd6gKu8Ih5ofmFKf" : {
+          "Time" : 1.6476197724669983E9,
+          "Value" : 27.15
+        },
+        "-MySmdHANI2vJlE0L_2T" : {
+          "Time" : 1.6476197731862879E9,
+          "Value" : -0.8999999999999999
+        },
+        "-MySmdUPDjWzzapi5wNm" : {
+          "Time" : 1.6476197738636131E9,
+          "Value" : -1.65
+        },
+        "-MySmde2P6X_tPBdZrrM" : {
+          "Time" : 1.647619774693274E9,
+          "Value" : -0.75
+        },
+        "-MySmdo-w0tmlOe0CrLP" : {
+          "Time" : 1.6476197753729246E9,
+          "Value" : -1.3499999999999999
+        },
+        "-MySmdyTcoog2MTwn9z1" : {
+          "Time" : 1.6476197760199223E9,
+          "Value" : 1.3499999999999999
+        },
+        "-MySme8351j0P53U6-oo" : {
+          "Time" : 1.6476197766845973E9,
+          "Value" : -1.7999999999999998
+        },
+        "-MySmeIgrcRTkK4npKsa" : {
+          "Time" : 1.6476197773644009E9,
+          "Value" : -0.44999999999999996
+        },
+        "-MySme_y1PuyRWSmDeAG" : {
+          "Time" : 1.647619778044512E9,
+          "Value" : 17.099999999999998
+        },
+        "-MySmelDBRWDIn_3Oxda" : {
+          "Time" : 1.647619779218171E9,
+          "Value" : 41.85
+        },
+        "-MySmevwKqoYcvkJVTQU" : {
+          "Time" : 1.6476197799429197E9,
+          "Value" : 24.9
+        },
+        "-MySmf5SpYz460fqCcdP" : {
+          "Time" : 1.6476197806187546E9,
+          "Value" : 40.5
+        },
+        "-MySmfIq-i98WOdyMsZg" : {
+          "Time" : 1.647619781308111E9,
+          "Value" : 43.8
+        },
+        "-MySmfT0g16Hpv3nXAbA" : {
+          "Time" : 1.6476197821371238E9,
+          "Value" : 17.7
+        },
+        "-MySmfcjGncaDJRBycVh" : {
+          "Time" : 1.6476197828003287E9,
+          "Value" : 35.1
+        },
+        "-MySmfnJ-iSTbAjU3Udc" : {
+          "Time" : 1.6476197834836464E9,
+          "Value" : 35.1
+        },
+        "-MySmfxnRYgYdZeOU5RE" : {
+          "Time" : 1.647619784162109E9,
+          "Value" : 37.5
+        },
+        "-MySmg7F4sVDyTn0MDGp" : {
+          "Time" : 1.6476197848337917E9,
+          "Value" : 40.199999999999996
+        },
+        "-MySmgHbL_Vbk2g_aL0o" : {
+          "Time" : 1.6476197855012398E9,
+          "Value" : 27.75
+        },
+        "-MySmgSd0RFyE4LGVRKT" : {
+          "Time" : 1.6476197862052703E9,
+          "Value" : 41.55
+        },
+        "-MySmgc7mRkMjkN8RHLb" : {
+          "Time" : 1.6476197868716972E9,
+          "Value" : 39.6
+        },
+        "-MySmgmhHmTnLZu6OTxV" : {
+          "Time" : 1.647619787539824E9,
+          "Value" : 37.199999999999996
+        }
+      },
+      "Z" : {
+        "-MySd5yySmz7vPuM-PkR" : {
+          "Time" : 1.6476172731112773E9,
+          "Value" : 3.4499999999999997
+        },
+        "-MySd68ZxkO7ai1yVtrT" : {
+          "Time" : 1.6476172740171509E9,
+          "Value" : 3.3
+        },
+        "-MySd6JHU5FUhzd9K_b6" : {
+          "Time" : 1.6476172746954236E9,
+          "Value" : 3.3
+        },
+        "-MySd6Ts-WwMyK-YcZiH" : {
+          "Time" : 1.6476172753847697E9,
+          "Value" : 1.5
+        },
+        "-MySd6ckDhCvu2TyfCjS" : {
+          "Time" : 1.6476172760543356E9,
+          "Value" : 4.35
+        },
+        "-MySd6n9AZcGp43HKNTr" : {
+          "Time" : 1.6476172766915483E9,
+          "Value" : 3.75
+        },
+        "-MySe78SJWrHZhjAlzPS" : {
+          "Time" : 1.6476175400228093E9,
+          "Value" : -7.6499999999999995
+        },
+        "-MySe7JLHKDzHRuhQ7ds" : {
+          "Time" : 1.6476175409357376E9,
+          "Value" : -7.949999999999999
+        },
+        "-MySe7U-hlio4tIz9OCw" : {
+          "Time" : 1.647617541628289E9,
+          "Value" : -7.949999999999999
+        },
+        "-MySe7drmCpKcbu-96rL" : {
+          "Time" : 1.647617542308556E9,
+          "Value" : -6.45
+        },
+        "-MySjw7AfsMdRqdVMrrj" : {
+          "Time" : 1.6476190636569395E9,
+          "Value" : 166.79999999999998
+        },
+        "-MySjwHiSbQL3B2X9mfB" : {
+          "Time" : 1.6476190645489793E9,
+          "Value" : 167.25
+        },
+        "-MySjwSLcxixuiKMR3jH" : {
+          "Time" : 1.6476190652253487E9,
+          "Value" : 168.6
+        },
+        "-MySjwbxz8au-whigRiy" : {
+          "Time" : 1.647619065902243E9,
+          "Value" : 166.95
+        },
+        "-MySjwmfC7qw_p9SMrv1" : {
+          "Time" : 1.6476190665837002E9,
+          "Value" : 167.7
+        },
+        "-MySlyQG5QZMDQQjTpVw" : {
+          "Time" : 1.6476195972858584E9,
+          "Value" : -11.25
+        },
+        "-MySly_p0Bu-_TdRDrAX" : {
+          "Time" : 1.6476195982631109E9,
+          "Value" : -11.7
+        },
+        "-MySlykUGM7x97VQm3MB" : {
+          "Time" : 1.6476195989365728E9,
+          "Value" : -9.75
+        },
+        "-MySlyvL-SELCY0ForzT" : {
+          "Time" : 1.6476195996180785E9,
+          "Value" : -13.049999999999999
+        },
+        "-MySlz5QOk1pLIY7fmbw" : {
+          "Time" : 1.647619600313867E9,
+          "Value" : -8.7
+        },
+        "-MySlzH5GcLyAfCbjE9D" : {
+          "Time" : 1.6476196010287821E9,
+          "Value" : -7.8
+        },
+        "-MySlzSkaQmLCfc2fES4" : {
+          "Time" : 1.647619601770276E9,
+          "Value" : -7.949999999999999
+        },
+        "-MySlzdJ9hU85SgR4KyX" : {
+          "Time" : 1.6476196025206554E9,
+          "Value" : -10.65
+        },
+        "-MySlzoLQh85O5Jk-th5" : {
+          "Time" : 1.647619603258593E9,
+          "Value" : -10.049999999999999
+        },
+        "-MySlzz-QVQtEnaqCmu8" : {
+          "Time" : 1.6476196039609213E9,
+          "Value" : -9.75
+        },
+        "-MySm-DPe0AHFDtb4dB5" : {
+          "Time" : 1.6476196046494877E9,
+          "Value" : -9.0
+        },
+        "-MySm-OF0EKhGY3RSUh2" : {
+          "Time" : 1.6476196056358848E9,
+          "Value" : -10.95
+        },
+        "-MySm-Z78G0nhVL2Cahj" : {
+          "Time" : 1.6476196063220701E9,
+          "Value" : -12.6
+        },
+        "-MySm-k4iBvX-35WDur8" : {
+          "Time" : 1.6476196070176144E9,
+          "Value" : -11.25
+        },
+        "-MySm-vIQGlOUxMiS1af" : {
+          "Time" : 1.6476196077832727E9,
+          "Value" : -7.6499999999999995
+        },
+        "-MySm04wb2kAmrIqGB-7" : {
+          "Time" : 1.6476196085039704E9,
+          "Value" : -13.049999999999999
+        },
+        "-MySm0FZDkLV1iFfU53k" : {
+          "Time" : 1.6476196091834586E9,
+          "Value" : -6.3
+        },
+        "-MySm0gZkfUM1CZV6K80" : {
+          "Time" : 1.6476196098589857E9,
+          "Value" : -2.55
+        },
+        "-MySmJxS0tgEu7ruM5Rt" : {
+          "Time" : 1.647619689617486E9,
+          "Value" : -2.6999999999999997
+        },
+        "-MySmKHTLxCSj3McWcCM" : {
+          "Time" : 1.647619690587606E9,
+          "Value" : -3.4499999999999997
+        },
+        "-MySmKTV0F_7YsM6Igh5" : {
+          "Time" : 1.6476196919262536E9,
+          "Value" : -3.4499999999999997
+        },
+        "-MySmKczn2_BWSSDtYAd" : {
+          "Time" : 1.6476196926843522E9,
+          "Value" : -2.85
+        },
+        "-MySmKnXzC0S70jn_9c0" : {
+          "Time" : 1.6476196933581283E9,
+          "Value" : -4.2
+        },
+        "-MySmL-q3q4GysKvAZEV" : {
+          "Time" : 1.6476196940313306E9,
+          "Value" : -2.85
+        },
+        "-MySmLAZ1DR9CYUxhKQR" : {
+          "Time" : 1.647619694900582E9,
+          "Value" : -5.1
+        },
+        "-MySmLLAWgyRPGE7PPIW" : {
+          "Time" : 1.6476196955721447E9,
+          "Value" : -2.6999999999999997
+        },
+        "-MySmLWfsKoEhW5Lsh7e" : {
+          "Time" : 1.647619696250517E9,
+          "Value" : -1.5
+        },
+        "-MySmLgXKn8-LArHLNKs" : {
+          "Time" : 1.6476196969895473E9,
+          "Value" : -2.1
+        },
+        "-MySmLtgfNMVsgZEyVZo" : {
+          "Time" : 1.6476196976912465E9,
+          "Value" : -6.3
+        },
+        "-MySmM2zv2F9xL7wYvQh" : {
+          "Time" : 1.647619698514233E9,
+          "Value" : -6.0
+        },
+        "-MySmMDXbH_xxQyBxGLc" : {
+          "Time" : 1.647619699180484E9,
+          "Value" : -1.7999999999999998
+        },
+        "-MySmMO5ei_m7qnWsxpg" : {
+          "Time" : 1.6476196998566868E9,
+          "Value" : -3.75
+        },
+        "-MySmMYamI9RgU8q8RvN" : {
+          "Time" : 1.647619700541602E9,
+          "Value" : -2.6999999999999997
+        },
+        "-MySmMhw21lmzSpGRrJ3" : {
+          "Time" : 1.6476197012041883E9,
+          "Value" : -4.5
+        },
+        "-MySmMsRk0sGGyvInFMF" : {
+          "Time" : 1.6476197018697615E9,
+          "Value" : -2.6999999999999997
+        },
+        "-MySmN1pzKiE2OQM2_pT" : {
+          "Time" : 1.6476197025396914E9,
+          "Value" : -2.85
+        },
+        "-MySmNCTwcZ9jRD3lhSL" : {
+          "Time" : 1.647619703207513E9,
+          "Value" : -1.7999999999999998
+        },
+        "-MySmNOMt-sd5cMYctWs" : {
+          "Time" : 1.6476197039754703E9,
+          "Value" : -3.4499999999999997
+        },
+        "-MySmNb7WVrO8ML6bk30" : {
+          "Time" : 1.647619704658138E9,
+          "Value" : -2.1
+        },
+        "-MySmNl_uCP0o1fnGkah" : {
+          "Time" : 1.6476197055252125E9,
+          "Value" : -3.0
+        },
+        "-MySmO3EhIX6gScAyFRv" : {
+          "Time" : 1.6476197061900003E9,
+          "Value" : -3.0
+        },
+        "-MySmOEKQ25JIiF5LibU" : {
+          "Time" : 1.64761970739046E9,
+          "Value" : -3.4499999999999997
+        },
+        "-MySmOP5v_8v1PTQN7Ej" : {
+          "Time" : 1.6476197081008332E9,
+          "Value" : -3.0
+        },
+        "-MySmOZkje1vwAwy-Tmt" : {
+          "Time" : 1.6476197087901092E9,
+          "Value" : -2.85
+        },
+        "-MySmOjBDPdsXzP8wcc_" : {
+          "Time" : 1.6476197094725022E9,
+          "Value" : -2.1
+        },
+        "-MySmOtsnwmO9hqdbziX" : {
+          "Time" : 1.6476197101410172E9,
+          "Value" : -3.5999999999999996
+        },
+        "-MySmPHedox1ZDGaPtve" : {
+          "Time" : 1.6476197108301954E9,
+          "Value" : -2.85
+        },
+        "-MySmPSCJNkDfafJpnbR" : {
+          "Time" : 1.6476197124091043E9,
+          "Value" : -3.9
+        },
+        "-MySmPeqw9CGSxTuG1zS" : {
+          "Time" : 1.6476197131016293E9,
+          "Value" : -3.5999999999999996
+        },
+        "-MySmPq3_W2rw5VXbB84" : {
+          "Time" : 1.647619713953224E9,
+          "Value" : -4.2
+        },
+        "-MySmQ-iMq07lJzaUQr4" : {
+          "Time" : 1.6476197146782055E9,
+          "Value" : -4.2
+        },
+        "-MySmQVliUr4IlLG81vT" : {
+          "Time" : 1.6476197153627388E9,
+          "Value" : -3.0
+        },
+        "-MySmQfUenWu2dPaflDi" : {
+          "Time" : 1.6476197174101744E9,
+          "Value" : -4.6499999999999995
+        },
+        "-MySmQqo7KyfJoL-WoYh" : {
+          "Time" : 1.6476197181040542E9,
+          "Value" : -10.65
+        },
+        "-MySmR2Kqq1LBgFr-VzJ" : {
+          "Time" : 1.6476197188338392E9,
+          "Value" : -13.799999999999999
+        },
+        "-MySmRDPcvfRMZuPBJ3o" : {
+          "Time" : 1.6476197196293712E9,
+          "Value" : -13.65
+        },
+        "-MySmRNd0UjcGebO5myx" : {
+          "Time" : 1.6476197203228803E9,
+          "Value" : -11.25
+        },
+        "-MySmRYQt_SpjGc1vIpw" : {
+          "Time" : 1.6476197209829924E9,
+          "Value" : -13.2
+        },
+        "-MySmS69EdwFYhY7kkhE" : {
+          "Time" : 1.647619721693708E9,
+          "Value" : -2.1
+        },
+        "-MySmSGopYto80ABSRYu" : {
+          "Time" : 1.6476197239690335E9,
+          "Value" : -5.3999999999999995
+        },
+        "-MySmSRMtV411yM_oKQo" : {
+          "Time" : 1.6476197246424835E9,
+          "Value" : -5.3999999999999995
+        },
+        "-MySmSbAdXdmdUVe_zXw" : {
+          "Time" : 1.6476197253168578E9,
+          "Value" : -5.85
+        },
+        "-MySmSm_wP_9xMKh8FqJ" : {
+          "Time" : 1.6476197260107777E9,
+          "Value" : -4.8
+        },
+        "-MySmSxArrO9aVXzzb3r" : {
+          "Time" : 1.647619726736941E9,
+          "Value" : -5.3999999999999995
+        },
+        "-MySmT6YyA4xfjQCNHim" : {
+          "Time" : 1.6476197274111173E9,
+          "Value" : -0.15
+        },
+        "-MySmTHNMjfR25Aej993" : {
+          "Time" : 1.6476197280993867E9,
+          "Value" : 6.0
+        },
+        "-MySmTezzPqvZXi0dl7p" : {
+          "Time" : 1.64761972877911E9,
+          "Value" : -3.0
+        },
+        "-MySmTpxSof27mI5PBrj" : {
+          "Time" : 1.647619730341118E9,
+          "Value" : -9.45
+        },
+        "-MySmU2HGVjturmSaZD2" : {
+          "Time" : 1.647619731056797E9,
+          "Value" : 0.44999999999999996
+        },
+        "-MySmUCyLyXc-tcamtua" : {
+          "Time" : 1.647619731892536E9,
+          "Value" : -4.8
+        },
+        "-MySmUNN-ntI9kikYolR" : {
+          "Time" : 1.6476197325836792E9,
+          "Value" : -7.199999999999999
+        },
+        "-MySmUY5zEGAN6MIW8vh" : {
+          "Time" : 1.6476197332473388E9,
+          "Value" : -5.1
+        },
+        "-MySmUhX0-OwJcA1GAwO" : {
+          "Time" : 1.6476197339317832E9,
+          "Value" : -7.6499999999999995
+        },
+        "-MySmUs1mTSprLZVCUHo" : {
+          "Time" : 1.6476197346014516E9,
+          "Value" : -1.05
+        },
+        "-MySmV1g6F2LkhJ1adgr" : {
+          "Time" : 1.6476197352715502E9,
+          "Value" : -5.3999999999999995
+        },
+        "-MySmVDRU_-WyqaRbjsL" : {
+          "Time" : 1.6476197359604993E9,
+          "Value" : -14.399999999999999
+        },
+        "-MySmVOTVBk2NjSOBqQa" : {
+          "Time" : 1.6476197367065039E9,
+          "Value" : -30.45
+        },
+        "-MySmVYqEWtLbqAue1TM" : {
+          "Time" : 1.6476197374096816E9,
+          "Value" : -30.45
+        },
+        "-MySmVlD7urrjP8iTgiE" : {
+          "Time" : 1.6476197380876148E9,
+          "Value" : -30.45
+        },
+        "-MySmVvpiQmeHUyJgIpn" : {
+          "Time" : 1.6476197389224482E9,
+          "Value" : -29.549999999999997
+        },
+        "-MySmW5ImyyA644D-lJi" : {
+          "Time" : 1.6476197396115427E9,
+          "Value" : -31.799999999999997
+        },
+        "-MySmWHk0kwyVDG666eH" : {
+          "Time" : 1.6476197402789333E9,
+          "Value" : -30.45
+        },
+        "-MySmWVv87VDNH5rmkoW" : {
+          "Time" : 1.6476197411616843E9,
+          "Value" : -28.05
+        },
+        "-MySmWfI1KSgoMaA9bfk" : {
+          "Time" : 1.647619741983272E9,
+          "Value" : -27.3
+        },
+        "-MySmWq4yrODn_pM2aR-" : {
+          "Time" : 1.6476197426532445E9,
+          "Value" : -27.3
+        },
+        "-MySmX-wQVua_HYyVYw0" : {
+          "Time" : 1.6476197433345723E9,
+          "Value" : -27.75
+        },
+        "-MySmXAQWv2_sJzw46hE" : {
+          "Time" : 1.6476197440331895E9,
+          "Value" : -27.3
+        },
+        "-MySmXKvXrZzEb_tcH91" : {
+          "Time" : 1.6476197447046967E9,
+          "Value" : -27.599999999999998
+        },
+        "-MySmXYA1YoAtOri9GZG" : {
+          "Time" : 1.6476197453862875E9,
+          "Value" : -26.25
+        },
+        "-MySmXhY2y434BRUkoTu" : {
+          "Time" : 1.6476197462138283E9,
+          "Value" : -27.599999999999998
+        },
+        "-MySmXszrN3dVd691yLa" : {
+          "Time" : 1.6476197469384701E9,
+          "Value" : -26.4
+        },
+        "-MySmY2X_ZPHozhFMhUv" : {
+          "Time" : 1.6476197476163085E9,
+          "Value" : -27.9
+        },
+        "-MySmYDEikMsGx97jSjr" : {
+          "Time" : 1.6476197482933865E9,
+          "Value" : -27.15
+        },
+        "-MySmYNsVkb8C6bIoKFG" : {
+          "Time" : 1.6476197489842541E9,
+          "Value" : -27.3
+        },
+        "-MySmYYR_HaoUIJFG8pX" : {
+          "Time" : 1.6476197496600728E9,
+          "Value" : -25.65
+        },
+        "-MySmYi253XmcCCHnWk8" : {
+          "Time" : 1.647619750333019E9,
+          "Value" : -27.3
+        },
+        "-MySmYtTbP5S3RRcyYIm" : {
+          "Time" : 1.6476197510120318E9,
+          "Value" : -25.65
+        },
+        "-MySmZ30mQLXKue-OiF7" : {
+          "Time" : 1.6476197517463577E9,
+          "Value" : -28.2
+        },
+        "-MySmZGVCCHcw7lpJob9" : {
+          "Time" : 1.6476197524310403E9,
+          "Value" : -15.6
+        },
+        "-MySmZYxwWRtiIoGjOXA" : {
+          "Time" : 1.6476197532708619E9,
+          "Value" : -13.65
+        },
+        "-MySmZiMg0bqdlSpQEDu" : {
+          "Time" : 1.6476197544617252E9,
+          "Value" : -13.049999999999999
+        },
+        "-MySmZskC4Km448brWoB" : {
+          "Time" : 1.6476197551271925E9,
+          "Value" : -8.85
+        },
+        "-MySm_22w_Ch8au-zZgE" : {
+          "Time" : 1.6476197558013775E9,
+          "Value" : -4.2
+        },
+        "-MySm_CwYSpXL99Hdt9_" : {
+          "Time" : 1.6476197564887953E9,
+          "Value" : -1.3499999999999999
+        },
+        "-MySm_NdcM1zR8r5NRe1" : {
+          "Time" : 1.6476197571480105E9,
+          "Value" : -6.8999999999999995
+        },
+        "-MySm_YLI5i9PhJlDkPh" : {
+          "Time" : 1.647619757832099E9,
+          "Value" : -10.35
+        },
+        "-MySm_i-TnlT-xS0sShm" : {
+          "Time" : 1.6476197585175254E9,
+          "Value" : -8.549999999999999
+        },
+        "-MySm_sni2vjGIsCrdDN" : {
+          "Time" : 1.6476197592005699E9,
+          "Value" : -9.299999999999999
+        },
+        "-MySma4yVzjOmanRGCZw" : {
+          "Time" : 1.6476197598985221E9,
+          "Value" : -7.8
+        },
+        "-MySmaFWI4637S_Nv3bx" : {
+          "Time" : 1.6476197607266662E9,
+          "Value" : -12.15
+        },
+        "-MySmaQ793XfJP5azlmx" : {
+          "Time" : 1.647619761409565E9,
+          "Value" : -11.4
+        },
+        "-MySma_Bg2EWMsP59Ta2" : {
+          "Time" : 1.6476197620809858E9,
+          "Value" : -11.25
+        },
+        "-MySmakT2YHEvA-8svnG" : {
+          "Time" : 1.6476197627394838E9,
+          "Value" : -11.1
+        },
+        "-MySmav8e3Zail6R-a1e" : {
+          "Time" : 1.6476197634532788E9,
+          "Value" : -7.949999999999999
+        },
+        "-MySmb4gm0gyUwYZhmZb" : {
+          "Time" : 1.6476197641349137E9,
+          "Value" : -12.6
+        },
+        "-MySmbFHJmDrYOTVSaXH" : {
+          "Time" : 1.6476197648178263E9,
+          "Value" : -12.9
+        },
+        "-MySmbQB6n1KJ8qtWy4N" : {
+          "Time" : 1.647619765490326E9,
+          "Value" : -11.25
+        },
+        "-MySmba3AYgCDKQLENi8" : {
+          "Time" : 1.6476197661885593E9,
+          "Value" : -11.7
+        },
+        "-MySmbnnysNbFngqneIy" : {
+          "Time" : 1.647619766892465E9,
+          "Value" : -9.299999999999999
+        },
+        "-MySmbyEHSB4_dkfKZyY" : {
+          "Time" : 1.6476197677573915E9,
+          "Value" : -4.5
+        },
+        "-MySmc7_WRiP_B4IRxWz" : {
+          "Time" : 1.6476197684302762E9,
+          "Value" : -4.5
+        },
+        "-MySmcHzxmW7iG3xWV16" : {
+          "Time" : 1.6476197690893006E9,
+          "Value" : -9.299999999999999
+        },
+        "-MySmcSVPA5AsUWaYYVt" : {
+          "Time" : 1.6476197697567694E9,
+          "Value" : -7.199999999999999
+        },
+        "-MySmcc63eH8Kth-Zlau" : {
+          "Time" : 1.647619770426971E9,
+          "Value" : -7.6499999999999995
+        },
+        "-MySmcmeRdJgiLSVBtpj" : {
+          "Time" : 1.6476197711118574E9,
+          "Value" : -5.25
+        },
+        "-MySmcxEdTpKZhJ2x76q" : {
+          "Time" : 1.6476197717842963E9,
+          "Value" : -12.299999999999999
+        },
+        "-MySmd7ZcDejBdEZ05cG" : {
+          "Time" : 1.6476197724669983E9,
+          "Value" : -7.8
+        },
+        "-MySmdHzRt9GtpJIS7xS" : {
+          "Time" : 1.6476197731862879E9,
+          "Value" : 2.25
+        },
+        "-MySmdVBCASeGXnCVJqv" : {
+          "Time" : 1.6476197738636131E9,
+          "Value" : 1.95
+        },
+        "-MySmdenb1R92qw0UPbi" : {
+          "Time" : 1.647619774693274E9,
+          "Value" : 3.9
+        },
+        "-MySmdooDKdGNdz2UCX-" : {
+          "Time" : 1.6476197753729246E9,
+          "Value" : 3.75
+        },
+        "-MySmdzGvUOhaTBp5zOF" : {
+          "Time" : 1.6476197760199223E9,
+          "Value" : 0.8999999999999999
+        },
+        "-MySme8qFISTrOJydgoZ" : {
+          "Time" : 1.6476197766845973E9,
+          "Value" : 2.85
+        },
+        "-MySmeJWztd2PubC-1m8" : {
+          "Time" : 1.6476197773644009E9,
+          "Value" : 2.25
+        },
+        "-MySmeanUfH0Bssn588b" : {
+          "Time" : 1.647619778044512E9,
+          "Value" : 2.25
+        },
+        "-MySmem1d3sBAyKqkkV6" : {
+          "Time" : 1.647619779218171E9,
+          "Value" : 7.35
+        },
+        "-MySmewjS4nY3ycLHLT5" : {
+          "Time" : 1.6476197799429197E9,
+          "Value" : -1.95
+        },
+        "-MySmf6LF3DugMA7D5MZ" : {
+          "Time" : 1.6476197806187546E9,
+          "Value" : -6.45
+        },
+        "-MySmfJaFWwh47y0encU" : {
+          "Time" : 1.647619781308111E9,
+          "Value" : -1.5
+        },
+        "-MySmfToRVA1cpXc9Vrg" : {
+          "Time" : 1.6476197821371238E9,
+          "Value" : -7.199999999999999
+        },
+        "-MySmfdXzQr7-DD4dRjY" : {
+          "Time" : 1.6476197828003287E9,
+          "Value" : -8.4
+        },
+        "-MySmfo7NiyiDcVld1G6" : {
+          "Time" : 1.6476197834836464E9,
+          "Value" : -3.15
+        },
+        "-MySmfyahfmmtiEBm0yF" : {
+          "Time" : 1.647619784162109E9,
+          "Value" : -4.6499999999999995
+        },
+        "-MySmg81qTQPWBFxbuK2" : {
+          "Time" : 1.6476197848337917E9,
+          "Value" : -1.7999999999999998
+        },
+        "-MySmgIOF8PblRby3h7h" : {
+          "Time" : 1.6476197855012398E9,
+          "Value" : 0.0
+        },
+        "-MySmgTQgOZaIIXS7v9C" : {
+          "Time" : 1.6476197862052703E9,
+          "Value" : -5.25
+        },
+        "-MySmgctGCGE5ojhUvvK" : {
+          "Time" : 1.6476197868716972E9,
+          "Value" : -1.5
+        },
+        "-MySmgnTmW7BezOv_wVw" : {
+          "Time" : 1.647619787539824E9,
+          "Value" : -3.75
+        }
+      }
+    }
+  }
+}
