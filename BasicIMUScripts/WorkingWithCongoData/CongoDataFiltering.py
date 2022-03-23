@@ -65,24 +65,30 @@ with open("woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_fi
         
         data[accltx[i]] = {'ACCL': new_accl, 'GYRO': new_gyro, 'MAG': new_mag}
 
+    # Correct for skipped measurements and imprecise sampling with interpolation
     times = list(data)
     timeDiffs = [times[i+1] - times[i] for i in range(len(times)-1)]
-
-    for t in timeDiffs: print(t / stat.median(timeDiffs))
-    print("timespan: ", times[-1] - times[0])
-    print("timestep: ", stat.median(timeDiffs))
-    print("timesteps: ", (times[-1] - times[0])/stat.median(timeDiffs))
-
     numsteps = round((times[-1] - times[0])/stat.median(timeDiffs))
-    print("numsteps:", numsteps)
     timestep = (times[-1] - times[0])/numsteps
-    print("timestep:", timestep)
     corrected_times = np.linspace(times[0], times[-1], numsteps)
-    
-    xlist = [0,1,2]
-    ylist = [0,1,0]
-    xvals = [0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25]
 
-    intperpolations = [interpolate(xlist, ylist, xval) for xval in xvals]
-    print("interpolatons:", intps)
+    xaccl_intps = [interpolate(times, [data[t]['ACCL']['X'] for t in times], ct) for ct in corrected_times]
+    yaccl_intps = [interpolate(times, [data[t]['ACCL']['Y'] for t in times], ct) for ct in corrected_times]
+    zaccl_intps = [interpolate(times, [data[t]['ACCL']['Z'] for t in times], ct) for ct in corrected_times]
+    accl_intps = np.array([xaccl_intps, yaccl_intps, zaccl_intps]).transpose()
+
+    xgyro_intps = [interpolate(times, [data[t]['GYRO']['X'] for t in times], ct) for ct in corrected_times]
+    ygyro_intps = [interpolate(times, [data[t]['GYRO']['Y'] for t in times], ct) for ct in corrected_times]
+    zgyro_intps = [interpolate(times, [data[t]['GYRO']['Z'] for t in times], ct) for ct in corrected_times]
+    gyro_intps = np.array([xgyro_intps, ygyro_intps, zgyro_intps]).transpose()
+
+    xmag_intps = [interpolate(times, [data[t]['MAG']['X'] for t in times], ct) for ct in corrected_times]
+    ymag_intps = [interpolate(times, [data[t]['MAG']['Y'] for t in times], ct) for ct in corrected_times]
+    zmag_intps = [interpolate(times, [data[t]['MAG']['Z'] for t in times], ct) for ct in corrected_times]
+    mag_intps = np.array([xmag_intps, ymag_intps, zmag_intps]).transpose()
+
+
+    # Apply kalman filter
+    qOut = skin.imus.kalman(1.0/timestep, accl_intps, gyro_intps, mag_intps)
+    
 
