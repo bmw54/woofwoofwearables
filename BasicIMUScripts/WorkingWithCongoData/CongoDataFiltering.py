@@ -2,6 +2,7 @@ import json
 import skinematics as skin
 import statistics as stat
 import numpy as np
+from datetime import datetime
 
 
 def interpolate(xlist, ylist, xval):
@@ -72,23 +73,25 @@ with open("woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_fi
     timestep = (times[-1] - times[0])/numsteps
     corrected_times = np.linspace(times[0], times[-1], numsteps)
 
-    xaccl_intps = [interpolate(times, [data[t]['ACCL']['X'] for t in times], ct) for ct in corrected_times]
-    yaccl_intps = [interpolate(times, [data[t]['ACCL']['Y'] for t in times], ct) for ct in corrected_times]
-    zaccl_intps = [interpolate(times, [data[t]['ACCL']['Z'] for t in times], ct) for ct in corrected_times]
-    accl_intps = np.array([xaccl_intps, yaccl_intps, zaccl_intps]).transpose()
+    def interpolate_sensor(sensor):
+        intps_list = [[interpolate(times, [data[t][sensor][dir] for t in times], ct) for ct in corrected_times] for dir in ['X', 'Y', 'Z']]
+        intps_array = np.array(intps_list).transpose()
+        return intps_array
 
-    xgyro_intps = [interpolate(times, [data[t]['GYRO']['X'] for t in times], ct) for ct in corrected_times]
-    ygyro_intps = [interpolate(times, [data[t]['GYRO']['Y'] for t in times], ct) for ct in corrected_times]
-    zgyro_intps = [interpolate(times, [data[t]['GYRO']['Z'] for t in times], ct) for ct in corrected_times]
-    gyro_intps = np.array([xgyro_intps, ygyro_intps, zgyro_intps]).transpose()
-
-    xmag_intps = [interpolate(times, [data[t]['MAG']['X'] for t in times], ct) for ct in corrected_times]
-    ymag_intps = [interpolate(times, [data[t]['MAG']['Y'] for t in times], ct) for ct in corrected_times]
-    zmag_intps = [interpolate(times, [data[t]['MAG']['Z'] for t in times], ct) for ct in corrected_times]
-    mag_intps = np.array([xmag_intps, ymag_intps, zmag_intps]).transpose()
+    accl_intps = interpolate_sensor('ACCL')
+    gyro_intps = interpolate_sensor('GYRO')
+    mag_intps = interpolate_sensor('MAG')
 
 
     # Apply kalman filter
     qOut = skin.imus.kalman(1.0/timestep, accl_intps, gyro_intps, mag_intps)
+    # for i in range(len(qOut)):
+    #     print(datetime.fromtimestamp(corrected_times[i]), skin.quat.quat2deg(qOut)[i])
     
+    for i in range(len(qOut)):
+        print(datetime.fromtimestamp(corrected_times[i]), [round(rads*180.0/np.pi) for rads in skin.quat.calc_angvel(qOut,1.0/timestep)[i]])
+    # print("\n\n\n")
+    # for i in range(len(qOut)):
+    #     print(datetime.fromtimestamp(corrected_times[i]), skin.quat.calc_angvel(qOut,1.0/timestep)[i])
+
 
