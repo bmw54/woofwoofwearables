@@ -1,28 +1,16 @@
-import json
-import skinematics as skin
-import statistics as stat
-import numpy as np
-from datetime import datetime
-from scipy.interpolate import interp1d
 import matplotlib.animation as ani
 import matplotlib.pyplot as plt
+import numpy as np
+from scipy.interpolate import interp1d
+import json
+import statistics as stat
+from datetime import datetime
 
 
-# def interpolate(xlist, ylist, xval):
-#     if xval != np.clip(xval, min(xlist), max(xlist)):
-#         print("X value", xval, "out of range")
-#         xval = np.clip(xval, min(xlist), max(xlist))
-#         print("Rounding X value to:", xval)
-    
-#     if xlist.count(xval): return ylist[xlist.index(xval)]
+x = np.linspace(0, 10, num=11, endpoint=True)
+y = np.cos(-x**2/9.0)
 
-#     x1_ind = [i for i in range(len(xlist)) if xlist[i]<xval][-1]
-#     x1 = xlist[x1_ind]
-#     x2 = xlist[x1_ind+1]
-#     y1 = ylist[x1_ind]
-#     y2 = ylist[x1_ind+1]
-#     yval = ((y2-y1)*1.0/(x2-x1)) * (xval-x1) + y1
-#     return yval
+
 
 with open("woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_file:
     read_data = json.load(read_file)
@@ -74,44 +62,22 @@ with open("woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_fi
     timeDiffs = [times[i+1] - times[i] for i in range(len(times)-1)]
     numsteps = round((times[-1] - times[0])/stat.median(timeDiffs))
     timestep = (times[-1] - times[0])/numsteps
+
+
+    xacc = [data[t]['ACCL']['X'] for t in times]
     corrected_times = np.linspace(times[0], times[-1], numsteps)
 
-
-    def interpolate_sensor(sensor):
-        funcs = {}
-        for d in ['X', 'Y', 'Z']:
-            funcs[d] = interp1d(times, [data[t][sensor][d] for t in times])
-        intps_list = [[funcs[d](ct) for ct in corrected_times] for d in ['X', 'Y', 'Z']]
-        # intps_list = [[interpolate(times, [data[t][sensor][dir] for t in times], ct) for ct in corrected_times] for dir in ['X', 'Y', 'Z']]
-        intps_array = np.array(intps_list).transpose()
-        return intps_array
-
-    accl_intps = interpolate_sensor('ACCL')
-    gyro_intps = interpolate_sensor('GYRO')
-    mag_intps = interpolate_sensor('MAG')
-
-
-    # Apply kalman filter
-    qOut = skin.imus.kalman(1.0/timestep, accl_intps, gyro_intps, mag_intps)
-    # for i in range(len(qOut)):
-    #     print(datetime.fromtimestamp(corrected_times[i]), skin.quat.quat2deg(qOut)[i])
     
-    # for i in range(len(qOut)):
-    #     print(datetime.fromtimestamp(corrected_times[i]), [round(rads*180.0/np.pi) for rads in skin.quat.calc_angvel(qOut,1.0/timestep)[i]])
-    # print("\n\n\n")
-    # for i in range(len(qOut)):
-    #     print(datetime.fromtimestamp(corrected_times[i]), skin.quat.calc_angvel(qOut,1.0/timestep)[i])
-
-    degs = skin.quat.quat2deg(qOut)
-    
+    color = ['red', 'green', 'blue', 'orange']
     fig = plt.figure()
     plt.xticks(rotation=45, ha="right", rotation_mode="anchor") #rotate the x-axis values
     plt.subplots_adjust(bottom = 0.2, top = 0.9) #ensuring the dates (on the x-axis) fit in the screen
-    plt.ylabel('Degree Rotation')
+    plt.ylabel('X Acceleration')
     plt.xlabel('Timestamp')
-    plt.plot([datetime.fromtimestamp(ct) for ct in corrected_times], degs)
-    plt.legend(['X', 'Y', 'Z'], loc='best')
+
+    def buildmebarchart(i=int):
+        p = plt.plot([datetime.fromtimestamp(t) for t in times[:i]], xacc[:i]) #note it only returns the dataset, up to the point i
+        p[0].set_color('red')
+
+    animator = ani.FuncAnimation(fig, buildmebarchart, interval = 100)
     plt.show()
-
-
-
