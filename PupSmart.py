@@ -22,30 +22,38 @@ while True:
     y_mag = data_module.get_Y_magnetic()
     z_mag = data_module.get_Z_magnetic()
 
-    x_accel_data = {"Time" : timestamp, "Value": x_acceleration}
-    y_accel_data = {"Time" : timestamp, "Value": y_acceleration}
-    z_accel_data = {"Time" : timestamp, "Value": z_acceleration}
+    x_accel_data = {"Time": timestamp, "Value": x_acceleration}
+    y_accel_data = {"Time": timestamp, "Value": y_acceleration}
+    z_accel_data = {"Time": timestamp, "Value": z_acceleration}
 
-    x_gyro_data = {"Time" : timestamp, "Value": x_gyro}
-    y_gyro_data = {"Time" : timestamp, "Value": y_gyro}
-    z_gyro_data = {"Time" : timestamp, "Value": z_gyro}
+    x_gyro_data = {"Time": timestamp, "Value": x_gyro}
+    y_gyro_data = {"Time": timestamp, "Value": y_gyro}
+    z_gyro_data = {"Time": timestamp, "Value": z_gyro}
 
-    x_mag_data = {"Time" : timestamp, "Value": x_mag}
-    y_mag_data = {"Time" : timestamp, "Value": y_mag}
-    z_mag_data = {"Time" : timestamp, "Value": z_mag}
+    x_mag_data = {"Time": timestamp, "Value": x_mag}
+    y_mag_data = {"Time": timestamp, "Value": y_mag}
+    z_mag_data = {"Time": timestamp, "Value": z_mag}
 
-    rpi_2_firebase.send_timeseries_to_firebase(x_accel_data, "FridayPuppyRun", "X", "accel")
-    rpi_2_firebase.send_timeseries_to_firebase(y_accel_data, "FridayPuppyRun", "Y", "accel")
-    rpi_2_firebase.send_timeseries_to_firebase(z_accel_data, "FridayPuppyRun", "Z", "accel")
+    rpi_2_firebase.send_timeseries_to_firebase(
+        x_accel_data, "0324PuppyRun", "X", "accel")
+    rpi_2_firebase.send_timeseries_to_firebase(
+        y_accel_data, "0324PuppyRun", "Y", "accel")
+    rpi_2_firebase.send_timeseries_to_firebase(
+        z_accel_data, "0324PuppyRun", "Z", "accel")
 
-    rpi_2_firebase.send_timeseries_to_firebase(x_gyro_data, "FridayPuppyRun", "X", "gyro")
-    rpi_2_firebase.send_timeseries_to_firebase(y_gyro_data, "FridayPuppyRun", "Y", "gyro")
-    rpi_2_firebase.send_timeseries_to_firebase(z_gyro_data, "FridayPuppyRun", "Z", "gyro")
+    rpi_2_firebase.send_timeseries_to_firebase(
+        x_gyro_data, "0324PuppyRun", "X", "gyro")
+    rpi_2_firebase.send_timeseries_to_firebase(
+        y_gyro_data, "0324PuppyRun", "Y", "gyro")
+    rpi_2_firebase.send_timeseries_to_firebase(
+        z_gyro_data, "0324PuppyRun", "Z", "gyro")
 
-    rpi_2_firebase.send_timeseries_to_firebase(x_mag_data, "FridayPuppyRun", "X", "mag")
-    rpi_2_firebase.send_timeseries_to_firebase(y_mag_data, "FridayPuppyRun", "Y", "mag")
-    rpi_2_firebase.send_timeseries_to_firebase(z_mag_data, "FridayPuppyRun", "Z", "mag")
-
+    rpi_2_firebase.send_timeseries_to_firebase(
+        x_mag_data, "0324PuppyRun", "X", "mag")
+    rpi_2_firebase.send_timeseries_to_firebase(
+        y_mag_data, "0324PuppyRun", "Y", "mag")
+    rpi_2_firebase.send_timeseries_to_firebase(
+        z_mag_data, "0324PuppyRun", "Z", "mag")
 
     current_data = data_module.get_imu_data()
     rpi_2_firebase.send_data_to_firebase(current_data, "CurrentIMUData")
