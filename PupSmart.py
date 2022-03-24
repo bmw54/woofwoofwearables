@@ -3,7 +3,7 @@ from BasicIMUScripts.IMUDataModule import IMUDataModule
 from Camera.CameraModule import CameraModule
 import time
 
-data_module = IMUDataModule()
+data_module = IMUDataModule(address=104)
 rpi_2_firebase = RPi2Firebase()
 # camera_module = CameraModule()
 
