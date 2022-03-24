@@ -34,17 +34,17 @@ while True:
     y_mag_data = {"Time" : timestamp, "Value": y_mag}
     z_mag_data = {"Time" : timestamp, "Value": z_mag}
 
-    rpi_2_firebase.send_timeseries_to_firebase(x_accel_data, "FridayPuppyRun", "X", "accel")
-    rpi_2_firebase.send_timeseries_to_firebase(y_accel_data, "FridayPuppyRun", "Y", "accel")
-    rpi_2_firebase.send_timeseries_to_firebase(z_accel_data, "FridayPuppyRun", "Z", "accel")
+    rpi_2_firebase.send_timeseries_to_firebase(x_accel_data, "March24Run", "X", "accel")
+    rpi_2_firebase.send_timeseries_to_firebase(y_accel_data, "March24Run", "Y", "accel")
+    rpi_2_firebase.send_timeseries_to_firebase(z_accel_data, "March24Run", "Z", "accel")
 
-    rpi_2_firebase.send_timeseries_to_firebase(x_gyro_data, "FridayPuppyRun", "X", "gyro")
-    rpi_2_firebase.send_timeseries_to_firebase(y_gyro_data, "FridayPuppyRun", "Y", "gyro")
-    rpi_2_firebase.send_timeseries_to_firebase(z_gyro_data, "FridayPuppyRun", "Z", "gyro")
+    rpi_2_firebase.send_timeseries_to_firebase(x_gyro_data, "March24Run", "X", "gyro")
+    rpi_2_firebase.send_timeseries_to_firebase(y_gyro_data, "March24Run", "Y", "gyro")
+    rpi_2_firebase.send_timeseries_to_firebase(z_gyro_data, "March24Run", "Z", "gyro")
 
-    rpi_2_firebase.send_timeseries_to_firebase(x_mag_data, "FridayPuppyRun", "X", "mag")
-    rpi_2_firebase.send_timeseries_to_firebase(y_mag_data, "FridayPuppyRun", "Y", "mag")
-    rpi_2_firebase.send_timeseries_to_firebase(z_mag_data, "FridayPuppyRun", "Z", "mag")
+    rpi_2_firebase.send_timeseries_to_firebase(x_mag_data, "March24Run", "X", "mag")
+    rpi_2_firebase.send_timeseries_to_firebase(y_mag_data, "March24Run", "Y", "mag")
+    rpi_2_firebase.send_timeseries_to_firebase(z_mag_data, "March24Run", "Z", "mag")
 
 
     current_data = data_module.get_imu_data()
