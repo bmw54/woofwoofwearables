@@ -82,7 +82,6 @@ with open("woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_fi
         for d in ['X', 'Y', 'Z']:
             funcs[d] = interp1d(times, [data[t][sensor][d] for t in times])
         intps_list = [[funcs[d](ct) for ct in corrected_times] for d in ['X', 'Y', 'Z']]
-        # intps_list = [[interpolate(times, [data[t][sensor][dir] for t in times], ct) for ct in corrected_times] for dir in ['X', 'Y', 'Z']]
         intps_array = np.array(intps_list).transpose()
         return intps_array
 
@@ -93,24 +92,61 @@ with open("woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_fi
 
     # Apply kalman filter
     qOut = skin.imus.kalman(1.0/timestep, accl_intps, gyro_intps, mag_intps)
-    # for i in range(len(qOut)):
-    #     print(datetime.fromtimestamp(corrected_times[i]), skin.quat.quat2deg(qOut)[i])
-    
-    # for i in range(len(qOut)):
-    #     print(datetime.fromtimestamp(corrected_times[i]), [round(rads*180.0/np.pi) for rads in skin.quat.calc_angvel(qOut,1.0/timestep)[i]])
-    # print("\n\n\n")
-    # for i in range(len(qOut)):
-    #     print(datetime.fromtimestamp(corrected_times[i]), skin.quat.calc_angvel(qOut,1.0/timestep)[i])
-
     degs = skin.quat.quat2deg(qOut)
-    
-    fig = plt.figure()
+
+    fig = plt.figure(1)
     plt.xticks(rotation=45, ha="right", rotation_mode="anchor") #rotate the x-axis values
     plt.subplots_adjust(bottom = 0.2, top = 0.9) #ensuring the dates (on the x-axis) fit in the screen
     plt.ylabel('Degree Rotation')
     plt.xlabel('Timestamp')
     plt.plot([datetime.fromtimestamp(ct) for ct in corrected_times], degs)
     plt.legend(['X', 'Y', 'Z'], loc='best')
+    
+    print(datetime.fromtimestamp(corrected_times[0]))
+
+    rotmats = [skin.quat.convert(q) for q in qOut]
+
+    fig = plt.figure(3, figsize=plt.figaspect(1.5))
+    ax = fig.add_subplot(211, projection='3d')
+    ax2 = fig.add_subplot(212)
+
+    colors = ['r','b','g']
+
+    def plotOrientation(i=int):
+        sampleNum = i%len(corrected_times)
+        Vecs = (rotmats[sampleNum]@np.diag([1.5,0.5,0.5])).transpose()
+        origin = np.zeros_like(Vecs) # origin point
+        ax.clear()
+        ax.set_xlim([-2, 2])
+        ax.set_ylim([-2, 2])
+        ax.set_zlim([-2, 2])
+        ax.quiver(*origin, Vecs[:,0], Vecs[:,1], Vecs[:,2], color = ['r','b','g','r','r','b','b','g','g'])
+
+        ax2.clear()
+        ax2.set_ylim([-180, 180])
+        ax2.grid(True)
+        p = plt.plot([ct-corrected_times[0] for ct in corrected_times], degs)
+        plt.axvline(corrected_times[sampleNum]-corrected_times[0], color='orange')
+        for j in range(3): p[j].set_color(colors[j])
+        plt.legend(['X', 'Y', 'Z'], loc='best')
+        plt.yticks(rotation=90) #rotate the y-axis values
+        plt.ylabel('Degree Rotation')
+        plt.xlabel('Seconds')
+        ax2.set_ylim([-180, 180])
+        ax2.grid(True)
+
+
+
+
+
+
+
+
+    animator = ani.FuncAnimation(fig, plotOrientation, interval = timestep*1000)
+
+
+
+    plt.tight_layout()
     plt.show()
 
 

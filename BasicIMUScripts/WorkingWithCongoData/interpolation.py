@@ -28,7 +28,6 @@ f2 = interp1d(x, y, kind='cubic')
 xnew = np.linspace(0, 10, num=41, endpoint=True)
 plt.plot(x, y, 'o', xnew, [interpolate(list(x), list(y), xn) for xn in xnew], '-', xnew, f2(xnew), '--')
 plt.legend(['data', 'mine', 'cubic'], loc='best')
-plt.show()
 
 
 
@@ -86,9 +85,9 @@ with open("woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_fi
     xacc = [data[t]['ACCL']['X'] for t in times]
     corrected_times = np.linspace(times[0], times[-1], numsteps)
 
-    f3 = interp1d(times, xacc, kind='quadratic')
+    f3 = interp1d(times, xacc, kind='cubic')
     plt.plot(times, xacc, 'o', corrected_times, [interpolate(times, xacc, ct) for ct in corrected_times], '-', corrected_times, f3(corrected_times), '--')
-    plt.legend(['data', 'mine', 'quadratic'], loc='best')
+    plt.legend(['data', 'mine', 'cubic'], loc='best')
     plt.show()
 
     xacc_interpolated = [interpolate(times, [data[t]['ACCL']['X'] for t in times], ct) for ct in corrected_times]
