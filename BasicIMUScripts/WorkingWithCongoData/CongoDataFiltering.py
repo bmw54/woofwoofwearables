@@ -8,14 +8,12 @@ import matplotlib.animation as ani
 import matplotlib.pyplot as plt
 
 
-def checkTimeSeries(lables, dataLists):
-    if not (len(lables) == len(dataLists) == 9):
+def checkTimeSeries(timeSeries, lables = ["AcclX", "AcclY", "AcclZ", "MagnX", "MagnY", "MagnZ", "GyroX", "GyroY", "GyroZ"]):
+    if not (len(lables) == len(timeSeries) == 9):
         print("invalid input length")
         return
     
-    allTimes = [item for sublist in dataLists for item in sublist]
-    allTimes = list(set(allTimes))
-    allTimes.sort()
+    allTimes = combineTimeSeries(timeSeries)
 
     timeDiffs = [allTimes[i+1] - allTimes[i] for i in range(len(allTimes)-1)]
     timestep = stat.median(timeDiffs)
@@ -43,7 +41,7 @@ def checkTimeSeries(lables, dataLists):
     print("All:\t%s" % (allString))
     
     for i in range(len(labels)):
-        newList = dataLists[i]
+        newList = timeSeries[i]
         string = allString
         missingMeasurementIndeces = [j for j in range(len(allTimes)) if not newList.count(allTimes[j])]
         for j in range(len(allTimes)):
@@ -55,151 +53,144 @@ def checkTimeSeries(lables, dataLists):
         print("%s:\t%s" % (labels[i], string))
     return
 
+def combineTimeSeries(timeSeries):
+    # given several time series lists, combine them into one sorted list with no repeats
+    allTimes = [item for sublist in timeSeries for item in sublist]
+    allTimes = list(set(allTimes))
+    allTimes.sort()
+    return allTimes
 
-file_name = "woof-woof-wearables-default-rtdb-2-push-export.json"
-# file_name = "woof-woof-wearables-rtdb-michelle.json"
+def timeSeriesIntersection(timeSeries):
+    timeIntersection = timeSeries[0]
+    for series in timeSeries[1:]:
+        for time in timeIntersection:
+            if not series.count(time):
+                timeIntersection.remove(time)
+    return timeIntersection
 
-with open(file_name, "r") as read_file:
-    # load json file
-    read_data = json.load(read_file)
-
-# check the data for missing entries and inconsistencies
-accl = read_data['accel']
-acclx = accl['X']
-accly = accl['Y']
-acclz = accl['Z']
-
-accltx = [acclx[entry]["Time"] for entry in acclx]
-acclty = [accly[entry]["Time"] for entry in accly]
-accltz = [acclz[entry]["Time"] for entry in acclz]
-
-mag = read_data['mag']
-magx = mag['X']
-magy = mag['Y']
-magz = mag['Z']
-
-magtx = [magx[entry]["Time"] for entry in magx]
-magty = [magy[entry]["Time"] for entry in magy]
-magtz = [magz[entry]["Time"] for entry in magz]
-
-gyro = read_data['gyro']
-gyrox = gyro['X']
-gyroy = gyro['Y']
-gyroz = gyro['Z']
-
-gyrotx = [gyrox[entry]["Time"] for entry in gyrox]
-gyroty = [gyroy[entry]["Time"] for entry in gyroy]
-gyrotz = [gyroz[entry]["Time"] for entry in gyroz]
-
-lists = [accltx, acclty, accltz, magtx, magty, magtz, gyrotx, gyroty, gyrotz]
-startIndex = 12
-stopIndex = 59
-
-labels = ["AcclX", "AcclY", "AcclZ", "MagnX", "MagnY", "MagnZ", "GyroX", "GyroY", "GyroZ"]
-checkTimeSeries(labels, lists)
-
-
-# Construct some dictionaries
-# because magnetometer is missing values at index 6 and 16, we'll start after those indeces
-# edit: actually there seems to be a large break in the values for about a little over a minute,
-# so we'll start after that (for i in range(35,len(accltx)))
-# MAKE SURE PYTHON VERSION IS 3.6 OR LATER SO THAT DICTIONARIES MAINTAIN ORDER
-# Note: using the acceleration x value timestamps for everything
-
-data = {}
-for i in range(startIndex,stopIndex-1):
-    new_accl = {'X': acclx[list(acclx.keys())[i]]["Value"],
-                'Y': accly[list(accly.keys())[i]]["Value"],
-                'Z': acclz[list(acclz.keys())[i]]["Value"]}
-
-    new_gyro = {'X': gyrox[list(gyrox.keys())[i]]["Value"],
-                'Y': gyroy[list(gyroy.keys())[i]]["Value"],
-                'Z': gyroz[list(gyroz.keys())[i]]["Value"]}
-
-    new_mag =  {'X': magx[list(magx.keys())[i]]["Value"],
-                'Y': magy[list(magy.keys())[i]]["Value"],
-                'Z': magz[list(magz.keys())[i]]["Value"]}
+def getTimeSeries(read_data):
+    timeSeries = []
+    for sensor in ['accel', 'mag', 'gyro']:
+        for d in ['X', 'Y', 'Z']:
+            newTimeSeries = [read_data[sensor][d][entry]["Time"] for entry in read_data[sensor][d]]
+            newTimeSeries.sort()
+            timeSeries += [newTimeSeries]
     
-    data[accltx[i]] = {'ACCL': new_accl, 'GYRO': new_gyro, 'MAG': new_mag}
+    labels = ["AcclX", "AcclY", "AcclZ", "MagnX", "MagnY", "MagnZ", "GyroX", "GyroY", "GyroZ"]
+    return timeSeries, labels
 
-# Correct for skipped measurements and imprecise sampling with interpolation
-times = list(data)
-timeDiffs = [times[i+1] - times[i] for i in range(len(times)-1)]
-numsteps = round((times[-1] - times[0])/stat.median(timeDiffs))
-timestep = (times[-1] - times[0])/numsteps
-corrected_times = np.linspace(times[0], times[-1], numsteps)
+def reorganizeData(read_data, start=0, stop=-1):
+    timeSeries = getTimeSeries(read_data)[0]
+    timeCombined = combineTimeSeries(timeSeries)
+    startTime = timeCombined[start]
+    stopTime = timeCombined[stop]
+    croppedTimeSeries = [[time for time in series if startTime <= time <= stopTime] for series in timeSeries]
+    # get list of timestamps measured by all sensors
+    timeIntersection = timeSeriesIntersection(croppedTimeSeries)
+    data = {}
+    data['time'] = timeIntersection
+    for sensor in ['accel', 'mag', 'gyro']:
+        for d in ['X', 'Y', 'Z']:
+            values = [read_data[sensor][d][entry]["Value"] for entry in read_data[sensor][d]]
+            times = [read_data[sensor][d][entry]["Time"] for entry in read_data[sensor][d]]
+            data[sensor+d] = []
+            for t in timeIntersection:
+                data[sensor+d].append(values[times.index(t)])
+    return data
+
+def readAndInterpolateData(read_data, start=0, stop=-1):
+    data = reorganizeData(read_data, start, stop)
+    times = data['time']
+    timeDiffs = [times[i+1] - times[i] for i in range(len(times)-1)]
+    numsteps = round((times[-1] - times[0])/stat.median(timeDiffs))
+    corrected_times = np.linspace(times[0], times[-1], numsteps)
+
+    def interpolate_sensor(sensor):
+        funcs = {}
+        for d in ['X', 'Y', 'Z']:
+            funcs[d] = interp1d(times, data[sensor+d])
+        intps_list = [[funcs[d](ct) for ct in corrected_times] for d in ['X', 'Y', 'Z']]
+        intps_array = np.array(intps_list).transpose()
+        return intps_array
+
+    accl_intps = interpolate_sensor('accel')
+    gyro_intps = interpolate_sensor('gyro')
+    mag_intps = interpolate_sensor('mag')
+    return corrected_times, accl_intps, gyro_intps, mag_intps
+
+def filterReadData(read_data, start=0, stop=-1):
+    corrected_times, accl_intps, gyro_intps, mag_intps = readAndInterpolateData(read_data, start, stop)
+    qOut = skin.imus.kalman(1.0/(corrected_times[1]-corrected_times[0]), accl_intps, gyro_intps, mag_intps)
+    return corrected_times, qOut
+
+def filterFile(file_name, start=0, stop=-1):
+    with open(file_name, "r") as read_file: read_data = json.load(read_file)
+    return filterReadData(read_data, start, stop)
 
 
-def interpolate_sensor(sensor):
-    funcs = {}
-    for d in ['X', 'Y', 'Z']:
-        funcs[d] = interp1d(times, [data[t][sensor][d] for t in times])
-    intps_list = [[funcs[d](ct) for ct in corrected_times] for d in ['X', 'Y', 'Z']]
-    intps_array = np.array(intps_list).transpose()
-    return intps_array
-
-accl_intps = interpolate_sensor('ACCL')
-gyro_intps = interpolate_sensor('GYRO')
-mag_intps = interpolate_sensor('MAG')
 
 
-# Apply kalman filter
-qOut = skin.imus.kalman(1.0/timestep, accl_intps, gyro_intps, mag_intps)
-# filterResults = skin.quat.quat2deg(qOut)
-filterResults = skin.quat.calc_angvel(qOut, 1.0/timestep)
+if __name__ == "__main__":
+    file_name = "woof-woof-wearables-default-rtdb-2-push-export.json"
+    # file_name = "woof-woof-wearables-rtdb-michelle.json"
+    
+    # vvv Uncomment to check data for missing entries and determine start and stop indeces vvv
+    # with open(file_name, "r") as read_file: read_data = json.load(read_file)
+    # lists, labels = getTimeSeries(read_data)
+    # checkTimeSeries(lists, labels)
 
-fig = plt.figure(1)
-plt.xticks(rotation=45, ha="right", rotation_mode="anchor") #rotate the x-axis values
-plt.subplots_adjust(bottom = 0.2, top = 0.9) #ensuring the dates (on the x-axis) fit in the screen
-plt.ylabel('Degree Rotation')
-plt.xlabel('Timestamp')
-plt.plot([datetime.fromtimestamp(ct) for ct in corrected_times], filterResults)
-plt.legend(['X', 'Y', 'Z'], loc='best')
+    startIndex = 35
+    stopIndex = -1
 
-print(datetime.fromtimestamp(corrected_times[0]))
+    corrected_times, qOut = filterFile(file_name, startIndex, stopIndex)
+    timeStep = corrected_times[1]-corrected_times[0]
 
-rotmats = [skin.quat.convert(q) for q in qOut]
+    # filterResults = skin.quat.quat2deg(qOut)
+    filterResults = skin.quat.calc_angvel(qOut, 1.0/timeStep)
 
-fig = plt.figure(3, figsize=plt.figaspect(1.5))
-ax = fig.add_subplot(211, projection='3d')
-ax2 = fig.add_subplot(212)
 
-colors = ['r','b','g']
 
-def plotOrientation(i=int):
-    sampleNum = i%len(corrected_times)
-    Vecs = (rotmats[sampleNum]@np.diag([1.5,0.5,0.5])).transpose()
-    origin = np.zeros_like(Vecs) # origin point
-    ax.clear()
-    ax.set_xlim([-2, 2])
-    ax.set_ylim([-2, 2])
-    ax.set_zlim([-2, 2])
-    ax.quiver(*origin, Vecs[:,0], Vecs[:,1], Vecs[:,2], color = ['r','b','g','r','r','b','b','g','g'])
-
-    ax2.clear()
-    p = plt.plot([ct-corrected_times[0] for ct in corrected_times], filterResults)
-    plt.axvline(corrected_times[sampleNum]-corrected_times[0], color='orange')
-    for j in range(3): p[j].set_color(colors[j])
-    plt.legend(['X', 'Y', 'Z'], loc='best')
-    plt.yticks(rotation=90) #rotate the y-axis values
+    # plot figures
+    fig = plt.figure()
+    plt.xticks(rotation=45, ha="right", rotation_mode="anchor") #rotate the x-axis values
+    plt.subplots_adjust(bottom = 0.2, top = 0.9) #ensuring the dates (on the x-axis) fit in the screen
     plt.ylabel('Degree Rotation')
-    plt.xlabel('Seconds')
-    # ax2.set_ylim([-180, 180])
-    ax2.grid(True)
+    plt.xlabel('Timestamp')
+    plt.plot([datetime.fromtimestamp(ct) for ct in corrected_times], filterResults)
+    plt.legend(['X', 'Y', 'Z'], loc='best')
 
 
 
+    rotmats = [skin.quat.convert(q) for q in qOut]
 
+    fig = plt.figure(figsize=plt.figaspect(1.5))
+    ax = fig.add_subplot(211, projection='3d')
+    ax2 = fig.add_subplot(212)
 
+    colors = ['r','b','g']
 
+    def plotOrientation(i=int):
+        sampleNum = i%len(corrected_times)
+        Vecs = (rotmats[sampleNum]@np.diag([1.5,0.5,0.5])).transpose()
+        origin = np.zeros_like(Vecs) # origin point
+        ax.clear()
+        ax.set_xlim([-2, 2])
+        ax.set_ylim([-2, 2])
+        ax.set_zlim([-2, 2])
+        ax.quiver(*origin, Vecs[:,0], Vecs[:,1], Vecs[:,2], color = ['r','b','g','r','r','b','b','g','g'])
 
+        ax2.clear()
+        p = plt.plot([ct-corrected_times[0] for ct in corrected_times], filterResults)
+        plt.axvline(corrected_times[sampleNum]-corrected_times[0], color='orange')
+        for j in range(3): p[j].set_color(colors[j])
+        plt.legend(['X', 'Y', 'Z'], loc='best')
+        plt.yticks(rotation=90) #rotate the y-axis values
+        plt.ylabel('Degree Rotation')
+        plt.xlabel('Seconds')
+        # ax2.set_ylim([-180, 180])
+        ax2.grid(True)
 
-animator = ani.FuncAnimation(fig, plotOrientation, interval = timestep*1000)
+    animator = ani.FuncAnimation(fig, plotOrientation, interval = timeStep*1000)
 
-
-
-plt.tight_layout()
-plt.show()
-
-
-
+    plt.tight_layout()
+    plt.show()
