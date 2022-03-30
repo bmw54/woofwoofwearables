@@ -1,4 +1,3 @@
-from sklearn.neighbors import VALID_METRICS
 from Communication.Firebase.RPi2Firebase import RPi2Firebase
 from BasicIMUScripts.IMUDataModule import IMUDataModule
 from Camera.CameraModule import CameraModule
@@ -57,9 +56,9 @@ while time.time() < time_start + duration:
     x_mag_list.append({"Time" : timestamp, "Value": x_mag})
     y_mag_list.append({"Time" : timestamp, "Value": y_mag})
     z_mag_list.append({"Time" : timestamp, "Value": z_mag})
-    time.sleep(.05)
+    time.sleep(.01)
 
-print(trial_name + "trial complete after" + time.time() - time_start + "seconds")
+print(trial_name + "trial complete after" + str(time.time() - time_start) + "seconds")
 
 for i in range(0, len(x_accel_list)):
     rpi_2_firebase.send_timeseries_to_firebase(x_accel_list[i], trial_name, "X", "accel")
