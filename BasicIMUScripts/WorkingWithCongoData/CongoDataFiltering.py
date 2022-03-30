@@ -121,34 +121,17 @@ def readAndInterpolateData(read_data, start=0, stop=-1):
 def filterReadData(read_data, start=0, stop=-1):
     corrected_times, accl_intps, gyro_intps, mag_intps = readAndInterpolateData(read_data, start, stop)
     qOut = skin.imus.kalman(1.0/(corrected_times[1]-corrected_times[0]), accl_intps, gyro_intps, mag_intps)
+    # qOut = skin.imus.kalman(1,1,1,1)
     return corrected_times, qOut
 
 def filterFile(file_name, start=0, stop=-1):
     with open(file_name, "r") as read_file: read_data = json.load(read_file)
     return filterReadData(read_data, start, stop)
 
-
-
-
-if __name__ == "__main__":
-    file_name = "woof-woof-wearables-default-rtdb-2-push-export.json"
-    # file_name = "woof-woof-wearables-rtdb-michelle.json"
-    
-    # vvv Uncomment to check data for missing entries and determine start and stop indeces vvv
-    with open(file_name, "r") as read_file: read_data = json.load(read_file)
-    lists, labels = getTimeSeries(read_data)
-    checkTimeSeries(lists, labels)
-
-    startIndex = 35
-    stopIndex = -1
-
-    times, qOut = filterFile(file_name, startIndex, stopIndex)
+def plotFilterOutput(times, qOut):
     timeStep = times[1]-times[0]
-
     degs = skin.quat.quat2deg(qOut)
     angvel = skin.quat.calc_angvel(qOut, 1.0/timeStep)
-
-
 
     # plot degree rotation
     fig = plt.figure()
@@ -221,3 +204,20 @@ if __name__ == "__main__":
 
     plt.tight_layout()
     plt.show()
+
+
+
+if __name__ == "__main__":
+    file_name = "woof-woof-wearables-default-rtdb-2-push-export.json"
+    # file_name = "woof-woof-wearables-rtdb-michelle.json"
+    
+    # vvv Uncomment to check data for missing entries and determine start and stop indeces vvv
+    with open(file_name, "r") as read_file: read_data = json.load(read_file)
+    lists, labels = getTimeSeries(read_data)
+    checkTimeSeries(lists, labels)
+
+    startIndex = 35
+    stopIndex = -1
+
+    times, qOut = filterFile(file_name, startIndex, stopIndex)
+    plotFilterOutput(times, qOut)
