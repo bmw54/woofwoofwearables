@@ -8,8 +8,8 @@ import matplotlib.animation as ani
 import matplotlib.pyplot as plt
 
 
-def checkTimeSeries(timeSeries, lables = ["AcclX", "AcclY", "AcclZ", "MagnX", "MagnY", "MagnZ", "GyroX", "GyroY", "GyroZ"]):
-    if not (len(lables) == len(timeSeries) == 9):
+def checkTimeSeries(timeSeries, labels = ["AcclX", "AcclY", "AcclZ", "MagnX", "MagnY", "MagnZ", "GyroX", "GyroY", "GyroZ"]):
+    if not (len(labels) == len(timeSeries) == 9):
         print("invalid input length")
         return
     
@@ -135,60 +135,87 @@ if __name__ == "__main__":
     # file_name = "woof-woof-wearables-rtdb-michelle.json"
     
     # vvv Uncomment to check data for missing entries and determine start and stop indeces vvv
-    # with open(file_name, "r") as read_file: read_data = json.load(read_file)
-    # lists, labels = getTimeSeries(read_data)
-    # checkTimeSeries(lists, labels)
+    with open(file_name, "r") as read_file: read_data = json.load(read_file)
+    lists, labels = getTimeSeries(read_data)
+    checkTimeSeries(lists, labels)
 
     startIndex = 35
     stopIndex = -1
 
-    corrected_times, qOut = filterFile(file_name, startIndex, stopIndex)
-    timeStep = corrected_times[1]-corrected_times[0]
+    times, qOut = filterFile(file_name, startIndex, stopIndex)
+    timeStep = times[1]-times[0]
 
-    # filterResults = skin.quat.quat2deg(qOut)
-    filterResults = skin.quat.calc_angvel(qOut, 1.0/timeStep)
+    degs = skin.quat.quat2deg(qOut)
+    angvel = skin.quat.calc_angvel(qOut, 1.0/timeStep)
 
 
 
-    # plot figures
+    # plot degree rotation
     fig = plt.figure()
     plt.xticks(rotation=45, ha="right", rotation_mode="anchor") #rotate the x-axis values
     plt.subplots_adjust(bottom = 0.2, top = 0.9) #ensuring the dates (on the x-axis) fit in the screen
     plt.ylabel('Degree Rotation')
     plt.xlabel('Timestamp')
-    plt.plot([datetime.fromtimestamp(ct) for ct in corrected_times], filterResults)
+    plt.plot([datetime.fromtimestamp(ct) for ct in times], degs)
     plt.legend(['X', 'Y', 'Z'], loc='best')
+    plt.grid(True)
+
+    # plot angular velocity
+    fig = plt.figure()
+    plt.xticks(rotation=45, ha="right", rotation_mode="anchor") #rotate the x-axis values
+    plt.subplots_adjust(bottom = 0.2, top = 0.9) #ensuring the dates (on the x-axis) fit in the screen
+    plt.ylabel('Angular Velocity')
+    plt.xlabel('Timestamp')
+    plt.plot([datetime.fromtimestamp(ct) for ct in times], angvel)
+    plt.legend(['X', 'Y', 'Z'], loc='best')
+    plt.grid(True)
 
 
 
     rotmats = [skin.quat.convert(q) for q in qOut]
 
-    fig = plt.figure(figsize=plt.figaspect(1.5))
-    ax = fig.add_subplot(211, projection='3d')
-    ax2 = fig.add_subplot(212)
+    fig = plt.figure(figsize=plt.figaspect(2))
+    ax = fig.add_subplot(311, projection='3d')
+    ax2 = fig.add_subplot(312)
+    ax3 = fig.add_subplot(313)
 
     colors = ['r','b','g']
 
     def plotOrientation(i=int):
-        sampleNum = i%len(corrected_times)
-        Vecs = (rotmats[sampleNum]@np.diag([1.5,0.5,0.5])).transpose()
+        sampleNum = i%len(times)
+        # Vecs = (rotmats[sampleNum]@np.diag([1.5,0.5,0.5])).transpose()
+        Vecs = (rotmats[sampleNum]@np.diag([1,1,1])).transpose()
         origin = np.zeros_like(Vecs) # origin point
         ax.clear()
         ax.set_xlim([-2, 2])
         ax.set_ylim([-2, 2])
         ax.set_zlim([-2, 2])
         ax.quiver(*origin, Vecs[:,0], Vecs[:,1], Vecs[:,2], color = ['r','b','g','r','r','b','b','g','g'])
+        ax.set_box_aspect((1, 1, 1))  # aspect ratio is 1:1:1 in data space
+
 
         ax2.clear()
-        p = plt.plot([ct-corrected_times[0] for ct in corrected_times], filterResults)
-        plt.axvline(corrected_times[sampleNum]-corrected_times[0], color='orange')
+        plt.sca(ax2)
+        p = plt.plot([ct-times[0] for ct in times], degs)
+        plt.axvline(times[sampleNum]-times[0], color='orange')
         for j in range(3): p[j].set_color(colors[j])
         plt.legend(['X', 'Y', 'Z'], loc='best')
         plt.yticks(rotation=90) #rotate the y-axis values
         plt.ylabel('Degree Rotation')
         plt.xlabel('Seconds')
-        # ax2.set_ylim([-180, 180])
+        ax2.set_ylim([-180, 180])
         ax2.grid(True)
+
+        ax3.clear()
+        plt.sca(ax3)
+        p = plt.plot([ct-times[0] for ct in times], angvel)
+        plt.axvline(times[sampleNum]-times[0], color='orange')
+        for j in range(3): p[j].set_color(colors[j])
+        plt.legend(['X', 'Y', 'Z'], loc='best')
+        plt.yticks(rotation=90) #rotate the y-axis values
+        plt.ylabel('Angular Velocity')
+        plt.xlabel('Seconds')
+        ax3.grid(True)
 
     animator = ani.FuncAnimation(fig, plotOrientation, interval = timeStep*1000)
 
