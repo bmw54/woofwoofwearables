@@ -43,9 +43,9 @@ def checkTimeSeries(timeSeries, labels = ["AcclX", "AcclY", "AcclZ", "MagnX", "M
     for i in range(len(labels)):
         newList = timeSeries[i]
         string = allString
-        missingMeasurementIndeces = [j for j in range(len(allTimes)) if not newList.count(allTimes[j])]
+        missingMeasurementIndices = [j for j in range(len(allTimes)) if not newList.count(allTimes[j])]
         for j in range(len(allTimes)):
-            if missingMeasurementIndeces.count(j):
+            if missingMeasurementIndices.count(j):
                 string = string.replace("-", "o", 1)
             else:
                 string = string.replace("-", "x", 1)
@@ -207,15 +207,17 @@ def plotFilterOutput(times, qOut):
 
 
 if __name__ == "__main__":
-    file_name = "woof-woof-wearables-default-rtdb-2-push-export.json"
+    # file_name = "woof-woof-wearables-default-rtdb-2-push-export.json"
     # file_name = "woof-woof-wearables-rtdb-michelle.json"
+    file_name = "Doherty-Hand.json"
+    # file_name = "Doherty-Hand0330.json"
     
-    # vvv Uncomment to check data for missing entries and determine start and stop indeces vvv
-    with open(file_name, "r") as read_file: read_data = json.load(read_file)
-    lists, labels = getTimeSeries(read_data)
-    checkTimeSeries(lists, labels)
+    # vvv Uncomment to check data for missing entries and determine start and stop indices vvv
+    # with open(file_name, "r") as read_file: read_data = json.load(read_file)
+    # lists, labels = getTimeSeries(read_data)
+    # checkTimeSeries(lists, labels)
 
-    startIndex = 35
+    startIndex = 0
     stopIndex = -1
 
     times, qOut = filterFile(file_name, startIndex, stopIndex)
