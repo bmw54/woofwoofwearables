@@ -6,7 +6,7 @@ from datetime import datetime
 from scipy.interpolate import interp1d
 import matplotlib.animation as ani
 import matplotlib.pyplot as plt
-
+from ModifiedKalman import modifiedKalman
 
 def checkTimeSeries(timeSeries, labels = ["AcclX", "AcclY", "AcclZ", "MagnX", "MagnY", "MagnZ", "GyroX", "GyroY", "GyroZ"]):
     if not (len(labels) == len(timeSeries) == 9):
@@ -120,8 +120,7 @@ def readAndInterpolateData(read_data, start=0, stop=-1):
 
 def filterReadData(read_data, start=0, stop=-1):
     corrected_times, accl_intps, gyro_intps, mag_intps = readAndInterpolateData(read_data, start, stop)
-    qOut = skin.imus.kalman(1.0/(corrected_times[1]-corrected_times[0]), accl_intps, gyro_intps, mag_intps)
-    # qOut = skin.imus.kalman(1,1,1,1)
+    qOut = modifiedKalman(1.0/(corrected_times[1]-corrected_times[0]), accl_intps, gyro_intps, mag_intps)
     return corrected_times, qOut
 
 def filterFile(file_name, start=0, stop=-1):
