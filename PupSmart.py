@@ -3,7 +3,7 @@ from BasicIMUScripts.IMUDataModule import IMUDataModule
 from Camera.CameraModule import CameraModule
 import time
 
-data_module = IMUDataModule()
+data_module = IMUDataModule(104)
 rpi_2_firebase = RPi2Firebase()
 # camera_module = CameraModule()
 
@@ -59,7 +59,7 @@ while time.time() < time_start + duration:
     z_mag_list.append({"Time" : timestamp, "Value": z_mag})
     time.sleep(.01)
 
-print(trial_name + "trial complete after" +str( time.time() - time_start) + "seconds")
+print(trial_name + "trial complete after" + str(time.time() - time_start) + "seconds")
 
 for i in range(0, len(x_accel_list)):
     rpi_2_firebase.send_timeseries_to_firebase(x_accel_list[i], trial_name, "X", "accel")
@@ -75,6 +75,7 @@ for i in range(0, len(x_accel_list)):
     rpi_2_firebase.send_timeseries_to_firebase(z_mag_list[i], trial_name, "Z", "mag")
     current_data = data_module.get_imu_data()
     rpi_2_firebase.send_data_to_firebase(current_data, "CurrentIMUData")
+    print("Pushing data to firebase %d/%d", i, len(x_accel_list))
 #     path =  camera_module.take_picture()
 #     rpi_2_firebase.send_image_to_firebase(path, "testimg.jpg")
     # average_data = data_module.get_average_imu_data()

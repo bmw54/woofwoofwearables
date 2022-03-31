@@ -4,9 +4,9 @@ import numpy as np
 import time
 
 class IMUDataModule:
-    def __init__(self):
+    def __init__(self, icm_address):
         i2c = board.I2C()  # uses board.SCL and board.SDA
-        self.icm = adafruit_icm20x.ICM20948(i2c)
+        self.icm = adafruit_icm20x.ICM20948(i2c, address = icm_address)
         self.acceleration = (0.0, 0.0,0.0)
         self.gyro = (0.0, 0.0,0.0)
         self.magnetic = (0.0, 0.0,0.0)
