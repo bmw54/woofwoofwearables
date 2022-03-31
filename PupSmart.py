@@ -100,10 +100,8 @@ while time.time() < time_start + duration:
     time.sleep(sample_time - (current_time - time_iter))
 
 print(trial_name + "trial complete after" + str(time.time() - time_start) + "seconds")
-
 send_data_to_firebase(tail_x_gyro_list, tail_y_gyro_list, tail_z_gyro_list, tail_x_accel_list, tail_y_accel_list, tail_z_accel_list, tail_x_mag_list, tail_y_mag_list, tail_z_mag_list, trial_name)
 send_data_to_firebase(body_x_gyro_list, body_y_gyro_list, body_z_gyro_list, body_x_accel_list, body_y_accel_list, body_z_accel_list, body_x_mag_list, body_y_mag_list, body_z_mag_list, trial_name)
-
 #     path =  camera_module.take_picture()
 #     rpi_2_firebase.send_image_to_firebase(path, "testimg.jpg")
     # average_data = tail_data_module.get_average_imu_data()
