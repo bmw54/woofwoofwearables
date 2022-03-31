@@ -15,7 +15,7 @@ except ValueError:
     print("Duration must be a number")
     duration = int(input("Trial Duration (seconds): "))
 
-
+input("Press Enter to continue...")
 x_gyro_list = []
 y_gyro_list = []
 z_gyro_list = []
@@ -61,25 +61,22 @@ while time.time() < time_start + duration:
 
 print(trial_name + "trial complete after" + str(time.time() - time_start) + "seconds")
 
-for i in range(0, len(x_accel_list)):
-    rpi_2_firebase.send_timeseries_to_firebase(x_accel_list[i], trial_name, "X", "accel")
-    rpi_2_firebase.send_timeseries_to_firebase(y_accel_list[i], trial_name, "Y", "accel")
-    rpi_2_firebase.send_timeseries_to_firebase(z_accel_list[i], trial_name, "Z", "accel")
+# for i in range(0, len(x_accel_list)):
+rpi_2_firebase.send_timeseries_to_firebase(x_accel_list, trial_name, "X", "accel")
+rpi_2_firebase.send_timeseries_to_firebase(y_accel_list, trial_name, "Y", "accel")
+rpi_2_firebase.send_timeseries_to_firebase(z_accel_list, trial_name, "Z", "accel")
 
-    rpi_2_firebase.send_timeseries_to_firebase(x_gyro_list[i], trial_name, "X", "gyro")
-    rpi_2_firebase.send_timeseries_to_firebase(y_gyro_list[i], trial_name, "Y", "gyro")
-    rpi_2_firebase.send_timeseries_to_firebase(z_gyro_list[i], trial_name, "Z", "gyro")
+rpi_2_firebase.send_timeseries_to_firebase(x_gyro_list, trial_name, "X", "gyro")
+rpi_2_firebase.send_timeseries_to_firebase(y_gyro_list, trial_name, "Y", "gyro")
+rpi_2_firebase.send_timeseries_to_firebase(z_gyro_list, trial_name, "Z", "gyro")
 
-    rpi_2_firebase.send_timeseries_to_firebase(x_mag_list[i], trial_name, "X", "mag")
-    rpi_2_firebase.send_timeseries_to_firebase(y_mag_list[i], trial_name, "Y", "mag")
-    rpi_2_firebase.send_timeseries_to_firebase(z_mag_list[i], trial_name, "Z", "mag")
-    current_data = data_module.get_imu_data()
-    rpi_2_firebase.send_data_to_firebase(current_data, "CurrentIMUData")
-    print("Pushing data to firebase %d/%d", i, len(x_accel_list))
+rpi_2_firebase.send_timeseries_to_firebase(x_mag_list, trial_name, "X", "mag")
+rpi_2_firebase.send_timeseries_to_firebase(y_mag_list, trial_name, "Y", "mag")
+rpi_2_firebase.send_timeseries_to_firebase(z_mag_list, trial_name, "Z", "mag")
 #     path =  camera_module.take_picture()
 #     rpi_2_firebase.send_image_to_firebase(path, "testimg.jpg")
     # average_data = data_module.get_average_imu_data()
     # rpi_2_firebase.send_data_to_firebase(average_data, "AverageIMUData")
 
-print("Pushing " +trial_name+ "trial to Firebase complete")
+print("Pushing " +trial_name+ " trial to Firebase complete")
 
