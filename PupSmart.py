@@ -3,7 +3,8 @@ from BasicIMUScripts.IMUDataModule import IMUDataModule
 from Camera.CameraModule import CameraModule
 import time
 
-data_module = IMUDataModule(104)
+
+data_module = IMUDataModule(address=104)
 rpi_2_firebase = RPi2Firebase()
 # camera_module = CameraModule()
 
@@ -61,7 +62,6 @@ while time.time() < time_start + duration:
 
 print(trial_name + "trial complete after" + str(time.time() - time_start) + "seconds")
 
-# for i in range(0, len(x_accel_list)):
 rpi_2_firebase.send_timeseries_to_firebase(x_accel_list, trial_name, "X", "accel")
 rpi_2_firebase.send_timeseries_to_firebase(y_accel_list, trial_name, "Y", "accel")
 rpi_2_firebase.send_timeseries_to_firebase(z_accel_list, trial_name, "Z", "accel")
