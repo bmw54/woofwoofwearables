@@ -174,6 +174,9 @@ def plotFilterOutput(times, qOut):
         ax.set_zlim([-2, 2])
         ax.quiver(*origin, Vecs[:,0], Vecs[:,1], Vecs[:,2], color = ['r','b','g','r','r','b','b','g','g'])
         ax.set_box_aspect((1, 1, 1))  # aspect ratio is 1:1:1 in data space
+        ax.set_xlabel('X') # X-axis seems to be North
+        ax.set_ylabel('Y') # Y-axis seems to be cross_product(Up, North)
+        ax.set_zlabel('Z') # Z-axis seems to be Up
 
 
         ax2.clear()
@@ -209,8 +212,8 @@ def plotFilterOutput(times, qOut):
 if __name__ == "__main__":
     # file_name = "woof-woof-wearables-default-rtdb-2-push-export.json"
     # file_name = "woof-woof-wearables-rtdb-michelle.json"
-    file_name = "Doherty-Hand.json"
-    # file_name = "Doherty-Hand0330.json"
+    # file_name = "Doherty-Hand.json"
+    file_name = "Doherty-Hand0330.json"
     
     # vvv Uncomment to check data for missing entries and determine start and stop indices vvv
     # with open(file_name, "r") as read_file: read_data = json.load(read_file)
