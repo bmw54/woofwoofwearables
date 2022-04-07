@@ -76,7 +76,7 @@ tail_data_module = IMUDataModule(address = 104)
 body_data_module = IMUDataModule(address = 105)
 
 rpi_2_firebase = RPi2Firebase()
-# camera_module = CameraModule()
+camera_module = CameraModule()
 
 trial_name = input("Trial run Name: ")
 duration = 0.0
@@ -138,6 +138,11 @@ while time.time() < time_start + duration:
     body_x_mag_list.append(body_x_mag)
     body_y_mag_list.append(body_y_mag)
     body_z_mag_list.append(body_z_mag)
+    
+    camera_start_time = time.time()
+    path =  camera_module.take_picture()
+    rpi_2_firebase.send_image_to_firebase(path, "testimg.jpg")
+    print(time.time() - camera_start_time)
 
     current_time = time.time()
     time_left = sample_time - (current_time - time_iter) #
@@ -148,8 +153,7 @@ while time.time() < time_start + duration:
 print(trial_name + "trial complete after" + str(time.time() - time_start) + "seconds")
 send_data_to_firebase(tail_x_gyro_list, tail_y_gyro_list, tail_z_gyro_list, tail_x_accel_list, tail_y_accel_list, tail_z_accel_list, tail_x_mag_list, tail_y_mag_list, tail_z_mag_list, trial_name)
 send_data_to_firebase(body_x_gyro_list, body_y_gyro_list, body_z_gyro_list, body_x_accel_list, body_y_accel_list, body_z_accel_list, body_x_mag_list, body_y_mag_list, body_z_mag_list, trial_name)
-#     path =  camera_module.take_picture()
-#     rpi_2_firebase.send_image_to_firebase(path, "testimg.jpg")
+
     # average_data = tail_data_module.get_average_imu_data()
     # rpi_2_firebase.send_data_to_firebase(average_data, "AverageIMUData")
 
