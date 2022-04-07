@@ -149,7 +149,7 @@ while time.time() < time_start + duration:
     send_data_to_firebase(body_x_gyro_list, body_y_gyro_list, body_z_gyro_list, body_x_accel_list, body_y_accel_list, body_z_accel_list, body_x_mag_list, body_y_mag_list, body_z_mag_list, trial_name)
     camera_start_time = time.time()
     path =  camera_module.take_picture()
-    url = "{TrialName}-{imageNum}.jpg".format(trial_name,image_num)
+    url = "{TrialName}-{imageNum}.jpg".format(TrialName = trial_name,imageNum = image_num)
     rpi_2_firebase.send_image_to_firebase(path, url, camera_start_time)
     image_num+=1
     print(time.time() - camera_start_time)
