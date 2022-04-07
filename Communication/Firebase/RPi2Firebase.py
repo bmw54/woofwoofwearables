@@ -32,7 +32,6 @@ class RPi2Firebase:
   def send_image_to_firebase(self, path, image_name):
     self.storage.child(image_name).put(path)
     storage_url = self.storage.child(image_name).get_url(None)
-    self.db.child("images").child("1-set").set(storage_url)
     self.db.child("images").child("2-push").push(storage_url)
     
     
