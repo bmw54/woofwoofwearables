@@ -29,11 +29,12 @@ class RPi2Firebase:
     print()
     self.db.child(folder_name).child("2-push").child(version_number).child(data_name).child(direction).push(data)
   
-  def send_image_to_firebase(self, path, image_name, timestamp):
+  def send_image_to_firebase(self, path, image_name, timestamp, trial_name):
     self.storage.child(image_name).put(path)
     storage_url = self.storage.child(image_name).get_url(None)
     entry = {"Time": timestamp, "url": storage_url}
-    self.db.child("images").child("2-push").push(entry)
+    foldername = "{TrialName}-images".format(TrialName = trial_name)
+    self.db.child(foldername).child("2-push").push(entry)
     
     
 
