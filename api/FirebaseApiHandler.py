@@ -1,8 +1,10 @@
 from re import A
+from turtle import position
 from flask_restful import Api, Resource, reqparse
 from flask import jsonify
 from numpy import average
-from Calculation_Handler import Averages_Module, Velocity_Module
+from CalculationHandler import Calculation_Module
+from MoodClassifier import Mood_Classifier
 import pyrebase
 
 class FirebaseConfig:
@@ -47,21 +49,37 @@ class DataApiHandler(Resource):
 
 class AveragesHandler(Resource):
   def get(self, folder_name, data_name, direction):
-    average_module = Averages_Module()
+    calculation_module = Calculation_Module()
     data = list(FirebaseConfig.db.child(folder_name).child("2-push").child(data_name).child(direction).get().val().values())
-    averages = average_module.get_averages(10, data)
+    averages = calculation_module.get_averages(10, data)
     response = jsonify(averages)
     response.status_code = 200 # or 400 or whatever
     return response
 
 class VelocityHandler(Resource):
   def get(self, folder_name, data_name, direction):
-    velocity_module = Velocity_Module()
-    average_module = Averages_Module()
+    calculation_module = Calculation_Module()
     data = list(FirebaseConfig.db.child(folder_name).child("2-push").child(data_name).child(direction).get().val().values())
-    velocities = velocity_module.get_velocity_from_acceleration(data)
-    averages = average_module.get_averages(10, velocities)
+    velocities = calculation_module.get_velocity_from_acceleration(data)
+    averages = calculation_module.get_averages(10, velocities)
     response = jsonify(averages)
     response.status_code = 200 # or 400 or whatever
     return response
 
+class PositionHandler(Resource):
+  def get(self, folder_name, data_name, direction):
+    calculation_module = Calculation_Module()
+    data = list(FirebaseConfig.db.child(folder_name).child("2-push").child(data_name).child(direction).get().val().values())
+    positions = calculation_module.get_position_from_acceleration(data)
+    response = jsonify(positions)
+    response.status_code = 200 # or 400 or whatever
+    return response
+
+class HappyPhotoHandler(Resource):
+  def get(self, folder_name, timestamp):
+    calculation_module = Calculation_Module()
+    data = list(FirebaseConfig.db.child(folder_name).child("2-push").child(data_name).child(direction).get().val().values())
+    positions = calculation_module.get_position_from_acceleration(data)
+    response = jsonify(positions)
+    response.status_code = 200 # or 400 or whatever
+    return response
