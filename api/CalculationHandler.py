@@ -1,5 +1,8 @@
+from ast import YieldFrom
 import scipy.integrate
 import numpy as np
+from scipy.fft import fft, fftfreq
+import matplotlib.pyplot as plt
 
 class Calculation_Module:
 
@@ -74,7 +77,6 @@ class Calculation_Module:
 
     def calculate_frequency(self, angles, timestamps):
         mean = np.mean(angles)
-        print(mean)
         if len(angles) < 2 or len(timestamps) <2  or len(angles) != len(timestamps) :
             return 0.0
         before = angles[0]
@@ -86,20 +88,38 @@ class Calculation_Module:
             before = curr
         duration = timestamps[-1] - timestamps[0]
         frequency = crosses / (duration * 2)
-        print(crosses)
         return frequency
     
     def calculate_average_amplitude(self, angles):
         rms = np.sqrt(np.mean(np.square(angles)))
         return rms
 
+    def calculate_fft(self, angles, timestamps):
+        N = len(angles)
+        yf = np.fft.fft(angles)
+        freq = np.fft.fftfreq(N, d = 0.5)
+        plt.plot(freq, np.abs(yf))
+        plt.grid()
+        plt.savefig("fft.png")
+
+    def calculate_side_bias_from_vectors(self, vectors):
+        angles = [np.arctan(vector[0], vector[1]) for vector in vectors]
+        mean = np.mean(angles)
+        return mean
+
 if __name__ == '__main__':
     ch = Calculation_Module()
-    angles =[30, 25, 20, 15, 10, 5, 0 , -5, -10, -15, -20, -25, -30]
-    timestamps = [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.60]
+    timestamps = np.arange(0, 2, 0.05)
+    angles = 30 * np.cos(timestamps)
+
     frequency = ch.calculate_frequency(angles, timestamps)
     print(frequency)
 
     amplitude = ch.calculate_average_amplitude(angles)
     print(amplitude)
+
+    side_bias  = ch.calculate_side_bias(angles)
+    print(side_bias)
+
+    ch.calculate_fft(angles, timestamps)
 
