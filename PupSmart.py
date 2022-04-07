@@ -150,7 +150,7 @@ while time.time() < time_start + duration:
     camera_start_time = time.time()
     path =  camera_module.take_picture()
     url = "{TrialName}-{imageNum}.jpg".format(TrialName = trial_name,imageNum = image_num)
-    rpi_2_firebase.send_image_to_firebase(path, url, camera_start_time, trial_name)
+    rpi_2_firebase.send_image_to_firebase(path, url, camera_start_time, trial_name, image_num)
     image_num+=1
     print(time.time() - camera_start_time)
 
