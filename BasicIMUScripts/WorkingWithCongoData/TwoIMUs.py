@@ -3,13 +3,17 @@ import skinematics as skin
 import skinematics.quat as sq
 import IMUDataProcessing
 
+
+PLOT = False
+
 tail_file = "twoSensorsRun-Tail.json"
 body_file = "twoSensorsRun-Body.json"
 
 tailTimes, tailQuats = IMUDataProcessing.filterFile(tail_file)
-IMUDataProcessing.plotFilterOutput(tailTimes, tailQuats)
 bodyTimes, bodyQuats = IMUDataProcessing.filterFile(body_file)
-IMUDataProcessing.plotFilterOutput(bodyTimes, bodyQuats)
+
+if(PLOT): IMUDataProcessing.plotFilterOutput(tailTimes, tailQuats)
+if(PLOT): IMUDataProcessing.plotFilterOutput(bodyTimes, bodyQuats)
 
 # Note: body and tail measurements aren't taken at the exact same time, and through the interpolation process, 
 # they are slightly different lengths. I'm choosing to ignore this for now, but it should be addressed. The two
@@ -18,8 +22,7 @@ IMUDataProcessing.plotFilterOutput(bodyTimes, bodyQuats)
 
 numPoints = min(len(tailTimes), len(bodyTimes))
 quatDiffs = sq.q_mult(sq.q_inv(bodyQuats[:numPoints]), tailQuats[:numPoints])
-print(quatDiffs.shape)
-IMUDataProcessing.plotFilterOutput(tailTimes[:numPoints], quatDiffs)
+if(PLOT): IMUDataProcessing.plotFilterOutput(tailTimes[:numPoints], quatDiffs)
 
 # Matrix math to translate a vector reletive to the tail IMU into the basis of the body:
 #           v2 = np.linalg.inv(B)@T@v
@@ -28,3 +31,5 @@ IMUDataProcessing.plotFilterOutput(tailTimes[:numPoints], quatDiffs)
 # This operation takes the vector, translates it into the environment basis, then into the body basis. The quaterion 
 # operations are basically doing the same thing
 
+rotMats = [sq.convert(q) for q in quatDiffs]
+xVecs = [rm[:,0] for rm in rotMats] # multiplying an x vector by a matrix is the same as just reading the first column of that matrix
