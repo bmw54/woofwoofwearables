@@ -236,9 +236,9 @@ if __name__ == "__main__":
     file_name = "twoSensorsRun-Tail.json"
     
     # vvv Uncomment to check data for missing entries and determine start and stop indices vvv
-    with open(file_name, "r") as read_file: read_data = json.load(read_file)
-    lists, labels = getTimeSeries(read_data)
-    checkTimeSeries(lists, labels)
+    # with open(file_name, "r") as read_file: read_data = json.load(read_file)
+    # lists, labels = getTimeSeries(read_data)
+    # checkTimeSeries(lists, labels)
 
     startIndex = 0
     stopIndex = -1
