@@ -1,6 +1,11 @@
 import numpy as np
 import skinematics as skin
 import skinematics.quat as sq
+# importing IMUDataProcessing.py
+import sys
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, '../../api')
+
 import IMUDataProcessing
 
 
