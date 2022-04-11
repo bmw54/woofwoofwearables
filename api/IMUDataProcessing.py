@@ -8,6 +8,11 @@ import matplotlib.animation as ani
 import matplotlib.pyplot as plt
 from ModifiedKalman import modifiedKalman
 
+def dataVersion(read_data):
+    if (len(read_data) == 3) and ('accel' in read_data) and ('mag' in read_data) and ('gyro' in read_data): return 1
+    if len(read_data) == 1: return list(read_data)[0]
+    raise ValueError("Error reading data version number. Data doesn't seem to have the right format")
+
 def checkTimeSeries(timeSeries, labels = ["AcclX", "AcclY", "AcclZ", "MagnX", "MagnY", "MagnZ", "GyroX", "GyroY", "GyroZ"]):
     if not (len(labels) == len(timeSeries) == 9):
         print("invalid input length")
@@ -69,10 +74,18 @@ def timeSeriesIntersection(timeSeries):
     return timeIntersection
 
 def getTimeSeries(read_data):
+    version = dataVersion(read_data)
     timeSeries = []
     for sensor in ['accel', 'mag', 'gyro']:
         for d in ['X', 'Y', 'Z']:
-            newTimeSeries = [read_data[sensor][d][entry]["Time"] for entry in read_data[sensor][d]]
+            if version == 1:
+                newTimeSeries = [read_data[sensor][d][key]["Time"] for key in read_data[sensor][d]]
+            else:
+                sensorDict = read_data[version][sensor][d]
+                if len(sensorDict) != 1:
+                    raise ValueError("Error reading data from datafile. Dictionary for %s %s has more than one entry. Data doesn't seem to have the right format" % (sensor, d))
+                dataDictList = list(sensorDict.values())[0]
+                newTimeSeries = [dict["Time"] for dict in dataDictList]
             newTimeSeries.sort()
             timeSeries += [newTimeSeries]
     
@@ -80,6 +93,7 @@ def getTimeSeries(read_data):
     return timeSeries, labels
 
 def reorganizeData(read_data, start=0, stop=-1):
+    version = dataVersion(read_data)
     timeSeries = getTimeSeries(read_data)[0]
     timeCombined = combineTimeSeries(timeSeries)
     startTime = timeCombined[start]
@@ -91,8 +105,13 @@ def reorganizeData(read_data, start=0, stop=-1):
     data['time'] = timeIntersection
     for sensor in ['accel', 'mag', 'gyro']:
         for d in ['X', 'Y', 'Z']:
-            values = [read_data[sensor][d][entry]["Value"] for entry in read_data[sensor][d]]
-            times = [read_data[sensor][d][entry]["Time"] for entry in read_data[sensor][d]]
+            if version == 1:
+                values = [read_data[sensor][d][entry]["Value"] for entry in read_data[sensor][d]]
+                times = [read_data[sensor][d][entry]["Time"] for entry in read_data[sensor][d]]
+            else:
+                dictList = list(read_data[version][sensor][d].values())[0]
+                values = [dict["Value"] for dict in dictList]
+                times = [dict["Time"] for dict in dictList]
             data[sensor+d] = []
             for t in timeIntersection:
                 data[sensor+d].append(values[times.index(t)])
@@ -213,7 +232,8 @@ if __name__ == "__main__":
     # file_name = "woof-woof-wearables-default-rtdb-2-push-export.json"
     # file_name = "woof-woof-wearables-rtdb-michelle.json"
     # file_name = "Doherty-Hand.json"
-    file_name = "Doherty-Hand0330.json"
+    # file_name = "Doherty-Hand0330.json"
+    file_name = "twoSensorsRun-Tail.json"
     
     # vvv Uncomment to check data for missing entries and determine start and stop indices vvv
     # with open(file_name, "r") as read_file: read_data = json.load(read_file)
