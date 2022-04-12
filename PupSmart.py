@@ -1,6 +1,6 @@
 from Communication.Firebase.RPi2Firebase import RPi2Firebase
 from BasicIMUScripts.IMUDataModule import IMUDataModule
-from Camera.CameraModule import CameraModule
+#from Camera.CameraModule import CameraModule
 import time
 
 def collect_data(tail_data_module, body_data_module):
@@ -77,7 +77,7 @@ tail_data_module = IMUDataModule(address = 104)
 body_data_module = IMUDataModule(address = 105)
 
 rpi_2_firebase = RPi2Firebase()
-camera_module = CameraModule()
+# camera_module = CameraModule()
 
 trial_name = input("Trial run Name: ")
 duration = 0.0
@@ -148,12 +148,12 @@ while time.time() < time_start + duration:
         time.sleep(sample_time - (current_time - time_iter))
     send_data_to_firebase(tail_x_gyro_list, tail_y_gyro_list, tail_z_gyro_list, tail_x_accel_list, tail_y_accel_list, tail_z_accel_list, tail_x_mag_list, tail_y_mag_list, tail_z_mag_list, trial_name, "tail")
     send_data_to_firebase(body_x_gyro_list, body_y_gyro_list, body_z_gyro_list, body_x_accel_list, body_y_accel_list, body_z_accel_list, body_x_mag_list, body_y_mag_list, body_z_mag_list, trial_name, "body")
-    camera_start_time = time.time()
-    path =  camera_module.take_picture()
-    url = "{TrialName}-{imageNum}.jpg".format(TrialName = trial_name,imageNum = image_num)
-    rpi_2_firebase.send_image_to_firebase(path, url, camera_start_time, trial_name, image_num)
-    image_num+=1
-    print(time.time() - camera_start_time)
+  #  camera_start_time = time.time()
+  #  path =  camera_module.take_picture()
+  #  url = "{TrialName}-{imageNum}.jpg".format(TrialName = trial_name,imageNum = image_num)
+  #  rpi_2_firebase.send_image_to_firebase(path, url, camera_start_time, trial_name, image_num)
+  #  image_num+=1
+  #  print(time.time() - camera_start_time)
 
     
 
