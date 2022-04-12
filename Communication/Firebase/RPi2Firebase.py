@@ -1,4 +1,3 @@
-from importlib_metadata import version
 import pyrebase
 #import config
 class RPi2Firebase:
