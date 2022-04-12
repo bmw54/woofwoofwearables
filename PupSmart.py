@@ -60,7 +60,7 @@ def collect_data(tail_data_module, body_data_module):
     return  x_acceleration, y_acceleration, z_acceleration, x_gyro, y_gyro, z_gyro, x_mag, y_mag, z_mag, body_x_acceleration, body_y_acceleration, body_z_acceleration, body_x_gyro, body_y_gyro, body_z_gyro, body_x_mag, body_y_mag, body_z_mag
 
 def send_data_to_firebase(x_gyro_list, y_gyro_list, z_gyro_list, x_accel_list, y_accel_list, z_accel_list, x_mag_list, y_mag_list, z_mag_list, trial_name, sensor_name):
-    folder_name = "{trial_name}-{sensor_name}".format(trial_name, sensor_name)
+    folder_name = "%s-%s" % (trial_name, sensor_name)
     rpi_2_firebase.send_timeseries_to_firebase(x_accel_list, folder_name, "X", "accel", "3")
     rpi_2_firebase.send_timeseries_to_firebase(y_accel_list, folder_name, "Y", "accel", "3")
     rpi_2_firebase.send_timeseries_to_firebase(z_accel_list, folder_name, "Z", "accel", "3")
