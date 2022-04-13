@@ -45,7 +45,7 @@ class TimeSeriesApiHandler(Resource):
 
 
 class AnglesHandler(Resource):
-  def get(self, folder_name, data_name):
+  def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
     vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
@@ -56,7 +56,7 @@ class AnglesHandler(Resource):
     return response
 
 class PitchesHandler(Resource):
-  def get(self, folder_name, data_name):
+  def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
     vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
@@ -67,7 +67,7 @@ class PitchesHandler(Resource):
     return response
   
 class FrequencyHandler(Resource):
-  def get(self, folder_name):
+  def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
     vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
@@ -79,7 +79,7 @@ class FrequencyHandler(Resource):
     return response
 
 class AmplitudeHandler(Resource):
-  def get(self, folder_name):
+  def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
     vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
@@ -91,7 +91,7 @@ class AmplitudeHandler(Resource):
     return response
     
 class SideBiasHandler(Resource):
-  def get(self, folder_name):
+  def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
     vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
