@@ -1,6 +1,6 @@
 from Communication.Firebase.RPi2Firebase import RPi2Firebase
 from BasicIMUScripts.IMUDataModule import IMUDataModule
-from Camera.CameraModule import CameraModule
+#from Camera.CameraModule import CameraModule
 import time
 
 def collect_data(tail_data_module, body_data_module):
@@ -59,24 +59,25 @@ def collect_data(tail_data_module, body_data_module):
     
     return  x_acceleration, y_acceleration, z_acceleration, x_gyro, y_gyro, z_gyro, x_mag, y_mag, z_mag, body_x_acceleration, body_y_acceleration, body_z_acceleration, body_x_gyro, body_y_gyro, body_z_gyro, body_x_mag, body_y_mag, body_z_mag
 
-def send_data_to_firebase(x_gyro_list, y_gyro_list, z_gyro_list, x_accel_list, y_accel_list, z_accel_list, x_mag_list, y_mag_list, z_mag_list, trial_name):
-    rpi_2_firebase.send_timeseries_to_firebase(x_accel_list, trial_name, "X", "accel", "3")
-    rpi_2_firebase.send_timeseries_to_firebase(y_accel_list, trial_name, "Y", "accel", "3")
-    rpi_2_firebase.send_timeseries_to_firebase(z_accel_list, trial_name, "Z", "accel", "3")
+def send_data_to_firebase(x_gyro_list, y_gyro_list, z_gyro_list, x_accel_list, y_accel_list, z_accel_list, x_mag_list, y_mag_list, z_mag_list, trial_name, sensor_name):
+    folder_name = "%s-%s" % (trial_name, sensor_name)
+    rpi_2_firebase.send_timeseries_to_firebase(x_accel_list, folder_name, "X", "accel", "3")
+    rpi_2_firebase.send_timeseries_to_firebase(y_accel_list, folder_name, "Y", "accel", "3")
+    rpi_2_firebase.send_timeseries_to_firebase(z_accel_list, folder_name, "Z", "accel", "3")
 
-    rpi_2_firebase.send_timeseries_to_firebase(x_gyro_list, trial_name, "X", "gyro", "3")
-    rpi_2_firebase.send_timeseries_to_firebase(y_gyro_list, trial_name, "Y", "gyro", "3")
-    rpi_2_firebase.send_timeseries_to_firebase(z_gyro_list, trial_name, "Z", "gyro", "3")
+    rpi_2_firebase.send_timeseries_to_firebase(x_gyro_list, folder_name, "X", "gyro", "3")
+    rpi_2_firebase.send_timeseries_to_firebase(y_gyro_list, folder_name, "Y", "gyro", "3")
+    rpi_2_firebase.send_timeseries_to_firebase(z_gyro_list, folder_name, "Z", "gyro", "3")
 
-    rpi_2_firebase.send_timeseries_to_firebase(x_mag_list, trial_name, "X", "mag", "3")
-    rpi_2_firebase.send_timeseries_to_firebase(y_mag_list, trial_name, "Y", "mag", "3")
-    rpi_2_firebase.send_timeseries_to_firebase(z_mag_list, trial_name, "Z", "mag", "3")
+    rpi_2_firebase.send_timeseries_to_firebase(x_mag_list, folder_name, "X", "mag", "3")
+    rpi_2_firebase.send_timeseries_to_firebase(y_mag_list, folder_name, "Y", "mag", "3")
+    rpi_2_firebase.send_timeseries_to_firebase(z_mag_list, folder_name, "Z", "mag", "3")
 
 tail_data_module = IMUDataModule(address = 104)
 body_data_module = IMUDataModule(address = 105)
 
 rpi_2_firebase = RPi2Firebase()
-camera_module = CameraModule()
+# camera_module = CameraModule()
 
 trial_name = input("Trial run Name: ")
 duration = 0.0
@@ -145,14 +146,14 @@ while time.time() < time_start + duration:
         if time_left <= 0:
             continue
         time.sleep(sample_time - (current_time - time_iter))
-    send_data_to_firebase(tail_x_gyro_list, tail_y_gyro_list, tail_z_gyro_list, tail_x_accel_list, tail_y_accel_list, tail_z_accel_list, tail_x_mag_list, tail_y_mag_list, tail_z_mag_list, trial_name)
-    send_data_to_firebase(body_x_gyro_list, body_y_gyro_list, body_z_gyro_list, body_x_accel_list, body_y_accel_list, body_z_accel_list, body_x_mag_list, body_y_mag_list, body_z_mag_list, trial_name)
-    camera_start_time = time.time()
-    path =  camera_module.take_picture()
-    url = "{TrialName}-{imageNum}.jpg".format(TrialName = trial_name,imageNum = image_num)
-    rpi_2_firebase.send_image_to_firebase(path, url, camera_start_time, trial_name, image_num)
-    image_num+=1
-    print(time.time() - camera_start_time)
+    send_data_to_firebase(tail_x_gyro_list, tail_y_gyro_list, tail_z_gyro_list, tail_x_accel_list, tail_y_accel_list, tail_z_accel_list, tail_x_mag_list, tail_y_mag_list, tail_z_mag_list, trial_name, "tail")
+    send_data_to_firebase(body_x_gyro_list, body_y_gyro_list, body_z_gyro_list, body_x_accel_list, body_y_accel_list, body_z_accel_list, body_x_mag_list, body_y_mag_list, body_z_mag_list, trial_name, "body")
+  #  camera_start_time = time.time()
+  #  path =  camera_module.take_picture()
+  #  url = "{TrialName}-{imageNum}.jpg".format(TrialName = trial_name,imageNum = image_num)
+  #  rpi_2_firebase.send_image_to_firebase(path, url, camera_start_time, trial_name, image_num)
+  #  image_num+=1
+  #  print(time.time() - camera_start_time)
 
     
 
