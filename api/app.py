@@ -17,3 +17,8 @@ api.add_resource(DataApiHandler, '/firebase/<string:folder_name>/<int:data_num>'
 api.add_resource(AveragesHandler, '/firebase/averages/<string:folder_name>/<string:data_name>/<string:direction>')
 api.add_resource(VelocityHandler, '/firebase/velocity/<string:folder_name>/<string:data_name>/<string:direction>')
 api.add_resource(PositionHandler, '/firebase/position/<string:folder_name>/<string:data_name>/<string:direction>')
+api.add_resource(PitchesHandler, '/firebase/pitches/<string:folder_name>/')
+api.add_resource(AnglesHandler, '/firebase/angles/<string:folder_name>/')
+api.add_resource(FrequencyHandler, '/firebase/frequency/<string:folder_name>/')
+api.add_resource(AmplitudeHandler, '/firebase/amplitude/<string:folder_name>/')
+api.add_resource(SideBiasHandler, '/firebase/sidebias/<string:folder_name>/')

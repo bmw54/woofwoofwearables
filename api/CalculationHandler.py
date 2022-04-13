@@ -1,6 +1,7 @@
 from ast import YieldFrom
 import scipy.integrate
 import numpy as np
+import math as m
 from scipy.fft import fft, fftfreq
 import matplotlib.pyplot as plt
 
@@ -54,8 +55,7 @@ class Calculation_Module:
         return ret
     
     def calculate_pitch_from_vector(self, vector):
-        angle = np.arctan(vector[2], vector[1]);
-        print(angle)
+        angle = m.atan(vector[2] / vector[1]);
         return angle
     
     def calculate_angle_two_vectors(self, a_vec, b_vec):
@@ -63,7 +63,6 @@ class Calculation_Module:
         b_mag = np.linalg.norm(b_vec)
         dot = np.dot(a_vec, b_vec)
         angle = np.arccos(dot/(a_mag * b_mag))
-        print(angle)
         return angle
 
     def get_pitches_angles_from_vectors(self, vectors):
@@ -103,7 +102,7 @@ class Calculation_Module:
         plt.savefig("fft.png")
 
     def calculate_side_bias_from_vectors(self, vectors):
-        angles = [np.arctan(vector[0], vector[1]) for vector in vectors]
+        angles = [m.atan(vector[0] / vector[1]) for vector in vectors]
         mean = np.mean(angles)
         return mean
 

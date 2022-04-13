@@ -1,35 +1,103 @@
-from re import A
+from dataclasses import dataclass
+from re import A, T
 from turtle import position
 from flask_restful import Api, Resource, reqparse
 from flask import jsonify
 from numpy import average
 from CalculationHandler import Calculation_Module
-from MoodClassifier import Mood_Classifier
 import pyrebase
+import TwoIMUs
+
 
 class FirebaseConfig:
-    config = {
+  config = {
 
-    "apiKey": "M3daySH0pEM5DcBgLbw8LVYJakBh2M8anFkDXq0I",
+  "apiKey": "M3daySH0pEM5DcBgLbw8LVYJakBh2M8anFkDXq0I",
 
-    "authDomain": "woof-woof-wearables.firebaseapp.com",
+  "authDomain": "woof-woof-wearables.firebaseapp.com",
 
-    "databaseURL": "https://woof-woof-wearables-default-rtdb.firebaseio.com",
+  "databaseURL": "https://woof-woof-wearables-default-rtdb.firebaseio.com",
 
-    "storageBucket": "woof-woof-wearables.appspot.com"
+  "storageBucket": "woof-woof-wearables.appspot.com"
 
-    }
-    firebase = pyrebase.initialize_app(config)
-    db = firebase.database()
-    storage = firebase.storage()
+  }
+  firebase = pyrebase.initialize_app(config)
+  db = firebase.database()
+  storage = firebase.storage()
 
+  def get_tail_and_body_data_from_firebase(folder_name, data_name, direction, version_number = 3):
+    body_folder_name = "{FolderName}-body".format(folder_name)
+    tail_folder_name = "{FolderName}-tail".format(folder_name)
+    body_data = list(FirebaseConfig.db.child(body_folder_name).child("2-push").child(version_number).child(data_name).child(direction).get().val().values())
+    tail_data = list(FirebaseConfig.db.child(tail_folder_name).child("2-push").child(version_number).child(data_name).child(direction).get().val().values())
+    print(tail_data)
+    print(type(tail_data))
+    return tail_data, body_data
 
 
 class TimeSeriesApiHandler(Resource):
   def get(self, folder_name, data_name, direction):
-    data = FirebaseConfig.db.child(folder_name).child("2-push").child(data_name).child(direction).get().val()
-    print(type(data))
-    response = jsonify(list(data.values()))
+    tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
+    response_dict = {"Tail": tail_data, "Body" : body_data}
+    response = jsonify(response_dict)
+    response.status_code = 200 # or 400 or whatever
+    return response
+
+
+class AnglesHandler(Resource):
+  def get(self, folder_name, data_name):
+    calculation_module = Calculation_Module()
+    #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
+    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
+    print(vectors)
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
+    response = jsonify(angles)
+    response.status_code = 200 # or 400 or whatever
+    return response
+
+class PitchesHandler(Resource):
+  def get(self, folder_name, data_name):
+    calculation_module = Calculation_Module()
+    #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
+    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
+    print(vectors)
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
+    response = jsonify(pitches)
+    response.status_code = 200 # or 400 or whatever
+    return response
+  
+class FrequencyHandler(Resource):
+  def get(self, folder_name):
+    calculation_module = Calculation_Module()
+    #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
+    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
+    print(vectors)
+    frequency = calculation_module.calculate_frequency(angles, timestamps)
+    response = jsonify(frequency)
+    response.status_code = 200 # or 400 or whatever
+    return response
+
+class AmplitudeHandler(Resource):
+  def get(self, folder_name):
+    calculation_module = Calculation_Module()
+    #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
+    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
+    print(vectors)
+    amplitude = calculation_module.calculate_average_amplitude(angles)
+    response = jsonify(amplitude)
+    response.status_code = 200 # or 400 or whatever
+    return response
+    
+class SideBiasHandler(Resource):
+  def get(self, folder_name):
+    calculation_module = Calculation_Module()
+    #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
+    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
+    side_bias = calculation_module.calculate_side_bias_from_vectors(vectors)
+    print(vectors)
+    response = jsonify(side_bias)
     response.status_code = 200 # or 400 or whatever
     return response
 
