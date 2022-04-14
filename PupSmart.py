@@ -33,29 +33,29 @@ def collect_data(tail_data_module, body_data_module):
     z_mag =  {"Time" : timestamp, "Value": z_mag}
 
     body_timestamp = body_data_module.get_timestamp()
-    body_x_acceleration = tail_data_module.get_X_acceleration()
-    body_y_acceleration = tail_data_module.get_Y_acceleration()
-    body_z_acceleration = tail_data_module.get_Z_acceleration()
+    body_x_acceleration = body_data_module.get_X_acceleration()
+    body_y_acceleration = body_data_module.get_Y_acceleration()
+    body_z_acceleration = body_data_module.get_Z_acceleration()
 
-    body_x_gyro = tail_data_module.get_X_gyro()
-    body_y_gyro = tail_data_module.get_Y_gyro()
-    body_z_gyro = tail_data_module.get_Z_gyro()
+    body_x_gyro = body_data_module.get_X_gyro()
+    body_y_gyro = body_data_module.get_Y_gyro()
+    body_z_gyro = body_data_module.get_Z_gyro()
 
-    body_x_mag = tail_data_module.get_X_magnetic()
-    body_y_mag = tail_data_module.get_Y_magnetic()
-    body_z_mag = tail_data_module.get_Z_magnetic()
+    body_x_mag = body_data_module.get_X_magnetic()
+    body_y_mag = body_data_module.get_Y_magnetic()
+    body_z_mag = body_data_module.get_Z_magnetic()
 
-    body_x_acceleration = {"Time" : timestamp, "Value": body_x_acceleration}
-    body_y_acceleration =  {"Time" : timestamp, "Value": body_y_acceleration}
-    body_z_acceleration = {"Time" : timestamp, "Value": body_z_acceleration}
+    body_x_acceleration = {"Time" : body_timestamp, "Value": body_x_acceleration}
+    body_y_acceleration =  {"Time" : body_timestamp, "Value": body_y_acceleration}
+    body_z_acceleration = {"Time" : body_timestamp, "Value": body_z_acceleration}
 
-    body_x_gyro = {"Time" : timestamp, "Value": body_x_gyro}
-    body_y_gyro = {"Time" : timestamp, "Value": body_y_gyro}
-    body_z_gyro = {"Time" : timestamp, "Value": body_z_gyro}
+    body_x_gyro = {"Time" : body_timestamp, "Value": body_x_gyro}
+    body_y_gyro = {"Time" : body_timestamp, "Value": body_y_gyro}
+    body_z_gyro = {"Time" : body_timestamp, "Value": body_z_gyro}
 
-    body_x_mag = {"Time" : timestamp, "Value": body_x_mag}
-    body_y_mag = {"Time" : timestamp, "Value": body_y_mag}
-    body_z_mag =  {"Time" : timestamp, "Value": body_z_mag}
+    body_x_mag = {"Time" : body_timestamp, "Value": body_x_mag}
+    body_y_mag = {"Time" : body_timestamp, "Value": body_y_mag}
+    body_z_mag =  {"Time" : body_timestamp, "Value": body_z_mag}
     
     return  x_acceleration, y_acceleration, z_acceleration, x_gyro, y_gyro, z_gyro, x_mag, y_mag, z_mag, body_x_acceleration, body_y_acceleration, body_z_acceleration, body_x_gyro, body_y_gyro, body_z_gyro, body_x_mag, body_y_mag, body_z_mag
 
