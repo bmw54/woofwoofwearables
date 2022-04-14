@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from scipy.signal import blackman
 import matplotlib.animation as ani
 from mpl_toolkits.mplot3d import Axes3D
-from IPython import display
+# from IPython import display
 import TwoIMUs
 
 class Calculation_Module:
@@ -172,7 +172,9 @@ class Calculation_Module:
         ax.set_xlim([0, 2])
         ax.set_ylim([0, 2])
         ax.set_zlim([0, 2])
-        print(vectors[:,0])
+        # print(vectors[:,0])
+        for vector in vectors:
+            print(vector)
     
         vlength=np.linalg.norm(vectors[0])
         ax.quiver(*origin,vectors[0][0],vectors[0][1],vectors[0][2],
@@ -203,6 +205,6 @@ if __name__ == '__main__':
     # ch.calculate_fft(angles, timestamps)
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
-    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
-    calculation_module.plot_vectors(vectors, timestamps)
+    vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
+    calculation_module.plot_vectors(vectorsList[0], timestampsList[0])
 
