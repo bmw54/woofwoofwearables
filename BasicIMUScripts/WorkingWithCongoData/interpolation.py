@@ -29,9 +29,9 @@ xnew = np.linspace(0, 10, num=41, endpoint=True)
 plt.plot(x, y, 'o', xnew, [interpolate(list(x), list(y), xn) for xn in xnew], '-', xnew, f2(xnew), '--')
 plt.legend(['data', 'mine', 'cubic'], loc='best')
 
+JSONpath = '../../SavedJSONs/'
 
-
-with open("woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_file:
+with open(JSONpath + "woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_file:
     read_data = json.load(read_file)
 
     accl = read_data['accel']
