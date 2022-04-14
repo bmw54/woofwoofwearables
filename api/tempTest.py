@@ -34,3 +34,23 @@ for d in Out:
     timeLength = len(d['time'])
     print(timeLength)
 
+interpOut = IMUDataProcessing.readAndInterpolateData(read_data)
+print(len(interpOut))
+for l in interpOut:
+    print(len(l[0]), len(l[1]), len(l[2]), len(l[3]))
+
+Out = IMUDataProcessing.filterReadData(read_data)
+print(len(Out))
+for l in Out:
+    print(len(l))
+    print(len(l[0]), len(l[1]))
+
+timeSeriesLists, labels = IMUDataProcessing.getTimeSeries(read_data)
+for series in timeSeriesLists:
+    IMUDataProcessing.checkTimeSeries(series, labels)
+
+
+filteredOutput = IMUDataProcessing.filterReadData(read_data)
+for [times, qOut] in filteredOutput:
+    IMUDataProcessing.plotFilterOutput(times, qOut)
+

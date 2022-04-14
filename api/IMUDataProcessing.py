@@ -19,6 +19,17 @@ def dataVersion(read_data):
     raise ValueError("Error reading data version number. Data doesn't seem to have the right format")
 
 def checkTimeSeries(timeSeries, labels = ["AcclX", "AcclY", "AcclZ", "MagnX", "MagnY", "MagnZ", "GyroX", "GyroY", "GyroZ"]):
+    """
+    Input: timeSeries - a list of 9 sublists, each of which contain the time series data
+    stored for a particular sensor (AccelerometerX, MagnetometerY, GyroscopeZ, etc.).
+        labels - the names corresponding to each of these sublists
+    
+    This function prints out visual representations of the timeseries and its holes to make
+    it easier to spot holes and errors. This function also calculates and prints helpful 
+    information about the time series data.
+
+    This function operates on a single sample window, not a whole data collection trial.
+    """
     if not (len(labels) == len(timeSeries) == 9):
         print("invalid input length")
         return
@@ -230,35 +241,71 @@ def reorganizeData(read_data, start=0, stop=-1):
     return dataDictList
 
 def readAndInterpolateData(read_data, start=0, stop=-1):
-    data = reorganizeData(read_data, start, stop)
-    times = data['time']
-    timeDiffs = [times[i+1] - times[i] for i in range(len(times)-1)]
-    numsteps = round((times[-1] - times[0])/stat.median(timeDiffs))
-    corrected_times = np.linspace(times[0], times[-1], numsteps)
+    """
+    Input: read_data - the data read from firebase in dictionary form
 
-    def interpolate_sensor(sensor):
-        funcs = {}
-        for d in ['X', 'Y', 'Z']:
-            funcs[d] = interp1d(times, data[sensor+d])
-        intps_list = [[funcs[d](ct) for ct in corrected_times] for d in ['X', 'Y', 'Z']]
-        intps_array = np.array(intps_list).transpose()
-        return intps_array
+    Output: The result from interpolating that data. For each sensor, this function
+    finds the median difference between samples in the data and predicts what the 
+    value of the data would be if sampled at exactly that rate. This is output in
+    a format that is intended to be easy to plug directly into our kalman filter
+    function.
 
-    accl_intps = interpolate_sensor('accel')
-    gyro_intps = interpolate_sensor('gyro')
-    mag_intps = interpolate_sensor('mag')
-    return corrected_times, accl_intps, gyro_intps, mag_intps
+    The output is a list in which each item corresponds to a sample window.
+    Each item in the output is a 4 item list of the form:
+
+        [corrected_times, accl_intps, gyro_intps, mag_intps]
+    
+    The last three items in this list (accl_intps, gyro_intps, mag_intps) are all
+    3xN arrays where N is the number of interpolated samples. They correspond to the
+    accelerometer, gyroscope, and magnetometer. Each row of these arrays corresponds
+    to the interpolated x, y, and z values for the given sensor at the cooresponding 
+    timestamp in corrected_times.
+
+    The output is sorted in the order in which the sample windows were recorded
+    """
+    dataDicts = reorganizeData(read_data, start, stop)
+    interpolatedData = []
+    for data in dataDicts:
+        times = data['time']
+        timeDiffs = [times[i+1] - times[i] for i in range(len(times)-1)]
+        numsteps = round((times[-1] - times[0])/stat.median(timeDiffs))
+        corrected_times = np.linspace(times[0], times[-1], numsteps)
+
+        def interpolate_sensor(sensor):
+            funcs = {}
+            for d in ['X', 'Y', 'Z']:
+                funcs[d] = interp1d(times, data[sensor+d])
+            intps_list = [[funcs[d](ct) for ct in corrected_times] for d in ['X', 'Y', 'Z']]
+            intps_array = np.array(intps_list).transpose()
+            return intps_array
+
+        accl_intps = interpolate_sensor('accel')
+        gyro_intps = interpolate_sensor('gyro')
+        mag_intps = interpolate_sensor('mag')
+        interpolatedData.append([corrected_times, accl_intps, gyro_intps, mag_intps])
+    return interpolatedData
 
 def filterReadData(read_data, start=0, stop=-1):
-    corrected_times, accl_intps, gyro_intps, mag_intps = readAndInterpolateData(read_data, start, stop)
-    qOut = modifiedKalman(1.0/(corrected_times[1]-corrected_times[0]), accl_intps, gyro_intps, mag_intps)
-    return corrected_times, qOut
+    interpolatedData = readAndInterpolateData(read_data, start, stop)
+    filteredData = []
+    for data in interpolatedData:
+        # apply the kalman filter to the data from each window
+        [corrected_times, accl_intps, gyro_intps, mag_intps] = data
+        qOut = modifiedKalman(1.0/(corrected_times[1]-corrected_times[0]), accl_intps, gyro_intps, mag_intps)
+        filteredData.append([corrected_times, qOut])
+    return filteredData
 
 def filterFile(file_name, start=0, stop=-1):
     with open(file_name, "r") as read_file: read_data = json.load(read_file)
     return filterReadData(read_data, start, stop)
 
 def plotFilterOutput(times, qOut):
+    """
+    This function takes the timestamps and quaternions from a single sample window
+    and plots them with detailed and animated graphs.
+
+    This function operates on a single sample window, not a whole data collection trial.
+    """
     timeStep = times[1]-times[0]
     degs = skin.quat.quat2deg(qOut)
     angvel = skin.quat.calc_angvel(qOut, 1.0/timeStep)
@@ -349,12 +396,14 @@ if __name__ == "__main__":
     file_name = "twoSensorsRun-Tail.json"
     
     # vvv Uncomment to check data for missing entries and determine start and stop indices vvv
-    # with open(file_name, "r") as read_file: read_data = json.load(read_file)
-    # lists, labels = getTimeSeries(read_data)
-    # checkTimeSeries(lists, labels)
+    with open(file_name, "r") as read_file: read_data = json.load(read_file)
+    timeSeriesLists, labels = getTimeSeries(read_data)
+    for series in timeSeriesLists:
+        checkTimeSeries(series, labels)
 
     startIndex = 0
     stopIndex = -1
 
-    times, qOut = filterFile(JSONpath + file_name, startIndex, stopIndex)
-    plotFilterOutput(times, qOut)
+    filteredOutput = filterFile(JSONpath + file_name, startIndex, stopIndex)
+    for [times, qOut] in filteredOutput:
+        plotFilterOutput(times, qOut)
