@@ -89,30 +89,6 @@ except ValueError:
 
 input("Press Enter to continue...")
 
-tail_x_gyro_list = []
-tail_y_gyro_list = []
-tail_z_gyro_list = []
-
-tail_x_accel_list = []
-tail_y_accel_list = []
-tail_z_accel_list = []
-
-tail_x_mag_list = []
-tail_y_mag_list = []
-tail_z_mag_list = []
-
-body_x_gyro_list = []
-body_y_gyro_list = []
-body_z_gyro_list = []
-
-body_x_accel_list = []
-body_y_accel_list = []
-body_z_accel_list = []
-
-body_x_mag_list = []
-body_y_mag_list = []
-body_z_mag_list = []
-
 sample_time = 0.05
 window_size = 10
 image_num = 0
@@ -120,6 +96,29 @@ time_start = time.time()
 
 while time.time() < time_start + duration:
     time_iter = time.time()
+    tail_x_gyro_list = []
+    tail_y_gyro_list = []
+    tail_z_gyro_list = []
+
+    tail_x_accel_list = []
+    tail_y_accel_list = []
+    tail_z_accel_list = []
+
+    tail_x_mag_list = []
+    tail_y_mag_list = []
+    tail_z_mag_list = []
+
+    body_x_gyro_list = []
+    body_y_gyro_list = []
+    body_z_gyro_list = []
+
+    body_x_accel_list = []
+    body_y_accel_list = []
+    body_z_accel_list = []
+
+    body_x_mag_list = []
+    body_y_mag_list = []
+    body_z_mag_list = []
     while(time_iter + window_size > time.time()):
         x_acceleration, y_acceleration, z_acceleration, x_gyro, y_gyro, z_gyro, x_mag, y_mag, z_mag, body_x_acceleration, body_y_acceleration, body_z_acceleration, body_x_gyro, body_y_gyro, body_z_gyro, body_x_mag, body_y_mag, body_z_mag = collect_data(tail_data_module, body_data_module)
         tail_x_accel_list.append(x_acceleration)
