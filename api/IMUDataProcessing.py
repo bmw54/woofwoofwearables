@@ -9,8 +9,13 @@ import matplotlib.pyplot as plt
 from ModifiedKalman import modifiedKalman
 
 def dataVersion(read_data):
+    """
+    Takes the data from a measurement trial and returns an integer corresponding
+    to the version number of that data. If version isn't recognized, raises an
+    error.
+    """
     if (len(read_data) == 3) and ('accel' in read_data) and ('mag' in read_data) and ('gyro' in read_data): return 1
-    if len(read_data) == 1: return list(read_data)[0]
+    if len(read_data) == 1: return int(list(read_data)[0])
     raise ValueError("Error reading data version number. Data doesn't seem to have the right format")
 
 def checkTimeSeries(timeSeries, labels = ["AcclX", "AcclY", "AcclZ", "MagnX", "MagnY", "MagnZ", "GyroX", "GyroY", "GyroZ"]):
@@ -59,13 +64,32 @@ def checkTimeSeries(timeSeries, labels = ["AcclX", "AcclY", "AcclZ", "MagnX", "M
     return
 
 def combineTimeSeries(timeSeries):
-    # given several time series lists, combine them into one sorted list with no repeats
+    """
+    Input: timeSeries - a list of 9 sublists, each of which contain the time series data
+    stored for a particular sensor (AccelerometerX, MagnetometerY, GyroscopeZ, etc.).
+    
+    Output: the union of these lists sorted in order. This is a list of all timestamps 
+    at which we've recorded any data for a given sample window. This list contains no 
+    repeats and is sorted.
+
+    This function operates on a single sample window, not a whole data collection trial.
+    """
     allTimes = [item for sublist in timeSeries for item in sublist]
     allTimes = list(set(allTimes))
     allTimes.sort()
     return allTimes
 
 def timeSeriesIntersection(timeSeries):
+    """
+    Input: timeSeries - a list of 9 sublists, each of which contain the time series data
+    stored for a particular sensor (AccelerometerX, MagnetometerY, GyroscopeZ, etc.).
+    
+    Output: the intesection of these lists sorted in order. This is a list of all the 
+    timestamps for which all of the sensors have data recorded. This list contains no
+    repeats and is sorted.
+
+    This function operates on a single sample window, not a whole data collection trial.
+    """
     timeIntersection = timeSeries[0]
     for series in timeSeries[1:]:
         for time in timeIntersection:
@@ -74,48 +98,136 @@ def timeSeriesIntersection(timeSeries):
     return timeIntersection
 
 def getTimeSeries(read_data):
-    version = dataVersion(read_data)
-    timeSeries = []
-    for sensor in ['accel', 'mag', 'gyro']:
-        for d in ['X', 'Y', 'Z']:
-            if version == 1:
-                newTimeSeries = [read_data[sensor][d][key]["Time"] for key in read_data[sensor][d]]
-            else:
-                sensorDict = read_data[version][sensor][d]
-                if len(sensorDict) != 1:
-                    raise ValueError("Error reading data from datafile. Dictionary for %s %s has more than one entry. Data doesn't seem to have the right format" % (sensor, d))
-                dataDictList = list(sensorDict.values())[0]
-                newTimeSeries = [dict["Time"] for dict in dataDictList]
-            newTimeSeries.sort()
-            timeSeries += [newTimeSeries]
+    """
+    *deep breath* ... *deep exhale*
     
+    Ok so
+    
+    This function takes the data from a measurement trial as input
+    
+    A measuement trial is split up into one or more measurement windows, periods
+    of time during the trial during which the pi is recording data
+    
+    This function returns a two lists. One is a list of labels, the other is a 
+    list where each item is a "time series object" and corresponds to a single
+    measurement window. This list of time series objects are sorted in the order
+    in which the measurement windows were recorded.
+    
+    A "time series object" means a list of nine lists, one list for each of the
+    nine sensors (AccelerometerX, MagnetometerY, GyroscopeZ, etc.). Each sublist
+    contains the timestamps recorded by that sensor. These timestamps are sorted
+    in chronological order.
+
+    The returned list of labels shows how the sensor data is ordered within each
+    timeseries object. The first list in a timeseries object corresponds to the
+    first label in the list of labels.
+    """
+
+    version = dataVersion(read_data)
     labels = ["AcclX", "AcclY", "AcclZ", "MagnX", "MagnY", "MagnZ", "GyroX", "GyroY", "GyroZ"]
-    return timeSeries, labels
+
+    if version == 1:
+        # version 1 only has one long window
+        timeSeries = []
+        for sensor in ['accel', 'mag', 'gyro']:
+            for d in ['X', 'Y', 'Z']:
+                newTimeList = [read_data[sensor][d][key]["Time"] for key in read_data[sensor][d]]
+                newTimeList.sort()
+                timeSeries += [newTimeList]
+        return [timeSeries], labels
+    
+
+    if version == 2:
+        # version 2 only has one long window
+        timeSeries = []
+        for sensor in ['accel', 'mag', 'gyro']:
+            for d in ['X', 'Y', 'Z']:
+                sensorDict = read_data[str(version)][sensor][d]
+                if len(sensorDict) != 1:
+                    raise ValueError("""Error reading data from datafile. Dictionary for %s %s has more than one entry.
+                                        Data doesn't seem to have the right format""" % (sensor, d))
+                dataDictList = list(sensorDict.values())[0]
+                newTimeList = [dict["Time"] for dict in dataDictList]
+                newTimeList.sort()
+                timeSeries += [newTimeList]
+        return [timeSeries], labels
+
+
+    if version == 3:
+        # use the accelerometer X sensor as a reference to determnie the number of windows
+        numberOfWindows = len(read_data[str(version)]['accel']['X'])
+        timeSeriesList = []
+        for windowNum in range(numberOfWindows):
+            newTimeSeries = []
+            for sensor in ['accel', 'mag', 'gyro']:
+                for d in ['X', 'Y', 'Z']:
+                    sensorDict = read_data[str(version)][sensor][d]
+                    if len(sensorDict) != numberOfWindows:
+                        raise ValueError("""Error reading data from datafile. Sensors have an inconsistent number of 
+                                            windows. accel X has %d sample windows while %s %s has %d sample windows""" 
+                                            % (numberOfWindows, sensor, d, len(sensorDict)))
+                    windowName = list(sensorDict)[windowNum]
+                    windowData = sensorDict[windowName]
+                    newTimeList = [wd['Time'] for wd in windowData]
+                    newTimeList.sort()
+                    newTimeSeries += [newTimeList]
+            timeSeriesList += [newTimeSeries]
+        timeSeriesList.sort()
+        return timeSeriesList, labels
+
+
+    raise ValueError("Error reading timeseries. getTimeSeries doesn't recognize the given version:", version)
+
 
 def reorganizeData(read_data, start=0, stop=-1):
+    """
+    Input: read_data - the data read from firebase in dictionary form
+
+    Output: The same data but sorted into a list of dictionaries.
+    These dictionaries are organized in a slightly more intuitive way and remove
+    the autogenerated keys which are stored in the firebase dataset. Each of the
+    dictionaries corresponds to the data from a single sample window and they're
+    sorted in chronological order.
+
+    The dictionaries have the following structure:
+    data = {"time" : [list of timestamps at which all the sensors have data],
+            "accelX" : [list of values corresponding to those timestamps]
+            "accelY" : [ " ]
+               etc...
+            }
+    """
     version = dataVersion(read_data)
-    timeSeries = getTimeSeries(read_data)[0]
-    timeCombined = combineTimeSeries(timeSeries)
-    startTime = timeCombined[start]
-    stopTime = timeCombined[stop]
-    croppedTimeSeries = [[time for time in series if startTime <= time <= stopTime] for series in timeSeries]
-    # get list of timestamps measured by all sensors
-    timeIntersection = timeSeriesIntersection(croppedTimeSeries)
-    data = {}
-    data['time'] = timeIntersection
-    for sensor in ['accel', 'mag', 'gyro']:
-        for d in ['X', 'Y', 'Z']:
-            if version == 1:
-                values = [read_data[sensor][d][entry]["Value"] for entry in read_data[sensor][d]]
-                times = [read_data[sensor][d][entry]["Time"] for entry in read_data[sensor][d]]
-            else:
-                dictList = list(read_data[version][sensor][d].values())[0]
-                values = [dict["Value"] for dict in dictList]
-                times = [dict["Time"] for dict in dictList]
-            data[sensor+d] = []
-            for t in timeIntersection:
-                data[sensor+d].append(values[times.index(t)])
-    return data
+    timeSeriesList, labels = getTimeSeries(read_data)
+    dataDictList = []
+    for timeSeries in timeSeriesList:
+        timeCombined = combineTimeSeries(timeSeries)
+        startTime = timeCombined[start]
+        stopTime = timeCombined[stop]
+        croppedTimeSeries = [[time for time in series if startTime <= time <= stopTime] for series in timeSeries]
+        # get list of timestamps measured by all sensors
+        timeIntersection = timeSeriesIntersection(croppedTimeSeries)
+        data = {}
+        data['time'] = timeIntersection
+        for sensor in ['accel', 'mag', 'gyro']:
+            for d in ['X', 'Y', 'Z']:
+                if version == 1:
+                    values = [read_data[sensor][d][entry]["Value"] for entry in read_data[sensor][d]]
+                    times = [read_data[sensor][d][entry]["Time"] for entry in read_data[sensor][d]]
+                elif version == 2:
+                    dictList = list(read_data[str(version)][sensor][d].values())[0]
+                    values = [dict["Value"] for dict in dictList]
+                    times = [dict["Time"] for dict in dictList]
+                elif version == 3:
+                    # get list of all times and values in the trial
+                    dictList = [dict for sublist in list(read_data[str(version)][sensor][d].values()) for dict in sublist]
+                    values = [dict["Value"] for dict in dictList]
+                    times = [dict["Time"] for dict in dictList]
+
+                data[sensor+d] = []
+                for t in timeIntersection:
+                    data[sensor+d].append(values[times.index(t)])
+        dataDictList.append(data)
+    return dataDictList
 
 def readAndInterpolateData(read_data, start=0, stop=-1):
     data = reorganizeData(read_data, start, stop)
@@ -229,6 +341,7 @@ def plotFilterOutput(times, qOut):
 
 
 if __name__ == "__main__":
+    JSONpath = '../SavedJSONs/'
     # file_name = "woof-woof-wearables-default-rtdb-2-push-export.json"
     # file_name = "woof-woof-wearables-rtdb-michelle.json"
     # file_name = "Doherty-Hand.json"
@@ -243,5 +356,5 @@ if __name__ == "__main__":
     startIndex = 0
     stopIndex = -1
 
-    times, qOut = filterFile(file_name, startIndex, stopIndex)
+    times, qOut = filterFile(JSONpath + file_name, startIndex, stopIndex)
     plotFilterOutput(times, qOut)
