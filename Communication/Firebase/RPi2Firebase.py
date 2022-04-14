@@ -20,25 +20,20 @@ class RPi2Firebase:
 
 
   def send_data_to_firebase(self, data, data_name):
-    print("Sending Data to Firebase Using Raspberry Pi")
-    print("—————————————-")
-    print()
     self.db.child(data_name).child("1-set").set(data)
-
-  def send_timeseries_to_firebase(self, data, folder_name, direction, data_name):
+    
+  def send_timeseries_to_firebase(self, data, folder_name, direction, data_name, version_number):
     print("Sending TimeSeries to Firebase Using Raspberry Pi")
     print("—————————————-")
     print()
-    self.db.child(folder_name).child("2-push").child(data_name).child(direction).push(data)
+    self.db.child(folder_name).child("2-push").child(version_number).child(data_name).child(direction).push(data)
   
-  def send_image_to_firebase(self, path, image_name):
-    print("Sending Image to Firebase Using Raspberry Pi")
-    print("—————————————-")
-    print()
+  def send_image_to_firebase(self, path, image_name, timestamp, trial_name, number):
     self.storage.child(image_name).put(path)
     storage_url = self.storage.child(image_name).get_url(None)
-    self.db.child("images").child("1-set").set(storage_url)
-    self.db.child("images").child("2-push").push(storage_url)
+    entry = {"Time": timestamp, "url": storage_url, "Number": number}
+    foldername = "{TrialName}-images".format(TrialName = trial_name)
+    self.db.child(foldername).child("2-push").push(entry)
     
     
 

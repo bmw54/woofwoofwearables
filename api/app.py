@@ -1,7 +1,7 @@
 from flask import Flask, send_from_directory
 from flask_restful import Api, Resource, reqparse
 from flask_cors import CORS #comment this on deployment
-from FirebaseApiHandler import TimeSeriesApiHandler, ImageApiHandler, DataApiHandler, AveragesHandler, VelocityHandler
+from FirebaseApiHandler import *
 
 app = Flask(__name__, static_url_path='', static_folder='frontend/build') # should i change this?
 CORS(app) #comment this on deployment
@@ -16,3 +16,13 @@ api.add_resource(ImageApiHandler, '/firebase/images')
 api.add_resource(DataApiHandler, '/firebase/<string:folder_name>/<int:data_num>')
 api.add_resource(AveragesHandler, '/firebase/averages/<string:folder_name>/<string:data_name>/<string:direction>')
 api.add_resource(VelocityHandler, '/firebase/velocity/<string:folder_name>/<string:data_name>/<string:direction>')
+api.add_resource(PositionHandler, '/firebase/position/<string:folder_name>/<string:data_name>/<string:direction>')
+api.add_resource(FourierTransformHandler, '/firebase/fouriertransform/<string:folder_name>/<int:window_num>')
+
+api.add_resource(PitchesHandler, '/firebase/pitches/<string:folder_name>/<int:window_num>')
+api.add_resource(AnglesHandler, '/firebase/angles/<string:folder_name>/<int:window_num>')
+api.add_resource(FrequencyHandler, '/firebase/frequency/<string:folder_name>/<int:window_num>')
+api.add_resource(AmplitudeHandler, '/firebase/amplitude/<string:folder_name>/<int:window_num>')
+api.add_resource(SideBiasHandler, '/firebase/sidebias/<string:folder_name>/<int:window_num>')
+api.add_resource(MoodHandler, '/firebase/mood/<string:folder_name>/<int:window_num>')
+api.add_resource(HappyPhotoHandler, '/firebase/happyphoto/<string:folder_name>/<int:window_num>')
