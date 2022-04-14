@@ -1,12 +1,11 @@
-from dataclasses import dataclass
-from re import A, T
-from turtle import position
 from flask_restful import Api, Resource, reqparse
 from flask import jsonify
-from numpy import average
+import numpy as np
 from CalculationHandler import Calculation_Module
 import pyrebase
 import TwoIMUs
+import MoodClassifier
+import random
 
 
 class FirebaseConfig:
@@ -72,7 +71,6 @@ class FrequencyHandler(Resource):
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
     vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
     pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
-    print(vectors)
     frequency = calculation_module.calculate_frequency(angles, timestamps)
     response = jsonify(frequency)
     response.status_code = 200 # or 400 or whatever
@@ -101,6 +99,30 @@ class SideBiasHandler(Resource):
     response.status_code = 200 # or 400 or whatever
     return response
 
+class MoodHandler(Resource):
+  def get(self, folder_name, window_num):
+    calculation_module = Calculation_Module()
+    #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
+    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
+    side_bias = calculation_module.calculate_side_bias_from_vectors(vectors)
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
+    frequency = calculation_module.calculate_frequency(angles, timestamps)
+    amplitude = calculation_module.calculate_average_amplitude(angles)
+    mood = MoodClassifier.get_mood(frequency, amplitude, pitches, angles, side_bias)
+    response = jsonify(mood)
+    response.status_code = 200 # or 400 or whatever
+    return response
+
+class HappyPhotoHandler(Resource):
+  def get(self, folder_name, window_num):
+    window_num_list = [0,1,2,3,4,5]
+    window_num = random.choice(window_num_list)
+    image_url = list(FirebaseConfig.db.child("harnessrunzero-images").child("2-push").get().val().values())[window_num]['url']
+    print(image_url)
+    response = jsonify(image_url)
+    response.status_code = 200 # or 400 or whatever
+    return response
+
 class ImageApiHandler(Resource):
   def get(self):
     data = FirebaseConfig.db.child("images").child("1-set").get().val()
@@ -114,6 +136,8 @@ class DataApiHandler(Resource):
     response = jsonify(data)
     response.status_code = 200 # or 400 or whatever
     return response
+
+
 
 class AveragesHandler(Resource):
   def get(self, folder_name, data_name, direction):
@@ -143,11 +167,16 @@ class PositionHandler(Resource):
     response.status_code = 200 # or 400 or whatever
     return response
 
-class HappyPhotoHandler(Resource):
-  def get(self, folder_name, timestamp):
+
+class FourierTransformHandler(Resource):
+  def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
-    data = list(FirebaseConfig.db.child(folder_name).child("2-push").child(data_name).child(direction).get().val().values())
-    positions = calculation_module.get_position_from_acceleration(data)
-    response = jsonify(positions)
+    #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
+    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
+    #print(vectors)
+    calculation_module.calculate_ft(angles, timestamps)
+    response = jsonify(0)
     response.status_code = 200 # or 400 or whatever
     return response
+
