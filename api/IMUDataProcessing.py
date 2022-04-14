@@ -189,8 +189,7 @@ def getTimeSeries(read_data):
 
     raise ValueError("Error reading timeseries. getTimeSeries doesn't recognize the given version:", version)
 
-
-def reorganizeData(read_data, start=0, stop=-1):
+def reorganizeData(read_data):
     """
     Input: read_data - the data read from firebase in dictionary form
 
@@ -211,12 +210,8 @@ def reorganizeData(read_data, start=0, stop=-1):
     timeSeriesList, labels = getTimeSeries(read_data)
     dataDictList = []
     for timeSeries in timeSeriesList:
-        timeCombined = combineTimeSeries(timeSeries)
-        startTime = timeCombined[start]
-        stopTime = timeCombined[stop]
-        croppedTimeSeries = [[time for time in series if startTime <= time <= stopTime] for series in timeSeries]
         # get list of timestamps measured by all sensors
-        timeIntersection = timeSeriesIntersection(croppedTimeSeries)
+        timeIntersection = timeSeriesIntersection(timeSeries)
         data = {}
         data['time'] = timeIntersection
         for sensor in ['accel', 'mag', 'gyro']:
@@ -240,7 +235,7 @@ def reorganizeData(read_data, start=0, stop=-1):
         dataDictList.append(data)
     return dataDictList
 
-def readAndInterpolateData(read_data, start=0, stop=-1):
+def readAndInterpolateData(read_data):
     """
     Input: read_data - the data read from firebase in dictionary form
 
@@ -263,7 +258,7 @@ def readAndInterpolateData(read_data, start=0, stop=-1):
 
     The output is sorted in the order in which the sample windows were recorded
     """
-    dataDicts = reorganizeData(read_data, start, stop)
+    dataDicts = reorganizeData(read_data)
     interpolatedData = []
     for data in dataDicts:
         times = data['time']
@@ -285,8 +280,8 @@ def readAndInterpolateData(read_data, start=0, stop=-1):
         interpolatedData.append([corrected_times, accl_intps, gyro_intps, mag_intps])
     return interpolatedData
 
-def filterReadData(read_data, start=0, stop=-1):
-    interpolatedData = readAndInterpolateData(read_data, start, stop)
+def filterReadData(read_data):
+    interpolatedData = readAndInterpolateData(read_data)
     filteredData = []
     for data in interpolatedData:
         # apply the kalman filter to the data from each window
@@ -295,9 +290,9 @@ def filterReadData(read_data, start=0, stop=-1):
         filteredData.append([corrected_times, qOut])
     return filteredData
 
-def filterFile(file_name, start=0, stop=-1):
+def filterFile(file_name):
     with open(file_name, "r") as read_file: read_data = json.load(read_file)
-    return filterReadData(read_data, start, stop)
+    return filterReadData(read_data)
 
 def plotFilterOutput(times, qOut):
     """
@@ -401,9 +396,6 @@ if __name__ == "__main__":
     for series in timeSeriesLists:
         checkTimeSeries(series, labels)
 
-    startIndex = 0
-    stopIndex = -1
-
-    filteredOutput = filterFile(JSONpath + file_name, startIndex, stopIndex)
+    filteredOutput = filterFile(JSONpath + file_name)
     for [times, qOut] in filteredOutput:
         plotFilterOutput(times, qOut)
