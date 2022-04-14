@@ -338,8 +338,8 @@ def plotFilterOutput(times, qOut):
 
     def plotOrientation(i=int):
         sampleNum = i%len(times)
-        # Vecs = (rotmats[sampleNum]@np.diag([1.5,0.5,0.5])).transpose()
-        Vecs = (rotmats[sampleNum]@np.diag([1,1,1])).transpose()
+        Vecs = (rotmats[sampleNum]@np.diag([1.5,0.5,0.5])).transpose()
+        # Vecs = (rotmats[sampleNum]@np.diag([1,1,1])).transpose()
         origin = np.zeros_like(Vecs) # origin point
         ax.clear()
         ax.set_xlim([-2, 2])
@@ -389,12 +389,13 @@ if __name__ == "__main__":
     # file_name = "Doherty-Hand.json"
     # file_name = "Doherty-Hand0330.json"
     file_name = "twoSensorsRun-Tail.json"
+    file_name = "Congo_4_12_22_idle2-body-cleaned.json"
     
     # vvv Uncomment to check data for missing entries and determine start and stop indices vvv
-    with open(file_name, "r") as read_file: read_data = json.load(read_file)
-    timeSeriesLists, labels = getTimeSeries(read_data)
-    for series in timeSeriesLists:
-        checkTimeSeries(series, labels)
+    # with open(JSONpath + file_name, "r") as read_file: read_data = json.load(read_file)
+    # timeSeriesLists, labels = getTimeSeries(read_data)
+    # for series in timeSeriesLists:
+    #     checkTimeSeries(series, labels)
 
     filteredOutput = filterFile(JSONpath + file_name)
     for [times, qOut] in filteredOutput:
