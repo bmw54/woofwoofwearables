@@ -19,6 +19,7 @@ for sensor in ['accel', 'mag', 'gyro']:
     for d in ['X', 'Y', 'Z']:
         sensorDict = read_data['3'][sensor][d]
 
+        # go in order from shortest window to longest
         windowNames = list(sensorDict)
         windowLengths = [len(sensorDict[wn]) for wn in windowNames]
         sortedWindowLenInds = [windowLengths.index(wl) for wl in sorted(windowLengths)]
@@ -39,6 +40,6 @@ string = input("write data to file %s? [y/n]" % (JSONpath + file_name + "-cleane
 
 if string == "y":
     print("writing")
-    with open(JSONpath + file_name + "-cleaned" + file_extension, "w") as fp: json.dump(read_data,fp) 
+    with open(JSONpath + file_name + "-cleaned" + file_extension, "w") as fp: json.dump(read_data,fp, indent=2) 
 else:
     print("not writing")
