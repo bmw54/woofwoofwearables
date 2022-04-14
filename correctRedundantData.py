@@ -9,7 +9,7 @@ please make sure the data is in the correct format and that it does have this re
 """
 
 
-JSONpath = '../SavedJSONs/'
+JSONpath = './SavedJSONs/'
 file_name = "Congo_4_12_22_idle2-body"
 file_extension = ".json"
 
