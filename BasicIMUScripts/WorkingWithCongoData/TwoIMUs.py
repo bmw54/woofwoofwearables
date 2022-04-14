@@ -11,8 +11,10 @@ import IMUDataProcessing
 
 PLOT = False
 
-tail_file = "twoSensorsRun-Tail.json"
-body_file = "twoSensorsRun-Body.json"
+JSONpath = '../../SavedJSONs'
+
+tail_file = JSONpath + "/" + "twoSensorsRun-Tail.json"
+body_file = JSONpath + "/" + "twoSensorsRun-Body.json"
 
 tailTimes, tailQuats = IMUDataProcessing.filterFile(tail_file)
 bodyTimes, bodyQuats = IMUDataProcessing.filterFile(body_file)

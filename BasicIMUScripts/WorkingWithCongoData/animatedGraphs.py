@@ -10,9 +10,9 @@ from datetime import datetime
 x = np.linspace(0, 10, num=11, endpoint=True)
 y = np.cos(-x**2/9.0)
 
+JSONpath = '../../SavedJSONs/'
 
-
-with open("woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_file:
+with open(JSONpath + "woof-woof-wearables-default-rtdb-2-push-export.json", "r") as read_file:
     read_data = json.load(read_file)
 
     accl = read_data['accel']
