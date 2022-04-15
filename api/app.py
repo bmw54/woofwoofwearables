@@ -26,3 +26,4 @@ api.add_resource(AmplitudeHandler, '/firebase/amplitude/<string:folder_name>/<in
 api.add_resource(SideBiasHandler, '/firebase/sidebias/<string:folder_name>/<int:window_num>')
 api.add_resource(MoodHandler, '/firebase/mood/<string:folder_name>/<int:window_num>')
 api.add_resource(HappyPhotoHandler, '/firebase/happyphoto/<string:folder_name>/<int:window_num>')
+api.add_resource(SpreadsheetHandler, '/firebase/spreedsheet/<int:window_num>')

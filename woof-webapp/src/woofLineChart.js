@@ -20,7 +20,7 @@ function WoofLineChart({ data_name, timeseries }) {
       <YAxis label={{ value: data_name, angle: -90, position: 'insideLeft' }} />
       <XAxis label={{ value: 'Time', offset: -5, position: 'insideBottom' }} />
       <Tooltip />
-      <Line type="monotone" dataKey="value" stroke="#8884d8" />
+      <Line type="monotone" dataKey="Value" stroke="#8884d8" />
     </LineChart>
   );
 }

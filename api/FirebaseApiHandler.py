@@ -8,6 +8,7 @@ import pyrebase
 import TwoIMUs
 import MoodClassifier
 import random
+import csv
 
 
 class FirebaseConfig:
@@ -191,3 +192,52 @@ class FourierTransformHandler(Resource):
     response.status_code = 200 # or 400 or whatever
     return response
 
+"""
+Spreadsheet - reach row is a different window
+row[0] = frequency
+row[1] = amplitude
+row[2] = pitches
+row[3] = angles
+row[4] = side_bias
+row[5] = mood
+row[6] = image_url
+row[7] = timestamps
+"""
+class SpreadsheetHandler(Resource):
+  def get(self, window_num):
+    spreedsheet_path = "test.csv"
+    with open(spreedsheet_path) as file_obj:
+      reader_obj = csv.reader(file_obj)
+      reader_list = list(reader_obj)
+      if window_num >= len(reader_list) - 1:
+        window_num = len(reader_list) -2
+      print(window_num)
+      row = reader_list[window_num + 1]
+      frequency = row[0]
+      amplitude = row[1]
+      pitches = row[2]
+      angles = row[3]
+      side_bias = row[4]
+      mood = row[5]
+      image_url = row[6]
+      time_stamps = row[7]
+      pitches_dict_list = []
+      angles_dict_list = []
+      time_stamps_list = time_stamps[1:-1].split(", ")
+      time_stamps = list(map(int,time_stamps_list ))
+
+      angles_list = list(map(int, angles[1:-1].split(", ")))
+      pitches_list = list(map(int, pitches[1:-1].split(", ")))
+
+
+      
+      # for i in range(len(time_stamps)):
+      #   datetime_obj = datetime.fromtimestamp(int(time_stamps[i])).time()
+      #   angle_dict = {"Time": str(datetime_obj), "Value": angles_list[i]}
+      #   pitches_dict = {"Time": str(datetime_obj), "Value": pitches_list[i]}
+      #   angles_dict_list.append(angle_dict)
+      #   pitches_dict_list.append(pitches_dict)
+      ret = [{"id" : "frequency", "value": frequency}, {"id": "pitches", "value":pitches_list}, {"id": "angles","value": angles_list}, {"id":"sidebias","value": side_bias}, {"id":"mood", "value":mood}, {"id":"imageurl", "value":image_url},{"id":"timestamps","value":time_stamps}]
+      response = jsonify(ret)
+      response.status_code = 200 # or 400 or whatever
+      return response

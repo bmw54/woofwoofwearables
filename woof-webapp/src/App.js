@@ -9,14 +9,34 @@ import WoofLineChart from './woofLineChart';
 import WoofBarChart from './woofBarChart';
 import axios from 'axios'
 
+let windowNum = 0;
+
 
 function App() {
 
   const [frequencyData, setFrequencyData] = useState([]);
   const [anglesData, setAnglesData] = useState([]);
   const [pitchesData, setPitchesData] = useState([]);
+  const [spreedsheetData, setSpreedsheetData] = useState([]);
+  
 
   useEffect(()=>{
+    let interval
+  
+    const fetchData = async () => {
+      axios.get('http://localhost:5000/firebase/spreedsheet/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      setSpreedsheetData(response.data)
+      windowNum ++;
+      }).catch(error => {
+        console.log(error)
+      })
+     }  
+     interval = setInterval(() => {
+      fetchData()
+    }, 10 * 1000)
+
+
     axios.get('http://localhost:5000/firebase/frequency/harnessrunzero/0').then(response => {
       console.log("SUCCESS", response.data)
       setFrequencyData(response.data)
@@ -64,7 +84,12 @@ function App() {
       {/* <ChartColoredFlag data_name={"test"} /> */}
       <WoofLineChart data_name={"Angles"} timeseries = {anglesData} />
       <WoofBarChart />
-
+      <ul>
+        {spreedsheetData.map((item) => (
+          <li>{item.value}</li>
+        ))}
+      </ul>
+      {/* <Home data = {spreedsheetData}/> */}
       <Outlet />
     </div>
   );
