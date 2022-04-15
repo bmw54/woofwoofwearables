@@ -76,10 +76,60 @@ def get_vectors_TEMP(body_data, tail_data):
     
     return xVecsList
 
+def get_quats_from_JSON():
+    JSONpath = '../SavedJSONs/'
+    tail_file = "april14run-tail.json"
+    body_file = "april14run-body.json"
+
+    # tailTimes, tailQuats = IMUDataProcessing.filterFile(tail_file)
+    # bodyTimes, bodyQuats = IMUDataProcessing.filterFile(body_file)
+
+    tailFilteredData = IMUDataProcessing.filterFile(JSONpath + tail_file)
+    bodyFilteredData = IMUDataProcessing.filterFile(JSONpath + body_file)
+
+    # Note: body and tail measurements aren't taken at the exact same time, and through the interpolation process, 
+    # they are slightly different lengths. I'm choosing to ignore this for now, but it should be addressed. The two
+    # series also don't seem to start at the same time. When the sample period is about 0.08 seconds, the body seems
+    # to start recording about 0.04 seconds before the tail
+
+    if len(tailFilteredData) != len(bodyFilteredData): 
+        raise ValueError("""Body and tail have different number of windows
+                            Body: %d windows
+                            Tail: %d windows""" % (len(bodyFilteredData), len(tailFilteredData)))
+
+    numWindows = len(tailFilteredData)
+
+    quatsList = []
+    timesList = []
+
+    for i in range(len(tailFilteredData)):
+        tailTimes, tailQuats = tailFilteredData[i]
+        bodyTimes, bodyQuats = bodyFilteredData[i]
+
+        if len(tailTimes) != len(bodyTimes): raise ValueError("""Window %d (out of %d) for Body and tail have different number of timestamps
+                                                                Body: %d timestamps
+                                                                Tail: %d timestamps""" % (i, numWindows, len(bodyTimes), len(tailTimes)))
+        
+        numTimes = len(bodyTimes)
+        
+        quatDiffs = sq.q_mult(sq.q_inv(bodyQuats), tailQuats)
+
+        # Matrix math to translate a vector reletive to the tail IMU into the basis of the body:
+        #           v2 = np.linalg.inv(B)@T@v
+        # T is the rotation matrix of the tail IMU (aka the change of basis matrix from the tail basis to the environment basis)
+        # B is the rotation matrix of the body IMU (aka the change of basis matrix from the body basis to the environment basis)
+        # This operation takes the vector, translates it into the environment basis, then into the body basis. The quaterion 
+        # operations are basically doing the same thing
+
+        quatsList.append(quatDiffs)
+        timesList.append(tailTimes)
+        # print(len(xVecs), len(timestamps))
+    return quatsList, timesList
+
 def get_vectors_from_JSON():
     JSONpath = '../SavedJSONs/'
-    tail_file = "Congo_4_12_22_idle2-tail-cleaned.json"
-    body_file = "Congo_4_12_22_idle2-body-cleaned.json"
+    tail_file = "april14run-tail.json"
+    body_file = "april14run-body.json"
 
     # tailTimes, tailQuats = IMUDataProcessing.filterFile(tail_file)
     # bodyTimes, bodyQuats = IMUDataProcessing.filterFile(body_file)
@@ -111,12 +161,6 @@ def get_vectors_from_JSON():
                                                                 Tail: %d timestamps""" % (i, numWindows, len(bodyTimes), len(tailTimes)))
         
         numTimes = len(bodyTimes)
-
-        for j in range(numTimes):
-            if tailTimes[j] != bodyTimes[j]: 
-                raise ValueError("""Window %d (out of %d), timestamp %d (out of %d) for Body and tail are different
-                                    Body: %d timestamps
-                                    Tail: %d timestamps""" % (i, numWindows, j, numTimes, bodyTimes[j], tailTimes[j]))
         
         quatDiffs = sq.q_mult(sq.q_inv(bodyQuats), tailQuats)
 

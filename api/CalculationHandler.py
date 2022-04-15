@@ -8,6 +8,7 @@ import matplotlib.animation as ani
 from mpl_toolkits.mplot3d import Axes3D
 # from IPython import display
 import TwoIMUs
+import IMUDataProcessing
 
 class Calculation_Module:
 
@@ -205,6 +206,9 @@ if __name__ == '__main__':
     # ch.calculate_fft(angles, timestamps)
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
+
     vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
+    quatsList, timestampsList = TwoIMUs.get_quats_from_JSON()
+    IMUDataProcessing.plotFilterOutput(timestampsList[0], quatsList[0])
     calculation_module.plot_vectors(vectorsList[0], timestampsList[0])
 
