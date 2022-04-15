@@ -1,3 +1,4 @@
+from tkinter import W
 from flask_restful import Api, Resource, reqparse
 from flask import jsonify
 import numpy as np
@@ -48,14 +49,14 @@ class AnglesHandler(Resource):
   def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
-    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
-    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
+    vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectorsList[window_num])
     ret = []
-    for i in range(len(timestamps)):
-      datetime_obj = datetime.fromtimestamp(int(timestamps[i])).time().second()
+    for i in range(len(timestampsList[window_num])):
+      datetime_obj = datetime.fromtimestamp(int(timestampsList[window_num][i])).time()
       a_dict = {"Time": str(datetime_obj), "Value": angles[i]}
       ret.append(a_dict)
-    print(type(timestamps))
+    print(type(timestampsList[window_num]))
     response = jsonify(ret)
     response.status_code = 200 # or 400 or whatever
     return response
@@ -64,14 +65,14 @@ class PitchesHandler(Resource):
   def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
-    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
-    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
+    vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectorsList[window_num])
     ret = []
-    for i in range(len(timestamps)):
-      datetime_obj = datetime.fromtimestamp(int(timestamps[i])).time()
+    for i in range(len(timestampsList[window_num])):
+      datetime_obj = datetime.fromtimestamp(int(timestampsList[window_num][i])).time()
       a_dict = {"Time": str(datetime_obj), "Value": pitches[i]}
       ret.append(a_dict)
-    print(type(timestamps))
+    print(type(timestampsList[window_num]))
     response = jsonify(ret)
     response.status_code = 200 # or 400 or whatever
     return response
@@ -80,9 +81,9 @@ class FrequencyHandler(Resource):
   def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
-    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
-    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
-    frequency = calculation_module.calculate_frequency(angles, timestamps)
+    vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectorsList[window_num])
+    frequency = calculation_module.calculate_frequency(angles, timestampsList[window_num])
     response = jsonify(frequency)
     response.status_code = 200 # or 400 or whatever
     return response
@@ -91,9 +92,8 @@ class AmplitudeHandler(Resource):
   def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
-    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
-    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
-    print(vectors)
+    vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectorsList[window_num])
     amplitude = calculation_module.calculate_average_amplitude(angles)
     response = jsonify(amplitude)
     response.status_code = 200 # or 400 or whatever
@@ -103,9 +103,9 @@ class SideBiasHandler(Resource):
   def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
-    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
-    side_bias = calculation_module.calculate_side_bias_from_vectors(vectors)
-    print(vectors)
+    vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
+    side_bias = calculation_module.calculate_side_bias_from_vectors(vectorsList[window_num])
+    print(vectorsList[window_num])
     response = jsonify(side_bias)
     response.status_code = 200 # or 400 or whatever
     return response
@@ -114,10 +114,10 @@ class MoodHandler(Resource):
   def get(self, folder_name, window_num):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
-    vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
-    side_bias = calculation_module.calculate_side_bias_from_vectors(vectors)
-    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
-    frequency = calculation_module.calculate_frequency(angles, timestamps)
+    vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
+    side_bias = calculation_module.calculate_side_bias_from_vectors(vectorsList[window_num])
+    pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectorsList[window_num])
+    frequency = calculation_module.calculate_frequency(angles, timestampsList[window_num])
     amplitude = calculation_module.calculate_average_amplitude(angles)
     mood = MoodClassifier.get_mood(frequency, amplitude, pitches, angles, side_bias)
     response = jsonify(mood)
