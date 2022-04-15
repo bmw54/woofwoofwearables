@@ -7,9 +7,38 @@ import { LinkContainer } from 'react-router-bootstrap'
 import ChartColoredFlag from './chartColoredFlag';
 import WoofLineChart from './woofLineChart';
 import WoofBarChart from './woofBarChart';
+import axios from 'axios'
 
 
 function App() {
+
+  const [frequencyData, setFrequencyData] = useState([]);
+  const [anglesData, setAnglesData] = useState([]);
+  const [pitchesData, setPitchesData] = useState([]);
+
+  useEffect(()=>{
+    axios.get('http://localhost:5000/firebase/frequency/harnessrunzero/0').then(response => {
+      console.log("SUCCESS", response.data)
+      setFrequencyData(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+
+    axios.get('http://localhost:5000/firebase/angles/harnessrunzero/0').then(response => {
+      console.log("SUCCESS", response.data)
+      setAnglesData(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+
+    axios.get('http://localhost:5000/firebase/pitches/harnessrunzero/0').then(response => {
+      console.log("SUCCESS", response.data)
+      setPitchesData(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+  }, [])
+
   return (
     <div className='app'>
       {/* <nav
@@ -33,7 +62,7 @@ function App() {
         <div>Profile</div>
       </div>
       {/* <ChartColoredFlag data_name={"test"} /> */}
-      <WoofLineChart data_name={"test"} />
+      <WoofLineChart data_name={"Angles"} timeseries = {anglesData} />
       <WoofBarChart />
 
       <Outlet />

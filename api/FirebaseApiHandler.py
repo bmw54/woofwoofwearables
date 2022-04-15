@@ -1,6 +1,7 @@
 from flask_restful import Api, Resource, reqparse
 from flask import jsonify
 import numpy as np
+from datetime import datetime
 from CalculationHandler import Calculation_Module
 import pyrebase
 import TwoIMUs
@@ -37,7 +38,7 @@ class FirebaseConfig:
 class TimeSeriesApiHandler(Resource):
   def get(self, folder_name, data_name, direction):
     tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
-    response_dict = {"Tail": tail_data, "Body" : body_data}
+    response_dict = {"Tail": tail_data.toList(), "Body" : body_data.toList()}
     response = jsonify(response_dict)
     response.status_code = 200 # or 400 or whatever
     return response
@@ -48,9 +49,14 @@ class AnglesHandler(Resource):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
     vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
-    print(vectors)
     pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
-    response = jsonify(angles)
+    ret = []
+    for i in range(len(timestamps)):
+      datetime_obj = datetime.fromtimestamp(int(timestamps[i])).time().second()
+      a_dict = {"Time": str(datetime_obj), "Value": angles[i]}
+      ret.append(a_dict)
+    print(type(timestamps))
+    response = jsonify(ret)
     response.status_code = 200 # or 400 or whatever
     return response
 
@@ -59,9 +65,14 @@ class PitchesHandler(Resource):
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
     vectors, timestamps = TwoIMUs.get_vectors_from_JSON()
-    print(vectors)
     pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectors)
-    response = jsonify(pitches)
+    ret = []
+    for i in range(len(timestamps)):
+      datetime_obj = datetime.fromtimestamp(int(timestamps[i])).time()
+      a_dict = {"Time": str(datetime_obj), "Value": pitches[i]}
+      ret.append(a_dict)
+    print(type(timestamps))
+    response = jsonify(ret)
     response.status_code = 200 # or 400 or whatever
     return response
   

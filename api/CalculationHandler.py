@@ -1,4 +1,3 @@
-import scipy.integrate
 import numpy as np
 import math as m
 from scipy.fft import fft, fftfreq
@@ -6,7 +5,6 @@ import matplotlib.pyplot as plt
 from scipy.signal import blackman
 import matplotlib.animation as ani
 from mpl_toolkits.mplot3d import Axes3D
-from IPython import display
 import TwoIMUs
 
 class Calculation_Module:
@@ -36,27 +34,27 @@ class Calculation_Module:
             ret.append({"Time": beginning_timestamps[k], "Value": averages[k]})
         return ret
         
-    def get_velocity_from_acceleration(self, acceleration_timeseries):
-        timestamps = [d['Time'] for d in acceleration_timeseries]
-        values = [d['Value'] for d in acceleration_timeseries]
-        velocity = scipy.integrate.cumtrapz(values, x=timestamps)
-        ret = []
-        for k in range(0, len(velocity)):
-            ret.append({"Time": timestamps[k], "Value": velocity[k]})
-        return ret
+    # def get_velocity_from_acceleration(self, acceleration_timeseries):
+    #     timestamps = [d['Time'] for d in acceleration_timeseries]
+    #     values = [d['Value'] for d in acceleration_timeseries]
+    #     velocity = scipy.integrate.cumtrapz(values, x=timestamps)
+    #     ret = []
+    #     for k in range(0, len(velocity)):
+    #         ret.append({"Time": timestamps[k], "Value": velocity[k]})
+    #     return ret
 
-    def get_position_from_acceleration(self, acceleration_timeseries):
-        timestamps = [d['Time'] for d in acceleration_timeseries]
-        values = [d['Value'] for d in acceleration_timeseries]
-        velocity = scipy.integrate.cumtrapz(values, x=timestamps)
-        print(len(velocity))
-        print(len(timestamps))
-        timestamps.pop()
-        position = scipy.integrate.cumtrapz(velocity, x=timestamps)
-        ret = []
-        for k in range(0, len(position)):
-            ret.append({"Time": timestamps[k], "Value": position[k]})
-        return ret
+    # def get_position_from_acceleration(self, acceleration_timeseries):
+    #     timestamps = [d['Time'] for d in acceleration_timeseries]
+    #     values = [d['Value'] for d in acceleration_timeseries]
+    #     velocity = scipy.integrate.cumtrapz(values, x=timestamps)
+    #     print(len(velocity))
+    #     print(len(timestamps))
+    #     timestamps.pop()
+    #     position = scipy.integrate.cumtrapz(velocity, x=timestamps)
+    #     ret = []
+    #     for k in range(0, len(position)):
+    #         ret.append({"Time": timestamps[k], "Value": position[k]})
+    #     return ret
     
     def calculate_pitch_from_vector(self, vector):
         angle = m.atan(vector[2] / vector[1]);
@@ -172,10 +170,10 @@ class Calculation_Module:
         ax.set_xlim([0, 2])
         ax.set_ylim([0, 2])
         ax.set_zlim([0, 2])
-        print(vectors[:,0])
+        print(vectors[1])
     
         vlength=np.linalg.norm(vectors[0])
-        ax.quiver(*origin,vectors[0][0],vectors[0][1],vectors[0][2],
+        ax.quiver(*origin,vectors[1][0],vectors[1][1],vectors[1][2],
                 pivot='tail',length=vlength,arrow_length_ratio=0.3/vlength)
         ax.set_box_aspect((1, 1, 1))  # aspect ratio is 1:1:1 in data space
         ax.set_xlabel('X') # X-axis seems to be North

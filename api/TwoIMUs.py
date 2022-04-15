@@ -68,5 +68,4 @@ def get_vectors_from_JSON():
     rotMats = [sq.convert(q) for q in quatDiffs]
     xVecs = [rm[:,0] for rm in rotMats] # multiplying an x vector by a matrix is the same as just reading the first column of that matrix
     timestamps = tailTimes[:numPoints] + bodyTimes[:numPoints] / 2
-    print(len(xVecs), len(timestamps))
     return xVecs, timestamps
