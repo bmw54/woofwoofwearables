@@ -17,46 +17,70 @@ function App() {
   const [frequencyData, setFrequencyData] = useState([]);
   const [anglesData, setAnglesData] = useState([]);
   const [pitchesData, setPitchesData] = useState([]);
-  const [spreedsheetData, setSpreedsheetData] = useState([]);
+  const [amplitudeData, setAmplitudeData] = useState([]);
+  const [sideBiasData, setSideBiasData] = useState([]);
+  const [moodData, setMoodData] = useState([]);
+  const [imageUrl, setImageUrl] = useState([]);
   
 
   useEffect(()=>{
     let interval
   
     const fetchData = async () => {
-      axios.get('http://localhost:5000/firebase/spreedsheet/' + windowNum).then(response => {
+      axios.get('http://localhost:5000/spreadsheet/frequency/' + windowNum).then(response => {
       console.log("SUCCESS", response.data)
-      setSpreedsheetData(response.data)
-      windowNum ++;
+      setFrequencyData(frequencyData.push(response.data[0]))
       }).catch(error => {
         console.log(error)
       })
+
+      axios.get('http://localhost:5000/spreadsheet/amplitude/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      setAmplitudeData(amplitudeData.push(response.data[0]))
+      }).catch(error => {
+        console.log(error)
+      })
+
+      axios.get('http://localhost:5000/spreadsheet/sidebias/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      setSideBiasData(sideBiasData.push(response.data[0]))
+      }).catch(error => {
+        console.log(error)
+      })
+
+      axios.get('http://localhost:5000/spreadsheet/mood/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      setMoodData(moodData.push(response.data[0]))
+      }).catch(error => {
+        console.log(error)
+      })
+
+      axios.get('http://localhost:5000/spreadsheet/happyphoto/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      setImageUrl(imageUrl.push(response.data[0]))
+      }).catch(error => {
+        console.log(error)
+      })
+
+      axios.get('http://localhost:5000/spreadsheet/angles/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      setAnglesData(response.data)
+      }).catch(error => {
+        console.log(error)
+      })
+
+      axios.get('http://localhost:5000/spreadsheet/pitches/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      setPitchesData(response.data)
+      }).catch(error => {
+        console.log(error)
+      })
+
+      windowNum ++;
      }  
      interval = setInterval(() => {
       fetchData()
     }, 10 * 1000)
-
-
-    axios.get('http://localhost:5000/firebase/frequency/harnessrunzero/0').then(response => {
-      console.log("SUCCESS", response.data)
-      setFrequencyData(response.data)
-    }).catch(error => {
-      console.log(error)
-    })
-
-    axios.get('http://localhost:5000/firebase/angles/harnessrunzero/0').then(response => {
-      console.log("SUCCESS", response.data)
-      setAnglesData(response.data)
-    }).catch(error => {
-      console.log(error)
-    })
-
-    axios.get('http://localhost:5000/firebase/pitches/harnessrunzero/0').then(response => {
-      console.log("SUCCESS", response.data)
-      setPitchesData(response.data)
-    }).catch(error => {
-      console.log(error)
-    })
   }, [])
 
   return (
@@ -83,13 +107,13 @@ function App() {
       </div>
       {/* <ChartColoredFlag data_name={"test"} /> */}
       <WoofLineChart data_name={"Angles"} timeseries = {anglesData} />
+      <WoofLineChart data_name={"Pitches"} timeseries = {pitchesData} />
       <WoofBarChart />
-      <ul>
+      {/* <ul>
         {spreedsheetData.map((item) => (
           <li>{item.value}</li>
         ))}
-      </ul>
-      {/* <Home data = {spreedsheetData}/> */}
+      </ul> */}
       <Outlet />
     </div>
   );
