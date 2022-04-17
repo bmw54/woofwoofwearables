@@ -59,14 +59,15 @@ class Calculation_Module:
     
     def calculate_pitch_from_vector(self, vector):
         angle = m.atan(vector[2] / vector[1]);
-        return angle
+
+        return m.degrees(angle)
     
     def calculate_angle_two_vectors(self, a_vec, b_vec):
         a_mag = np.linalg.norm(a_vec)
         b_mag = np.linalg.norm(b_vec)
         dot = np.dot(a_vec, b_vec)
         angle = np.arccos(dot/(a_mag * b_mag))
-        return angle
+        return m.degrees(angle)
 
     def get_pitches_angles_from_vectors(self, vectors):
         pitches = []

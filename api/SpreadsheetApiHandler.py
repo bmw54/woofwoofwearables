@@ -16,6 +16,7 @@ row[5] = mood
 row[6] = image_url
 row[7] = timestamps
 """
+
 data_col_list = ["frequency", "amplitude", "pitches", "angles", "side-bias", "mood", "image-url", "timestamps"]
 spreedsheet_path = "test.csv"
 

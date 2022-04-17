@@ -8,6 +8,9 @@ import ChartColoredFlag from './chartColoredFlag';
 import WoofLineChart from './woofLineChart';
 import WoofBarChart from './woofBarChart';
 import axios from 'axios'
+import { Grid, GridSpan } from '@react-ui-org/react-ui';
+import WoofMoodDisplay from './WoofMoodDisplay';
+
 
 let windowNum = 0;
 
@@ -21,6 +24,11 @@ function App() {
   const [sideBiasData, setSideBiasData] = useState([]);
   const [moodData, setMoodData] = useState([]);
   const [imageUrl, setImageUrl] = useState([]);
+
+  let mood = [];
+  let sideBias = [];
+  let amplitude = [];
+  let frequency = [];
   
 
   useEffect(()=>{
@@ -29,35 +37,39 @@ function App() {
     const fetchData = async () => {
       axios.get('http://localhost:5000/spreadsheet/frequency/' + windowNum).then(response => {
       console.log("SUCCESS", response.data)
-      setFrequencyData(frequencyData.push(response.data[0]))
+      frequency = frequency.concat(response.data[0])
+      setFrequencyData(frequency)
       }).catch(error => {
         console.log(error)
       })
 
       axios.get('http://localhost:5000/spreadsheet/amplitude/' + windowNum).then(response => {
       console.log("SUCCESS", response.data)
-      setAmplitudeData(amplitudeData.push(response.data[0]))
+      amplitude = amplitude.concat(response.data[0])
+      setAmplitudeData(amplitude)
       }).catch(error => {
         console.log(error)
       })
 
       axios.get('http://localhost:5000/spreadsheet/sidebias/' + windowNum).then(response => {
       console.log("SUCCESS", response.data)
-      setSideBiasData(sideBiasData.push(response.data[0]))
+      sideBias = sideBias.concat(response.data[0])
+      setSideBiasData(sideBias)
       }).catch(error => {
         console.log(error)
       })
 
       axios.get('http://localhost:5000/spreadsheet/mood/' + windowNum).then(response => {
       console.log("SUCCESS", response.data)
-      setMoodData(moodData.push(response.data[0]))
+      mood = mood.concat(response.data[0])
+      setMoodData(mood)
       }).catch(error => {
         console.log(error)
       })
 
       axios.get('http://localhost:5000/spreadsheet/happyphoto/' + windowNum).then(response => {
       console.log("SUCCESS", response.data)
-      setImageUrl(imageUrl.push(response.data[0]))
+      setImageUrl(response.data)
       }).catch(error => {
         console.log(error)
       })
@@ -75,12 +87,17 @@ function App() {
       }).catch(error => {
         console.log(error)
       })
-
+      if(windowNum >= 8){
+        clearInterval(interval);
+      }else{
       windowNum ++;
+      }
+      
      }  
      interval = setInterval(() => {
       fetchData()
     }, 10 * 1000)
+
   }, [])
 
   return (
@@ -105,15 +122,15 @@ function App() {
         </Nav>
         <div>Profile</div>
       </div>
+      <Grid columns="1fr 1fr 1fr">
+        <WoofMoodDisplay moodData = {moodData}/>
+        <WoofLineChart data_name={"Angles"} timeseries = {anglesData} />
+        <WoofLineChart data_name={"Pitches"} timeseries = {pitchesData} />
+        <WoofBarChart data_name = {"Side Bias"} timeseries = {sideBiasData} />
+        <WoofBarChart data_name = {"Frequency"} timeseries = {frequencyData} />
+        <WoofBarChart data_name = {"Amplitude"} timeseries = {amplitudeData} />
+      </Grid>
       {/* <ChartColoredFlag data_name={"test"} /> */}
-      <WoofLineChart data_name={"Angles"} timeseries = {anglesData} />
-      <WoofLineChart data_name={"Pitches"} timeseries = {pitchesData} />
-      <WoofBarChart />
-      {/* <ul>
-        {spreedsheetData.map((item) => (
-          <li>{item.value}</li>
-        ))}
-      </ul> */}
       <Outlet />
     </div>
   );
