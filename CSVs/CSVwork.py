@@ -11,32 +11,9 @@ import json
 
 JSON_PATH = "../SavedJSONs/"
 CSV_PATH = "./"
-tail_file_name = "butterbean_4_16_happy-tail.json"
-body_file_name = "butterbean_4_16_happy-body.json"
-write_file_name = "butterbean_4_16_happy.csv"
-
-# with open(JSON_PATH+tail_file_name, "r") as read_file: read_data = json.load(read_file)
-# version = IMUDataProcessing.dataVersion(read_data)
-# # use the accelerometer X sensor as a reference to determnie the number of windows
-# numberOfWindows = len(read_data[str(version)]['accel']['X'])
-# timeSeriesList = []
-# for windowNum in range(numberOfWindows):
-#     newTimeSeries = []
-#     for sensor in ['accel', 'mag', 'gyro']:
-#         for d in ['X', 'Y', 'Z']:
-#             sensorDict = read_data[str(version)][sensor][d]
-#             if windowNum >= len(sensorDict): continue
-#             windowName = list(sensorDict)[windowNum]
-#             windowData = sensorDict[windowName]
-#             newTimeList = [wd['Time'] for wd in windowData]
-#             newTimeList.sort()
-#             newTimeSeries += [newTimeList]
-#             print("Sensor %s%s window %d starts at time: %d" %(sensor, d, windowNum, newTimeList[0]-1650138015))
-#     timeSeriesList += [newTimeSeries]
-# timeSeriesList.sort()
-
-
-# quit()
+tail_file_name = "butterbean_4_16_excited-tail.json"
+body_file_name = "butterbean_4_16_excited-body.json"
+write_file_name = "butterbean_4_16_excited.csv"
 
 tailFilteredData = IMUDataProcessing.filterFile(JSON_PATH + tail_file_name)
 bodyFilteredData = IMUDataProcessing.filterFile(JSON_PATH + body_file_name)
