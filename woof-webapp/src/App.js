@@ -8,6 +8,9 @@ import ChartColoredFlag from './chartColoredFlag';
 import WoofLineChart from './woofLineChart';
 import WoofBarChart from './woofBarChart';
 import axios from 'axios'
+import { Grid, GridSpan } from '@react-ui-org/react-ui';
+import WoofMoodDisplay from './WoofMoodDisplay';
+
 
 let windowNum = 0;
 
@@ -17,46 +20,84 @@ function App() {
   const [frequencyData, setFrequencyData] = useState([]);
   const [anglesData, setAnglesData] = useState([]);
   const [pitchesData, setPitchesData] = useState([]);
-  const [spreedsheetData, setSpreedsheetData] = useState([]);
+  const [amplitudeData, setAmplitudeData] = useState([]);
+  const [sideBiasData, setSideBiasData] = useState([]);
+  const [moodData, setMoodData] = useState([]);
+  const [imageUrl, setImageUrl] = useState([]);
+
+  let mood = [];
+  let sideBias = [];
+  let amplitude = [];
+  let frequency = [];
   
 
   useEffect(()=>{
     let interval
   
     const fetchData = async () => {
-      axios.get('http://localhost:5000/firebase/spreedsheet/' + windowNum).then(response => {
+      axios.get('http://localhost:5000/spreadsheet/frequency/' + windowNum).then(response => {
       console.log("SUCCESS", response.data)
-      setSpreedsheetData(response.data)
-      windowNum ++;
+      frequency = frequency.concat(response.data[0])
+      setFrequencyData(frequency)
       }).catch(error => {
         console.log(error)
       })
+
+      axios.get('http://localhost:5000/spreadsheet/amplitude/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      amplitude = amplitude.concat(response.data[0])
+      setAmplitudeData(amplitude)
+      }).catch(error => {
+        console.log(error)
+      })
+
+      axios.get('http://localhost:5000/spreadsheet/sidebias/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      sideBias = sideBias.concat(response.data[0])
+      setSideBiasData(sideBias)
+      }).catch(error => {
+        console.log(error)
+      })
+
+      axios.get('http://localhost:5000/spreadsheet/mood/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      mood = mood.concat(response.data[0])
+      setMoodData(mood)
+      }).catch(error => {
+        console.log(error)
+      })
+
+      axios.get('http://localhost:5000/spreadsheet/happyphoto/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      setImageUrl(response.data)
+      }).catch(error => {
+        console.log(error)
+      })
+
+      axios.get('http://localhost:5000/spreadsheet/angles/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      setAnglesData(response.data)
+      }).catch(error => {
+        console.log(error)
+      })
+
+      axios.get('http://localhost:5000/spreadsheet/pitches/' + windowNum).then(response => {
+      console.log("SUCCESS", response.data)
+      setPitchesData(response.data)
+      }).catch(error => {
+        console.log(error)
+      })
+      if(windowNum >= 8){
+        clearInterval(interval);
+      }else{
+      windowNum ++;
+      }
+      
      }  
      interval = setInterval(() => {
       fetchData()
     }, 10 * 1000)
 
-
-    axios.get('http://localhost:5000/firebase/frequency/harnessrunzero/0').then(response => {
-      console.log("SUCCESS", response.data)
-      setFrequencyData(response.data)
-    }).catch(error => {
-      console.log(error)
-    })
-
-    axios.get('http://localhost:5000/firebase/angles/harnessrunzero/0').then(response => {
-      console.log("SUCCESS", response.data)
-      setAnglesData(response.data)
-    }).catch(error => {
-      console.log(error)
-    })
-
-    axios.get('http://localhost:5000/firebase/pitches/harnessrunzero/0').then(response => {
-      console.log("SUCCESS", response.data)
-      setPitchesData(response.data)
-    }).catch(error => {
-      console.log(error)
-    })
   }, [])
 
   return (
@@ -81,15 +122,15 @@ function App() {
         </Nav>
         <div>Profile</div>
       </div>
+      <Grid columns="1fr 1fr 1fr">
+        <WoofMoodDisplay moodData = {moodData}/>
+        <WoofLineChart data_name={"Angles"} timeseries = {anglesData} />
+        <WoofLineChart data_name={"Pitches"} timeseries = {pitchesData} />
+        <WoofBarChart data_name = {"Side Bias"} timeseries = {sideBiasData} />
+        <WoofBarChart data_name = {"Frequency"} timeseries = {frequencyData} />
+        <WoofBarChart data_name = {"Amplitude"} timeseries = {amplitudeData} />
+      </Grid>
       {/* <ChartColoredFlag data_name={"test"} /> */}
-      <WoofLineChart data_name={"Angles"} timeseries = {anglesData} />
-      <WoofBarChart />
-      <ul>
-        {spreedsheetData.map((item) => (
-          <li>{item.value}</li>
-        ))}
-      </ul>
-      {/* <Home data = {spreedsheetData}/> */}
       <Outlet />
     </div>
   );

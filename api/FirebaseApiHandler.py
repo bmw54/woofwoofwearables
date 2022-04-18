@@ -53,11 +53,12 @@ class AnglesHandler(Resource):
     vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
     pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectorsList[window_num])
     ret = []
+    first_time = timestampsList[window_num][0]
     for i in range(len(timestampsList[window_num])):
-      datetime_obj = datetime.fromtimestamp(int(timestampsList[window_num][i])).time()
-      a_dict = {"Time": str(datetime_obj), "Value": angles[i]}
+      seconds = timestampsList[window_num][i] - first_time
+      print(seconds)
+      a_dict = {"Time": round(seconds,1), "Value": angles[i]}
       ret.append(a_dict)
-    print(type(timestampsList[window_num]))
     response = jsonify(ret)
     response.status_code = 200 # or 400 or whatever
     return response
@@ -69,11 +70,12 @@ class PitchesHandler(Resource):
     vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
     pitches, angles = calculation_module.get_pitches_angles_from_vectors(vectorsList[window_num])
     ret = []
+    first_time = timestampsList[window_num][0]
     for i in range(len(timestampsList[window_num])):
-      datetime_obj = datetime.fromtimestamp(int(timestampsList[window_num][i])).time()
-      a_dict = {"Time": str(datetime_obj), "Value": pitches[i]}
+      seconds = timestampsList[window_num][i] - first_time
+      print(seconds)
+      a_dict = {"Time": round(seconds,1), "Value": pitches[i]}
       ret.append(a_dict)
-    print(type(timestampsList[window_num]))
     response = jsonify(ret)
     response.status_code = 200 # or 400 or whatever
     return response
