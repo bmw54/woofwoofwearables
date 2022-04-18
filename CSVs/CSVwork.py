@@ -6,12 +6,11 @@ import CalculationHandler
 import TwoIMUs
 import IMUDataProcessing
 import MoodClassifier
-import json
 
 
 JSON_PATH = "../SavedJSONs/"
 CSV_PATH = "./"
-tail_file_name = "butterbean_4_16_excited-tail.json"
+tail_file_name = "butterbean_4_16_excited-tail-corrected.json"
 body_file_name = "butterbean_4_16_excited-body.json"
 write_file_name = "butterbean_4_16_excited.csv"
 
