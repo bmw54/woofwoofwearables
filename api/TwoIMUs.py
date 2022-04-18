@@ -38,15 +38,11 @@ def get_quats_from_filtered_data(tailFilteredData, bodyFilteredData):
     quatsList = []
     timesList = []
 
-    # Note: body and tail measurements aren't taken at the exact same time, and through the interpolation process, 
-    # they are slightly different lengths. I'm choosing to ignore this for now, but it should be addressed. The two
-    # series also don't seem to start at the same time. When the sample period is about 0.08 seconds, the body seems
-    # to start recording about 0.04 seconds before the tail
-
+    # Note: body and tail measurements aren't taken at the exact same time.
+    # I'm choosing to ignore this for now.
     for i in range(len(tailFilteredData)):
         tailTimes, tailQuats = tailFilteredData[i]
         bodyTimes, bodyQuats = bodyFilteredData[i]
-        print(len(tailTimes), len(bodyTimes))
 
         if len(tailTimes) != len(bodyTimes): raise ValueError("""Window %d (out of %d) for Body and tail have different number of timestamps
                                                                 Body: %d timestamps
@@ -76,17 +72,12 @@ def get_vectors(body_data, tail_data):
     return xVecsList, timesList
 
 
-def get_quats_from_JSON():
-    JSONpath = '../SavedJSONs/'
-    tail_file = "april14run-tail.json"
-    body_file = "april14run-body.json"
-
-    tailFilteredData = IMUDataProcessing.filterFile(JSONpath + tail_file)
-    bodyFilteredData = IMUDataProcessing.filterFile(JSONpath + body_file)
-
+def get_quats_from_JSON(tail_file, body_file):
+    tailFilteredData = IMUDataProcessing.filterFile(tail_file)
+    bodyFilteredData = IMUDataProcessing.filterFile(body_file)
     return get_quats_from_filtered_data(tailFilteredData, bodyFilteredData)
 
-def get_vectors_from_JSON():
-    quatsList, timesList = get_quats_from_JSON()
+def get_vectors_from_JSON(tail_file, body_file):
+    quatsList, timesList = get_quats_from_JSON(tail_file, body_file)
     xVecsList = quats_to_vectors(quatsList)
     return xVecsList, timesList

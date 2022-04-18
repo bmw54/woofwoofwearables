@@ -205,8 +205,13 @@ if __name__ == '__main__':
     calculation_module = Calculation_Module()
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
 
-    vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
-    quatsList, timestampsList = TwoIMUs.get_quats_from_JSON()
-    # IMUDataProcessing.plotFilterOutput(timestampsList[0], quatsList[0])
+    JSONpath = '../SavedJSONs/'
+    tail_file = "butterbean_4_16_happy-tail.json"
+    body_file = "butterbean_4_16_happy-body.json"
+
+    quatsList, timestampsList = TwoIMUs.get_quats_from_JSON(JSONpath + tail_file, JSONpath + body_file)
+    vectorsList = TwoIMUs.quats_to_vectors(quatsList)
+    for i in range(len(timestampsList)):
+        IMUDataProcessing.plotFilterOutput(timestampsList[i], quatsList[i])
     # calculation_module.plot_vectors(vectorsList[0], timestampsList[0])
 
