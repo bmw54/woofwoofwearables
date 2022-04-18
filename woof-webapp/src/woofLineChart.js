@@ -13,15 +13,17 @@ import {
 function WoofLineChart({ data_name, timeseries }) {
 
   return (
-    <LineChart width={500} height={400} data={timeseries}
-      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="Time" />
-      <YAxis label={{ value: data_name, angle: -90, position: 'insideLeft' }} />
-      <XAxis label={{ value: 'Time', offset: -5, position: 'insideBottom' }} />
-      <Tooltip />
-      <Line type="monotone" dataKey="Value" stroke="#8884d8" />
-    </LineChart>
+
+    <div className="container">
+      <h3>{data_name}</h3>
+      <LineChart width={350} height={300} data={timeseries} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <YAxis label={{ value: "Degrees", angle: -90, position: 'insideLeft' }} />
+        <XAxis type = "number" dataKey = "Time" label={{ value: 'Seconds', offset: -10, position: 'insideBottom' }}/>
+        <Tooltip />
+        <Line type="monotone" dataKey="Value" stroke="#8884d8" />
+      </LineChart>
+    </div>
   );
 }
 export default WoofLineChart;
