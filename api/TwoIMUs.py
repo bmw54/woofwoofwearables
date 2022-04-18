@@ -23,7 +23,6 @@ def quats_to_vectors(quatsList):
                                     [0,0,-1]])
         
         rotMats = [SensorCorrection @ sq.convert(q) for q in quatDiffs]
-        # rotMats = [sq.convert(q) for q in quatDiffs]
         xVecs = [rm[:,0] for rm in rotMats] # multiplying an x vector by a matrix is the same as just reading the first column of that matrix
         xVecsList.append(xVecs)
     return xVecsList

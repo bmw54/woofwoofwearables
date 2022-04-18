@@ -206,8 +206,8 @@ if __name__ == '__main__':
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
 
     JSONpath = '../SavedJSONs/'
-    tail_file = "butterbean_4_16_happy-tail.json"
-    body_file = "butterbean_4_16_happy-body.json"
+    tail_file = "butterbean_4_16_idle-tail.json"
+    body_file = "butterbean_4_16_idle-body.json"
 
     quatsList, timestampsList = TwoIMUs.get_quats_from_JSON(JSONpath + tail_file, JSONpath + body_file)
     vectorsList = TwoIMUs.quats_to_vectors(quatsList)
