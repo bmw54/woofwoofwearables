@@ -206,7 +206,7 @@ if __name__ == '__main__':
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
 
     vectorsList, timestampsList = TwoIMUs.get_vectors_from_JSON()
-    # quatsList, timestampsList = TwoIMUs.get_quats_from_JSON()
+    quatsList, timestampsList = TwoIMUs.get_quats_from_JSON()
     # IMUDataProcessing.plotFilterOutput(timestampsList[0], quatsList[0])
-    calculation_module.plot_vectors(vectorsList[0], timestampsList[0])
+    # calculation_module.plot_vectors(vectorsList[0], timestampsList[0])
 
