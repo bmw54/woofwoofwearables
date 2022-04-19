@@ -58,15 +58,17 @@ class Calculation_Module:
     #     return ret
     
     def calculate_pitch_from_vector(self, vector):
-        angle = m.atan(vector[2] / vector[1]);
+        angle = m.atan(vector[2] / vector[1])
 
         return m.degrees(angle)
     
-    def calculate_angle_two_vectors(self, a_vec, b_vec):
-        a_mag = np.linalg.norm(a_vec)
-        b_mag = np.linalg.norm(b_vec)
-        dot = np.dot(a_vec, b_vec)
+    def calculate_angle_two_vectors(self, vector, projection):
+        a_mag = np.linalg.norm(vector)
+        b_mag = np.linalg.norm(projection)
+        dot = np.dot(vector, projection)
         angle = np.arccos(dot/(a_mag * b_mag))
+        if vector[0] > 0:
+            return m.degrees(angle) * -1
         return m.degrees(angle)
 
     def get_pitches_angles_from_vectors(self, vectors):
@@ -102,6 +104,7 @@ class Calculation_Module:
         return max_amp_freq
     
     def calculate_average_amplitude(self, angles):
+        # rms = np.sqrt(np.mean(np.square(angles-np.mean(angles))))
         rms = np.sqrt(np.mean(np.square(angles)))
         return rms
 
@@ -189,14 +192,16 @@ class Calculation_Module:
         plt.close()
 
 if __name__ == '__main__':
-    # ch = Calculation_Module()
-    # timestamps = np.arange(0, 2, 0.05)
-    # angles = 30 * np.cos(timestamps)
+    ch = Calculation_Module()
+    timestamps = np.arange(0, 2, 0.05)
+    angles = (30 * np.cos(timestamps))
 
     # frequency = ch.calculate_frequency(angles, timestamps)
     # print(frequency)
 
-    # amplitude = ch.calculate_average_amplitude(angles)
+    amplitude = ch.calculate_average_amplitude(angles)
+
+    print(amplitude)
     # print(amplitude)
 
     # side_bias  = ch.calculate_side_bias(angles)
@@ -207,11 +212,11 @@ if __name__ == '__main__':
     #tail_data, body_data = FirebaseConfig.get_tail_and_body_data_from_firebase(folder_name, data_name, direction)
 
     JSONpath = '../SavedJSONs/'
-    tail_file = "butterbean_4_16_idle-tail.json"
-    body_file = "butterbean_4_16_idle-body.json"
+    tail_file = "butterbean_4_16_alert-tail.json"
+    body_file = "butterbean_4_16_alert-body.json"
 
     quatsList, timestampsList = TwoIMUs.get_quats_from_JSON(JSONpath + tail_file, JSONpath + body_file)
-    vectorsList = TwoIMUs.quats_to_vectors(quatsList)
+    # vectorsList = TwoIMUs.quats_to_vectors(quatsList)
     for i in range(len(timestampsList)):
         IMUDataProcessing.plotFilterOutput(timestampsList[i], quatsList[i])
     # calculation_module.plot_vectors(vectorsList[0], timestampsList[0])
