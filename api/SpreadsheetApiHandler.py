@@ -29,7 +29,7 @@ class SpreadSheetReader:
                 window_num = len(reader_list) -2
             row = reader_list[window_num + 1]
             data = row[data_col_list.index(data_name)]
-            return data;
+            return data
 
 
 class AnglesHandler(Resource):
