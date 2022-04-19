@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import App1 from './App1';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Redirect } from "react-router-dom";
 import Trends from './routes/trends';
 import Log from './routes/log';
 import Logs from './routes/logs';
@@ -24,7 +24,7 @@ ReactDOM.render(
       } >
         <Route path="trends" element={<Trends />} />
         <Route path="logs" element={<Logs />}>
-          <Route path=":logId" element={<Log />} />
+          {/* <Route path=":logId" element={<Log />} /> */}
         </Route>
         <Route path="livestream" element={<Livestream />} />
         <Route
