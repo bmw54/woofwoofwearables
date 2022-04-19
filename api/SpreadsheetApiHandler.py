@@ -18,7 +18,7 @@ row[7] = timestamps
 """
 
 data_col_list = ["frequency", "amplitude", "pitches", "angles", "side-bias", "mood", "image-url", "timestamps"]
-spreedsheet_path = "test.csv"
+spreedsheet_path = "../CSVs/butterbean_4_16_happy.csv"
 
 class SpreadSheetReader:
     def get_data(data_name, window_num):
@@ -29,16 +29,16 @@ class SpreadSheetReader:
                 window_num = len(reader_list) -2
             row = reader_list[window_num + 1]
             data = row[data_col_list.index(data_name)]
-            return data
-
+            return data;
+ 
 
 class AnglesHandler(Resource):
     def get(self, window_num):
         angles = SpreadSheetReader.get_data('angles', window_num)
         time_stamps = SpreadSheetReader.get_data('timestamps', window_num)
         time_stamps_list = time_stamps[1:-1].split(", ")
-        time_stamps = list(map(int,time_stamps_list ))
-        angles = list(map(int, angles[1:-1].split(", ")))
+        time_stamps = list(map(float,time_stamps_list ))
+        angles = list(map(float, angles[1:-1].split(", ")))
         ret = []
         first_time = time_stamps[0]
         for i in range(len(time_stamps)):
@@ -54,8 +54,8 @@ class PitchesHandler(Resource):
         pitches = SpreadSheetReader.get_data('pitches', window_num)
         time_stamps = SpreadSheetReader.get_data('timestamps', window_num)
         time_stamps_list = time_stamps[1:-1].split(", ")
-        time_stamps = list(map(int,time_stamps_list ))
-        pitches = list(map(int, pitches[1:-1].split(", ")))
+        time_stamps = list(map(float,time_stamps_list ))
+        pitches = list(map(float, pitches[1:-1].split(", ")))
         ret = []
         first_time = time_stamps[0]
         for i in range(len(time_stamps)):
@@ -70,7 +70,7 @@ class FrequencyHandler(Resource):
     def get(self, window_num):
         time_stamps = SpreadSheetReader.get_data('timestamps', window_num)
         time_stamps_list = time_stamps[1:-1].split(", ")
-        time_stamps = list(map(int,time_stamps_list ))
+        time_stamps = list(map(float,time_stamps_list ))
         datetime_obj = datetime.fromtimestamp(int(time_stamps[0])).time()
         a_dict = {"Time": str(datetime_obj), "Value": float(SpreadSheetReader.get_data('frequency', window_num))}
         ret = [a_dict]
@@ -82,7 +82,7 @@ class AmplitudeHandler(Resource):
     def get(self, window_num):
         time_stamps = SpreadSheetReader.get_data('timestamps', window_num)
         time_stamps_list = time_stamps[1:-1].split(", ")
-        time_stamps = list(map(int,time_stamps_list ))
+        time_stamps = list(map(float,time_stamps_list ))
         datetime_obj = datetime.fromtimestamp(int(time_stamps[0])).time()
         a_dict = {"Time": str(datetime_obj), "Value": float(SpreadSheetReader.get_data('amplitude', window_num))}
         ret = [a_dict]
@@ -95,7 +95,7 @@ class SideBiasHandler(Resource):
     def get(self, window_num):
         time_stamps = SpreadSheetReader.get_data('timestamps', window_num)
         time_stamps_list = time_stamps[1:-1].split(", ")
-        time_stamps = list(map(int,time_stamps_list ))
+        time_stamps = list(map(float,time_stamps_list ))
         datetime_obj = datetime.fromtimestamp(int(time_stamps[0])).time()
         a_dict = {"Time": str(datetime_obj), "Value": float(SpreadSheetReader.get_data('side-bias', window_num))}
         ret = [a_dict]
@@ -107,7 +107,7 @@ class MoodHandler(Resource):
     def get(self, window_num):
         time_stamps = SpreadSheetReader.get_data('timestamps', window_num)
         time_stamps_list = time_stamps[1:-1].split(", ")
-        time_stamps = list(map(int,time_stamps_list ))
+        time_stamps = list(map(float,time_stamps_list ))
         datetime_obj = datetime.fromtimestamp(int(time_stamps[0])).time()
         a_dict = {"Time": str(datetime_obj), "Value": SpreadSheetReader.get_data('mood', window_num)}
         ret = [a_dict]
@@ -119,7 +119,7 @@ class HappyPhotoHandler(Resource):
     def get(self, window_num):
         time_stamps = SpreadSheetReader.get_data('timestamps', window_num)
         time_stamps_list = time_stamps[1:-1].split(", ")
-        time_stamps = list(map(int,time_stamps_list ))
+        time_stamps = list(map(float,time_stamps_list ))
         datetime_obj = datetime.fromtimestamp(int(time_stamps[0])).time()
         a_dict = {"Time": str(datetime_obj), "Value": SpreadSheetReader.get_data('image-url', window_num)}
         ret = [a_dict]
