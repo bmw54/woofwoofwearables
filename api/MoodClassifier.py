@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 
 def get_mood(frequency, amplitude, pitches, angles, side_bias):
     moods = ['excited','happy', 'angry', 'idle', 'alert']
-    if amplitude > 20: return 'excited'
     if side_bias > 0.9: return 'alert'
+    if amplitude < 18: return 'idle'
     avgPitch = np.mean(pitches)
-    if avgPitch > 0.325: return 'idle'
-    return 'happy'
-    
+    if side_bias < -0.03: return 'happy'
+    return 'excited'
+
 
 
 

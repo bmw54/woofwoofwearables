@@ -22,7 +22,7 @@ write_names = ["butterbean_4_16_alert.csv",
 for i in range(len(file_names)):
     tail_file_name, body_file_name = file_names[i]
     write_file_name = write_names[i]
-    print("Reading from %s and %s" %(tail_file_name, body_file_name))
+    print("\nReading from %s and %s" %(tail_file_name, body_file_name))
 
     tailFilteredData = IMUDataProcessing.filterFile(JSON_PATH + tail_file_name)
     bodyFilteredData = IMUDataProcessing.filterFile(JSON_PATH + body_file_name)
@@ -33,7 +33,7 @@ for i in range(len(file_names)):
 
     calculation_module = CalculationHandler.Calculation_Module()
 
-    print("Writing to %s" % (write_file_name))
+    print("\nWriting to %s" % (write_file_name))
 
     # open the file in the write mode
     with open(CSV_PATH + write_file_name, 'w') as f:
