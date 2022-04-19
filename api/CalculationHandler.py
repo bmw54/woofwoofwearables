@@ -62,11 +62,13 @@ class Calculation_Module:
 
         return m.degrees(angle)
     
-    def calculate_angle_two_vectors(self, a_vec, b_vec):
-        a_mag = np.linalg.norm(a_vec)
-        b_mag = np.linalg.norm(b_vec)
-        dot = np.dot(a_vec, b_vec)
+    def calculate_angle_two_vectors(self, vector, projection):
+        a_mag = np.linalg.norm(vector)
+        b_mag = np.linalg.norm(projection)
+        dot = np.dot(vector, projection)
         angle = np.arccos(dot/(a_mag * b_mag))
+        if vector[0] > 0:
+            return m.degrees(angle) * -1
         return m.degrees(angle)
 
     def get_pitches_angles_from_vectors(self, vectors):
